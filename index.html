@@ -227,12 +227,35 @@
           </div>
         </section>
 
-        <figure class="finops-product-shot">
-          <div class="preview-bar"><i></i><i></i><i></i><strong>SCF FinOps · Early Payments</strong></div>
-          <div class="launch-preview-body">
-            <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
+        <figure class="finops-product-shot" data-finops-carousel>
+          <div class="preview-bar">
+            <div class="preview-window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <strong id="finops-shot-title">SCF FinOps · Early Payments</strong>
+            <div class="preview-controls">
+              <button id="finops-shot-prev" type="button" aria-label="Previous SCF FinOps screenshot">←</button>
+              <span id="finops-shot-count" aria-live="polite">1 / 3</span>
+              <button id="finops-shot-next" type="button" aria-label="Next SCF FinOps screenshot">→</button>
+            </div>
           </div>
-          <figcaption>Early Payments provides operational totals, filters and transaction-level visibility in one view.</figcaption>
+          <div class="launch-preview-body">
+            <div class="finops-shot is-current" data-title="SCF FinOps · Early Payments" data-caption="Operational totals, filters and transaction-level visibility in one view.">
+              <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
+            </div>
+            <div class="finops-shot" data-title="SCF FinOps · Invoices" data-caption="A consolidated invoice view across buyer programs, suppliers and statuses.">
+              <img src="assets/scf-finops-invoices.jpg" alt="SCF FinOps Invoices workspace showing totals, filters and invoice records">
+            </div>
+            <div class="finops-shot" data-title="SCF FinOps · Early Payment Details" data-caption="Early payment information, linked instruments, documents and transaction timeline.">
+              <img src="assets/scf-finops-early-payment-details.jpg" alt="SCF FinOps Early Payment details workspace">
+            </div>
+          </div>
+          <figcaption>
+            <span id="finops-shot-caption">Operational totals, filters and transaction-level visibility in one view.</span>
+            <div class="carousel-dots" aria-label="Choose SCF FinOps screenshot">
+              <button class="is-current" type="button" data-finops-index="0" aria-label="Show Early Payments screenshot" aria-current="true"></button>
+              <button type="button" data-finops-index="1" aria-label="Show Invoices screenshot" aria-current="false"></button>
+              <button type="button" data-finops-index="2" aria-label="Show Early Payment Details screenshot" aria-current="false"></button>
+            </div>
+          </figcaption>
         </figure>
       </div>
 
@@ -399,10 +422,10 @@
 
       <div class="active-funder-strip" aria-label="Active funders">
         <strong>Active</strong>
-        <div><img src="assets/logos/snb.jpg" alt="Saudi National Bank"></div>
+        <div><img class="active-funder-square-logo" src="assets/logos/snb.jpg" alt="Saudi National Bank"></div>
         <div><img src="assets/logos/hsbc.svg" alt="HSBC"></div>
         <div><img src="assets/logos/jpmorgan.svg" alt="J.P. Morgan"></div>
-        <div><img src="assets/logos/sidf.jpg" alt="Saudi Industrial Development Fund"></div>
+        <div><img class="active-funder-square-logo" src="assets/logos/sidf.jpg" alt="Saudi Industrial Development Fund"></div>
       </div>
 
       <div class="funder-progress-grid">
