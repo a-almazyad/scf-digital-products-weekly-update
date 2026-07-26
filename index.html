@@ -32,7 +32,7 @@
           <ol>
             <li><span>01</span>Channel updates</li>
             <li><span>02</span>Current internal tools</li>
-            <li><span>03</span>Platform roadmap</li>
+            <li><span>03</span>Platform strategy &amp; FinOps launch</li>
             <li><span>04</span>Taulia and funders</li>
           </ol>
         </aside>
@@ -204,80 +204,67 @@
       <header class="slide-header">
         <span class="slide-number">03</span>
         <div>
-          <h2 id="slide-4-title">SCF platform roadmap</h2>
-          <p>Move SCF operations out of the shared Admin Portal into three focused platforms.</p>
+          <h2 id="slide-4-title">Standalone Buyer and Funder Management platforms</h2>
+          <p>Today they are Admin Portal feature sets. Each will move to a dedicated platform with its own roadmap.</p>
         </div>
         <span class="slide-context">Product strategy</span>
       </header>
 
-      <div class="platform-transition">
-        <article class="transition-card current-admin">
-          <span class="transition-label">Current structure</span>
+      <div class="management-strategy">
+        <section class="strategy-current">
+          <span class="strategy-kicker">Today</span>
           <h3>Shared Admin Portal</h3>
-          <div class="mini-module">Buyer Management features</div>
-          <div class="mini-module">Funder Management features</div>
-        </article>
-        <div class="transition-arrow" aria-hidden="true">→</div>
-        <article class="transition-card finops-product">
-          <span class="transition-label">First standalone product</span>
-          <h3>SCF FinOps</h3>
-          <p>One workspace for SCF financial operations, information and actions.</p>
-        </article>
-        <div class="transition-arrow" aria-hidden="true">→</div>
-        <article class="transition-card future-platforms">
-          <span class="transition-label">Next standalone products</span>
-          <div class="future-platform"><strong>Buyer Management</strong><small>Buyer 360, programs and controls</small></div>
-          <div class="future-platform"><strong>Funder Management</strong><small>Programs, pricing, wallets and reporting</small></div>
-        </article>
+          <p>Buyer and funder workflows are added as features inside one large internal platform.</p>
+          <div class="admin-module-list">
+            <div><span>01</span><strong>Buyer Management features</strong></div>
+            <div><span>02</span><strong>Funder Management features</strong></div>
+          </div>
+        </section>
+
+        <div class="strategy-separation" aria-hidden="true">
+          <span>Separate</span>
+          <i>→</i>
+        </div>
+
+        <section class="strategy-platforms">
+          <span class="strategy-kicker">Future structure</span>
+          <article class="management-platform buyer-platform">
+            <div class="platform-index">01</div>
+            <div>
+              <h3>Buyer Management</h3>
+              <p>Dedicated workspace for buyer profiles, programs, controls and operational visibility.</p>
+              <ul>
+                <li>Buyer 360 and program setup</li>
+                <li>Program controls and monitoring</li>
+                <li>Dedicated roadmap and ownership</li>
+              </ul>
+            </div>
+          </article>
+          <article class="management-platform funder-platform">
+            <div class="platform-index">02</div>
+            <div>
+              <h3>Funder Management</h3>
+              <p>Dedicated workspace for funder programs, pricing, eligibility, wallets and reporting.</p>
+              <ul>
+                <li>Funder 360 and program hierarchy</li>
+                <li>Pricing, limits and account management</li>
+                <li>Dedicated roadmap and ownership</li>
+              </ul>
+            </div>
+          </article>
+        </section>
       </div>
 
-      <div class="finops-roadmap">
-        <div class="roadmap-title">
-          <div><span>SCF FinOps</span><h3>Delivery roadmap</h3></div>
-          <p>SCF FinOps is being introduced to the team as the first product separated from Admin.</p>
-        </div>
-
-        <div class="roadmap-phases">
-          <article class="roadmap-phase phase-now">
-            <span>Now</span>
-            <h4>Core workspace</h4>
-            <ul>
-              <li>Transaction and invoice views</li>
-              <li>Early payments, offers and loans</li>
-              <li>Receivables in one place</li>
-            </ul>
-          </article>
-          <article class="roadmap-phase phase-next">
-            <span>Next</span>
-            <h4>Operational control</h4>
-            <ul>
-              <li>FinOps dashboard</li>
-              <li>Alerts and SLA monitoring</li>
-              <li>Exception visibility</li>
-            </ul>
-          </article>
-          <article class="roadmap-phase phase-later">
-            <span>Later</span>
-            <h4>Complete the workflow</h4>
-            <ul>
-              <li>More FinOps actions</li>
-              <li>Approvals and automation</li>
-              <li>Reporting and insights</li>
-            </ul>
-          </article>
-          <aside class="product-preview">
-            <div class="preview-bar"><i></i><i></i><i></i><strong>SCF FinOps</strong></div>
-            <div class="preview-body">
-              <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
-            </div>
-            <p class="preview-caption"><strong>Early Payments</strong><span>Operational totals and transaction-level visibility</span></p>
-          </aside>
-        </div>
+      <div class="strategy-principles">
+        <span>What changes</span>
+        <div><strong>Focused workflows</strong><p>Each team works in a platform designed for its operational responsibilities.</p></div>
+        <div><strong>Clear ownership</strong><p>Each platform has an accountable product owner and delivery roadmap.</p></div>
+        <div><strong>Incremental separation</strong><p>Capabilities move from Admin in planned stages rather than one large migration.</p></div>
       </div>
 
       <footer class="slide-footer">
         <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Each future platform will have independent ownership and a dedicated roadmap.</span>
+        <span>SCF FinOps is the first product using this separation model; Buyer and Funder Management follow.</span>
       </footer>
     </section>
 
@@ -285,7 +272,56 @@
       <header class="slide-header">
         <span class="slide-number">04</span>
         <div>
-          <h2 id="slide-5-title">Taulia integration updates</h2>
+          <h2 id="slide-5-title">Introducing SCF FinOps</h2>
+          <p>Launching a dedicated workspace for SCF financial operations, information and actions.</p>
+        </div>
+        <span class="slide-context">Product launch</span>
+      </header>
+
+      <div class="finops-launch">
+        <section class="launch-introduction">
+          <span class="launch-kicker">Launching to the SCF team</span>
+          <h3>The first standalone product separated from the Admin Portal</h3>
+          <p>SCF FinOps brings the information and daily actions used by financial operations into one clear workspace.</p>
+
+          <div class="launch-scope">
+            <span>Initial workspace</span>
+            <ul>
+              <li>Invoices and credit notes</li>
+              <li>Early payments and fund requests</li>
+              <li>Transaction-level financial details</li>
+              <li>Buyer, supplier and funder visibility</li>
+            </ul>
+          </div>
+        </section>
+
+        <figure class="finops-product-shot">
+          <div class="preview-bar"><i></i><i></i><i></i><strong>SCF FinOps · Early Payments</strong></div>
+          <div class="launch-preview-body">
+            <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
+          </div>
+          <figcaption>Early Payments provides operational totals, filters and transaction-level visibility in one view.</figcaption>
+        </figure>
+      </div>
+
+      <div class="finops-delivery">
+        <div class="delivery-title"><span>Delivery roadmap</span><strong>Build from visibility into full operational control</strong></div>
+        <article><span>Now</span><strong>Core workspace</strong><p>Invoices, transactions, early payments and receivables.</p></article>
+        <article><span>Next</span><strong>Operational control</strong><p>Dashboard, alerts, SLA monitoring and exception visibility.</p></article>
+        <article><span>Later</span><strong>Complete workflow</strong><p>More actions, approvals, automation, reporting and insights.</p></article>
+      </div>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>The launch starts with a focused operational workspace and expands through its dedicated roadmap.</span>
+      </footer>
+    </section>
+
+    <section class="slide" data-slide="6" aria-labelledby="slide-6-title">
+      <header class="slide-header">
+        <span class="slide-number">05</span>
+        <div>
+          <h2 id="slide-6-title">Taulia integration updates</h2>
           <p>Two API changes currently being worked on with SAP Taulia.</p>
         </div>
         <div class="taulia-wordmark" aria-label="SAP Taulia"><span>SAP</span> Taulia</div>
@@ -351,11 +387,11 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="6" aria-labelledby="slide-6-title">
+    <section class="slide" data-slide="7" aria-labelledby="slide-7-title">
       <header class="slide-header">
-        <span class="slide-number">05</span>
+        <span class="slide-number">06</span>
         <div>
-          <h2 id="slide-6-title">Funder integration status</h2>
+          <h2 id="slide-7-title">Funder integration status</h2>
           <p>Current phase, immediate action and available timing for each active integration.</p>
         </div>
         <span class="slide-context">External integrations</span>
@@ -410,12 +446,37 @@
         <span>Delivery path: Kickoff → SDD → Development → Testing → Pilot → Live</span>
       </footer>
     </section>
+
+    <section class="slide closing-slide" data-slide="8" aria-labelledby="slide-8-title">
+      <div class="closing-orbit" aria-hidden="true"></div>
+      <header class="closing-header">
+        <img class="brand-logo closing-logo" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>SCF Digital Products · Weekly Update</span>
+      </header>
+
+      <div class="closing-content">
+        <p class="eyebrow">End of update</p>
+        <h2 id="slide-8-title">Thank you</h2>
+        <p>Questions &amp; discussion</p>
+      </div>
+
+      <footer class="closing-footer">
+        <div>
+          <span>Operating buyer programs</span>
+          <strong>Saudi Electricity Company · Saudi Aramco</strong>
+        </div>
+        <div class="cover-logos">
+          <img src="assets/logos/sec.svg" alt="Saudi Electricity Company">
+          <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
+        </div>
+      </footer>
+    </section>
   </main>
 
   <nav class="deck-controls" aria-label="Presentation controls">
     <button class="control-button" id="prev-slide" type="button" aria-label="Previous slide">←</button>
     <div class="slide-progress" aria-hidden="true"><span id="progress-fill"></span></div>
-    <p><span id="current-slide">1</span> / <span id="total-slides">6</span></p>
+    <p><span id="current-slide">1</span> / <span id="total-slides">8</span></p>
     <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
   </nav>
 
