@@ -267,7 +267,9 @@ button { font: inherit; }
   border-radius: 12px;
 }
 
-.cover-logos img { display: block; width: 46%; max-height: 2.4rem; object-fit: contain; }
+.cover-logos img { display: block; max-height: 2.4rem; object-fit: contain; }
+.cover-logos img:first-child { width: auto; max-width: 25%; height: 2.8rem; max-height: 2.8rem; }
+.cover-logos img:last-child { width: 58%; }
 
 .cover-orbit {
   position: absolute;
@@ -673,128 +675,56 @@ button { font: inherit; }
 .ownership-panel strong { color: var(--brand-light-blue); font-size: clamp(0.57rem, 0.67vw, 0.76rem); }
 .ownership-panel p { margin: 0.2rem 0 0; color: rgba(255,255,255,0.68); font-size: clamp(0.49rem, 0.58vw, 0.66rem); line-height: 1.3; }
 
-/* Funder status */
-.phase-legend {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1.1rem;
-  margin: 1rem 0 0.65rem;
-  color: var(--muted);
-  font-size: clamp(0.48rem, 0.57vw, 0.64rem);
-  font-weight: 700;
-}
-
-.phase-legend span { display: flex; align-items: center; gap: 0.35rem; }
-.phase-legend i { width: 0.52rem; height: 0.52rem; border-radius: 50%; }
-.phase-sdd { background: var(--brand-violet); }
-.phase-development { background: var(--brand-blue); }
-.phase-testing { background: var(--brand-light-blue); }
-.phase-pilot { background: var(--status-watch); }
-.phase-live { background: var(--status-good); }
-
-.funder-table { flex: 1; grid-template-rows: auto repeat(4, 1fr); margin-bottom: 0.8rem; }
-.funder-table .integration-row { grid-template-columns: 1.08fr 0.62fr 1.45fr 1.72fr 0.72fr; }
-.funder-row { min-height: 4.7rem; }
-.row-pilot { background: var(--surface-warm); }
-.row-development { background: var(--surface-blue); }
-.row-sdd { background: var(--surface-violet); }
-
-.bank-cell { display: grid; grid-template-columns: 5.1rem 1fr; gap: 0.7rem; align-items: center; }
-.bank-cell img { display: block; width: 100%; max-height: 2.2rem; object-fit: contain; object-position: left center; }
-.bank-cell strong { font-size: clamp(0.66rem, 0.78vw, 0.9rem); }
-.status-pilot { color: #7f4a00; background: #ffd89b; }
-.status-development { color: #fff; background: var(--brand-blue); }
-.status-sdd { color: #fff; background: var(--brand-violet); }
-
-.weekly-focus {
+/* Funder progress — CTO Weekly layout */
+.active-funder-strip {
   display: grid;
-  grid-template-columns: 8rem 1fr;
-  gap: 1rem;
+  grid-template-columns: 0.55fr repeat(4, 1fr);
   align-items: center;
-  min-height: 3.7rem;
-  margin-bottom: 0.9rem;
-  padding: 0.65rem 1rem;
-  color: #fff;
-  background: var(--brand-ink);
-  border-radius: 12px;
+  min-height: 4.4rem;
+  margin: 1.1rem 0 0.9rem;
+  padding: 0.45rem 1.15rem;
+  background: var(--surface);
+  border-radius: 2px;
 }
 
-.weekly-focus span { color: var(--brand-light-blue); font-size: clamp(0.52rem, 0.61vw, 0.69rem); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-.weekly-focus strong { font-size: clamp(0.67rem, 0.8vw, 0.92rem); font-weight: 620; }
+.active-funder-strip > strong { color: #009b83; font-size: clamp(0.57rem, 0.68vw, 0.77rem); letter-spacing: 0.04em; text-transform: uppercase; }
+.active-funder-strip > div { display: grid; height: 3.25rem; place-items: center; padding: 0 0.7rem; }
+.active-funder-strip img { display: block; width: 100%; max-width: 7.5rem; height: 100%; object-fit: contain; }
 
-/* Funder watch — matched to the CTO Weekly editorial table */
-.watch-table {
+.funder-progress-grid {
   display: grid;
   flex: 1;
-  grid-template-rows: auto repeat(4, 1fr);
-  margin: 1.35rem 0 0.95rem;
-  overflow: hidden;
-  border: 1px solid var(--line-dark);
-  border-top: 3px solid var(--brand-violet);
-  border-radius: 14px;
-}
-
-.watch-row {
-  display: grid;
-  grid-template-columns: 1fr 2.35fr 0.78fr 1.65fr;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
   min-height: 0;
-  padding: 0 0.8rem;
-  border-bottom: 1px solid var(--line);
-  font-size: clamp(0.56rem, 0.67vw, 0.77rem);
-  line-height: 1.3;
-}
-
-.watch-row:last-child { border-bottom: 0; }
-.watch-row > * { min-width: 0; padding: 0 0.65rem; }
-.watch-row > * + * { border-left: 1px solid var(--line); }
-.watch-row-head {
-  min-height: 2.45rem;
-  color: var(--brand-violet);
-  background: var(--surface-violet);
-  font-size: clamp(0.47rem, 0.55vw, 0.62rem);
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.watch-row-pilot { background: #fffaf2; }
-.watch-row-development { background: var(--surface-blue); }
-.watch-row > span { color: var(--muted); }
-.watch-row > strong { color: var(--brand-ink); font-size: 0.96em; }
-
-.watch-funder {
-  display: grid;
-  grid-template-columns: 4.8rem 1fr;
-  gap: 0.65rem;
-  align-items: center;
-}
-
-.watch-funder img { display: block; width: 100%; max-height: 2.05rem; object-fit: contain; object-position: left center; }
-.watch-funder strong { color: var(--brand-ink); font-size: clamp(0.62rem, 0.74vw, 0.86rem); line-height: 1.2; }
-.watch-position { display: flex; align-items: center; color: var(--brand-ink) !important; font-weight: 700; }
-.status-dot { display: inline-block; flex: 0 0 auto; width: 0.52rem; height: 0.52rem; margin-right: 0.45rem; border-radius: 50%; }
-.status-watch { background: var(--status-watch); }
-.status-blue { background: var(--brand-blue); }
-.status-violet { background: var(--brand-violet); }
-
-.funder-date-strip {
-  display: grid;
-  grid-template-columns: 0.55fr 1fr 1fr 1.45fr;
-  min-height: 4.15rem;
   margin-bottom: 0.9rem;
-  overflow: hidden;
-  background: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  border-radius: 12px;
 }
 
-.funder-date-strip > div { display: flex; flex-direction: column; justify-content: center; padding: 0 1rem; border-right: 1px solid var(--line); }
-.funder-date-strip > div:last-child { border-right: 0; }
-.funder-date-strip .date-strip-title { color: var(--brand-violet); font-size: clamp(0.52rem, 0.61vw, 0.69rem); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-.funder-date-strip strong { color: var(--brand-ink); font-size: clamp(0.59rem, 0.7vw, 0.8rem); }
-.funder-date-strip span { margin-top: 0.18rem; color: var(--muted); font-size: clamp(0.49rem, 0.58vw, 0.66rem); }
+.funder-progress-card {
+  min-width: 0;
+  padding: 1.15rem 1.05rem 0.9rem;
+  border-left: 1px solid var(--line);
+}
+
+.funder-progress-card:first-child { border-left: 0; }
+.progress-funder-logo { display: block; width: 7.1rem; height: 2.25rem; object-fit: contain; object-position: left center; }
+.progress-status { display: block; margin-top: 0.65rem; color: #009b83; font-size: clamp(0.5rem, 0.59vw, 0.67rem); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.funder-progress-card h3 { margin: 0.6rem 0 0.75rem; font-size: clamp(0.9rem, 1.13vw, 1.3rem); line-height: 1.15; }
+.funder-progress-card > p { margin: 0.8rem 0 0; color: var(--muted); font-size: clamp(0.54rem, 0.64vw, 0.73rem); line-height: 1.42; }
+.funder-progress-card > p + p { margin-top: 0.28rem; }
+.funder-progress-card > p strong { color: var(--brand-ink); }
+
+.delivery-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.28rem; }
+.delivery-track div { display: grid; gap: 0.28rem; text-align: center; }
+.delivery-track i { display: block; height: 0.26rem; background: var(--line-dark); border-radius: 999px; }
+.delivery-track span { color: var(--muted); font-size: clamp(0.39rem, 0.46vw, 0.52rem); font-weight: 650; }
+.delivery-track-pilot div:nth-child(-n+4) i,
+.delivery-track-development div:nth-child(-n+2) i,
+.delivery-track-sdd div:first-child i { background: var(--brand-violet); }
+.delivery-track-pilot div:nth-child(5) i,
+.delivery-track-development div:nth-child(3) i,
+.delivery-track-sdd div:nth-child(2) i { background: #009b83; }
 
 /* Closing */
 .closing-slide {
