@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <title>SCF Digital Products — Weekly Update</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,372 +13,414 @@
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
     <section class="slide cover is-active" data-slide="1" aria-labelledby="slide-1-title">
-      <div class="cover-copy">
-        <img class="cover-brand-logo" src="assets/manafa-logo.svg" alt="Manafa">
-        <h1 id="slide-1-title">SCF Digital<br>Products</h1>
-        <div class="title-rule"></div>
-        <p class="cover-subtitle">Weekly Product &amp; Technology Update</p>
-        <p class="cover-date">26 July 2026</p>
+      <div class="cover-orbit" aria-hidden="true"></div>
+      <header class="cover-header">
+        <img class="brand-logo brand-logo-cover" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>SCF vertical · Product &amp; Technology</span>
+      </header>
+
+      <div class="cover-grid">
+        <div class="cover-copy">
+          <p class="eyebrow">Weekly update</p>
+          <h1 id="slide-1-title">SCF Digital<br>Products</h1>
+          <p class="cover-subtitle">Current work, platform roadmap and partner integrations</p>
+          <p class="cover-date">26 July 2026</p>
+        </div>
+
+        <aside class="cover-agenda" aria-label="Discussion areas">
+          <p>Today’s discussion</p>
+          <ol>
+            <li><span>01</span>Channel updates</li>
+            <li><span>02</span>Current internal tools</li>
+            <li><span>03</span>Platform roadmap</li>
+            <li><span>04</span>Taulia and funders</li>
+          </ol>
+        </aside>
       </div>
-      <div class="cover-programs" aria-label="Operating buyer programs">
-        <p>Operating programs</p>
+
+      <footer class="cover-footer">
+        <div>
+          <span>Operating buyer programs</span>
+          <strong>Saudi Electricity Company · Saudi Aramco</strong>
+        </div>
         <div class="cover-logos">
           <img src="assets/logos/sec.svg" alt="Saudi Electricity Company">
           <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
         </div>
-      </div>
-      <div class="cover-lines" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-      <aside class="speaker-notes" hidden>
-        Open with the two live buyer programs and frame the session around the shared product portfolio supporting them.
-        Sources: user-provided program context; Wikimedia Commons program logos.
-      </aside>
+      </footer>
     </section>
 
     <section class="slide" data-slide="2" aria-labelledby="slide-2-title">
       <header class="slide-header">
-        <span class="slide-number" aria-hidden="true">01</span>
+        <span class="slide-number">01</span>
         <div>
-          <h2 id="slide-2-title">One channel strategy, three distinct users</h2>
-          <p>Current priorities improve activation, visibility and international funder access.</p>
+          <h2 id="slide-2-title">Channel updates</h2>
+          <p>Work currently planned across the borrower, buyer and funder experiences.</p>
         </div>
-        <div class="program-lockup" aria-label="SEC and Saudi Aramco">
-          <img src="assets/logos/sec.svg" alt="Saudi Electricity Company">
-          <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
-        </div>
+        <span class="slide-context">Planning view · R61–R62</span>
       </header>
 
-      <div class="channel-lanes">
-        <article class="channel-lane">
-          <div class="line-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"></circle><path d="M10 39c1-9 6-14 14-14s13 5 14 14"></path></svg>
+      <div class="channel-grid">
+        <article class="channel-card channel-card-violet">
+          <header>
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"></circle><path d="M10 39c1-9 6-14 14-14s13 5 14 14"></path></svg>
+            </div>
+            <div><h3>Borrower channel</h3><p>Supplier web and mobile</p></div>
+          </header>
+          <div class="work-block">
+            <span>Current work</span>
+            <h4>Borrower Activation Journey V2</h4>
+            <p>One journey from sign-up and profile completion through the borrower’s first financing activity, covering SCF and non-SCF users.</p>
           </div>
-          <h3>Borrower</h3>
-          <p class="lane-purpose">Supplier web &amp; mobile</p>
-          <div class="initiative-primary">
-            <strong>Activation Journey V2</strong>
-            <p>Unify sign-up, profile completion and first financing across SCF and non-SCF journeys.</p>
+          <div class="card-facts">
+            <div><span>Purpose</span><strong>Increase activation</strong></div>
+            <div><span>Planning target</span><strong>R62</strong></div>
           </div>
-          <p class="outcome"><span>Outcome</span> Increase borrower activation</p>
-          <p class="release-line">Planning target <strong>R62</strong></p>
         </article>
 
-        <article class="channel-lane">
-          <div class="line-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M7 40h34M12 40V15h10v25M26 40V8h10v32"></path><path d="M16 21h2M16 27h2M30 15h2M30 21h2M30 27h2"></path></svg>
+        <article class="channel-card channel-card-blue">
+          <header>
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M7 40h34M12 40V15h10v25M26 40V8h10v32"></path><path d="M16 21h2M16 27h2M30 15h2M30 21h2M30 27h2"></path></svg>
+            </div>
+            <div><h3>Buyer channel</h3><p>Buyer web application</p></div>
+          </header>
+          <div class="work-block">
+            <span>Current work</span>
+            <ul class="work-list">
+              <li><strong>Dashboard V2</strong><small>Improve operational visibility</small></li>
+              <li><strong>Analytics</strong><small>Extend the buyer reporting experience</small></li>
+              <li><strong>Data quality and QA</strong><small>Correct existing figures and validate results</small></li>
+            </ul>
           </div>
-          <h3>Buyer</h3>
-          <p class="lane-purpose">Buyer web experience</p>
-          <ul class="initiative-list">
-            <li><strong>Dashboard V2</strong><span>Richer operational visibility</span></li>
-            <li><strong>Analytics</strong><span>More useful performance insights</span></li>
-            <li><strong>Data quality &amp; QA</strong><span>Restore confidence in reported numbers</span></li>
-          </ul>
-          <p class="release-line">Planning target <strong>R62</strong></p>
+          <div class="card-facts">
+            <div><span>Primary concern</span><strong>Reliable visibility</strong></div>
+            <div><span>Planning target</span><strong>R62</strong></div>
+          </div>
         </article>
 
-        <article class="channel-lane">
-          <div class="line-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M7 20h34L24 8 7 20ZM10 23h28M12 23v14M20 23v14M28 23v14M36 23v14M7 40h34"></path></svg>
+        <article class="channel-card channel-card-ink">
+          <header>
+            <div class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M7 20h34L24 8 7 20ZM10 23h28M12 23v14M20 23v14M28 23v14M36 23v14M7 40h34"></path></svg>
+            </div>
+            <div><h3>Funder channel</h3><p>Local and international funders</p></div>
+          </header>
+          <div class="work-block">
+            <span>Current work</span>
+            <ul class="work-list compact">
+              <li><strong>International login</strong><small>Email and password access</small></li>
+              <li><strong>SIC enablement</strong><small>Onboarding, pricing and eligibility changes</small></li>
+              <li><strong>SIDF account changes</strong><small>Updated wallet and account structure</small></li>
+              <li><strong>BNP Paribas model</strong><small>Direct transfer to the supplier</small></li>
+            </ul>
           </div>
-          <h3>Funder</h3>
-          <p class="lane-purpose">Local &amp; international funders</p>
-          <ul class="initiative-list compact">
-            <li><strong>International login</strong><span>Email and password access</span></li>
-            <li><strong>SIC enablement</strong><span>Onboarding, pricing and eligibility</span></li>
-            <li><strong>SIDF account model</strong><span>Wallet and account restructuring</span></li>
-            <li><strong>Direct-to-supplier</strong><span>BNP Paribas transaction model</span></li>
-          </ul>
-          <p class="release-line">Planning target <strong>R62</strong></p>
+          <div class="card-facts">
+            <div><span>Primary concern</span><strong>New funder models</strong></div>
+            <div><span>Planning target</span><strong>R62</strong></div>
+          </div>
         </article>
       </div>
-      <img class="slide-brand" src="assets/manafa-logo.svg" alt="Manafa">
-      <aside class="speaker-notes" hidden>
-        Borrower Activation V2 is intended to improve activation, but no numeric success target has been set.
-        SIC scope verified in Jira DF-4021 and linked implementation tickets.
-      </aside>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Targets are planning assumptions and may move with release readiness.</span>
+      </footer>
     </section>
 
     <section class="slide" data-slide="3" aria-labelledby="slide-3-title">
       <header class="slide-header">
-        <span class="slide-number" aria-hidden="true">02</span>
+        <span class="slide-number">02</span>
         <div>
-          <h2 id="slide-3-title">SCF operations are becoming product-led</h2>
-          <p>Recent launches strengthen today’s Admin Portal while the next generation of platforms takes shape.</p>
+          <h2 id="slide-3-title">Current internal tools</h2>
+          <p>What the SCF team uses today inside the Admin Portal and Manafa CRM.</p>
         </div>
+        <span class="slide-context">Current state</span>
       </header>
 
-      <div class="platform-columns">
-        <article class="platform-column">
-          <p class="section-index">01</p>
-          <h3>Buyer Management</h3>
-          <p class="platform-state">Launched in R58</p>
-          <div class="platform-rule"></div>
-          <p class="platform-claim">A centralized buyer profile brings core buyer information and activity into one view.</p>
-          <ul>
-            <li>Buyer summary and status</li>
-            <li>Centralized invoice visibility</li>
-            <li>Invoice status and financial details</li>
-          </ul>
-        </article>
+      <div class="current-state-layout">
+        <section class="admin-area">
+          <div class="area-heading">
+            <div><span>Shared platform</span><h3>Admin Portal</h3></div>
+            <p>Buyer and funder capabilities currently exist as feature sets inside the shared Admin Portal.</p>
+          </div>
 
-        <article class="platform-column">
-          <p class="section-index">02</p>
-          <h3>Funder Management</h3>
-          <p class="platform-state">Capabilities launched in Admin</p>
-          <div class="platform-rule"></div>
-          <p class="platform-claim">Program-level controls replace fragmented funder configuration.</p>
-          <ul>
-            <li>Program hierarchy and activation</li>
-            <li>Pricing strategy and revenue model</li>
-            <li>Eligibility and concentration controls</li>
-          </ul>
-        </article>
+          <div class="admin-features">
+            <article>
+              <span class="feature-index">01</span>
+              <div>
+                <h4>Buyer Management features</h4>
+                <p class="state-chip state-live">Launched in R58</p>
+                <ul>
+                  <li>Buyer profile and status</li>
+                  <li>Centralized invoice view</li>
+                  <li>Invoice status and financial details</li>
+                </ul>
+              </div>
+            </article>
+            <article>
+              <span class="feature-index">02</span>
+              <div>
+                <h4>Funder Management features</h4>
+                <p class="state-chip state-current">Available in Admin</p>
+                <ul>
+                  <li>Funder and program hierarchy</li>
+                  <li>Pricing and revenue configuration</li>
+                  <li>Eligibility and concentration controls</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <article class="platform-column">
-          <p class="section-index">03</p>
-          <h3>Manafa CRM</h3>
-          <p class="platform-state">Continuous enhancement</p>
-          <div class="platform-rule"></div>
-          <p class="platform-claim">The SCF pipeline remains the engagement workspace for the operating team.</p>
-          <ul>
-            <li>Pipeline enhancements</li>
-            <li>Reported issue resolution</li>
-            <li>Lead Management targeted for R61</li>
-          </ul>
-        </article>
+        <section class="crm-area">
+          <div class="area-heading">
+            <div><span>Dedicated tool</span><h3>Manafa CRM</h3></div>
+          </div>
+          <div class="crm-body">
+            <p>The SCF team manages its relationship and opportunity pipeline in Manafa CRM.</p>
+            <ul>
+              <li><span>Ongoing</span>SCF pipeline enhancements</li>
+              <li><span>Ongoing</span>Reported issue resolution</li>
+              <li><span>R61</span>Lead Management launch target</li>
+            </ul>
+          </div>
+        </section>
       </div>
 
-      <footer class="strategy-bridge">
-        <span>Strategic direction</span>
-        <strong>Move from features inside one large Admin Portal to independently evolving domain platforms.</strong>
+      <div class="clarity-strip">
+        <div><span>Today</span><strong>Buyer and Funder Management are Admin Portal feature sets.</strong></div>
+        <div><span>Future</span><strong>They will become separate platforms with their own roadmaps.</strong></div>
+      </div>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>This distinction is important when discussing the platform strategy.</span>
       </footer>
-      <img class="slide-brand slide-brand--inverse" src="assets/manafa-logo.svg" alt="Manafa">
-      <aside class="speaker-notes" hidden>
-        Buyer Profile and Funder Management release scope verified in Release 58 Notes.
-        CRM Lead Management is an internal planning target for R61.
-      </aside>
     </section>
 
-    <section class="slide strategy-slide" data-slide="4" aria-labelledby="slide-4-title">
+    <section class="slide" data-slide="4" aria-labelledby="slide-4-title">
       <header class="slide-header">
-        <span class="slide-number" aria-hidden="true">03</span>
+        <span class="slide-number">03</span>
         <div>
-          <h2 id="slide-4-title">SCF FinOps is the first step toward three independent platforms</h2>
-          <p>The product strategy creates clear ownership boundaries while preserving one integrated operating model.</p>
+          <h2 id="slide-4-title">SCF platform roadmap</h2>
+          <p>Move SCF operations out of the shared Admin Portal into three focused platforms.</p>
         </div>
+        <span class="slide-context">Product strategy</span>
       </header>
 
-      <div class="strategy-layout">
-        <div class="strategy-platforms" aria-label="Independent platforms">
-          <article class="strategy-platform active">
-            <span class="platform-symbol" aria-hidden="true">F</span>
-            <div>
-              <h3>SCF FinOps</h3>
-              <p>Financial operations across invoices, early payments, offers, loans and receivables.</p>
-            </div>
-          </article>
-          <article class="strategy-platform">
-            <span class="platform-symbol" aria-hidden="true">B</span>
-            <div>
-              <h3>Buyer Management</h3>
-              <p>Buyer profiles, programs, limits, pricing, settlement and Buyer 360.</p>
-            </div>
-          </article>
-          <article class="strategy-platform">
-            <span class="platform-symbol" aria-hidden="true">I</span>
-            <div>
-              <h3>Funder Management</h3>
-              <p>Funder programs, pricing, portfolio rules, wallets, approvals and reporting.</p>
-            </div>
-          </article>
+      <div class="platform-transition">
+        <article class="transition-card current-admin">
+          <span class="transition-label">Current structure</span>
+          <h3>Shared Admin Portal</h3>
+          <div class="mini-module">Buyer Management features</div>
+          <div class="mini-module">Funder Management features</div>
+        </article>
+        <div class="transition-arrow" aria-hidden="true">→</div>
+        <article class="transition-card finops-product">
+          <span class="transition-label">First standalone product</span>
+          <h3>SCF FinOps</h3>
+          <p>One workspace for SCF financial operations, information and actions.</p>
+        </article>
+        <div class="transition-arrow" aria-hidden="true">→</div>
+        <article class="transition-card future-platforms">
+          <span class="transition-label">Next standalone products</span>
+          <div class="future-platform"><strong>Buyer Management</strong><small>Buyer 360, programs and controls</small></div>
+          <div class="future-platform"><strong>Funder Management</strong><small>Programs, pricing, wallets and reporting</small></div>
+        </article>
+      </div>
+
+      <div class="finops-roadmap">
+        <div class="roadmap-title">
+          <div><span>SCF FinOps</span><h3>Delivery roadmap</h3></div>
+          <p>SCF FinOps is being introduced to the team as the first product separated from Admin.</p>
         </div>
 
-        <div class="finops-frame">
-          <div class="mock-browser">
-            <span></span><span></span><span></span>
-            <p>SCF FinOps</p>
-          </div>
-          <div class="screenshot-placeholder">
-            <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M14 60h52M20 54V32h12v22M36 54V20h12v34M52 54V38h10v16"></path></svg>
-            <strong>Platform screenshot</strong>
-            <span>Placeholder — replace with product capture</span>
-          </div>
-          <div class="shared-foundation">
-            <span>Identity &amp; access</span>
-            <span>Data &amp; insights</span>
-            <span>Audit &amp; logs</span>
-          </div>
-        </div>
-
-        <div class="strategy-roadmap" aria-label="Now next future roadmap">
-          <article>
-            <p>Now</p>
-            <h3>Establish the domains</h3>
+        <div class="roadmap-phases">
+          <article class="roadmap-phase phase-now">
+            <span>Now</span>
+            <h4>Core workspace</h4>
             <ul>
-              <li>FinOps core transaction views</li>
-              <li>Buyer and funder capabilities in Admin</li>
+              <li>Transaction and invoice views</li>
+              <li>Early payments, offers and loans</li>
+              <li>Receivables in one place</li>
             </ul>
           </article>
-          <article>
-            <p>Next</p>
-            <h3>Migrate and control</h3>
+          <article class="roadmap-phase phase-next">
+            <span>Next</span>
+            <h4>Operational control</h4>
             <ul>
-              <li>FinOps dashboard, alerts and SLA</li>
-              <li>Funder-platform migration</li>
-              <li>Buyer program controls</li>
+              <li>FinOps dashboard</li>
+              <li>Alerts and SLA monitoring</li>
+              <li>Exception visibility</li>
             </ul>
           </article>
-          <article>
-            <p>Future</p>
-            <h3>Operate independently</h3>
+          <article class="roadmap-phase phase-later">
+            <span>Later</span>
+            <h4>Complete the workflow</h4>
             <ul>
-              <li>Buyer 360 and self-service</li>
-              <li>Funder users, wallets and reports</li>
-              <li>Complete FinOps workspace</li>
+              <li>More FinOps actions</li>
+              <li>Approvals and automation</li>
+              <li>Reporting and insights</li>
             </ul>
           </article>
+          <aside class="product-preview">
+            <div class="preview-bar"><i></i><i></i><i></i><strong>SCF FinOps</strong></div>
+            <div class="preview-body">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M14 60h52M20 54V32h12v22M36 54V20h12v34M52 54V38h10v16"></path></svg>
+              <strong>Product screenshot</strong>
+              <span>To be inserted</span>
+            </div>
+          </aside>
         </div>
       </div>
-      <img class="slide-brand" src="assets/manafa-logo.svg" alt="Manafa">
-      <aside class="speaker-notes" hidden>
-        Strategy based on Manafa Business Suite Product Strategy plus the Buyer Management, Funder Management and SCF FinOps roadmaps in Confluence.
-      </aside>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Each future platform will have independent ownership and a dedicated roadmap.</span>
+      </footer>
     </section>
 
     <section class="slide" data-slide="5" aria-labelledby="slide-5-title">
-      <header class="slide-header taulia-header">
-        <span class="slide-number" aria-hidden="true">04</span>
+      <header class="slide-header">
+        <span class="slide-number">04</span>
         <div>
-          <h2 id="slide-5-title">SAP Taulia enhancements remove friction from core SCF operations</h2>
-          <p>Two focused API tracks simplify supplier onboarding and improve invoice-document recovery.</p>
+          <h2 id="slide-5-title">Taulia integration updates</h2>
+          <p>Two API changes currently being worked on with SAP Taulia.</p>
         </div>
         <div class="taulia-wordmark" aria-label="SAP Taulia"><span>SAP</span> Taulia</div>
       </header>
 
-      <div class="taulia-tracks">
-        <article class="taulia-track">
-          <div class="track-number">01</div>
-          <div class="track-body">
-            <h3>Supplier Onboarding APIs</h3>
-            <p class="track-outcome">Suppliers onboard directly with Manafa—without completing a separate Taulia journey.</p>
-            <ol class="flow-list">
-              <li><span>1</span>Buyer invites suppliers through Taulia</li>
-              <li><span>2</span>Manafa retrieves the latest invited suppliers</li>
-              <li><span>3</span>Manafa sends the registration experience</li>
-            </ol>
-            <div class="milestone-callout">
-              <span>Joint testing</span>
-              <strong>13 August 2026</strong>
-            </div>
-          </div>
-        </article>
+      <div class="integration-table taulia-table" role="table" aria-label="Taulia integration updates">
+        <div class="integration-row integration-head" role="row">
+          <span role="columnheader">Workstream</span>
+          <span role="columnheader">What is changing</span>
+          <span role="columnheader">Current position</span>
+          <span role="columnheader">Next step</span>
+        </div>
 
-        <article class="taulia-track">
-          <div class="track-number">02</div>
-          <div class="track-body">
-            <h3>Invoice PDF Recovery API</h3>
-            <p class="track-outcome">Create a controlled recovery path when an accelerated invoice PDF is not received successfully.</p>
-            <div class="recovery-flow">
-              <div>PDF requested</div><span>→</span>
-              <div>Delivery error</div><span>→</span>
-              <div>API retry</div>
-            </div>
-            <div class="milestone-callout subdued">
-              <span>Timeline</span>
-              <strong>To be confirmed by Taulia</strong>
-            </div>
+        <div class="integration-row taulia-onboarding" role="row">
+          <div class="workstream-cell" role="cell">
+            <span class="row-index">01</span>
+            <div><h3>Supplier onboarding APIs</h3><p>Remove duplicate supplier registration</p></div>
           </div>
-        </article>
+          <div role="cell">
+            <p>Manafa will retrieve suppliers invited by the buyer through Taulia and send the Manafa registration journey.</p>
+            <strong>Supplier onboards only with Manafa.</strong>
+          </div>
+          <div role="cell">
+            <span class="status-pill status-scheduled">Testing scheduled</span>
+            <p>API integration preparation is in progress.</p>
+          </div>
+          <div role="cell">
+            <strong>Joint testing</strong>
+            <p>13 August 2026</p>
+          </div>
+        </div>
+
+        <div class="integration-row taulia-pdf" role="row">
+          <div class="workstream-cell" role="cell">
+            <span class="row-index">02</span>
+            <div><h3>Invoice PDF recovery API</h3><p>Recover failed invoice documents</p></div>
+          </div>
+          <div role="cell">
+            <p>Manafa will be able to request the invoice PDF again when the original document delivery fails.</p>
+            <strong>Creates a controlled retry path.</strong>
+          </div>
+          <div role="cell">
+            <span class="status-pill status-pending">Timeline pending</span>
+            <p>Taulia has confirmed the API work; delivery timing is not yet confirmed.</p>
+          </div>
+          <div role="cell">
+            <strong>Confirm delivery plan</strong>
+            <p>Waiting for Taulia</p>
+          </div>
+        </div>
       </div>
 
-      <footer class="ownership-strip">
-        <div><span>Manafa</span> Invitation experience, integration and operational handling</div>
-        <div><span>Taulia</span> API delivery and source data availability</div>
-        <div><span>Joint</span> Testing, reconciliation and readiness</div>
+      <div class="ownership-panel">
+        <span>Ownership</span>
+        <div><strong>Manafa</strong><p>Integration, registration experience and operating process</p></div>
+        <div><strong>Taulia</strong><p>API delivery and source data availability</p></div>
+        <div><strong>Joint</strong><p>Testing, reconciliation and readiness</p></div>
+      </div>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Dates shown are the latest confirmed working dates.</span>
       </footer>
-      <img class="slide-brand slide-brand--inverse" src="assets/manafa-logo.svg" alt="Manafa">
-      <aside class="speaker-notes" hidden>
-        Onboarding APIs target testing on 13 August 2026. PDF API delivery timeline remains unconfirmed.
-      </aside>
     </section>
 
-    <section class="slide funder-slide" data-slide="6" aria-labelledby="slide-6-title">
+    <section class="slide" data-slide="6" aria-labelledby="slide-6-title">
       <header class="slide-header">
-        <span class="slide-number" aria-hidden="true">05</span>
+        <span class="slide-number">05</span>
         <div>
-          <h2 id="slide-6-title">Funder integrations are progressing through one delivery model</h2>
-          <p>Stage gates create a consistent path from solution design to live financing.</p>
+          <h2 id="slide-6-title">Funder integration status</h2>
+          <p>Current phase, immediate action and available timing for each active integration.</p>
         </div>
+        <span class="slide-context">External integrations</span>
       </header>
 
-      <div class="maturity-pipeline" aria-label="SDD, development, testing, pilot and live stages">
-        <div class="pipeline-line"></div>
-        <div class="stage complete">
-          <span>1</span>
-          <strong>SDD</strong>
-          <small>Requirements &amp; design</small>
+      <div class="phase-legend" aria-label="Integration phases">
+        <span><i class="phase-sdd"></i>SDD</span>
+        <span><i class="phase-development"></i>Development</span>
+        <span><i class="phase-testing"></i>Testing</span>
+        <span><i class="phase-pilot"></i>Pilot</span>
+        <span><i class="phase-live"></i>Live</span>
+      </div>
+
+      <div class="integration-table funder-table" role="table" aria-label="Funder integration status">
+        <div class="integration-row integration-head" role="row">
+          <span role="columnheader">Funder</span>
+          <span role="columnheader">Phase</span>
+          <span role="columnheader">Current position</span>
+          <span role="columnheader">Immediate action</span>
+          <span role="columnheader">Timing</span>
         </div>
-        <div class="stage active">
-          <span>2</span>
-          <strong>Development</strong>
-          <small>Build &amp; configure</small>
+
+        <div class="integration-row funder-row row-pilot" role="row">
+          <div class="bank-cell" role="cell"><img src="assets/logos/bnp-paribas.svg" alt=""><strong>BNP Paribas</strong></div>
+          <div role="cell"><span class="status-pill status-pilot">Pilot</span></div>
+          <div role="cell">Fourth pilot attempt is planned.</div>
+          <div role="cell"><strong>Complete the pilot and confirm go-live readiness.</strong></div>
+          <div role="cell"><strong>27 Jul 2026</strong></div>
         </div>
-        <div class="stage">
-          <span>3</span>
-          <strong>Testing</strong>
-          <small>Joint validation</small>
+
+        <div class="integration-row funder-row row-development" role="row">
+          <div class="bank-cell" role="cell"><img src="assets/logos/smbc.svg" alt=""><strong>SMBC</strong></div>
+          <div role="cell"><span class="status-pill status-development">Development</span></div>
+          <div role="cell">SDD is complete; Manafa development is underway.</div>
+          <div role="cell"><strong>Finish development and confirm test readiness with SMBC.</strong></div>
+          <div role="cell"><strong>Target R61</strong></div>
         </div>
-        <div class="stage pilot">
-          <span>4</span>
-          <strong>Pilot</strong>
-          <small>Selected transactions</small>
+
+        <div class="integration-row funder-row row-sdd" role="row">
+          <div class="bank-cell" role="cell"><img src="assets/logos/riyad-bank.svg" alt=""><strong>Riyad Bank</strong></div>
+          <div role="cell"><span class="status-pill status-sdd">SDD</span></div>
+          <div role="cell">Requirements and solution design are being defined.</div>
+          <div role="cell"><strong>Complete and agree the SDD.</strong></div>
+          <div role="cell"><strong>TBD</strong></div>
         </div>
-        <div class="stage">
-          <span>5</span>
-          <strong>Live</strong>
-          <small>Scale operations</small>
+
+        <div class="integration-row funder-row row-sdd" role="row">
+          <div class="bank-cell" role="cell"><img src="assets/logos/standard-chartered.svg" alt=""><strong>Standard Chartered</strong></div>
+          <div role="cell"><span class="status-pill status-sdd">SDD</span></div>
+          <div role="cell">Requirements and solution design are being defined.</div>
+          <div role="cell"><strong>Complete and agree the SDD.</strong></div>
+          <div role="cell"><strong>TBD</strong></div>
         </div>
       </div>
 
-      <div class="funder-positions">
-        <article class="funder-position pilot-position">
-          <div class="logo-box"><img src="assets/logos/bnp-paribas.svg" alt="BNP Paribas"></div>
-          <h3>BNP Paribas</h3>
-          <p><strong>Pilot</strong> · 27 July 2026</p>
-          <span>Fourth pilot attempt</span>
-        </article>
-        <article class="funder-position development-position">
-          <div class="logo-box"><img src="assets/logos/smbc.svg" alt="SMBC"></div>
-          <h3>SMBC</h3>
-          <p><strong>Development</strong> · Target R61</p>
-          <span>Then confirm test readiness</span>
-        </article>
-        <article class="funder-position sdd-position">
-          <div class="logo-box"><img src="assets/logos/riyad-bank.svg" alt="Riyad Bank"></div>
-          <h3>Riyad Bank</h3>
-          <p><strong>SDD</strong> · Timeline TBD</p>
-          <span>Finalize solution design</span>
-        </article>
-        <article class="funder-position sdd-position">
-          <div class="logo-box"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"></div>
-          <h3>Standard Chartered</h3>
-          <p><strong>SDD</strong> · Timeline TBD</p>
-          <span>Finalize solution design</span>
-        </article>
+      <div class="weekly-focus">
+        <span>This week</span>
+        <strong>Close the BNP Paribas pilot, complete SMBC development, and progress both SDD discussions.</strong>
       </div>
 
-      <footer class="closing-focus">
-        <span>Immediate focus</span>
-        <strong>Close the BNP Paribas pilot, make SMBC test-ready, and progress both SDD tracks.</strong>
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Delivery path: Kickoff → SDD → Development → Testing → Pilot → Live</span>
       </footer>
-      <img class="slide-brand slide-brand--inverse" src="assets/manafa-logo.svg" alt="Manafa">
-      <aside class="speaker-notes" hidden>
-        The maturity model is Kickoff → SDD → Development → Testing → Pilot → Live. Kickoff is omitted from the visual because all four funders are beyond it.
-        BNP Paribas naming verified in the internal integration BRD.
-      </aside>
     </section>
   </main>
 
