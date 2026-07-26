@@ -268,10 +268,9 @@
           <aside class="product-preview">
             <div class="preview-bar"><i></i><i></i><i></i><strong>SCF FinOps</strong></div>
             <div class="preview-body">
-              <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M14 60h52M20 54V32h12v22M36 54V20h12v34M52 54V38h10v16"></path></svg>
-              <strong>Product screenshot</strong>
-              <span>To be inserted</span>
+              <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
             </div>
+            <p class="preview-caption"><strong>Early Payments</strong><span>Operational totals and transaction-level visibility</span></p>
           </aside>
         </div>
       </div>
@@ -362,59 +361,48 @@
         <span class="slide-context">External integrations</span>
       </header>
 
-      <div class="phase-legend" aria-label="Integration phases">
-        <span><i class="phase-sdd"></i>SDD</span>
-        <span><i class="phase-development"></i>Development</span>
-        <span><i class="phase-testing"></i>Testing</span>
-        <span><i class="phase-pilot"></i>Pilot</span>
-        <span><i class="phase-live"></i>Live</span>
-      </div>
-
-      <div class="integration-table funder-table" role="table" aria-label="Funder integration status">
-        <div class="integration-row integration-head" role="row">
+      <div class="watch-table" role="table" aria-label="Funder integration status">
+        <div class="watch-row watch-row-head" role="row">
           <span role="columnheader">Funder</span>
-          <span role="columnheader">Phase</span>
-          <span role="columnheader">Current position</span>
-          <span role="columnheader">Immediate action</span>
-          <span role="columnheader">Timing</span>
+          <span role="columnheader">Current evidence</span>
+          <span role="columnheader">Position</span>
+          <span role="columnheader">Immediate gate</span>
         </div>
 
-        <div class="integration-row funder-row row-pilot" role="row">
-          <div class="bank-cell" role="cell"><img src="assets/logos/bnp-paribas.svg" alt=""><strong>BNP Paribas</strong></div>
-          <div role="cell"><span class="status-pill status-pilot">Pilot</span></div>
-          <div role="cell">Fourth pilot attempt is planned.</div>
-          <div role="cell"><strong>Complete the pilot and confirm go-live readiness.</strong></div>
-          <div role="cell"><strong>27 Jul 2026</strong></div>
+        <div class="watch-row watch-row-pilot" role="row">
+          <div class="watch-funder" role="cell"><img src="assets/logos/bnp-paribas.svg" alt=""><strong>BNP Paribas</strong></div>
+          <span role="cell">Pilot stage. The fourth pilot attempt is planned for 27 July.</span>
+          <span class="watch-position" role="cell"><i class="status-dot status-watch"></i>Pilot</span>
+          <strong role="cell">Complete the pilot and confirm go-live readiness.</strong>
         </div>
 
-        <div class="integration-row funder-row row-development" role="row">
-          <div class="bank-cell" role="cell"><img src="assets/logos/smbc.svg" alt=""><strong>SMBC</strong></div>
-          <div role="cell"><span class="status-pill status-development">Development</span></div>
-          <div role="cell">SDD is complete; Manafa development is underway.</div>
-          <div role="cell"><strong>Finish development and confirm test readiness with SMBC.</strong></div>
-          <div role="cell"><strong>Target R61</strong></div>
+        <div class="watch-row watch-row-development" role="row">
+          <div class="watch-funder" role="cell"><img src="assets/logos/smbc.svg" alt=""><strong>SMBC</strong></div>
+          <span role="cell">SDD is complete. Manafa implementation is underway with an R61 target.</span>
+          <span class="watch-position" role="cell"><i class="status-dot status-blue"></i>Development</span>
+          <strong role="cell">Finish development and confirm test readiness with SMBC.</strong>
         </div>
 
-        <div class="integration-row funder-row row-sdd" role="row">
-          <div class="bank-cell" role="cell"><img src="assets/logos/riyad-bank.svg" alt=""><strong>Riyad Bank</strong></div>
-          <div role="cell"><span class="status-pill status-sdd">SDD</span></div>
-          <div role="cell">Requirements and solution design are being defined.</div>
-          <div role="cell"><strong>Complete and agree the SDD.</strong></div>
-          <div role="cell"><strong>TBD</strong></div>
+        <div class="watch-row" role="row">
+          <div class="watch-funder" role="cell"><img src="assets/logos/riyad-bank.svg" alt=""><strong>Riyad Bank</strong></div>
+          <span role="cell">Requirements and solution design are being defined. No delivery date is confirmed.</span>
+          <span class="watch-position" role="cell"><i class="status-dot status-violet"></i>SDD</span>
+          <strong role="cell">Complete and agree the solution design document.</strong>
         </div>
 
-        <div class="integration-row funder-row row-sdd" role="row">
-          <div class="bank-cell" role="cell"><img src="assets/logos/standard-chartered.svg" alt=""><strong>Standard Chartered</strong></div>
-          <div role="cell"><span class="status-pill status-sdd">SDD</span></div>
-          <div role="cell">Requirements and solution design are being defined.</div>
-          <div role="cell"><strong>Complete and agree the SDD.</strong></div>
-          <div role="cell"><strong>TBD</strong></div>
+        <div class="watch-row" role="row">
+          <div class="watch-funder" role="cell"><img src="assets/logos/standard-chartered.svg" alt=""><strong>Standard Chartered</strong></div>
+          <span role="cell">Requirements and solution design are being defined. No delivery date is confirmed.</span>
+          <span class="watch-position" role="cell"><i class="status-dot status-violet"></i>SDD</span>
+          <strong role="cell">Complete and agree the solution design document.</strong>
         </div>
       </div>
 
-      <div class="weekly-focus">
-        <span>This week</span>
-        <strong>Close the BNP Paribas pilot, complete SMBC development, and progress both SDD discussions.</strong>
+      <div class="funder-date-strip">
+        <div class="date-strip-title">Timing</div>
+        <div><strong>BNP Paribas</strong><span>Pilot · 27 Jul 2026</span></div>
+        <div><strong>SMBC</strong><span>Development · Target R61</span></div>
+        <div><strong>Riyad Bank / Standard Chartered</strong><span>SDD · Timeline TBD</span></div>
       </div>
 
       <footer class="slide-footer">
