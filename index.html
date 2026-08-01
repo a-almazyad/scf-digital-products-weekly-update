@@ -24,16 +24,16 @@
           <p class="eyebrow">Weekly update</p>
           <h1 id="slide-1-title">SCF Digital<br>Products</h1>
           <p class="cover-subtitle">Current work, platform roadmap and partner integrations</p>
-          <p class="cover-date">26 July 2026</p>
+          <p class="cover-date">2 August 2026</p>
         </div>
 
         <aside class="cover-agenda" aria-label="Discussion areas">
           <p>Today’s discussion</p>
           <ol>
-            <li><span>01</span>Channel updates</li>
-            <li><span>02</span>Current internal tools</li>
-            <li><span>03</span>FinOps launch &amp; platform strategy</li>
-            <li><span>04</span>Taulia and funders</li>
+            <li><span>01</span>R61 scope</li>
+            <li><span>02</span>Channel &amp; internal-product updates</li>
+            <li><span>03</span>FinOps &amp; platform strategy</li>
+            <li><span>04</span>Taulia &amp; funders</li>
           </ol>
         </aside>
       </div>
@@ -50,9 +50,71 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="2" aria-labelledby="slide-2-title">
+    <section class="slide release-scope-slide" data-slide="2" aria-labelledby="slide-r61-title">
       <header class="slide-header">
         <span class="slide-number">01</span>
+        <div>
+          <h2 id="slide-r61-title">R61 scope — SCF</h2>
+          <p>Scope under the SCF team for the upcoming two-week delivery cycle.</p>
+        </div>
+        <span class="slide-context">3–14 August 2026</span>
+      </header>
+
+      <div class="release-summary" aria-label="R61 summary">
+        <div><strong>20</strong><span>Scope items</span></div>
+        <div><strong>95</strong><span>Delivery tickets</span></div>
+        <p><span class="release-live-dot" aria-hidden="true"></span>Jira snapshot · 1 August 2026</p>
+      </div>
+
+      <div class="release-scope-layout" data-release-scope>
+        <nav class="scope-themes" aria-label="R61 scope workstreams">
+          <p>Workstreams</p>
+          <button type="button" data-scope-theme="integrations" aria-pressed="true">
+            <span>Funder integrations</span><strong>6</strong>
+          </button>
+          <button type="button" data-scope-theme="operations" aria-pressed="false">
+            <span>Operations &amp; reporting</span><strong>5</strong>
+          </button>
+          <button type="button" data-scope-theme="platform" aria-pressed="false">
+            <span>Platform &amp; controls</span><strong>5</strong>
+          </button>
+          <button type="button" data-scope-theme="stability" aria-pressed="false">
+            <span>Compliance &amp; stability</span><strong>4</strong>
+          </button>
+        </nav>
+
+        <section class="scope-items" aria-labelledby="scope-theme-title">
+          <header>
+            <div><span>Selected workstream</span><h3 id="scope-theme-title">Funder integrations</h3></div>
+            <strong id="scope-theme-count">6 items</strong>
+          </header>
+          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="R61 scope items"></div>
+        </section>
+
+        <aside class="scope-detail" id="scope-detail" aria-live="polite">
+          <div class="scope-detail-heading">
+            <div><span id="scope-detail-key">EMQ-5516 · DF-3832</span><h3 id="scope-detail-title">SMBC Integration Manager — Email</h3></div>
+            <span class="scope-signal signal-testing" id="scope-detail-signal">In testing</span>
+          </div>
+          <div class="scope-detail-count"><strong id="scope-detail-tickets">15</strong><span>Delivery tickets</span></div>
+          <div class="scope-status-section">
+            <div class="scope-status-heading"><span>Current ticket status</span><strong id="scope-status-total">15 total</strong></div>
+            <div class="scope-status-bar" id="scope-status-bar" aria-label="Ticket status distribution"></div>
+            <div class="scope-status-legend" id="scope-status-legend"></div>
+          </div>
+          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/EMQ-5516" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Select a workstream, then an item, to review its Jira status.</span>
+      </footer>
+    </section>
+
+    <section class="slide" data-slide="3" aria-labelledby="slide-2-title">
+      <header class="slide-header">
+        <span class="slide-number">02</span>
         <div>
           <h2 id="slide-2-title">Channel updates</h2>
           <p>Work currently planned across the borrower, buyer and funder experiences.</p>
@@ -129,9 +191,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="3" aria-labelledby="slide-3-title">
+    <section class="slide" data-slide="4" aria-labelledby="slide-3-title">
       <header class="slide-header">
-        <span class="slide-number">02</span>
+        <span class="slide-number">03</span>
         <div>
           <h2 id="slide-3-title">Current internal tools</h2>
           <p>What the SCF team uses today inside the Admin Portal and Manafa CRM.</p>
@@ -200,9 +262,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="4" aria-labelledby="slide-4-title">
+    <section class="slide" data-slide="5" aria-labelledby="slide-4-title">
       <header class="slide-header">
-        <span class="slide-number">03</span>
+        <span class="slide-number">04</span>
         <div>
           <h2 id="slide-4-title">Introducing SCF FinOps</h2>
           <p>Launching a dedicated workspace for SCF financial operations, information and actions.</p>
@@ -272,9 +334,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="5" aria-labelledby="slide-5-title">
+    <section class="slide" data-slide="6" aria-labelledby="slide-5-title">
       <header class="slide-header">
-        <span class="slide-number">04</span>
+        <span class="slide-number">05</span>
         <div>
           <h2 id="slide-5-title">Standalone Buyer and Funder Management platforms</h2>
           <p>Today they are Admin Portal feature sets. Each will move to a dedicated platform with its own roadmap.</p>
@@ -340,9 +402,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="6" aria-labelledby="slide-6-title">
+    <section class="slide" data-slide="7" aria-labelledby="slide-6-title">
       <header class="slide-header">
-        <span class="slide-number">05</span>
+        <span class="slide-number">06</span>
         <div>
           <h2 id="slide-6-title">Taulia integration updates</h2>
           <p>Two API changes currently being worked on with SAP Taulia.</p>
@@ -410,9 +472,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="7" aria-labelledby="slide-7-title">
+    <section class="slide" data-slide="8" aria-labelledby="slide-7-title">
       <header class="slide-header">
-        <span class="slide-number">06</span>
+        <span class="slide-number">07</span>
         <div>
           <h2 id="slide-7-title">SCF funder progress</h2>
           <p>Active funders and the current delivery position of integrations in progress.</p>
@@ -496,7 +558,7 @@
       </footer>
     </section>
 
-    <section class="slide closing-slide" data-slide="8" aria-labelledby="slide-8-title">
+    <section class="slide closing-slide" data-slide="9" aria-labelledby="slide-8-title">
       <div class="closing-orbit" aria-hidden="true"></div>
       <header class="closing-header">
         <img class="brand-logo closing-logo" src="assets/manafa-logo.svg" alt="Manafa">

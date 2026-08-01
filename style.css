@@ -294,6 +294,143 @@ button { font: inherit; }
 .cover-orbit::before { top: 38%; left: -38%; }
 .cover-orbit::after { top: 78%; left: 0; border-color: rgba(83,55,255,0.45); }
 
+/* R61 scope */
+.release-scope-slide { padding-bottom: 2%; }
+
+.release-summary {
+  display: grid;
+  grid-template-columns: 8.6rem 9.7rem 1fr;
+  align-items: stretch;
+  min-height: 3.75rem;
+  margin: 0.9rem 0 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.release-summary > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-right: 1px solid var(--line);
+}
+
+.release-summary strong { color: var(--brand-violet); font-size: clamp(1.1rem, 1.5vw, 1.65rem); letter-spacing: -0.04em; }
+.release-summary span { color: var(--muted); font-size: clamp(0.52rem, 0.62vw, 0.7rem); font-weight: 650; }
+.release-summary > p { display: flex; align-items: center; justify-content: flex-end; gap: 0.45rem; margin: 0; padding: 0 1rem; color: var(--muted); font-size: clamp(0.52rem, 0.61vw, 0.68rem); }
+.release-live-dot { width: 0.48rem; height: 0.48rem; border-radius: 50%; background: var(--status-good); box-shadow: 0 0 0 4px rgba(21,170,62,0.12); }
+
+.release-scope-layout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.35fr 1.05fr;
+  gap: 0.8rem;
+  flex: 1;
+  min-height: 0;
+  margin-bottom: 0.75rem;
+}
+
+.scope-themes,
+.scope-items,
+.scope-detail {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  border-radius: 12px;
+}
+
+.scope-themes { display: flex; flex-direction: column; padding: 0.75rem; background: var(--brand-ink); }
+.scope-themes > p { margin: 0 0 0.55rem; padding: 0 0.35rem; color: var(--brand-light-blue); font-size: clamp(0.49rem, 0.58vw, 0.66rem); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.scope-themes button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 3.15rem;
+  padding: 0.65rem 0.75rem;
+  color: rgba(255,255,255,0.67);
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  cursor: pointer;
+}
+.scope-themes button span { font-size: clamp(0.57rem, 0.69vw, 0.79rem); font-weight: 650; line-height: 1.25; }
+.scope-themes button strong { display: grid; width: 1.65rem; height: 1.65rem; place-items: center; color: var(--brand-light-blue); border: 1px solid rgba(130,157,255,0.36); border-radius: 50%; font-size: clamp(0.48rem, 0.57vw, 0.64rem); }
+.scope-themes button:hover,
+.scope-themes button:focus-visible { color: #fff; background: rgba(255,255,255,0.07); outline: none; }
+.scope-themes button[aria-pressed="true"] { margin: 0 -0.12rem; padding-right: 0.87rem; padding-left: 0.87rem; color: #fff; background: var(--brand-violet); border-color: transparent; border-radius: 8px; }
+.scope-themes button[aria-pressed="true"] + button { border-color: transparent; }
+.scope-themes button[aria-pressed="true"] strong { color: #fff; border-color: rgba(255,255,255,0.48); }
+
+.scope-items { display: flex; flex-direction: column; background: #fff; }
+.scope-items > header { display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); background: var(--surface-violet); }
+.scope-items header span { color: var(--brand-violet); font-size: clamp(0.43rem, 0.51vw, 0.58rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
+.scope-items header h3 { margin: 0.12rem 0 0; font-size: clamp(0.69rem, 0.82vw, 0.94rem); }
+.scope-items > header > strong { color: var(--muted); font-size: clamp(0.49rem, 0.58vw, 0.66rem); }
+.scope-item-list { display: flex; flex: 1; min-height: 0; flex-direction: column; padding: 0.35rem 0.45rem; }
+.scope-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+  padding: 0.42rem 0.6rem;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.scope-item:last-child { border-bottom: 0; }
+.scope-item:hover,
+.scope-item:focus-visible { background: var(--surface); outline: none; }
+.scope-item[aria-selected="true"] { background: var(--surface-blue); box-shadow: inset 3px 0 0 var(--brand-violet); }
+.scope-item-copy { min-width: 0; }
+.scope-item-copy span { display: block; color: var(--brand-violet); font-size: clamp(0.42rem, 0.5vw, 0.57rem); font-weight: 750; }
+.scope-item-copy strong { display: block; margin-top: 0.12rem; overflow: hidden; color: var(--brand-ink); font-size: clamp(0.53rem, 0.64vw, 0.73rem); font-weight: 650; line-height: 1.23; text-overflow: ellipsis; white-space: nowrap; }
+.scope-item-meta { display: grid; justify-items: end; gap: 0.22rem; }
+.scope-item-meta small { color: var(--muted); font-size: clamp(0.4rem, 0.47vw, 0.54rem); }
+
+.scope-signal { display: inline-flex; align-items: center; min-height: 1.35rem; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: clamp(0.4rem, 0.48vw, 0.55rem); font-weight: 800; white-space: nowrap; }
+.signal-planned { color: #514b68; background: #ebeaf1; }
+.signal-progress { color: #173eb7; background: #e8efff; }
+.signal-testing { color: #965408; background: #fff0d5; }
+.signal-complete { color: #076d22; background: var(--surface-green); }
+.signal-hold { color: #8b5000; background: #ffe9c7; }
+.signal-deferred { color: #5f606b; background: #e7e8ec; }
+
+.scope-detail { display: flex; flex-direction: column; padding: 0.95rem; background: var(--surface); border-top: 3px solid var(--brand-violet); }
+.scope-detail-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.65rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--line-dark); }
+.scope-detail-heading > div { min-width: 0; }
+.scope-detail-heading > div > span { color: var(--brand-violet); font-size: clamp(0.46rem, 0.55vw, 0.62rem); font-weight: 800; }
+.scope-detail-heading h3 { margin: 0.35rem 0 0; font-size: clamp(0.76rem, 0.94vw, 1.08rem); line-height: 1.25; }
+.scope-detail-count { display: flex; align-items: baseline; gap: 0.55rem; padding: 0.8rem 0; }
+.scope-detail-count strong { color: var(--brand-violet); font-size: clamp(1.7rem, 2.4vw, 2.75rem); font-weight: 520; letter-spacing: -0.07em; }
+.scope-detail-count span { color: var(--muted); font-size: clamp(0.52rem, 0.61vw, 0.69rem); font-weight: 650; }
+.scope-status-section { padding: 0.8rem; background: #fff; border: 1px solid var(--line); border-radius: 9px; }
+.scope-status-heading { display: flex; align-items: center; justify-content: space-between; }
+.scope-status-heading span { color: var(--muted); font-size: clamp(0.46rem, 0.54vw, 0.61rem); font-weight: 650; }
+.scope-status-heading strong { color: var(--brand-ink); font-size: clamp(0.46rem, 0.54vw, 0.61rem); }
+.scope-status-bar { display: flex; width: 100%; height: 0.48rem; margin-top: 0.65rem; overflow: hidden; background: var(--line); border-radius: 999px; }
+.scope-status-bar span { min-width: 0.22rem; }
+.status-approved { background: var(--status-good); }
+.status-testing { background: var(--status-watch); }
+.status-progress { background: var(--brand-blue); }
+.status-todo { background: #9ca1b1; }
+.status-hold { background: #f4c648; }
+.status-deferred { background: #595b67; }
+.scope-status-legend { display: grid; gap: 0.42rem; margin-top: 0.75rem; }
+.scope-status-legend div { display: grid; grid-template-columns: 0.5rem 1fr auto; gap: 0.45rem; align-items: center; color: var(--muted); font-size: clamp(0.43rem, 0.51vw, 0.58rem); }
+.scope-status-legend i { width: 0.44rem; height: 0.44rem; border-radius: 50%; }
+.scope-status-legend strong { color: var(--brand-ink); font-size: inherit; }
+.scope-jira-link { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding: 0.75rem 0.85rem; color: #fff; text-decoration: none; background: var(--brand-ink); border-radius: 8px; font-size: clamp(0.5rem, 0.59vw, 0.67rem); font-weight: 750; }
+.scope-jira-link:hover,
+.scope-jira-link:focus-visible { background: var(--brand-violet); outline: none; }
+
 /* Channel updates */
 .channel-grid {
   display: grid;
