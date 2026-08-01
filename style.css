@@ -991,6 +991,7 @@ button { font: inherit; }
 .funder-progress-card:first-child { border-left: 0; }
 .progress-funder-logo { display: block; width: 7.1rem; height: 2.25rem; object-fit: contain; object-position: left center; }
 .progress-funder-logo-bnp { width: 8.4rem; }
+.progress-funder-logo-smbc { width: 8.4rem; }
 .progress-status { display: block; margin-top: 0.65rem; color: #009b83; font-size: clamp(0.5rem, 0.59vw, 0.67rem); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
 .progress-status-success { color: var(--status-good); }
 .funder-progress-card h3 { margin: 0.6rem 0 0.75rem; font-size: clamp(0.9rem, 1.13vw, 1.3rem); line-height: 1.15; }
