@@ -841,10 +841,9 @@ button { font: inherit; }
 
 /* Taulia updates */
 .taulia-logo { display: block; width: clamp(6.6rem, 8.4vw, 9rem); height: auto; margin-top: 0.15rem; }
-.taulia-workstreams { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; flex: 1; min-height: 0; margin: 1.25rem 0 1rem; }
+.taulia-workstreams { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; flex: 1; min-height: 0; margin: 1.25rem 0 1rem; }
 .taulia-workstream-card { display: flex; min-width: 0; flex-direction: column; padding: 1.05rem 1.1rem; overflow: hidden; border: 1px solid var(--line-dark); border-top: 3px solid var(--brand-violet); border-radius: 12px; background: #fff; }
 .taulia-workstream-card:nth-child(2) { border-top-color: var(--brand-blue); background: var(--surface-blue); }
-.taulia-workstream-card:nth-child(3) { border-top-color: #f88a4e; background: #fff8f2; }
 .taulia-workstream-card > header { display: flex; align-items: center; justify-content: space-between; }
 .taulia-workstream-card > header > span:first-child { color: var(--brand-violet); font-size: clamp(1.25rem, 1.8vw, 2rem); font-weight: 350; letter-spacing: -0.06em; }
 .taulia-workstream-card h3 { margin: 0.8rem 0 0; font-size: clamp(0.86rem, 1.06vw, 1.22rem); line-height: 1.2; }

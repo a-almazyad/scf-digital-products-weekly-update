@@ -55,7 +55,7 @@
         <span class="slide-number">01</span>
         <div>
           <h2 id="slide-r61-title">R61 scope — Digital Business</h2>
-          <p>Selected scope across the Admin, CRM, Borrower and SCF delivery squads.</p>
+          <p>Selected scope across the SCF, CRM, Admin and Borrower delivery squads.</p>
         </div>
         <span class="slide-context">3–14 August 2026</span>
       </header>
@@ -69,17 +69,17 @@
       <div class="release-scope-layout" data-release-scope>
         <nav class="scope-themes" aria-label="R61 scope workstreams">
           <p>Workstreams</p>
-          <button type="button" data-scope-theme="admin" aria-pressed="false">
-            <span>Admin Sprint</span><strong>8</strong>
+          <button type="button" data-scope-theme="scf" aria-pressed="true">
+            <span>SCF Sprint</span><strong>18</strong>
           </button>
           <button type="button" data-scope-theme="crm" aria-pressed="false">
             <span>CRM Sprint</span><strong>4</strong>
           </button>
+          <button type="button" data-scope-theme="admin" aria-pressed="false">
+            <span>Admin Sprint</span><strong>8</strong>
+          </button>
           <button type="button" data-scope-theme="borrower" aria-pressed="false">
             <span>Borrower Sprint</span><strong>5</strong>
-          </button>
-          <button type="button" data-scope-theme="scf" aria-pressed="true">
-            <span>SCF Sprint</span><strong>18</strong>
           </button>
         </nav>
 
@@ -413,7 +413,7 @@
         <span class="slide-number">06</span>
         <div>
           <h2 id="slide-6-title">Taulia integration updates</h2>
-          <p>Three API tracks currently being worked on with SAP Taulia.</p>
+          <p>Two API tracks currently being worked on with SAP Taulia.</p>
         </div>
         <img class="taulia-logo" src="https://events.sap.com/adobe/dynamicmedia/deliver/dm-aid--5c5d573e-a3b4-446b-b794-d5221ee8ad7e/sap-taulia-r-grad-blu--3-.png?width=1600&amp;preferwebp=true&amp;quality=85" alt="SAP Taulia">
       </header>
@@ -429,17 +429,10 @@
 
         <article class="taulia-workstream-card">
           <header><span>02</span><span class="status-pill status-pending">In definition</span></header>
-          <h3>Invoice PDF APIs</h3>
-          <p class="taulia-card-subtitle">Receive the PDF copy required for financed invoices.</p>
-          <div class="taulia-card-detail"><span>Change</span><p>Use an API-based document flow for invoice copies required during financing operations.</p></div>
-          <div class="taulia-card-detail"><span>Next</span><p><strong>Confirm technical behavior and delivery plan.</strong></p></div>
-        </article>
-
-        <article class="taulia-workstream-card">
-          <header><span>03</span><span class="status-pill status-pending">Scope agreed</span></header>
-          <h3>Failed PDF retrieval endpoint</h3>
-          <p class="taulia-card-subtitle">Retrieve a PDF again when the original copy fails.</p>
-          <div class="taulia-card-detail"><span>Current</span><p>Taulia proposed a new endpoint and the initial scope has been agreed.</p></div>
+          <h3>Invoice PDF API</h3>
+          <p class="taulia-card-subtitle">Receive the invoice PDF required for financing and retrieve it again when the original delivery fails.</p>
+          <div class="taulia-card-detail"><span>Scope</span><p>One API-based document flow covering the initial invoice copy and failed-copy retrieval.</p></div>
+          <div class="taulia-card-detail"><span>Current</span><p>The initial scope for the retrieval endpoint has been agreed.</p></div>
           <div class="taulia-card-detail"><span>Waiting for Taulia</span><p><strong>Technical Swagger and delivery timeline.</strong></p></div>
         </article>
       </div>
