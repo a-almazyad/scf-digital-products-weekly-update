@@ -15,34 +15,61 @@ const finopsDots = finopsCarousel ? Array.from(finopsCarousel.querySelectorAll("
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 
 const releaseScope = [
-  { id: "EMQ-5516", df: "DF-3832", title: "SMBC Integration Manager — Email", theme: "integrations", signal: "In testing", tone: "testing", tickets: 15, statuses: [["Dev tested on staging", 10, "testing"], ["To do", 4, "todo"], ["Deferred", 1, "deferred"]] },
-  { id: "EMQ-5352", df: "DF-3957", title: "Direct-to-Supplier Funding Model V1.0", theme: "integrations", signal: "In progress", tone: "progress", tickets: 4, statuses: [["To do", 3, "todo"], ["Approved", 1, "approved"]] },
-  { id: "EMQ-5491", df: "DF-4032", title: "SE Program Limits Update: BNPP and SAB", theme: "integrations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5711", df: "DF-4136", title: "BNPP End-of-Month Fees Reconciliation", theme: "integrations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5338", df: "DF-3936", title: "J.P. Morgan Financing Calculation", theme: "integrations", signal: "Planned", tone: "planned", tickets: 3, statuses: [["To do", 3, "todo"]] },
-  { id: "EMQ-5715", df: "DF-3714", title: "Standard Chartered B2B API Manager", theme: "integrations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5712", df: "DF-4091", title: "Buyer Maturity Report Enhancement", theme: "operations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5713", df: "DF-4148", title: "SAB Financing Requests Timeline", theme: "operations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5714", df: "DF-4135", title: "SAB Thursday Timing Enhancement", theme: "operations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5462", df: "DF-4014", title: "SIDF SCF Weekly Report — English", theme: "operations", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5463", df: "DF-3486", title: "Auto-send Supplier Outreach Report", theme: "operations", signal: "Partially deferred", tone: "deferred", tickets: 5, statuses: [["To do", 3, "todo"], ["Deferred", 2, "deferred"]] },
-  { id: "EMQ-5328", df: "DF-3928", title: "Buyer Profile Phase III", theme: "platform", signal: "Partially on hold", tone: "hold", tickets: 6, statuses: [["To do", 3, "todo"], ["On hold", 3, "hold"]] },
-  { id: "EMQ-5693", df: "DF-4192", title: "Supplier Banking & Payout Accounts", theme: "platform", signal: "In progress", tone: "progress", tickets: 19, statuses: [["To do", 15, "todo"], ["Dev completed", 3, "progress"], ["Dev tested", 1, "testing"]] },
-  { id: "EMQ-5438", df: "DF-4021", title: "SIC SCF Onboarding Requirements", theme: "platform", signal: "Planned", tone: "planned", tickets: 3, statuses: [["To do", 3, "todo"]] },
-  { id: "EMQ-5630", df: "DF-4164", title: "Merged SCF Offer View Permission", theme: "platform", signal: "Planned", tone: "planned", tickets: 1, statuses: [["To do", 1, "todo"]] },
-  { id: "EMQ-5716", df: "DF-4194", title: "Fees Management Goal-Seeking Fixes", theme: "platform", signal: "Planned", tone: "planned", tickets: 2, statuses: [["To do", 2, "todo"]] },
-  { id: "EMQ-4226", df: "DF-3492", title: "AML Fetch for Companies and Owners", theme: "stability", signal: "Complete", tone: "complete", tickets: 16, statuses: [["Approved", 16, "approved"]] },
-  { id: "EMQ-5668", df: "", title: "Admin AML Issues to Be Fixed", theme: "stability", signal: "In testing", tone: "testing", tickets: 6, statuses: [["Dev tested on staging", 3, "testing"], ["To do", 1, "todo"], ["Dev completed", 1, "progress"], ["Approved", 1, "approved"]] },
-  { id: "EMQ-5595", df: "", title: "Release Regression Q3-2026", theme: "stability", signal: "Planned", tone: "planned", tickets: 2, statuses: [["To do", 2, "todo"]] },
-  { id: "EMQ-5596", df: "", title: "Miscellaneous Q3-2026", theme: "stability", signal: "In progress", tone: "progress", tickets: 6, statuses: [["To do", 3, "todo"], ["In progress", 2, "progress"], ["On hold", 1, "hold"]] }
+  { id: "ASQ-4559", df: "DF-4049", title: "Storybook Setup for Internal Design System", theme: "admin", signal: "In testing", tone: "testing", tickets: 1, labels: [], statuses: [["Dev tested on staging", 1, "testing"]] },
+  { id: "ASQ-4592", df: "DF-3908", title: "Oracle SSO Permission Automation", theme: "admin", signal: "On hold", tone: "hold", tickets: 3, labels: ["might-spill-r61"], statuses: [["On hold", 3, "hold"]] },
+  { id: "ASQ-4897", df: "DF-4215", title: "PM Board Filter Enhancement", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4879", df: "DF-4113", title: "Automate Facility Creation from Offer Acceptance", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4877", df: "DF-4144", title: "Revamp Admin Header for New Design System", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4875", df: "DF-4188", title: "Invoice Payer Column & Filter", theme: "admin", signal: "Planned", tone: "planned", tickets: 2, labels: [], statuses: [["To do", 2, "todo"]] },
+  { id: "ASQ-4868", df: "DF-4184", title: "Design System Component Fixes", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4910", df: "DF-4174", title: "Create Manual Financial Offer", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+
+  { id: "ASQ-4601", df: "DF-3718", title: "Lead Management in Sales CRM", theme: "crm", signal: "In progress", tone: "progress", tickets: 15, labels: [], statuses: [["To do", 8, "todo"], ["Dev completed", 4, "progress"], ["Dev tested", 2, "testing"], ["In progress", 1, "progress"]] },
+  { id: "ASQ-4881", df: "DF-4182", title: "Reactivate Eligible Financed Companies", theme: "crm", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4882", df: "DF-4114", title: "Onboarding V2 CRM Impacts", theme: "crm", signal: "Spillover risk", tone: "hold", tickets: 1, labels: ["might-spill-r62"], statuses: [["To do", 1, "todo"]] },
+  { id: "ASQ-4883", df: "DF-4160", title: "CRM Enhancements Part 6", theme: "crm", signal: "In progress", tone: "progress", tickets: 6, labels: [], statuses: [["To do", 5, "todo"], ["In progress", 1, "progress"]] },
+
+  { id: "BSQ-2988", df: "DF-3357", title: "Borrower Activation Journey V2", theme: "borrower", signal: "Spilling over", tone: "hold", tickets: 25, labels: ["design-pending", "will-spill-over-r61"], statuses: [["To do", 22, "todo"], ["On hold", 2, "hold"], ["In testing", 1, "testing"]] },
+  { id: "BSQ-3020", df: "DF-4121", title: "Borrower User Management Phase II", theme: "borrower", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "BSQ-3064", df: "DF-4102", title: "Add More Borrower Task Types", theme: "borrower", signal: "In testing", tone: "testing", tickets: 21, labels: ["will-spill-over-r61"], statuses: [["To do", 5, "todo"], ["Dev completed", 2, "progress"], ["In testing", 14, "testing"]] },
+  { id: "BSQ-3135", df: "DF-4198", title: "User Management Post-Launch Enhancements", theme: "borrower", signal: "Planned", tone: "planned", tickets: 12, labels: [], statuses: [["To do", 12, "todo"]] },
+  { id: "BSQ-3134", df: "DF-4011", title: "Request Clearance Letter", theme: "borrower", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+
+  { id: "EMQ-4226", df: "DF-3492", title: "AML Fetch for Companies and Owners", theme: "scf", signal: "Testing spillover", tone: "hold", tickets: 16, labels: ["R61", "testing-spillover"], statuses: [["Approved", 16, "approved"]] },
+  { id: "EMQ-5328", df: "DF-3928", title: "Buyer Profile Phase III", theme: "scf", signal: "On hold", tone: "hold", tickets: 6, labels: ["design-pending", "remove-for-62"], statuses: [["To do", 3, "todo"], ["On hold", 3, "hold"]] },
+  { id: "EMQ-5338", df: "DF-3936", title: "J.P. Morgan Financing Calculation", theme: "scf", signal: "Planned", tone: "planned", tickets: 3, labels: [], statuses: [["To do", 3, "todo"]] },
+  { id: "EMQ-5352", df: "DF-3957", title: "Direct-to-Supplier Funding Model V1.0", theme: "scf", signal: "In progress", tone: "progress", tickets: 4, labels: ["must-have"], statuses: [["To do", 3, "todo"], ["Approved", 1, "approved"]] },
+  { id: "EMQ-5438", df: "DF-4021", title: "SIC SCF Onboarding Requirements", theme: "scf", signal: "Planned", tone: "planned", tickets: 3, labels: [], statuses: [["To do", 3, "todo"]] },
+  { id: "EMQ-5462", df: "DF-4014", title: "SIDF SCF Weekly Report — English", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5463", df: "DF-3486", title: "Auto-send Supplier Outreach Report", theme: "scf", signal: "Partially deferred", tone: "deferred", tickets: 5, labels: [], statuses: [["To do", 3, "todo"], ["Deferred", 2, "deferred"]] },
+  { id: "EMQ-5491", df: "DF-4032", title: "SE Program Limits Update: BNPP and SAB", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: ["must-have"], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5516", df: "DF-3832", title: "SMBC Integration Manager — Email", theme: "scf", signal: "In testing", tone: "testing", tickets: 15, labels: ["might-spill-r61", "r60"], statuses: [["Dev tested on staging", 10, "testing"], ["To do", 4, "todo"], ["Deferred", 1, "deferred"]] },
+  { id: "EMQ-5630", df: "DF-4164", title: "Merged SCF Offer View Permission", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5668", df: "", title: "Admin AML Issues to Be Fixed", theme: "scf", signal: "In testing", tone: "testing", tickets: 6, labels: ["R61"], statuses: [["Dev tested on staging", 3, "testing"], ["To do", 1, "todo"], ["Dev completed", 1, "progress"], ["Approved", 1, "approved"]] },
+  { id: "EMQ-5693", df: "DF-4192", title: "Supplier Banking & Payout Accounts", theme: "scf", signal: "In progress", tone: "progress", tickets: 19, labels: [], statuses: [["To do", 15, "todo"], ["Dev completed", 3, "progress"], ["Dev tested", 1, "testing"]] },
+  { id: "EMQ-5711", df: "DF-4136", title: "BNPP End-of-Month Fees Reconciliation", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: ["must-have"], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5712", df: "DF-4091", title: "Buyer Maturity Report Enhancement", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: ["alsaeed", "must-have"], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5713", df: "DF-4148", title: "SAB Financing Requests Timeline", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: ["must-have"], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5714", df: "DF-4135", title: "SAB Thursday Timing Enhancement", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: ["must-have"], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5715", df: "DF-3714", title: "Standard Chartered B2B API Manager", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
+  { id: "EMQ-5716", df: "DF-4194", title: "Fees Management Goal-Seeking Fixes", theme: "scf", signal: "Planned", tone: "planned", tickets: 2, labels: ["must-have"], statuses: [["To do", 2, "todo"]] }
 ];
 
 const releaseThemeLabels = {
-  integrations: "Funder integrations",
-  operations: "Operations & reporting",
-  platform: "Platform & controls",
-  stability: "Compliance & stability"
+  admin: "Admin Sprint",
+  crm: "CRM Sprint",
+  borrower: "Borrower Sprint",
+  scf: "SCF Sprint"
 };
+const scopePageSize = 6;
+let activeScopeTheme = "scf";
+let activeScopePage = 0;
+
+function scopeLabelTone(label) {
+  if (label.includes("spill") || label.includes("pending") || label.includes("remove")) return "label-risk";
+  if (label === "must-have") return "label-must";
+  return "";
+}
 
 function renderScopeDetail(item) {
   if (!releaseScopeRoot || !item) return;
@@ -56,6 +83,9 @@ function renderScopeDetail(item) {
   const signal = document.getElementById("scope-detail-signal");
   signal.textContent = item.signal;
   signal.className = `scope-signal signal-${item.tone}`;
+  document.getElementById("scope-detail-labels").innerHTML = item.labels.length
+    ? item.labels.map((label) => `<span class="${scopeLabelTone(label)}">${label}</span>`).join("")
+    : "<span>No Jira labels</span>";
 
   document.getElementById("scope-status-bar").innerHTML = item.statuses.map(([label, count, tone]) =>
     `<span class="status-${tone}" style="width:${(count / item.tickets) * 100}%" title="${label}: ${count}"></span>`
@@ -72,19 +102,30 @@ function renderScopeDetail(item) {
 
 function renderScopeTheme(theme) {
   if (!releaseScopeRoot) return;
+  activeScopeTheme = theme;
+  activeScopePage = 0;
+  renderScopePage();
+}
 
-  const items = releaseScope.filter((item) => item.theme === theme);
+function renderScopePage() {
+  if (!releaseScopeRoot) return;
+  const items = releaseScope.filter((item) => item.theme === activeScopeTheme);
+  const pageCount = Math.ceil(items.length / scopePageSize);
+  activeScopePage = Math.max(0, Math.min(pageCount - 1, activeScopePage));
+  const start = activeScopePage * scopePageSize;
+  const visibleItems = items.slice(start, start + scopePageSize);
   releaseScopeRoot.querySelectorAll("[data-scope-theme]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.scopeTheme === theme));
+    button.setAttribute("aria-pressed", String(button.dataset.scopeTheme === activeScopeTheme));
   });
-  document.getElementById("scope-theme-title").textContent = releaseThemeLabels[theme];
+  document.getElementById("scope-theme-title").textContent = releaseThemeLabels[activeScopeTheme];
   document.getElementById("scope-theme-count").textContent = `${items.length} items`;
 
   const list = document.getElementById("scope-item-list");
-  list.innerHTML = items.map((item) => {
+  list.innerHTML = visibleItems.map((item) => {
     const key = item.df ? `${item.id} · ${item.df}` : item.id;
+    const labels = item.labels.slice(0, 2).map((label) => `<i class="${scopeLabelTone(label)}">${label}</i>`).join("");
     return `<button class="scope-item" type="button" role="option" data-scope-item="${item.id}" aria-selected="false">
-      <span class="scope-item-copy"><span>${key}</span><strong>${item.title}</strong></span>
+      <span class="scope-item-copy"><span>${key}</span><strong>${item.title}</strong>${labels ? `<span class="scope-item-labels">${labels}</span>` : ""}</span>
       <span class="scope-item-meta"><span class="scope-signal signal-${item.tone}">${item.signal}</span><small>${item.tickets} ticket${item.tickets === 1 ? "" : "s"}</small></span>
     </button>`;
   }).join("");
@@ -96,7 +137,11 @@ function renderScopeTheme(theme) {
     });
   });
 
-  renderScopeDetail(items[0]);
+  const end = Math.min(start + scopePageSize, items.length);
+  document.getElementById("scope-page-label").textContent = `${start + 1}–${end} of ${items.length}`;
+  document.getElementById("scope-page-prev").disabled = activeScopePage === 0;
+  document.getElementById("scope-page-next").disabled = activeScopePage === pageCount - 1;
+  renderScopeDetail(visibleItems[0]);
 }
 
 releaseScopeRoot?.querySelectorAll("[data-scope-theme]").forEach((button) => {
@@ -106,7 +151,19 @@ releaseScopeRoot?.querySelectorAll("[data-scope-theme]").forEach((button) => {
   });
 });
 
-renderScopeTheme("integrations");
+document.getElementById("scope-page-prev")?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  activeScopePage -= 1;
+  renderScopePage();
+});
+
+document.getElementById("scope-page-next")?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  activeScopePage += 1;
+  renderScopePage();
+});
+
+renderScopeTheme("scf");
 
 let currentIndex = 0;
 let finopsIndex = 0;

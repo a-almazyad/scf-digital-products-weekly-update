@@ -54,61 +54,67 @@
       <header class="slide-header">
         <span class="slide-number">01</span>
         <div>
-          <h2 id="slide-r61-title">R61 scope — SCF</h2>
-          <p>Scope under the SCF team for the upcoming two-week delivery cycle.</p>
+          <h2 id="slide-r61-title">R61 scope — Digital Business</h2>
+          <p>Selected scope across the Admin, CRM, Borrower and SCF delivery squads.</p>
         </div>
         <span class="slide-context">3–14 August 2026</span>
       </header>
 
       <div class="release-summary" aria-label="R61 summary">
-        <div><strong>20</strong><span>Scope items</span></div>
-        <div><strong>95</strong><span>Delivery tickets</span></div>
-        <p><span class="release-live-dot" aria-hidden="true"></span>Jira snapshot · 1 August 2026</p>
+        <div><strong>35</strong><span>Selected scope items</span></div>
+        <div><strong>4</strong><span>Delivery squads</span></div>
+        <p><span class="release-live-dot" aria-hidden="true"></span>Regression and miscellaneous containers excluded</p>
       </div>
 
       <div class="release-scope-layout" data-release-scope>
         <nav class="scope-themes" aria-label="R61 scope workstreams">
           <p>Workstreams</p>
-          <button type="button" data-scope-theme="integrations" aria-pressed="true">
-            <span>Funder integrations</span><strong>6</strong>
+          <button type="button" data-scope-theme="admin" aria-pressed="false">
+            <span>Admin Sprint</span><strong>8</strong>
           </button>
-          <button type="button" data-scope-theme="operations" aria-pressed="false">
-            <span>Operations &amp; reporting</span><strong>5</strong>
+          <button type="button" data-scope-theme="crm" aria-pressed="false">
+            <span>CRM Sprint</span><strong>4</strong>
           </button>
-          <button type="button" data-scope-theme="platform" aria-pressed="false">
-            <span>Platform &amp; controls</span><strong>5</strong>
+          <button type="button" data-scope-theme="borrower" aria-pressed="false">
+            <span>Borrower Sprint</span><strong>5</strong>
           </button>
-          <button type="button" data-scope-theme="stability" aria-pressed="false">
-            <span>Compliance &amp; stability</span><strong>4</strong>
+          <button type="button" data-scope-theme="scf" aria-pressed="true">
+            <span>SCF Sprint</span><strong>18</strong>
           </button>
         </nav>
 
         <section class="scope-items" aria-labelledby="scope-theme-title">
           <header>
-            <div><span>Selected workstream</span><h3 id="scope-theme-title">Funder integrations</h3></div>
-            <strong id="scope-theme-count">6 items</strong>
+            <div><span>Selected sprint</span><h3 id="scope-theme-title">SCF Sprint</h3></div>
+            <strong id="scope-theme-count">18 items</strong>
           </header>
           <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="R61 scope items"></div>
+          <div class="scope-pagination" aria-label="Scope item pages">
+            <button id="scope-page-prev" type="button" aria-label="Previous scope items">←</button>
+            <span id="scope-page-label">1–6 of 18</span>
+            <button id="scope-page-next" type="button" aria-label="Next scope items">→</button>
+          </div>
         </section>
 
         <aside class="scope-detail" id="scope-detail" aria-live="polite">
           <div class="scope-detail-heading">
-            <div><span id="scope-detail-key">EMQ-5516 · DF-3832</span><h3 id="scope-detail-title">SMBC Integration Manager — Email</h3></div>
-            <span class="scope-signal signal-testing" id="scope-detail-signal">In testing</span>
+            <div><span id="scope-detail-key">EMQ-4226 · DF-3492</span><h3 id="scope-detail-title">AML Fetch for Companies and Owners</h3></div>
+            <span class="scope-signal signal-hold" id="scope-detail-signal">Testing spillover</span>
           </div>
-          <div class="scope-detail-count"><strong id="scope-detail-tickets">15</strong><span>Delivery tickets</span></div>
+          <div class="scope-detail-labels" id="scope-detail-labels" aria-label="Jira labels"></div>
+          <div class="scope-detail-count"><strong id="scope-detail-tickets">16</strong><span>Delivery tickets</span></div>
           <div class="scope-status-section">
-            <div class="scope-status-heading"><span>Current ticket status</span><strong id="scope-status-total">15 total</strong></div>
+            <div class="scope-status-heading"><span>Current ticket status</span><strong id="scope-status-total">16 total</strong></div>
             <div class="scope-status-bar" id="scope-status-bar" aria-label="Ticket status distribution"></div>
             <div class="scope-status-legend" id="scope-status-legend"></div>
           </div>
-          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/EMQ-5516" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
+          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/EMQ-4226" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
         </aside>
       </div>
 
       <footer class="slide-footer">
         <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Select a workstream, then an item, to review its Jira status.</span>
+        <span>Select a sprint, then an item, to review its Jira status.</span>
       </footer>
     </section>
 
@@ -245,7 +251,7 @@
             <ul>
               <li><span>Ongoing</span>SCF pipeline enhancements</li>
               <li><span>Ongoing</span>Reported issue resolution</li>
-              <li><span>R61</span>Lead Management launch target</li>
+              <li><span>Planned · 2 Aug</span>Lead Management deployment</li>
             </ul>
           </div>
         </section>
@@ -407,56 +413,35 @@
         <span class="slide-number">06</span>
         <div>
           <h2 id="slide-6-title">Taulia integration updates</h2>
-          <p>Two API changes currently being worked on with SAP Taulia.</p>
+          <p>Three API tracks currently being worked on with SAP Taulia.</p>
         </div>
-        <div class="taulia-wordmark" aria-label="SAP Taulia"><span>SAP</span> Taulia</div>
+        <img class="taulia-logo" src="assets/logos/taulia.svg" alt="SAP Taulia">
       </header>
 
-      <div class="integration-table taulia-table" role="table" aria-label="Taulia integration updates">
-        <div class="integration-row integration-head" role="row">
-          <span role="columnheader">Workstream</span>
-          <span role="columnheader">What is changing</span>
-          <span role="columnheader">Current position</span>
-          <span role="columnheader">Next step</span>
-        </div>
+      <div class="taulia-workstreams" aria-label="Taulia integration updates">
+        <article class="taulia-workstream-card">
+          <header><span>01</span><span class="status-pill status-scheduled">Testing scheduled</span></header>
+          <h3>Supplier onboarding APIs</h3>
+          <p class="taulia-card-subtitle">Remove duplicate supplier registration.</p>
+          <div class="taulia-card-detail"><span>Change</span><p>Retrieve suppliers invited by the buyer and take them directly through Manafa registration.</p></div>
+          <div class="taulia-card-detail"><span>Next</span><p><strong>Joint testing · 13 August 2026</strong></p></div>
+        </article>
 
-        <div class="integration-row taulia-onboarding" role="row">
-          <div class="workstream-cell" role="cell">
-            <span class="row-index">01</span>
-            <div><h3>Supplier onboarding APIs</h3><p>Remove duplicate supplier registration</p></div>
-          </div>
-          <div role="cell">
-            <p>Manafa will retrieve suppliers invited by the buyer through Taulia and send the Manafa registration journey.</p>
-            <strong>Supplier onboards only with Manafa.</strong>
-          </div>
-          <div role="cell">
-            <span class="status-pill status-scheduled">Testing scheduled</span>
-            <p>API integration preparation is in progress.</p>
-          </div>
-          <div role="cell">
-            <strong>Joint testing</strong>
-            <p>13 August 2026</p>
-          </div>
-        </div>
+        <article class="taulia-workstream-card">
+          <header><span>02</span><span class="status-pill status-pending">In definition</span></header>
+          <h3>Invoice PDF APIs</h3>
+          <p class="taulia-card-subtitle">Receive the PDF copy required for financed invoices.</p>
+          <div class="taulia-card-detail"><span>Change</span><p>Use an API-based document flow for invoice copies required during financing operations.</p></div>
+          <div class="taulia-card-detail"><span>Next</span><p><strong>Confirm technical behavior and delivery plan.</strong></p></div>
+        </article>
 
-        <div class="integration-row taulia-pdf" role="row">
-          <div class="workstream-cell" role="cell">
-            <span class="row-index">02</span>
-            <div><h3>Invoice PDF recovery API</h3><p>Recover failed invoice documents</p></div>
-          </div>
-          <div role="cell">
-            <p>Manafa will be able to request the invoice PDF again when the original document delivery fails.</p>
-            <strong>Creates a controlled retry path.</strong>
-          </div>
-          <div role="cell">
-            <span class="status-pill status-pending">Timeline pending</span>
-            <p>Taulia has confirmed the API work; delivery timing is not yet confirmed.</p>
-          </div>
-          <div role="cell">
-            <strong>Confirm delivery plan</strong>
-            <p>Waiting for Taulia</p>
-          </div>
-        </div>
+        <article class="taulia-workstream-card">
+          <header><span>03</span><span class="status-pill status-pending">Scope agreed</span></header>
+          <h3>Failed PDF retrieval endpoint</h3>
+          <p class="taulia-card-subtitle">Retrieve a PDF again when the original copy fails.</p>
+          <div class="taulia-card-detail"><span>Current</span><p>Taulia proposed a new endpoint and the initial scope has been agreed.</p></div>
+          <div class="taulia-card-detail"><span>Waiting for Taulia</span><p><strong>Technical Swagger and delivery timeline.</strong></p></div>
+        </article>
       </div>
 
       <div class="ownership-panel">
@@ -492,22 +477,22 @@
 
       <div class="funder-progress-grid">
         <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="assets/logos/bnp-paribas.svg" alt="BNP Paribas">
-          <span class="progress-status">In progress</span>
-          <h3>Pilot — final step</h3>
-          <div class="delivery-track delivery-track-pilot" aria-label="BNP Paribas is in pilot">
+          <img class="progress-funder-logo progress-funder-logo-bnp" src="assets/logos/bnp-paribas.svg?v=3" alt="BNP Paribas">
+          <span class="progress-status progress-status-success">Pilot successful</span>
+          <h3>Pilot completed</h3>
+          <div class="delivery-track delivery-track-complete" aria-label="BNP Paribas pilot completed">
             <div><i></i><span>Req.</span></div>
             <div><i></i><span>SDD</span></div>
             <div><i></i><span>Dev.</span></div>
             <div><i></i><span>Test</span></div>
             <div><i></i><span>Pilot</span></div>
           </div>
-          <p>The fourth pilot attempt is planned for 27 July.</p>
-          <p><strong>Next:</strong> Complete the pilot and confirm go-live readiness.</p>
+          <p>The core pilot completed successfully.</p>
+          <p><strong>Pending:</strong> Settlement after the invoice settles, and transfer of Manafa fees collected by BNP Paribas.</p>
         </article>
 
         <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="assets/logos/smbc.svg" alt="SMBC">
+          <img class="progress-funder-logo" src="assets/logos/smbc.svg?v=2" alt="SMBC">
           <span class="progress-status">In progress</span>
           <h3>Development underway</h3>
           <div class="delivery-track delivery-track-development" aria-label="SMBC is in development">
@@ -532,8 +517,8 @@
             <div><i></i><span>Test</span></div>
             <div><i></i><span>Pilot</span></div>
           </div>
-          <p>Requirements and solution design are being defined. No delivery date is confirmed.</p>
-          <p><strong>Next:</strong> Complete and agree the solution design document.</p>
+          <p>The expected Excel data shape has been shared. Coordination is moving better since Rana joined Riyad Bank.</p>
+          <p><strong>Next:</strong> Continue the SDD and align the remaining design.</p>
         </article>
 
         <article class="funder-progress-card">
