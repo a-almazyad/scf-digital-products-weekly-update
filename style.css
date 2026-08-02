@@ -938,13 +938,14 @@ button { font: inherit; }
 
 /* Funder progress — CTO Weekly layout */
 .funder-progress-grid { display: grid; flex: 1; min-height: 0; margin: 1rem 0 0.9rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.funder-progress-grid-five { grid-template-columns: repeat(5, 1fr); }
-.funder-progress-card { min-width: 0; padding: 1rem 0.8rem 0.8rem; border-left: 1px solid var(--line); }
+.funder-progress-grid-six { grid-template-columns: repeat(6, 1fr); }
+.funder-progress-card { min-width: 0; padding: 1rem 0.68rem 0.8rem; border-left: 1px solid var(--line); }
 .funder-progress-card:first-child { border-left: 0; }
 .progress-funder-logo { display: block; width: 6.3rem; height: 2.25rem; object-fit: contain; object-position: left center; }
 .progress-funder-logo-smbc { width: 7.2rem; }
 .progress-funder-logo-snb { width: 4.4rem; height: 2.4rem; }
 .progress-funder-logo-fab { width: 4.8rem; height: 2.35rem; }
+.progress-funder-logo-natixis { width: 6.2rem; }
 .progress-status { display: block; margin-top: 0.55rem; color: #009b83; font-size: clamp(0.46rem, 0.52vw, 0.59rem); font-weight: 800; letter-spacing: 0.055em; text-transform: uppercase; }
 .progress-status-pending { color: #a46007; }
 .funder-progress-card h3 { min-height: 2.15rem; margin: 0.42rem 0 0.55rem; font-size: clamp(0.78rem, 0.91vw, 1.04rem); line-height: 1.14; }
@@ -966,6 +967,7 @@ button { font: inherit; }
 .delivery-track-complete i { background: var(--status-good) !important; }
 .delivery-track-testing div:nth-child(-n+3) i { background: var(--brand-violet); }
 .delivery-track-testing div:nth-child(4) i { background: #009b83; }
+.delivery-track-discovery div:first-child i { background: #009b83; }
 
 /* Closing */
 .closing-slide {
