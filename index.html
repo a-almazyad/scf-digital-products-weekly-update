@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260802-funders">
+  <link rel="stylesheet" href="style.css?v=20260802-funders-all">
 </head>
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -463,71 +463,45 @@
         <span class="slide-context">Weekly integration update</span>
       </header>
 
-      <div class="funder-update-tabs" role="tablist" aria-label="Select a funder update">
-        <button class="is-current" type="button" role="tab" data-funder-tab="smbc" aria-controls="funder-panel-smbc" aria-selected="true">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/SMBC_Indonesia_logo.svg/1920px-SMBC_Indonesia_logo.svg.png" alt="SMBC">
-          <span>Testing</span>
-        </button>
-        <button type="button" role="tab" data-funder-tab="riyad" aria-controls="funder-panel-riyad" aria-selected="false" tabindex="-1">
-          <img src="assets/logos/riyad-bank.svg" alt="Riyad Bank">
-          <span>Technical setup</span>
-        </button>
-        <button type="button" role="tab" data-funder-tab="scb" aria-controls="funder-panel-scb" aria-selected="false" tabindex="-1">
-          <img src="assets/logos/standard-chartered.svg" alt="Standard Chartered">
-          <span>Development setup</span>
-        </button>
-        <button type="button" role="tab" data-funder-tab="fab" aria-controls="funder-panel-fab" aria-selected="false" tabindex="-1">
-          <strong class="fab-wordmark">FAB</strong>
-          <span>Technical coordination</span>
-        </button>
-        <button type="button" role="tab" data-funder-tab="snb" aria-controls="funder-panel-snb" aria-selected="false" tabindex="-1">
-          <img src="https://www.kscdr.org.sa/sites/default/files/styles/node_cover/public/2021-08/SNB-2.png?h=1336e95a&amp;itok=TZGeLG8N" alt="Saudi National Bank">
-          <span>Development planning</span>
-        </button>
-      </div>
-
-      <div class="funder-update-panels">
-        <article class="funder-update-panel is-current" id="funder-panel-smbc" role="tabpanel" data-funder-panel="smbc">
-          <header>
-            <div><span>SMBC</span><h3>Development complete; testing kickoff this week</h3></div>
-            <div class="delivery-track delivery-track-testing" aria-label="SMBC is moving into testing"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          </header>
-          <div class="funder-update-columns">
-            <section><span class="update-column-label update-complete">Completed / received</span><ul><li>SMBC selected four suppliers from the shared supplier list.</li><li>SMBC shared the Collection Account Certificate.</li></ul></section>
-            <section><span class="update-column-label update-next">Next actions</span><ul><li>Share the SMBC Collection Account Addition Request with Aramco.</li><li>After internal testing, request Taulia and Aramco to generate pilot invoices.</li></ul></section>
-          </div>
+      <div class="funder-progress-grid funder-progress-grid-five">
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo progress-funder-logo-smbc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/SMBC_Indonesia_logo.svg/1920px-SMBC_Indonesia_logo.svg.png" alt="SMBC">
+          <span class="progress-status">Testing this week</span>
+          <h3>Development complete</h3>
+          <div class="delivery-track delivery-track-testing" aria-label="SMBC is moving into testing"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Four suppliers selected.</li><li>Collection Account Certificate received.</li><li><strong>Next:</strong> Share account addition request with Aramco, then request pilot invoices after internal testing.</li></ul>
         </article>
 
-        <article class="funder-update-panel" id="funder-panel-riyad" role="tabpanel" data-funder-panel="riyad" hidden>
-          <header><div><span>Riyad Bank</span><h3>File-sharing structure finalized</h3></div><div class="delivery-track delivery-track-sdd" aria-label="Riyad Bank is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div></header>
-          <div class="funder-update-columns">
-            <section><span class="update-column-label update-complete">Completed</span><ul><li>Finalized the file-sharing structure.</li></ul></section>
-            <section><span class="update-column-label update-pending">Pending / this week</span><ul><li>Riyad Bank to share portal access for file-upload testing.</li><li>Riyad Bank to share Payment and B2B API documentation for technical review.</li><li>Share the updated SDD with Riyad Bank this week.</li></ul></section>
-          </div>
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo" src="assets/logos/riyad-bank.svg" alt="Riyad Bank">
+          <span class="progress-status">Technical setup</span>
+          <h3>File structure finalized</h3>
+          <div class="delivery-track delivery-track-sdd" aria-label="Riyad Bank is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Portal access pending for upload testing.</li><li>Payment and B2B API documents pending.</li><li><strong>This week:</strong> Share the updated SDD.</li></ul>
         </article>
 
-        <article class="funder-update-panel" id="funder-panel-scb" role="tabpanel" data-funder-panel="scb" hidden>
-          <header><div><span>Standard Chartered Bank</span><h3>API development setup pending SCB</h3></div><div class="delivery-track delivery-track-development" aria-label="Standard Chartered is preparing for development"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div></header>
-          <div class="funder-update-columns">
-            <section><span class="update-column-label update-complete">Shared</span><ul><li>Updated SDD shared; transaction reference on the acknowledgement file and benchmark file format remain pending.</li></ul></section>
-            <section><span class="update-column-label update-pending">Pending SCB / next</span><ul><li>Payment and B2B API UAT environment for development this week.</li><li>SFTP server access credentials.</li><li>Update on the fee-waiver request.</li><li>Manafa to share the SLA.</li></ul></section>
-          </div>
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo" src="assets/logos/standard-chartered.svg" alt="Standard Chartered">
+          <span class="progress-status progress-status-pending">Pending SCB</span>
+          <h3>API development setup</h3>
+          <div class="delivery-track delivery-track-development" aria-label="Standard Chartered is preparing for development"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Updated SDD shared; acknowledgement reference and benchmark format remain open.</li><li>UAT environment and SFTP credentials pending.</li><li>Fee-waiver update pending; Manafa to share SLA.</li></ul>
         </article>
 
-        <article class="funder-update-panel" id="funder-panel-fab" role="tabpanel" data-funder-panel="fab" hidden>
-          <header><div><span>First Abu Dhabi Bank</span><h3>Solution design and access coordination</h3></div><div class="delivery-track delivery-track-sdd" aria-label="FAB is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div></header>
-          <div class="funder-update-columns">
-            <section><span class="update-column-label update-complete">Completed</span><ul><li>Coordination meeting conducted on Wednesday.</li><li>Updated SDD shared on Thursday; the payment transaction reference on the acknowledgement file remains pending.</li></ul></section>
-            <section><span class="update-column-label update-next">Next actions</span><ul><li>Share the SLA.</li><li>Share SFTP access credentials with the internal technical team.</li></ul></section>
-          </div>
+        <article class="funder-progress-card" aria-label="First Abu Dhabi Bank">
+          <strong class="fab-wordmark progress-funder-wordmark" title="First Abu Dhabi Bank">FAB</strong>
+          <span class="progress-status">Solution design</span>
+          <h3>Access coordination</h3>
+          <div class="delivery-track delivery-track-sdd" aria-label="FAB is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Meeting completed Wednesday.</li><li>Updated SDD shared Thursday; acknowledgement reference remains open.</li><li><strong>Next:</strong> Share SLA and SFTP credentials internally.</li></ul>
         </article>
 
-        <article class="funder-update-panel" id="funder-panel-snb" role="tabpanel" data-funder-panel="snb" hidden>
-          <header><div><span>Saudi National Bank</span><h3>API integration scope finalized</h3></div><div class="delivery-track delivery-track-development" aria-label="SNB is moving into development planning"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div></header>
-          <div class="funder-update-columns funder-update-columns-single">
-            <section><span class="update-column-label update-complete">Completed</span><ul><li>Finalized the API integration scope.</li></ul></section>
-            <section><span class="update-column-label update-pending">Pending external dependency</span><ul><li>API development timeline from Qualco and SNB.</li></ul></section>
-          </div>
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo progress-funder-logo-snb" src="https://www.kscdr.org.sa/sites/default/files/styles/node_cover/public/2021-08/SNB-2.png?h=1336e95a&amp;itok=TZGeLG8N" alt="Saudi National Bank">
+          <span class="progress-status progress-status-pending">Pending timeline</span>
+          <h3>API scope finalized</h3>
+          <div class="delivery-track delivery-track-development" aria-label="SNB is moving into development planning"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Integration scope agreed.</li><li><strong>Pending:</strong> API development timeline from Qualco and SNB.</li></ul>
         </article>
       </div>
 
@@ -570,6 +544,6 @@
     <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
   </nav>
 
-  <script src="script.js?v=20260802-funders"></script>
+  <script src="script.js?v=20260802-funders-all"></script>
 </body>
 </html>
