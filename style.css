@@ -731,9 +731,10 @@ button { font: inherit; }
 .launch-introduction > p { margin: 0; color: rgba(255,255,255,0.68); font-size: clamp(0.61rem, 0.72vw, 0.82rem); line-height: 1.48; }
 .launch-scope { margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); }
 .launch-scope > span { color: var(--brand-light-blue); font-size: clamp(0.52rem, 0.61vw, 0.69rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
-.launch-scope ul { display: grid; gap: 0.52rem; margin: 0.75rem 0 0; padding: 0; list-style: none; }
-.launch-scope li { position: relative; padding-left: 0.8rem; color: rgba(255,255,255,0.88); font-size: clamp(0.55rem, 0.65vw, 0.74rem); line-height: 1.35; }
-.launch-scope li::before { position: absolute; top: 0.5em; left: 0; width: 0.28rem; height: 0.28rem; border-radius: 50%; background: var(--brand-light-blue); content: ""; }
+.launch-domain { margin-top: 0.7rem; padding: 0.65rem 0.75rem; border: 1px solid rgba(255,255,255,0.16); border-radius: 9px; background: rgba(255,255,255,0.06); }
+.launch-domain strong { color: #fff; font-size: clamp(0.59rem, 0.7vw, 0.8rem); }
+.launch-domain p { margin: 0.3rem 0 0; color: rgba(255,255,255,0.82); font-size: clamp(0.52rem, 0.61vw, 0.7rem); line-height: 1.4; }
+.launch-domain small { display: block; margin-top: 0.3rem; color: var(--brand-light-blue); font-size: clamp(0.46rem, 0.54vw, 0.62rem); font-weight: 700; }
 
 .finops-product-shot { display: flex; flex-direction: column; min-width: 0; margin: 0; overflow: hidden; background: #eef0f4; border: 1px solid var(--line-dark); border-top: 3px solid var(--brand-violet); border-radius: 14px; }
 .preview-bar { display: flex; align-items: center; gap: 0.25rem; min-height: 2rem; padding: 0 0.65rem; background: #fff; border-bottom: 1px solid var(--line); }

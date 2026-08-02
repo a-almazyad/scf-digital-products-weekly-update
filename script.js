@@ -1,4 +1,5 @@
-const slides = Array.from(document.querySelectorAll(".slide"));
+const slides = Array.from(document.querySelectorAll(".slide"))
+  .sort((a, b) => Number(a.dataset.slide) - Number(b.dataset.slide));
 const prevButton = document.getElementById("prev-slide");
 const nextButton = document.getElementById("next-slide");
 const currentLabel = document.getElementById("current-slide");
