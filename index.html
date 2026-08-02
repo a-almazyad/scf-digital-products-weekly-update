@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260802-natixis">
+  <link rel="stylesheet" href="style.css?v=20260802-embedded">
 </head>
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -32,7 +32,7 @@
           <ol>
             <li><span>01</span>R61 scope</li>
             <li><span>02</span>SCF FinOps · R60 launch</li>
-            <li><span>03</span>Taulia &amp; funder integrations</li>
+            <li><span>03</span>Taulia, funders &amp; embedded financing</li>
             <li><span>04</span>Channels, tools &amp; platform strategy</li>
           </ol>
         </aside>
@@ -61,7 +61,7 @@
       </header>
 
       <div class="release-summary" aria-label="R61 summary">
-        <div><strong>35</strong><span>Selected scope items</span></div>
+        <div><strong>33</strong><span>Selected scope items</span></div>
         <div><strong>4</strong><span>Delivery squads</span></div>
         <p><span class="release-live-dot" aria-hidden="true"></span>Regression and miscellaneous containers excluded</p>
       </div>
@@ -70,7 +70,7 @@
         <nav class="scope-themes" aria-label="R61 scope workstreams">
           <p>Workstreams</p>
           <button type="button" data-scope-theme="scf" aria-pressed="true">
-            <span>SCF Sprint</span><strong>18</strong>
+            <span>SCF Sprint</span><strong>16</strong>
           </button>
           <button type="button" data-scope-theme="crm" aria-pressed="false">
             <span>CRM Sprint</span><strong>4</strong>
@@ -86,12 +86,12 @@
         <section class="scope-items" aria-labelledby="scope-theme-title">
           <header>
             <div><span>Selected sprint</span><h3 id="scope-theme-title">SCF Sprint</h3></div>
-            <strong id="scope-theme-count">18 items</strong>
+            <strong id="scope-theme-count">16 items</strong>
           </header>
           <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="R61 scope items"></div>
           <div class="scope-pagination" aria-label="Scope item pages">
             <button id="scope-page-prev" type="button" aria-label="Previous scope items">←</button>
-            <span id="scope-page-label">1–6 of 18</span>
+            <span id="scope-page-label">1–6 of 16</span>
             <button id="scope-page-next" type="button" aria-label="Next scope items">→</button>
           </div>
         </section>
@@ -118,9 +118,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="6" aria-labelledby="slide-2-title">
+    <section class="slide" data-slide="7" aria-labelledby="slide-2-title">
       <header class="slide-header">
-        <span class="slide-number">05</span>
+        <span class="slide-number">06</span>
         <div>
           <h2 id="slide-2-title">Channel updates</h2>
           <p>Work currently planned across the borrower, buyer and funder experiences.</p>
@@ -197,9 +197,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="7" aria-labelledby="slide-3-title">
+    <section class="slide" data-slide="8" aria-labelledby="slide-3-title">
       <header class="slide-header">
-        <span class="slide-number">06</span>
+        <span class="slide-number">07</span>
         <div>
           <h2 id="slide-3-title">Current internal tools</h2>
           <p>What the SCF team uses today inside the Admin Portal and Manafa CRM.</p>
@@ -343,9 +343,9 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="8" aria-labelledby="slide-5-title">
+    <section class="slide" data-slide="9" aria-labelledby="slide-5-title">
       <header class="slide-header">
-        <span class="slide-number">07</span>
+        <span class="slide-number">08</span>
         <div>
           <h2 id="slide-5-title">Standalone Buyer and Funder Management platforms</h2>
           <p>Today they are Admin Portal feature sets. Each will move to a dedicated platform with its own roadmap.</p>
@@ -519,7 +519,55 @@
       </footer>
     </section>
 
-    <section class="slide closing-slide" data-slide="9" aria-labelledby="slide-8-title">
+    <section class="slide embedded-finance-slide" data-slide="6" aria-labelledby="slide-embedded-title">
+      <header class="slide-header">
+        <span class="slide-number">05</span>
+        <div>
+          <h2 id="slide-embedded-title">Embedded financing partnerships</h2>
+          <p>Partner-led financing capabilities and the next delivery gate for each relationship.</p>
+        </div>
+        <span class="slide-context">Partnership roadmap</span>
+      </header>
+
+      <div class="embedded-finance-head" aria-hidden="true">
+        <span>Partner / outcome</span>
+        <span>Current position</span>
+        <span>Next handshake</span>
+      </div>
+
+      <div class="embedded-finance-list">
+        <article class="embedded-finance-row">
+          <div class="embedded-partner"><span>01</span><div><h3>NHC Supplier Pro</h3><p>Embed PO financing into the supplier platform</p></div></div>
+          <div class="embedded-position"><strong>Webhook integration active</strong><p>The endpoint hotfix has production evidence; remaining webhook work is still being completed.</p></div>
+          <div class="embedded-next"><i></i><p>Complete the remaining work and align the delivery records.</p></div>
+        </article>
+
+        <article class="embedded-finance-row">
+          <div class="embedded-partner"><span>02</span><div><h3>NHC ERP</h3><p>Use ERP information as a financing input</p></div></div>
+          <div class="embedded-position"><strong>Technical definition</strong><p>Integration documentation has been shared; the detailed scope and partner response remain open.</p></div>
+          <div class="embedded-next"><i></i><p>Confirm the partner response and agree the technical scope.</p></div>
+        </article>
+
+        <article class="embedded-finance-row">
+          <div class="embedded-partner"><span>03</span><div><h3>Daman / Muqeem</h3><p>Finance Muqeem packages and membership fees</p></div></div>
+          <div class="embedded-position"><strong>Use case identified</strong><p>The financing concept is defined, but the owners and current delivery milestone still need confirmation.</p></div>
+          <div class="embedded-next"><i></i><p>Confirm official naming, ownership and the next partner gate.</p></div>
+        </article>
+
+        <article class="embedded-finance-row">
+          <div class="embedded-partner"><span>04</span><div><h3>SME Bank</h3><p>Financing operations and reporting integration</p></div></div>
+          <div class="embedded-position"><strong>R61 planning</strong><p>An R61 integration and reporting item exists; the earlier linked implementation remains deferred.</p></div>
+          <div class="embedded-next"><i></i><p>Agree the R61 integration plan and its next delivery gate.</p></div>
+        </article>
+      </div>
+
+      <footer class="slide-footer">
+        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
+        <span>Embedded Financing · Partner integrations</span>
+      </footer>
+    </section>
+
+    <section class="slide closing-slide" data-slide="10" aria-labelledby="slide-8-title">
       <div class="closing-orbit" aria-hidden="true"></div>
       <header class="closing-header">
         <img class="brand-logo closing-logo" src="assets/manafa-logo.svg" alt="Manafa">

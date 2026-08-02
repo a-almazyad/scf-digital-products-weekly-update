@@ -969,6 +969,42 @@ button { font: inherit; }
 .delivery-track-testing div:nth-child(4) i { background: #009b83; }
 .delivery-track-discovery div:first-child i { background: #009b83; }
 
+/* Embedded financing — adapted from the CTO weekly partnership view */
+.embedded-finance-slide { background: #fff; }
+.embedded-finance-head {
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr 0.8fr;
+  gap: 1.1rem;
+  margin-top: 1.05rem;
+  padding: 0 1rem 0.55rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line-dark);
+  font-size: clamp(0.47rem, 0.55vw, 0.63rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.embedded-finance-list { display: grid; flex: 1; min-height: 0; grid-template-rows: repeat(4, 1fr); margin-bottom: 0.85rem; }
+.embedded-finance-row {
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr 0.8fr;
+  gap: 1.1rem;
+  min-height: 0;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.embedded-finance-row:nth-child(even) { background: var(--surface); }
+.embedded-partner { display: grid; grid-template-columns: 2rem 1fr; gap: 0.65rem; align-items: center; min-width: 0; }
+.embedded-partner > span { color: var(--brand-violet); font-size: clamp(0.7rem, 0.84vw, 0.96rem); font-weight: 850; }
+.embedded-partner h3 { margin: 0; font-size: clamp(0.77rem, 0.92vw, 1.05rem); line-height: 1.18; }
+.embedded-partner p, .embedded-position p, .embedded-next p { margin: 0.24rem 0 0; color: var(--muted); font-size: clamp(0.49rem, 0.57vw, 0.65rem); line-height: 1.38; }
+.embedded-position { min-width: 0; padding-left: 0.9rem; border-left: 2px solid var(--brand-violet); }
+.embedded-position strong { color: var(--brand-ink); font-size: clamp(0.55rem, 0.65vw, 0.74rem); }
+.embedded-next { display: grid; grid-template-columns: 0.48rem 1fr; gap: 0.55rem; align-items: start; min-width: 0; }
+.embedded-next i { width: 0.48rem; height: 0.48rem; margin-top: 0.32rem; border: 2px solid #009b83; border-radius: 50%; }
+.embedded-next p { margin-top: 0; color: var(--brand-ink); font-weight: 650; }
+
 /* Closing */
 .closing-slide {
   padding: 4.5% 5.7% 3.7%;
