@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260802-embedded">
+  <link rel="stylesheet" href="style.css?v=20260802-embedded-cto">
 </head>
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -463,7 +463,15 @@
         <span class="slide-context">Weekly integration update</span>
       </header>
 
-      <div class="funder-progress-grid funder-progress-grid-six">
+      <div class="funder-progress-grid funder-progress-grid-seven">
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo progress-funder-logo-bnpp" src="assets/logos/bnpp.png" alt="BNP Paribas">
+          <span class="progress-status progress-status-success">Pilot successful</span>
+          <h3>Two scenarios pending</h3>
+          <div class="delivery-track delivery-track-complete" aria-label="BNP Paribas pilot completed"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Settlement test awaits invoice settlement.</li><li>Manafa fee-transfer scenario remains to be tested.</li></ul>
+        </article>
+
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-smbc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/SMBC_Indonesia_logo.svg/1920px-SMBC_Indonesia_logo.svg.png" alt="SMBC">
           <span class="progress-status">Testing this week</span>
@@ -529,35 +537,51 @@
         <span class="slide-context">Partnership roadmap</span>
       </header>
 
-      <div class="embedded-finance-head" aria-hidden="true">
-        <span>Partner / outcome</span>
-        <span>Current position</span>
-        <span>Next handshake</span>
-      </div>
-
-      <div class="embedded-finance-list">
-        <article class="embedded-finance-row">
-          <div class="embedded-partner"><span>01</span><div><h3>NHC Supplier Pro</h3><p>Embed PO financing into the supplier platform</p></div></div>
-          <div class="embedded-position"><strong>Webhook integration active</strong><p>The endpoint hotfix has production evidence; remaining webhook work is still being completed.</p></div>
-          <div class="embedded-next"><i></i><p>Complete the remaining work and align the delivery records.</p></div>
+      <div class="embedded-partner-map">
+        <article class="embedded-partner-column">
+          <header>
+            <div class="embedded-logo-pair">
+              <img src="assets/logos/nphies.png" alt="Nphies">
+              <img src="assets/logos/lean.png" alt="Lean Technologies">
+            </div>
+            <span>Healthcare financing stream</span>
+          </header>
+          <div class="embedded-rail" aria-hidden="true"><i></i></div>
+          <section class="embedded-stream embedded-stream-waiting">
+            <div><span>Current milestone</span><strong>Dleen pilot · Postponed</strong></div>
+            <p>The pilot was postponed until further notice because the hospital authorization manager was unavailable.</p>
+          </section>
         </article>
 
-        <article class="embedded-finance-row">
-          <div class="embedded-partner"><span>02</span><div><h3>NHC ERP</h3><p>Use ERP information as a financing input</p></div></div>
-          <div class="embedded-position"><strong>Technical definition</strong><p>Integration documentation has been shared; the detailed scope and partner response remain open.</p></div>
-          <div class="embedded-next"><i></i><p>Confirm the partner response and agree the technical scope.</p></div>
+        <article class="embedded-partner-column">
+          <header>
+            <div class="embedded-logo-single"><img src="assets/logos/elm.png" alt="Elm"></div>
+            <span>Government services stream</span>
+          </header>
+          <div class="embedded-rail" aria-hidden="true"><i></i></div>
+          <section class="embedded-stream embedded-stream-hold">
+            <div><span>Track 01</span><strong>Tasdeed</strong></div>
+            <b>On hold</b>
+          </section>
+          <section class="embedded-stream embedded-stream-active">
+            <div class="embedded-stream-brand"><img src="assets/logos/dhamen.png" alt="Dhamen"><p>Nusuk · Muqeem</p></div>
+            <p>Muqeem is progressing; testing is targeted to start next week.</p>
+          </section>
         </article>
 
-        <article class="embedded-finance-row">
-          <div class="embedded-partner"><span>03</span><div><h3>Daman / Muqeem</h3><p>Finance Muqeem packages and membership fees</p></div></div>
-          <div class="embedded-position"><strong>Use case identified</strong><p>The financing concept is defined, but the owners and current delivery milestone still need confirmation.</p></div>
-          <div class="embedded-next"><i></i><p>Confirm official naming, ownership and the next partner gate.</p></div>
-        </article>
-
-        <article class="embedded-finance-row">
-          <div class="embedded-partner"><span>04</span><div><h3>SME Bank</h3><p>Financing operations and reporting integration</p></div></div>
-          <div class="embedded-position"><strong>R61 planning</strong><p>An R61 integration and reporting item exists; the earlier linked implementation remains deferred.</p></div>
-          <div class="embedded-next"><i></i><p>Agree the R61 integration plan and its next delivery gate.</p></div>
+        <article class="embedded-partner-column">
+          <header>
+            <div class="embedded-logo-single"><img src="assets/logos/nhc.png" alt="National Housing Company"></div>
+            <span>Housing ecosystem stream</span>
+          </header>
+          <div class="embedded-rail" aria-hidden="true"><i></i></div>
+          <section class="embedded-stream embedded-stream-active">
+            <div class="embedded-stream-brand"><img src="assets/logos/supplypro.png" alt="Supplier Pro"></div>
+            <p>Supplier Pro testing is targeted to start next week.</p>
+          </section>
+          <section class="embedded-stream embedded-stream-planned">
+            <div><span>Track 02</span><strong>NHC ERP integration</strong></div>
+          </section>
         </article>
       </div>
 
