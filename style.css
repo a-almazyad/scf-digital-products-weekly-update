@@ -937,67 +937,31 @@ button { font: inherit; }
 .ownership-panel p { margin: 0.2rem 0 0; color: rgba(255,255,255,0.68); font-size: clamp(0.49rem, 0.58vw, 0.66rem); line-height: 1.3; }
 
 /* Funder progress — CTO Weekly layout */
-.active-funder-strip {
-  display: grid;
-  grid-template-columns: 0.55fr repeat(4, 1fr);
-  align-items: center;
-  min-height: 4.4rem;
-  margin: 1.1rem 0 0.9rem;
-  padding: 0.45rem 1.15rem;
-  background: var(--surface);
-  border-radius: 2px;
-}
+.funder-update-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.55rem; margin: 1rem 0 0.8rem; }
+.funder-update-tabs button { display: grid; grid-template-rows: 2.2rem auto; min-width: 0; min-height: 4.25rem; place-items: center; padding: 0.55rem 0.6rem; color: var(--muted); background: var(--surface); border: 1px solid var(--line-dark); border-radius: 10px; cursor: pointer; }
+.funder-update-tabs button:hover, .funder-update-tabs button:focus-visible { border-color: var(--brand-violet); outline: none; }
+.funder-update-tabs button.is-current { color: var(--brand-violet); background: var(--surface-violet); border-color: var(--brand-violet); box-shadow: inset 0 3px 0 var(--brand-violet); }
+.funder-update-tabs img { display: block; width: auto; max-width: 7.2rem; height: auto; max-height: 2rem; object-fit: contain; }
+.funder-update-tabs button[data-funder-tab="snb"] img { width: 4.6rem; height: 2.15rem; }
+.funder-update-tabs span { margin-top: 0.28rem; font-size: clamp(0.44rem, 0.52vw, 0.59rem); font-weight: 750; text-align: center; }
+.fab-wordmark { color: var(--brand-ink); font-size: clamp(1.1rem, 1.5vw, 1.65rem); font-weight: 780; letter-spacing: -0.04em; }
 
-.active-funder-strip > strong { color: #009b83; font-size: clamp(0.57rem, 0.68vw, 0.77rem); letter-spacing: 0.04em; text-transform: uppercase; }
-.active-funder-strip > div {
-  display: grid;
-  height: 3.25rem;
-  place-items: center;
-  padding: 0 0.7rem;
-  overflow: hidden;
-}
-.active-funder-strip img {
-  display: block;
-  width: auto;
-  max-width: 7.5rem;
-  height: auto;
-  max-height: 2.65rem;
-  object-fit: contain;
-}
-.active-funder-strip img.active-funder-square-logo {
-  width: 4.4rem;
-  max-width: none;
-  height: 4.4rem;
-  max-height: none;
-  object-fit: contain;
-}
-
-.funder-progress-grid {
-  display: grid;
-  flex: 1;
-  grid-template-columns: repeat(4, 1fr);
-  min-height: 0;
-  margin-bottom: 0.9rem;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.funder-progress-card {
-  min-width: 0;
-  padding: 1.15rem 1.05rem 0.9rem;
-  border-left: 1px solid var(--line);
-}
-
-.funder-progress-card:first-child { border-left: 0; }
-.progress-funder-logo { display: block; width: 7.1rem; height: 2.25rem; object-fit: contain; object-position: left center; }
-.progress-funder-logo-bnp { width: 8.4rem; }
-.progress-funder-logo-smbc { width: 8.4rem; }
-.progress-status { display: block; margin-top: 0.65rem; color: #009b83; font-size: clamp(0.5rem, 0.59vw, 0.67rem); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
-.progress-status-success { color: var(--status-good); }
-.funder-progress-card h3 { margin: 0.6rem 0 0.75rem; font-size: clamp(0.9rem, 1.13vw, 1.3rem); line-height: 1.15; }
-.funder-progress-card > p { margin: 0.8rem 0 0; color: var(--muted); font-size: clamp(0.54rem, 0.64vw, 0.73rem); line-height: 1.42; }
-.funder-progress-card > p + p { margin-top: 0.28rem; }
-.funder-progress-card > p strong { color: var(--brand-ink); }
+.funder-update-panels { display: flex; flex: 1; min-height: 0; margin-bottom: 0.85rem; }
+.funder-update-panel { display: none; flex: 1; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid var(--line-dark); border-top: 3px solid var(--brand-violet); border-radius: 12px; background: #fff; }
+.funder-update-panel.is-current { display: grid; grid-template-rows: auto 1fr; }
+.funder-update-panel > header { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 1.5rem; align-items: center; min-height: 5.4rem; padding: 0.9rem 1.15rem; border-bottom: 1px solid var(--line); background: var(--surface-violet); }
+.funder-update-panel > header > div:first-child > span { color: var(--brand-violet); font-size: clamp(0.49rem, 0.58vw, 0.66rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
+.funder-update-panel h3 { margin: 0.25rem 0 0; font-size: clamp(1rem, 1.28vw, 1.45rem); line-height: 1.18; }
+.funder-update-columns { display: grid; grid-template-columns: repeat(2, 1fr); min-height: 0; }
+.funder-update-columns section { min-width: 0; padding: 1rem 1.2rem; }
+.funder-update-columns section + section { border-left: 1px solid var(--line); background: var(--surface); }
+.update-column-label { display: inline-flex; min-height: 1.35rem; align-items: center; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: clamp(0.44rem, 0.51vw, 0.58rem); font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+.update-complete { color: #08772a; background: var(--surface-green); }
+.update-next { color: #3e2fba; background: var(--surface-violet); }
+.update-pending { color: #875007; background: #ffe7bc; }
+.funder-update-columns ul { display: grid; gap: 0.62rem; margin: 0.8rem 0 0; padding: 0; list-style: none; }
+.funder-update-columns li { position: relative; padding-left: 0.9rem; color: var(--muted); font-size: clamp(0.57rem, 0.68vw, 0.78rem); line-height: 1.4; }
+.funder-update-columns li::before { position: absolute; top: 0.48em; left: 0; width: 0.3rem; height: 0.3rem; border-radius: 50%; background: var(--brand-violet); content: ""; }
 
 .delivery-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.28rem; }
 .delivery-track div { display: grid; gap: 0.28rem; text-align: center; }
@@ -1010,6 +974,8 @@ button { font: inherit; }
 .delivery-track-development div:nth-child(3) i,
 .delivery-track-sdd div:nth-child(2) i { background: #009b83; }
 .delivery-track-complete i { background: var(--status-good) !important; }
+.delivery-track-testing div:nth-child(-n+3) i { background: var(--brand-violet); }
+.delivery-track-testing div:nth-child(4) i { background: #009b83; }
 
 /* Closing */
 .closing-slide {

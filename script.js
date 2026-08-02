@@ -14,6 +14,8 @@ const finopsTitle = document.getElementById("finops-shot-title");
 const finopsCaption = document.getElementById("finops-shot-caption");
 const finopsDots = finopsCarousel ? Array.from(finopsCarousel.querySelectorAll("[data-finops-index]")) : [];
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
+const funderUpdateTabs = Array.from(document.querySelectorAll("[data-funder-tab]"));
+const funderUpdatePanels = Array.from(document.querySelectorAll("[data-funder-panel]"));
 
 const releaseScope = [
   { id: "ASQ-4559", df: "DF-4049", title: "Storybook Setup for Internal Design System", theme: "admin", signal: "In testing", tone: "testing", tickets: 1, labels: [], statuses: [["Dev tested on staging", 1, "testing"]] },
@@ -206,6 +208,30 @@ finopsDots.forEach((dot) => {
 });
 
 showFinopsShot(0);
+
+function showFunderUpdate(funderKey) {
+  funderUpdateTabs.forEach((tab) => {
+    const isCurrent = tab.dataset.funderTab === funderKey;
+    tab.classList.toggle("is-current", isCurrent);
+    tab.setAttribute("aria-selected", String(isCurrent));
+    tab.tabIndex = isCurrent ? 0 : -1;
+  });
+
+  funderUpdatePanels.forEach((panel) => {
+    const isCurrent = panel.dataset.funderPanel === funderKey;
+    panel.classList.toggle("is-current", isCurrent);
+    panel.hidden = !isCurrent;
+  });
+}
+
+funderUpdateTabs.forEach((tab) => {
+  tab.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showFunderUpdate(tab.dataset.funderTab);
+  });
+});
+
+showFunderUpdate("smbc");
 
 function readInitialSlide() {
   const hashValue = Number.parseInt(window.location.hash.replace("#slide-", ""), 10);
