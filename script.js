@@ -15,7 +15,7 @@ const finopsCaption = document.getElementById("finops-shot-caption");
 const finopsDots = finopsCarousel ? Array.from(finopsCarousel.querySelectorAll("[data-finops-index]")) : [];
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 
-const releaseScope = [
+const legacyReleaseScope = [
   { id: "ASQ-4559", df: "DF-4049", title: "Storybook Setup for Internal Design System", theme: "admin", signal: "In testing", tone: "testing", tickets: 1, labels: [], statuses: [["Dev tested on staging", 1, "testing"]] },
   { id: "ASQ-4592", df: "DF-3908", title: "Oracle SSO Permission Automation", theme: "admin", signal: "On hold", tone: "hold", tickets: 3, labels: ["might-spill-r61"], statuses: [["On hold", 3, "hold"]] },
   { id: "ASQ-4897", df: "DF-4215", title: "PM Board Filter Enhancement", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
@@ -54,11 +54,75 @@ const releaseScope = [
   { id: "EMQ-5715", df: "DF-3714", title: "Standard Chartered B2B API Manager", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] }
 ];
 
+const planned = (id, title, theme, labels = []) => ({
+  id, title, theme, signal: "R61 scope", tone: "planned", tickets: 1, labels,
+  statuses: [["In delivery queue", 1, "progress"]]
+});
+const spill = (id, title, theme, certainty = "might") => ({
+  id, title, theme,
+  signal: certainty === "will" ? "Spills to R62" : "Spillover risk",
+  tone: "hold", tickets: 1,
+  labels: [certainty === "will" ? "will-spill-r62" : "might-spill-r62"],
+  statuses: [["In delivery queue", 1, "progress"]]
+});
+
+const releaseScope = [
+  planned("DF-4282", "SE Program Operational Limits — Aug & Sep 2026", "scf", ["must-have"]),
+  planned("DF-4264", "Borrower Invoice Listing Page Enhancement", "scf", ["hotfix"]),
+  planned("DF-3832", "SMBC Integration Manager — Email Phase I", "scf", ["must-have"]),
+  { id: "DF-3492", title: "AML Fetch for Companies and Owners", theme: "scf", signal: "Testing spillover", tone: "hold", tickets: 16, labels: ["testing-spillover"], statuses: [["Development approved", 16, "approved"]] },
+  planned("DF-3947", "Automatic Email for Funder File Errors", "scf"),
+  planned("DF-4265", "Supplier V-Wallet Transactions and USD Restriction", "scf"),
+  planned("DF-4091", "Buyer Maturity Report Enhancement", "scf", ["must-have"]),
+  planned("DF-4021", "SIC SCF Onboarding Requirements", "scf"),
+  planned("DF-4148", "SAB Financing Requests Timeline", "scf", ["must-have"]),
+  planned("DF-4135", "SAB Thursday Timing Enhancement", "scf", ["must-have"]),
+  planned("DF-3714", "Standard Chartered B2B API Manager", "scf"),
+  planned("DF-4164", "Merged SCF Offer View Permission", "scf"),
+  planned("DF-3770", "Supplier No-Offer Message Handling", "scf"),
+  planned("DF-4103", "Funder Slack Notifications Enhancements", "scf"),
+  spill("DF-4120", "SAMA SCF Report Automation Enhancement", "scf", "will"),
+  spill("DF-3936", "J.P. Morgan Financing Calculation", "scf"),
+  spill("DF-3957", "Direct-to-Supplier Funding Model V1.0", "scf"),
+  spill("DF-4192", "Supplier Banking and Payout Account Management", "scf"),
+  spill("DF-4136", "BNPP End-of-Month Fees Reconciliation", "scf"),
+  spill("DF-3486", "Auto-send Supplier Outreach Report", "scf"),
+  spill("DF-4071", "Taulia Onboarding APIs Impact and Interactions", "scf"),
+
+  planned("DF-4182", "Reactivate Eligible Financed Companies", "crm"),
+  planned("DF-4160", "CRM Enhancements Part 6", "crm"),
+  spill("DF-3718", "Lead Management in Sales CRM", "crm"),
+
+  planned("DF-3908", "Oracle SSO Permission Automation", "admin"),
+  planned("DF-4184", "Design System Component Fixes", "admin"),
+  planned("DF-4188", "Invoice Payer Column and Filter", "admin"),
+  planned("DF-4144", "Revamp Admin Header for New Design System", "admin"),
+  planned("DF-4215", "PM Board Filter Enhancement", "admin"),
+  planned("DF-4113", "Automate Facility Creation from Offer Acceptance", "admin"),
+  planned("DF-4174", "Create Manual Financial Offer", "admin"),
+  planned("DF-4200", "Storybook Coverage for Remaining Components", "admin"),
+  planned("DF-4230", "Collapsed Sidebar Interaction Enhancement", "admin"),
+  planned("DF-4273", "SCBC Excel Report Enhancements", "admin"),
+  spill("DF-3752", "Capex Product — Admin", "admin", "will"),
+
+  { ...planned("DF-3770-BORROWER", "SCF Supplier No-Offer Message Handling", "borrower"), jira: "DF-3770" },
+  { ...spill("DF-4192-BORROWER", "Supplier Banking and Payout Account Management", "borrower"), jira: "DF-4192" },
+  planned("DF-4102", "Add More Borrower Task Types", "borrower"),
+  spill("DF-3357", "Borrower Activation Journey V2", "borrower", "will"),
+  spill("DF-4283", "Capex Product — Borrower", "borrower", "will"),
+  planned("DF-4011", "Request Clearance Letter", "borrower"),
+  planned("DF-4198", "User Management Post-Launch Enhancements", "borrower"),
+
+  { id: "DF-4026", title: "SCF FinOps — Phase 1", theme: "finops", signal: "Testing in R61", tone: "testing", tickets: 10, labels: ["R60-CAB-approved", "R61-testing"], statuses: [["Dev tested on staging", 6, "testing"], ["UAT review", 2, "progress"], ["Testing", 1, "testing"], ["UAT queue", 1, "todo"]] },
+  { id: "DF-4030", title: "SCF FinOps — Phase 2", theme: "finops", signal: "In development", tone: "progress", tickets: 6, labels: ["R61-development"], statuses: [["In progress dev", 4, "progress"], ["Deferred", 2, "deferred"]] }
+];
+
 const releaseThemeLabels = {
   admin: "Admin Sprint",
   crm: "CRM Sprint",
   borrower: "Borrower Sprint",
-  scf: "SCF Sprint"
+  scf: "SCF Sprint",
+  finops: "SCF FinOps"
 };
 const scopePageSize = 6;
 let activeScopeTheme = "scf";
@@ -73,7 +137,7 @@ function scopeLabelTone(label) {
 function renderScopeDetail(item) {
   if (!releaseScopeRoot || !item) return;
 
-  const key = item.df ? `${item.id} · ${item.df}` : item.id;
+  const key = item.jira || (item.df ? `${item.id} · ${item.df}` : item.id);
   document.getElementById("scope-detail-key").textContent = key;
   document.getElementById("scope-detail-title").textContent = item.title;
   document.getElementById("scope-detail-tickets").textContent = item.tickets;
@@ -92,7 +156,7 @@ function renderScopeDetail(item) {
   document.getElementById("scope-status-legend").innerHTML = item.statuses.map(([label, count, tone]) =>
     `<div><i class="status-${tone}"></i><span>${label}</span><strong>${count}</strong></div>`
   ).join("");
-  document.getElementById("scope-jira-link").href = `https://manafaco.atlassian.net/browse/${item.id}`;
+  document.getElementById("scope-jira-link").href = `https://manafaco.atlassian.net/browse/${item.jira || item.id}`;
 
   releaseScopeRoot.querySelectorAll(".scope-item").forEach((button) => {
     button.setAttribute("aria-selected", String(button.dataset.scopeItem === item.id));
@@ -121,7 +185,7 @@ function renderScopePage() {
 
   const list = document.getElementById("scope-item-list");
   list.innerHTML = visibleItems.map((item) => {
-    const key = item.df ? `${item.id} · ${item.df}` : item.id;
+    const key = item.jira || (item.df ? `${item.id} · ${item.df}` : item.id);
     const labels = item.labels.slice(0, 2).map((label) => `<i class="${scopeLabelTone(label)}">${label}</i>`).join("");
     return `<button class="scope-item" type="button" role="option" data-scope-item="${item.id}" aria-selected="false">
       <span class="scope-item-copy"><span>${key}</span><strong>${item.title}</strong>${labels ? `<span class="scope-item-labels">${labels}</span>` : ""}</span>
