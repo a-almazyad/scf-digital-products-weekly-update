@@ -113,7 +113,7 @@ const releaseScope = [
   planned("DF-4011", "Request Clearance Letter", "borrower"),
   planned("DF-4198", "User Management Post-Launch Enhancements", "borrower"),
 
-  { id: "DF-4026", title: "SCF FinOps — Phase 1", theme: "finops", signal: "Testing in R61", tone: "testing", tickets: 10, labels: ["R60-CAB-approved", "R61-testing"], statuses: [["Dev tested on staging", 6, "testing"], ["UAT review", 2, "progress"], ["Testing", 1, "testing"], ["UAT queue", 1, "todo"]] },
+  { id: "DF-4026", title: "SCF FinOps — Phase 1", theme: "finops", signal: "Live · follow-up UAT", tone: "complete", tickets: 10, labels: ["R60-live", "R61-follow-up"], statuses: [["Dev tested on staging", 6, "testing"], ["UAT review", 2, "progress"], ["Testing", 1, "testing"], ["UAT queue", 1, "todo"]] },
   { id: "DF-4030", title: "SCF FinOps — Phase 2", theme: "finops", signal: "In development", tone: "progress", tickets: 6, labels: ["R61-development"], statuses: [["In progress dev", 4, "progress"], ["Deferred", 2, "deferred"]] }
 ];
 
