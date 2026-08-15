@@ -228,10 +228,10 @@ button { font: inherit; }
 .follow-up-list {
   display: grid;
   flex: 1;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 0.8rem;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.55rem;
   min-height: 0;
-  margin: 1.15rem 0 0.9rem;
+  margin: 0.9rem 0 0.75rem;
 }
 
 .follow-up-item {
@@ -239,17 +239,20 @@ button { font: inherit; }
   grid-template-columns: 4.4rem minmax(0, 1.55fr) minmax(15rem, 0.72fr);
   gap: 1.25rem;
   align-items: center;
-  padding: 0.85rem 1rem;
+  padding: 0.55rem 1rem;
   border-left: 4px solid var(--brand-violet);
   background: var(--surface);
 }
 
 .follow-up-item-accent { background: var(--surface-violet); }
-.follow-up-index { color: var(--brand-violet); font-size: clamp(1.75rem, 2.6vw, 3rem); font-weight: 320; letter-spacing: -0.06em; }
+.follow-up-item-complete { border-left-color: var(--status-good); background: var(--surface-green); }
+.follow-up-item-complete .follow-up-index,
+.follow-up-item-complete .follow-up-status { color: var(--status-good); }
+.follow-up-index { color: var(--brand-violet); font-size: clamp(1.55rem, 2.2vw, 2.55rem); font-weight: 320; letter-spacing: -0.06em; }
 .follow-up-copy { min-width: 0; }
 .follow-up-status { color: var(--brand-violet); font-size: clamp(0.5rem, 0.59vw, 0.68rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
-.follow-up-copy h3 { margin: 0.35rem 0 0; font-size: clamp(1rem, 1.32vw, 1.52rem); line-height: 1.15; }
-.follow-up-copy p { margin: 0.4rem 0 0; color: var(--muted); font-size: clamp(0.62rem, 0.74vw, 0.84rem); line-height: 1.42; }
+.follow-up-copy h3 { margin: 0.25rem 0 0; font-size: clamp(0.86rem, 1.08vw, 1.24rem); line-height: 1.15; }
+.follow-up-copy p { margin: 0.28rem 0 0; color: var(--muted); font-size: clamp(0.56rem, 0.66vw, 0.76rem); line-height: 1.38; }
 .follow-up-decision { align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding-left: 1.15rem; border-left: 1px solid var(--line-dark); }
 .follow-up-decision span { color: var(--muted); font-size: clamp(0.48rem, 0.56vw, 0.64rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
 .follow-up-decision strong { margin-top: 0.38rem; font-size: clamp(0.65rem, 0.78vw, 0.9rem); line-height: 1.35; }
