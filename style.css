@@ -969,23 +969,31 @@ button { font: inherit; }
 
 /* Funder progress — CTO Weekly layout */
 .funder-progress-grid { display: grid; flex: 1; min-height: 0; margin: 1rem 0 0.9rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.funder-progress-grid-seven { grid-template-columns: repeat(7, 1fr); }
-.funder-progress-card { min-width: 0; padding: 0.9rem 0.56rem 0.72rem; border-left: 1px solid var(--line); }
-.funder-progress-card:first-child { border-left: 0; }
-.progress-funder-logo { display: block; width: 6.3rem; height: 2.25rem; object-fit: contain; object-position: left center; }
-.progress-funder-logo-smbc { width: 7.2rem; }
-.progress-funder-logo-bnpp { width: 6.4rem; }
-.progress-funder-logo-snb { width: 4.4rem; height: 2.4rem; }
-.progress-funder-logo-fab { width: 4.8rem; height: 2.35rem; }
-.progress-funder-logo-natixis { width: 6.2rem; }
-.progress-status { display: block; margin-top: 0.55rem; color: #009b83; font-size: clamp(0.46rem, 0.52vw, 0.59rem); font-weight: 800; letter-spacing: 0.055em; text-transform: uppercase; }
+.funder-progress-grid-seven { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); }
+.funder-progress-card { min-width: 0; padding: 0.75rem 1rem 0.65rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.funder-progress-card:nth-child(4),
+.funder-progress-card:nth-child(8) { border-right: 0; }
+.funder-progress-card:nth-child(n+5) { border-bottom: 0; }
+.progress-funder-logo { display: block; width: 7.2rem; height: 1.8rem; object-fit: contain; object-position: left center; }
+.progress-funder-logo-smbc { width: 7.8rem; }
+.progress-funder-logo-bnpp { width: 7rem; }
+.progress-funder-logo-snb { width: 5rem; height: 1.9rem; }
+.progress-funder-logo-fab { width: 5.2rem; height: 1.9rem; }
+.progress-funder-logo-natixis { width: 6.8rem; }
+.progress-status { display: block; margin-top: 0.4rem; color: #009b83; font-size: clamp(0.43rem, 0.49vw, 0.56rem); font-weight: 800; letter-spacing: 0.055em; text-transform: uppercase; }
 .progress-status-success { color: var(--status-good); }
 .progress-status-pending { color: #a46007; }
-.funder-progress-card h3 { min-height: 2.15rem; margin: 0.42rem 0 0.55rem; font-size: clamp(0.7rem, 0.82vw, 0.94rem); line-height: 1.14; }
-.funder-progress-list { display: grid; gap: 0.48rem; margin: 0.75rem 0 0; padding: 0; list-style: none; }
-.funder-progress-list li { position: relative; padding-left: 0.68rem; color: var(--muted); font-size: clamp(0.46rem, 0.52vw, 0.59rem); line-height: 1.36; }
+.funder-progress-card h3 { min-height: 1.25rem; margin: 0.28rem 0 0.38rem; font-size: clamp(0.72rem, 0.84vw, 0.96rem); line-height: 1.14; }
+.funder-progress-list { display: grid; gap: 0.34rem; margin: 0.5rem 0 0; padding: 0; list-style: none; }
+.funder-progress-list li { position: relative; padding-left: 0.62rem; color: var(--muted); font-size: clamp(0.47rem, 0.55vw, 0.63rem); line-height: 1.34; }
 .funder-progress-list li::before { position: absolute; top: 0.48em; left: 0; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: var(--brand-violet); content: ""; }
 .funder-progress-list strong { color: var(--brand-ink); }
+
+.funder-progress-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #8a8c96; background: #f5f5f6; text-align: center; }
+.funder-progress-placeholder .funder-placeholder-mark { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; color: #9b9ca5; border: 1px dashed #b8b9c0; border-radius: 50%; }
+.funder-progress-placeholder svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 1.6; }
+.funder-progress-placeholder h3 { min-height: 0; margin: 0.65rem 0 0; color: #777985; font-size: clamp(0.72rem, 0.84vw, 0.96rem); }
+.funder-progress-placeholder p { margin: 0.35rem 0 0; color: #999ba4; font-size: clamp(0.47rem, 0.54vw, 0.62rem); }
 
 .delivery-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.28rem; }
 .delivery-track div { display: grid; gap: 0.28rem; text-align: center; }
