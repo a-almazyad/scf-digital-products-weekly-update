@@ -983,6 +983,7 @@ button { font: inherit; }
 .progress-funder-logo-snb { width: 5rem; height: 1.9rem; }
 .progress-funder-logo-fab { width: 5.2rem; height: 1.9rem; }
 .progress-funder-logo-natixis { width: 6.8rem; }
+.progress-funder-logo-gib { width: 5.2rem; height: 1.9rem; }
 .progress-status { display: block; margin-top: 0.4rem; color: #009b83; font-size: clamp(0.43rem, 0.49vw, 0.56rem); font-weight: 800; letter-spacing: 0.055em; text-transform: uppercase; }
 .progress-status-success { color: var(--status-good); }
 .progress-status-pending { color: #a46007; }
