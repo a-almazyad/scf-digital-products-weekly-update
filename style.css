@@ -332,7 +332,7 @@ button { font: inherit; }
 
 .release-summary {
   display: grid;
-  grid-template-columns: 8.6rem 9.7rem 1fr;
+  grid-template-columns: 7.2rem 7.2rem 6.8rem 1fr;
   align-items: stretch;
   min-height: 3.75rem;
   margin: 0.9rem 0 0.75rem;
@@ -399,10 +399,15 @@ button { font: inherit; }
 .scope-themes button[aria-pressed="true"] strong { color: #fff; border-color: rgba(255,255,255,0.48); }
 
 .scope-items { display: flex; flex-direction: column; background: #fff; }
-.scope-items > header { display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); background: var(--surface-violet); }
+.scope-items > header { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 0.6rem; align-items: center; min-height: 3.5rem; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); background: var(--surface-violet); }
 .scope-items header span { color: var(--brand-violet); font-size: clamp(0.43rem, 0.51vw, 0.58rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
 .scope-items header h3 { margin: 0.12rem 0 0; font-size: clamp(0.69rem, 0.82vw, 0.94rem); }
 .scope-items > header > strong { color: var(--muted); font-size: clamp(0.49rem, 0.58vw, 0.66rem); }
+.scope-release-switch { display: flex; padding: 0.18rem; background: rgba(83,55,255,0.08); border: 1px solid rgba(83,55,255,0.16); border-radius: 999px; }
+.scope-release-switch button { min-width: 2.45rem; padding: 0.34rem 0.55rem; color: var(--muted); background: transparent; border: 0; border-radius: 999px; cursor: pointer; font-size: clamp(0.43rem, 0.5vw, 0.58rem); font-weight: 800; }
+.scope-release-switch button[aria-pressed="true"] { color: #fff; background: var(--brand-violet); }
+.scope-release-switch button:focus-visible { outline: 2px solid var(--brand-light-blue); outline-offset: 1px; }
+.scope-release-switch button:disabled { opacity: 0.35; cursor: not-allowed; }
 .scope-item-list { display: flex; flex: 1; min-height: 0; flex-direction: column; padding: 0.35rem 0.45rem; }
 .scope-item {
   display: grid;

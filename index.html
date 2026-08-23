@@ -119,37 +119,42 @@
       </header>
 
       <div class="release-summary" aria-label="R61 closeout and R62 summary">
-        <div><strong>52</strong><span>Delivery epics</span></div>
-        <div><strong>5</strong><span>Workstreams</span></div>
+        <div><strong>33</strong><span>R61 epics</span></div>
+        <div><strong>52</strong><span>R62 epics</span></div>
+        <div><strong>5</strong><span>Squads</span></div>
         <p><span class="release-live-dot" aria-hidden="true"></span>R61 ended · Monday production target · R62 starts Monday</p>
       </div>
 
       <div class="release-scope-layout" data-release-scope>
-        <nav class="scope-themes" aria-label="R62 delivery workstreams">
-          <p>Workstreams</p>
+        <nav class="scope-themes" aria-label="Delivery squads">
+          <p>Squads</p>
           <button type="button" data-scope-theme="scf" aria-pressed="true">
-            <span>SCF Sprint</span><strong>20</strong>
+            <span>SCF Sprint</span><strong data-scope-theme-count="scf">20</strong>
           </button>
           <button type="button" data-scope-theme="crm" aria-pressed="false">
-            <span>CRM Sprint</span><strong>4</strong>
+            <span>CRM Sprint</span><strong data-scope-theme-count="crm">4</strong>
           </button>
           <button type="button" data-scope-theme="admin" aria-pressed="false">
-            <span>Admin Sprint</span><strong>18</strong>
+            <span>Admin Sprint</span><strong data-scope-theme-count="admin">18</strong>
           </button>
           <button type="button" data-scope-theme="borrower" aria-pressed="false">
-            <span>Borrower Sprint</span><strong>6</strong>
+            <span>Borrower Sprint</span><strong data-scope-theme-count="borrower">6</strong>
           </button>
           <button type="button" data-scope-theme="finops" aria-pressed="false">
-            <span>SCF FinOps</span><strong>4</strong>
+            <span>SCF FinOps</span><strong data-scope-theme-count="finops">4</strong>
           </button>
         </nav>
 
         <section class="scope-items" aria-labelledby="scope-theme-title">
           <header>
-            <div><span>Selected sprint</span><h3 id="scope-theme-title">SCF Sprint</h3></div>
+            <div><span>Selected squad</span><h3 id="scope-theme-title">SCF Sprint · R62</h3></div>
+            <div class="scope-release-switch" role="group" aria-label="Selected squad release">
+              <button type="button" data-scope-release="r61" aria-pressed="false">R61</button>
+              <button type="button" data-scope-release="r62" aria-pressed="true">R62</button>
+            </div>
             <strong id="scope-theme-count">20 items</strong>
           </header>
-          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="R62 delivery items"></div>
+          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="SCF Sprint R62 delivery items"></div>
           <div class="scope-pagination" aria-label="Scope item pages">
             <button id="scope-page-prev" type="button" aria-label="Previous scope items">←</button>
             <span id="scope-page-label">1–6 of 20</span>
@@ -175,7 +180,7 @@
 
       <footer class="slide-footer">
         <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>R62 delivery scope from Delivery Pulse · regression and miscellaneous epics excluded.</span>
+        <span id="scope-footer-release">R62 delivery scope from Delivery Pulse · regression and miscellaneous epics excluded.</span>
       </footer>
     </section>
 
@@ -694,6 +699,6 @@
     <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
   </nav>
 
-  <script src="script.js?v=20260823-main-appendix-order"></script>
+  <script src="script.js?v=20260823-squad-release-split"></script>
 </body>
 </html>

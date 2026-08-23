@@ -128,8 +128,17 @@ const releaseThemeLabels = {
   scf: "SCF Sprint",
   finops: "SCF FinOps"
 };
+const releaseScopes = {
+  r61: legacyReleaseScope,
+  r62: releaseScope
+};
+const releaseLabels = {
+  r61: "R61",
+  r62: "R62"
+};
 const scopePageSize = 6;
 let activeScopeTheme = "scf";
+let activeScopeRelease = "r62";
 let activeScopePage = 0;
 
 function scopeLabelTone(label) {
@@ -160,7 +169,7 @@ function renderScopeDetail(item) {
   document.getElementById("scope-status-legend").innerHTML = item.statuses.map(([label, count, tone]) =>
     `<div><i class="status-${tone}"></i><span>${label}</span><strong>${count}</strong></div>`
   ).join("");
-  document.getElementById("scope-jira-link").href = `https://manafaco.atlassian.net/browse/${item.jira || item.id}`;
+  document.getElementById("scope-jira-link").href = `https://manafaco.atlassian.net/browse/${item.jira || item.df || item.id}`;
 
   releaseScopeRoot.querySelectorAll(".scope-item").forEach((button) => {
     button.setAttribute("aria-selected", String(button.dataset.scopeItem === item.id));
@@ -170,13 +179,27 @@ function renderScopeDetail(item) {
 function renderScopeTheme(theme) {
   if (!releaseScopeRoot) return;
   activeScopeTheme = theme;
+  if (!releaseScopes[activeScopeRelease].some((item) => item.theme === theme)) {
+    activeScopeRelease = Object.keys(releaseScopes).find((release) =>
+      releaseScopes[release].some((item) => item.theme === theme)
+    ) || activeScopeRelease;
+  }
+  activeScopePage = 0;
+  renderScopePage();
+}
+
+function renderScopeRelease(release) {
+  if (!releaseScopeRoot || !releaseScopes[release]) return;
+  if (!releaseScopes[release].some((item) => item.theme === activeScopeTheme)) return;
+  activeScopeRelease = release;
   activeScopePage = 0;
   renderScopePage();
 }
 
 function renderScopePage() {
   if (!releaseScopeRoot) return;
-  const items = releaseScope.filter((item) => item.theme === activeScopeTheme);
+  const activeReleaseScope = releaseScopes[activeScopeRelease];
+  const items = activeReleaseScope.filter((item) => item.theme === activeScopeTheme);
   const pageCount = Math.ceil(items.length / scopePageSize);
   activeScopePage = Math.max(0, Math.min(pageCount - 1, activeScopePage));
   const start = activeScopePage * scopePageSize;
@@ -184,10 +207,21 @@ function renderScopePage() {
   releaseScopeRoot.querySelectorAll("[data-scope-theme]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.scopeTheme === activeScopeTheme));
   });
-  document.getElementById("scope-theme-title").textContent = releaseThemeLabels[activeScopeTheme];
+  releaseScopeRoot.querySelectorAll("[data-scope-theme-count]").forEach((count) => {
+    count.textContent = activeReleaseScope.filter((item) => item.theme === count.dataset.scopeThemeCount).length;
+  });
+  releaseScopeRoot.querySelectorAll("[data-scope-release]").forEach((button) => {
+    const releaseCount = releaseScopes[button.dataset.scopeRelease]
+      .filter((item) => item.theme === activeScopeTheme).length;
+    button.setAttribute("aria-pressed", String(button.dataset.scopeRelease === activeScopeRelease));
+    button.disabled = releaseCount === 0;
+    button.title = releaseCount === 0 ? `No ${releaseLabels[button.dataset.scopeRelease]} items for this squad` : "";
+  });
+  document.getElementById("scope-theme-title").textContent = `${releaseThemeLabels[activeScopeTheme]} · ${releaseLabels[activeScopeRelease]}`;
   document.getElementById("scope-theme-count").textContent = `${items.length} items`;
 
   const list = document.getElementById("scope-item-list");
+  list.setAttribute("aria-label", `${releaseThemeLabels[activeScopeTheme]} ${releaseLabels[activeScopeRelease]} delivery items`);
   list.innerHTML = visibleItems.map((item) => {
     const key = item.jira || (item.df ? `${item.id} · ${item.df}` : item.id);
     const labels = item.labels.slice(0, 2).map((label) => `<i class="${scopeLabelTone(label)}">${label}</i>`).join("");
@@ -200,7 +234,7 @@ function renderScopePage() {
   list.querySelectorAll("[data-scope-item]").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.stopPropagation();
-      renderScopeDetail(releaseScope.find((item) => item.id === button.dataset.scopeItem));
+      renderScopeDetail(activeReleaseScope.find((item) => item.id === button.dataset.scopeItem));
     });
   });
 
@@ -208,6 +242,7 @@ function renderScopePage() {
   document.getElementById("scope-page-label").textContent = `${start + 1}–${end} of ${items.length}`;
   document.getElementById("scope-page-prev").disabled = activeScopePage === 0;
   document.getElementById("scope-page-next").disabled = activeScopePage === pageCount - 1;
+  document.getElementById("scope-footer-release").textContent = `${releaseLabels[activeScopeRelease]} delivery scope from Delivery Pulse · regression and miscellaneous epics excluded.`;
   renderScopeDetail(visibleItems[0]);
 }
 
@@ -215,6 +250,13 @@ releaseScopeRoot?.querySelectorAll("[data-scope-theme]").forEach((button) => {
   button.addEventListener("click", (event) => {
     event.stopPropagation();
     renderScopeTheme(button.dataset.scopeTheme);
+  });
+});
+
+releaseScopeRoot?.querySelectorAll("[data-scope-release]").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    renderScopeRelease(button.dataset.scopeRelease);
   });
 });
 
