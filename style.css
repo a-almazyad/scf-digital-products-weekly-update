@@ -978,6 +978,19 @@ button { font: inherit; }
 /* Funder progress — CTO Weekly layout */
 .funder-progress-grid { display: grid; flex: 1; min-height: 0; margin: 1rem 0 0.9rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .funder-progress-grid-seven { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); }
+.funder-progress-grid-nine { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line); }
+.funder-progress-grid-nine .funder-progress-card { padding: 0.58rem 0.82rem 0.5rem; }
+.funder-progress-grid-nine .funder-progress-card:nth-child(3n) { border-right: 0; }
+.funder-progress-grid-nine .funder-progress-card:nth-child(n+7) { border-bottom: 0; }
+.funder-progress-grid-nine .funder-progress-card:nth-child(4),
+.funder-progress-grid-nine .funder-progress-card:nth-child(8) { border-right: 1px solid var(--line); }
+.funder-progress-grid-nine .funder-progress-card:nth-child(n+5):nth-child(-n+6) { border-bottom: 1px solid var(--line); }
+.funder-progress-grid-nine .progress-funder-logo { height: 1.15rem; }
+.funder-progress-grid-nine .funder-progress-card h3 { margin: 0.2rem 0 0.25rem; }
+.funder-progress-grid-nine .delivery-track { margin-top: 0.3rem; }
+.funder-progress-grid-nine .funder-progress-list { gap: 0.2rem; margin-top: 0.32rem; }
+.funder-progress-grid-nine .funder-progress-list li { font-size: clamp(0.43rem, 0.49vw, 0.56rem); line-height: 1.24; }
+.funder-progress-grid-nine .progress-funder-logo-sidf { width: 5.2rem; object-fit: contain; object-position: left center; }
 .funder-progress-card { min-width: 0; padding: 0.75rem 1rem 0.65rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .funder-progress-card:nth-child(4),
 .funder-progress-card:nth-child(8) { border-right: 0; }

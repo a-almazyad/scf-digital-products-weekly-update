@@ -15,7 +15,51 @@ const finopsCaption = document.getElementById("finops-shot-caption");
 const finopsDots = finopsCarousel ? Array.from(finopsCarousel.querySelectorAll("[data-finops-index]")) : [];
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 
+const r61Epic = (id, df, title, theme, done, labels = [], jira = id) => ({
+  id, df, jira, title, theme, tickets: 1, labels,
+  signal: done ? "Production Done" : "Backlog",
+  tone: done ? "complete" : "planned",
+  statuses: [[done ? "Production Done" : "Backlog", 1, done ? "approved" : "todo"]]
+});
+
 const legacyReleaseScope = [
+  r61Epic("EMQ-4226", "DF-3492", "AML Fetch for Companies and Owners", "scf", true, ["R61"]),
+  r61Epic("EMQ-5438", "DF-4021", "SIC SCF Onboarding Requirements", "scf", true, ["R61"]),
+  r61Epic("EMQ-5516", "DF-3832", "SMBC Integration Manager — Email Phase 1", "scf", true, ["R61"]),
+  r61Epic("EMQ-5630", "DF-4164", "Merged SCF Offer View Permission", "scf", true, ["R61"]),
+  r61Epic("EMQ-5668", "", "Admin AML Issues to Be Fixed", "scf", true, ["R61"]),
+  r61Epic("EMQ-5712", "DF-4091", "Buyer Maturity Report Enhancement", "scf", true, ["R61"]),
+  r61Epic("EMQ-5713", "DF-4148", "SAB Financing Requests Timeline", "scf", true, ["R61"]),
+  r61Epic("EMQ-5714", "DF-4135", "SAB Thursday Timing Enhancement", "scf", true, ["R61", "no-qa"]),
+  r61Epic("EMQ-5352", "DF-3957", "Direct-to-Supplier Funding Model V1.0", "scf", false),
+  r61Epic("EMQ-5711", "DF-4136", "BNPP End-of-Month Fees Reconciliation", "scf", false, ["connected-with-direct-to-supplier"]),
+  r61Epic("EMQ-5716", "DF-4194", "Fees Management Goal-Seeking Fixes", "scf", false),
+  r61Epic("EMQ-5463", "DF-3486", "Auto-send Supplier Outreach Report", "scf", false),
+  r61Epic("EMQ-5328", "DF-3928", "Buyer Profile Phase III", "scf", false, ["remove-for-62"]),
+  r61Epic("EMQ-5338", "DF-3936", "J.P. Morgan Financing Calculation", "scf", false),
+  r61Epic("EMQ-5693", "DF-4192", "Supplier Banking & Payout Accounts", "scf", false),
+  r61Epic("EMQ-5715", "DF-3714", "Standard Chartered B2B API Manager", "scf", false, ["third-party-pending"]),
+
+  r61Epic("ASQ-4559", "DF-4049", "Storybook Setup for Internal Design System", "admin", true),
+  r61Epic("ASQ-4592", "DF-3908", "Oracle SSO Permission Automation", "admin", true),
+  r61Epic("ASQ-4897", "DF-4215", "PM Board Filter Enhancement", "admin", true),
+  r61Epic("ASQ-4879", "DF-4113", "Automate Facility Creation from Offer Acceptance", "admin", true),
+  r61Epic("ASQ-4877", "DF-4144", "Revamp Admin Header for New Design System", "admin", true),
+  r61Epic("ASQ-4868", "DF-4184", "Design System Component Fixes", "admin", true),
+  r61Epic("ASQ-4910", "DF-4174", "Create Manual Financial Offer", "admin", true),
+  r61Epic("ASQ-4875", "DF-4188", "Invoice Payer Column & Filter", "admin", false, ["connected-with-direct-to-supplier"], "EMQ-5825"),
+
+  r61Epic("ASQ-4881", "DF-4182", "Reactivate Eligible Financed Companies", "crm", true),
+  r61Epic("ASQ-4883", "DF-4160", "CRM Enhancements Part 6", "crm", true),
+  r61Epic("ASQ-4601", "DF-3718", "Lead Management in Sales CRM", "crm", false),
+  r61Epic("ASQ-4882", "DF-4114", "Onboarding V2 CRM Impacts", "crm", false),
+
+  r61Epic("BSQ-3020", "DF-4121", "Borrower User Management Phase II", "borrower", true),
+  r61Epic("BSQ-3064", "DF-4102", "Add More Borrower Task Types", "borrower", true),
+  r61Epic("BSQ-3135", "DF-4198", "User Management Post-Launch Enhancements — Part 1", "borrower", true, ["extension"]),
+  r61Epic("BSQ-3134", "DF-4011", "Request Clearance Letter", "borrower", true),
+  r61Epic("BSQ-2988", "DF-3357", "Borrower Activation Journey V2", "borrower", false, ["will-spill-over-r63"])
+/* Legacy snapshot replaced with current Jira epic statuses.
   { id: "ASQ-4559", df: "DF-4049", title: "Storybook Setup for Internal Design System", theme: "admin", signal: "In testing", tone: "testing", tickets: 1, labels: [], statuses: [["Dev tested on staging", 1, "testing"]] },
   { id: "ASQ-4592", df: "DF-3908", title: "Oracle SSO Permission Automation", theme: "admin", signal: "On hold", tone: "hold", tickets: 3, labels: ["might-spill-r61"], statuses: [["On hold", 3, "hold"]] },
   { id: "ASQ-4897", df: "DF-4215", title: "PM Board Filter Enhancement", theme: "admin", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] },
@@ -52,6 +96,7 @@ const legacyReleaseScope = [
   { id: "EMQ-5668", df: "", title: "Admin AML Issues to Be Fixed", theme: "scf", signal: "In testing", tone: "testing", tickets: 6, labels: ["R61"], statuses: [["Dev tested on staging", 3, "testing"], ["To do", 1, "todo"], ["Dev completed", 1, "progress"], ["Approved", 1, "approved"]] },
   { id: "EMQ-5693", df: "DF-4192", title: "Supplier Banking & Payout Accounts", theme: "scf", signal: "In progress", tone: "progress", tickets: 19, labels: [], statuses: [["To do", 15, "todo"], ["Dev completed", 3, "progress"], ["Dev tested", 1, "testing"]] },
   { id: "EMQ-5715", df: "DF-3714", title: "Standard Chartered B2B API Manager", theme: "scf", signal: "Planned", tone: "planned", tickets: 1, labels: [], statuses: [["To do", 1, "todo"]] }
+*/
 ];
 
 const planned = (id, title, theme, labels = []) => ({
@@ -63,62 +108,67 @@ const scoped = (id, title, theme, tickets, labels, statuses, signal = "R62 scope
 });
 
 const releaseScope = [
-  scoped("DF-4136", "BNPP End-of-Month Fees Reconciliation — Sending & Receiving", "scf", 1, ["connected-with-direct-to-supplier", "might-spill-r62"], [["Dev done", 1, "approved"]], "Development complete", "complete"),
-  scoped("DF-3486", "Auto-sending Supplier Outreach Report", "scf", 3, ["might-spill-r62"], [["Dev done", 3, "approved"]], "Development complete", "complete"),
-  scoped("DF-3957", "Direct-to-Supplier Funding Model V1.0", "scf", 4, ["might-spill-r62"], [["To do", 3, "todo"], ["Approved", 1, "approved"]], "In delivery", "progress"),
-  scoped("DF-4265", "V-Wallet — Display All Supplier Transactions and Restrict USD Information", "scf", 1, ["Apr-in-R62"], [["In testing", 1, "testing"]], "In testing", "testing"),
-  scoped("DF-4071", "Taulia Onboarding APIs Impact and Interactions", "scf", 4, ["extension", "might-spill-r62"], [["On hold", 1, "hold"], ["In testing", 3, "testing"]], "Testing · one on hold", "testing"),
-  scoped("DF-4192", "Supplier Banking and Payout Account Management", "scf", 20, ["extension", "might-spill-r62"], [["To do", 2, "todo"], ["On hold", 5, "hold"], ["In testing", 13, "testing"]], "Testing", "testing"),
-  scoped("DF-4322", "Buyer-Configurable Default IBAN Selection", "scf", 7, ["default-iban-selection", "phase-2", "will-spill-over-r62"], [["To do", 6, "todo"], ["In progress", 1, "progress"]], "In progress", "progress"),
-  scoped("DF-3936", "J.P. Morgan Adjusting Financing Calculation", "scf", 3, ["extension", "might-spill-r62"], [["In testing", 3, "testing"]], "In testing", "testing"),
-  scoped("DF-4188", "Invoice Management — Add Payer Column and Filter", "scf", 2, ["connected-with-direct-to-supplier", "will-spill-over-r62"], [["To do", 2, "todo"]], "R62 spillover", "hold"),
-  scoped("DF-4120", "Automating SAMA SCF Report — Enhancement", "scf", 1, ["OnHold-BI", "will-spill-over-r62"], [["To do", 1, "todo"]], "On hold · BI", "hold"),
-  scoped("DF-4194", "Goal-Seeking Fee Management Fixes", "scf", 2, ["must-have"], [["To do", 2, "todo"]]),
+  planned("DF-4265", "V-Wallet — Display All Supplier Transactions and Restrict USD Information", "scf"),
+  planned("DF-4192", "Supplier Banking and Payout Account Management", "scf"),
+  planned("DF-4322", "Buyer-Configurable Default IBAN Selection", "scf"),
+  planned("DF-3957", "Direct-to-Supplier Funding Model V1.0", "scf"),
+  planned("DF-4188", "Invoice Management — Add Payer Column and Filter", "scf"),
+  planned("DF-4136", "BNPP End-of-Month Fees Reconciliation — Sending & Receiving", "scf"),
+  planned("DF-3936", "J.P. Morgan Adjusting Financing Calculation", "scf"),
+  planned("DF-3486", "Auto-sending Supplier Outreach Report", "scf"),
+  planned("DF-4071", "Taulia Onboarding APIs Impact and Interactions", "scf"),
+  planned("DF-3714", "Standard Chartered Bank — B2B API Manager", "scf"),
+  planned("DF-4385", "Funder Integration — Automatic Email for File Errors and Slack Notifications", "scf"),
   planned("DF-4305", "PO Financing Endpoint — Enhancement", "scf"),
-  planned("DF-4302", "Riyad Bank — B2B API Manager", "scf"),
+  planned("DF-4302", "Riyadh Bank — B2B API Manager", "scf", ["might-spill-over-r63"]),
   planned("DF-4288", "SNB Financing Request File — Use Slashes in Date Format", "scf"),
   planned("DF-4277", "FAB — SFTP Access Credentials", "scf"),
   planned("DF-4275", "Standard Chartered Bank — SFTP Access Credentials", "scf"),
-  planned("DF-4344", "SMBC Inbound Files — Support Password-Protected Attachments", "scf"),
   planned("DF-4346", "SMBC Email Integration — Migrate CSV to XLSX", "scf"),
+  planned("DF-4344", "SMBC Inbound Files — Support Password-Protected Attachments", "scf"),
+  planned("DF-3778", "Borrower Channel — Taulia Onboarding APIs Impact and Interactions", "scf", ["might-spill-over-r63"]),
+  planned("DF-4194", "Fees Management — Goal-Seeking Fixes", "scf"),
   planned("DF-4329", "Automate Scheduled Sending of the Aramco Buyer Report", "scf"),
-  scoped("DF-3778", "Buyer Supplier Yearly Spend", "scf", 6, [], [["To do", 6, "todo"]]),
+  planned("DF-4120", "Automating SAMA SCF Report — Enhancement", "scf"),
 
-  scoped("DF-4114", "Onboarding V2 CRM Impacts — Appointment Status and Financing Amount", "crm", 1, ["extension", "might-spill-r62"], [["Dev done", 1, "approved"]], "Development complete", "complete"),
-  scoped("DF-3976", "Target Management Version 2.0 — CRM", "crm", 12, [], [["To do", 12, "todo"]]),
-  planned("DF-4354", "CRM — Show Support Report Dialog", "crm"),
+  planned("DF-3718", "Lead Management in Sales CRM", "crm"),
+  planned("DF-3976", "Target Management Version 2.0 — CRM", "crm", ["will-spill-over-r63"]),
   planned("DF-4337", "Rename Sales CRM to Customer Relationship", "crm"),
+  planned("DF-4354", "CRM — Show Support Report Dialog", "crm"),
 
-  planned("DF-4259", "Hotfix — Control Collaterals Reflection at Loan Level", "admin"),
-  scoped("DF-3752", "Capex Product — Admin", "admin", 41, ["will-spill-over-r62"], [["UAT queue", 1, "todo"], ["To do", 1, "todo"], ["On hold", 1, "hold"], ["In progress", 1, "progress"], ["Dev done", 12, "approved"], ["In testing", 25, "testing"]], "R62 spillover", "hold"),
-  scoped("DF-4269", "Enable Duplicating a Financing Offer", "admin", 2, [], [["To do", 2, "todo"]]),
-  planned("DF-4308", "Invoice Management — Remove Redundant Bank Information Columns", "admin"),
-  planned("DF-4335", "Debt Periodic Review and Facility Change — Validate Outstanding Amount", "admin"),
-  planned("DF-4177", "Financial Ratios and Qawaem — Company Size Update Cycle", "admin"),
+  planned("DF-3752", "Capex Product — Admin", "admin", ["will-spill-over-r63"]),
+  planned("DF-4335", "Periodic Review & Facility Change — Validate Outstanding Amount", "admin"),
+  planned("DF-4259", "Hotfix — Control Collaterals Reflection at Loan Level", "admin", ["hotfix"]),
+  planned("DF-4348", "Job Title Creation and Edit Handling", "admin"),
+  planned("DF-4339", "Facility Agreement Update", "admin"),
+  planned("DF-4359", "Hotfix — VAT Percentage Rounding on Invoice Files", "admin", ["hotfix"]),
+  planned("DF-4361", "Remove VAT Field from Manual Invoice Creation", "admin"),
+  planned("DF-4364", "Handle Long Company Names in Tax Invoice", "admin"),
+  planned("DF-4187", "Funder Management — Manual Qawaem in RAC Eligibility", "admin"),
+  planned("DF-4177", "Financial Ratios & Qawaem — Four-Month Update Cycle", "admin"),
   planned("DF-4293", "Switcher Enhancement", "admin"),
   planned("DF-4292", "Sidebar Enhancement for CRM and Invoice", "admin"),
+  planned("DF-4338", "Internal Design System — Create Permissions Page", "admin"),
+  planned("DF-4308", "Invoice Management — Remove Redundant Bank Information Columns", "admin"),
   planned("DF-4291", "Add Header Breadcrumbs for CRM and Invoice", "admin"),
-  scoped("DF-4187", "Funder Management — Manual Qawaem in RAC Eligibility", "admin", 2, [], [["To do", 2, "todo"]]),
-  planned("DF-4331", "Add Filter to Fund Request Page", "admin"),
-  scoped("DF-4315", "Invoice Management — Credit Note for Unpaid Invoices", "admin", 2, [], [["To do", 2, "todo"]]),
-  scoped("DF-4330", "Facility Configuration Enhancement", "admin", 2, [], [["To do", 2, "todo"]]),
+  planned("DF-4269", "Enable Duplicating a Financing Offer", "admin"),
   planned("DF-4270", "Add Filters to Credit Instrument Details Master View", "admin"),
+  planned("DF-4331", "Add Filter to Fund Request Page", "admin"),
+  planned("DF-4330", "Facility Configuration Enhancement", "admin"),
   planned("DF-4336", "Attach Image Screenshots", "admin"),
-  planned("DF-4348", "Job Title Creation and Edit Handling", "admin"),
-  planned("DF-4333", "Internal Design System — Create Permissions Page", "admin"),
-  scoped("DF-4339", "Facility Agreement Update", "admin", 4, [], [["To do", 4, "todo"]]),
 
-  scoped("DF-3357", "Borrower Onboarding Activation Journey V2", "borrower", 26, ["will-spill-over-r62"], [["To do", 3, "todo"], ["Dev done", 9, "approved"], ["In testing", 13, "testing"], ["Approved", 1, "approved"]], "Testing", "testing"),
-  scoped("DF-4294", "Borrower Admin User Management Post-Launch Enhancements — Part 2", "borrower", 20, ["extension", "will-spill-over-r62"], [["To do", 11, "todo"], ["On hold", 5, "hold"], ["In progress", 1, "progress"], ["Dev done", 1, "approved"], ["In testing", 2, "testing"]], "In delivery", "progress"),
-  scoped("DF-4283", "Capex Product — Borrower", "borrower", 33, ["will-spill-over-r62"], [["To do", 18, "todo"], ["In progress", 3, "progress"], ["Dev done", 6, "approved"], ["In testing", 6, "testing"]], "In delivery", "progress"),
-  scoped("DF-4332", "Register and Track External Delegations", "borrower", 5, [], [["To do", 4, "todo"], ["Dev done", 1, "approved"]]),
-  scoped("DF-4328", "Owner-Related Companies", "borrower", 3, [], [["To do", 3, "todo"]]),
+  planned("DF-3357", "Borrower Onboarding Activation Journey V2", "borrower", ["will-spill-over-r63"]),
+  planned("DF-4294", "Borrower Admin User Management Post-Launch Enhancements — Part 2", "borrower"),
+  planned("DF-4283", "Capex Product — Borrower", "borrower", ["will-spill-over-r63"]),
+  planned("DF-4332", "Register and Track External Delegations", "borrower"),
+  planned("DF-4328", "Owner-Related Companies", "borrower"),
   planned("DF-4142", "Update Primary Permission Assignee Eligibility Rules", "borrower"),
+  planned("DF-4373", "Borrower Financing Journey V2", "borrower", ["will-spill-over-r63"]),
 
-  scoped("DF-4026", "SCF FinOps — First Phase", "finops", 45, [], [["In testing", 12, "testing"], ["Approved", 33, "approved"]], "Testing", "testing"),
-  scoped("DF-4030", "SCF FinOps 2", "finops", 16, [], [["In testing", 14, "testing"], ["Approved", 2, "approved"]], "Testing", "testing"),
-  scoped("DF-4284", "SCF FinOps — Post-Deployment Feedback and Improvements", "finops", 35, [], [["To do", 9, "todo"], ["Dev done", 1, "approved"], ["In testing", 23, "testing"], ["UAT ready", 2, "progress"]], "Testing", "testing"),
-  scoped("DF-4324", "Reject Pending EPs by Supplier and Program", "finops", 3, [], [["In progress", 2, "progress"], ["UAT ready", 1, "progress"]], "In progress", "progress")
+  scoped("DF-4284", "SCF FinOps — Post-Deployment Feedback and Improvements", "finops", 1, ["mostly-done", "discussions-pending"], [["Mostly done", 1, "testing"]], "Mostly done", "testing"),
+  planned("DF-4389", "SCF FinOps — Supplier Onboarding to Funder Function", "finops"),
+  scoped("DF-4170", "SCF FinOps — Phase 3", "finops", 1, ["continuous-delivery"], [["In progress", 1, "progress"]], "Continuing", "progress"),
+  scoped("DF-4324", "Reject Pending EPs by Supplier and Program", "finops", 1, ["hotfix"], [["Hotfix", 1, "testing"]], "Hotfix delivery", "testing")
 ];
 
 const releaseThemeLabels = {
