@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260830-weekly-update">
+  <link rel="stylesheet" href="style.css?v=20260906-funders-four-rows">
 </head>
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -24,13 +24,13 @@
           <p class="eyebrow">Weekly update</p>
           <h1 id="slide-1-title">SCF Digital<br>Products</h1>
           <p class="cover-subtitle">Weekly actions, delivery scope and partner integrations</p>
-          <p class="cover-date">30 August 2026</p>
+          <p class="cover-date">6 September 2026</p>
         </div>
 
         <aside class="cover-agenda" aria-label="Discussion areas">
           <p>Today’s discussion</p>
           <ol>
-            <li><span>01</span>Last-week items &amp; R61/R62 delivery</li>
+            <li><span>01</span>Last-week items &amp; R62/R63 delivery</li>
             <li><span>02</span>Taulia integration update</li>
             <li><span>03</span>SCF funder progress</li>
             <li><span>04</span>Embedded financing partnerships</li>
@@ -61,18 +61,8 @@
       </header>
 
       <div class="follow-up-list">
-        <article class="follow-up-item follow-up-item-complete">
-          <span class="follow-up-index">01</span>
-          <div class="follow-up-copy">
-            <span class="follow-up-status">Completed</span>
-            <h3>Pre-populate company size for existing SCF companies</h3>
-            <p>Company size has been populated for all existing SCF organizations using the agreed data.</p>
-          </div>
-          <div class="follow-up-decision"><span>Status</span><strong>Completed.</strong></div>
-        </article>
-
         <article class="follow-up-item">
-          <span class="follow-up-index">02</span>
+          <span class="follow-up-index">01</span>
           <div class="follow-up-copy">
             <span class="follow-up-status">Scheduled</span>
             <h3>Define the company-size update mechanism</h3>
@@ -81,30 +71,20 @@
           <div class="follow-up-decision"><span>Target</span><strong>30 September, with the Taulia onboarding API release.</strong></div>
         </article>
 
-        <article class="follow-up-item">
-          <span class="follow-up-index">03</span>
-          <div class="follow-up-copy">
-            <span class="follow-up-status">R61 scope</span>
-            <h3>Bulk rejection of pending early payments</h3>
-            <p>Enable the SCF FinOps team to reject multiple pending early payments in one action.</p>
-          </div>
-          <div class="follow-up-decision"><span>Target</span><strong>R61 production deployment on Monday.</strong></div>
-        </article>
-
         <article class="follow-up-item follow-up-item-accent">
-          <span class="follow-up-index">04</span>
+          <span class="follow-up-index">02</span>
           <div class="follow-up-copy">
-            <span class="follow-up-status">Spillover</span>
+            <span class="follow-up-status">R63 · In testing</span>
             <h3>Define SCF IBAN selection and management</h3>
             <p>When Taulia ERP onboarding returns multiple IBANs, determine the correct one and send it back to Taulia as the EP default.</p>
           </div>
-          <div class="follow-up-decision"><span>Target</span><strong>First week of R62.</strong></div>
+          <div class="follow-up-decision"><span>Status</span><strong>Default IBAN selection: all 5 tickets in testing in R63.</strong></div>
         </article>
       </div>
 
       <footer class="slide-footer">
         <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Company-size pre-population is complete; the update mechanism is scheduled for 30 September.</span>
+        <span>Open actions: company-size updates and SCF IBAN selection.</span>
       </footer>
     </section>
 
@@ -112,75 +92,76 @@
       <header class="slide-header">
         <span class="slide-number">02</span>
         <div>
-          <h2 id="slide-r61-title">R61 closeout · R62 delivery plan</h2>
-          <p>R61 closeout is based on current Jira epic status. R62 runs from 24 August through 4 September.</p>
+          <h2 id="slide-r61-title">R62 delivery status · R63 scope</h2>
+          <p>Ticket status within each selected sprint. Approved and In Production are shown separately.</p>
         </div>
-        <span class="slide-context">R62 · 24 Aug–4 Sep</span>
+        <span class="slide-context">6 Sep weekly update</span>
       </header>
 
-      <div class="release-summary" aria-label="R61 closeout and R62 summary">
-        <div><strong>33</strong><span>R61 epics</span></div>
-        <div><strong>57</strong><span>R62 epics</span></div>
+      <div class="release-summary" aria-label="R62 and R63 filtered scope summary">
+        <div><strong>52</strong><span>R62 entries</span></div>
+        <div><strong>46</strong><span>R63 entries</span></div>
         <div><strong>5</strong><span>Squads</span></div>
-        <p><span class="release-live-dot" aria-hidden="true"></span>21 of 33 R61 epics are Production Done · 12 remain in Backlog</p>
+        <p><span class="release-live-dot" aria-hidden="true"></span>All 98 entries from the selected sprint and squad view</p>
       </div>
 
       <div class="release-scope-layout" data-release-scope>
         <nav class="scope-themes" aria-label="Delivery squads">
           <p>Squads</p>
           <button type="button" data-scope-theme="scf" aria-pressed="true">
-            <span>SCF Sprint</span><strong data-scope-theme-count="scf">22</strong>
+            <span>SCF Sprint</span><strong data-scope-theme-count="scf">17</strong>
           </button>
           <button type="button" data-scope-theme="crm" aria-pressed="false">
-            <span>CRM Sprint</span><strong data-scope-theme-count="crm">4</strong>
+            <span>CRM Sprint</span><strong data-scope-theme-count="crm">2</strong>
           </button>
           <button type="button" data-scope-theme="admin" aria-pressed="false">
-            <span>Admin Sprint</span><strong data-scope-theme-count="admin">20</strong>
+            <span>Admin Sprint</span><strong data-scope-theme-count="admin">17</strong>
           </button>
           <button type="button" data-scope-theme="borrower" aria-pressed="false">
             <span>Borrower Sprint</span><strong data-scope-theme-count="borrower">7</strong>
           </button>
           <button type="button" data-scope-theme="finops" aria-pressed="false">
-            <span>SCF FinOps</span><strong data-scope-theme-count="finops">4</strong>
+            <span>SCF FinOps</span><strong data-scope-theme-count="finops">3</strong>
           </button>
         </nav>
 
         <section class="scope-items" aria-labelledby="scope-theme-title">
           <header>
-            <div><span>Selected squad</span><h3 id="scope-theme-title">SCF Sprint · R62</h3></div>
+            <div><span>Selected squad</span><h3 id="scope-theme-title">SCF Sprint · R63</h3></div>
             <div class="scope-release-switch" role="group" aria-label="Selected squad release">
-              <button type="button" data-scope-release="r61" aria-pressed="false">R61</button>
-              <button type="button" data-scope-release="r62" aria-pressed="true">R62</button>
+              <button type="button" data-scope-release="r62" aria-pressed="false">R62</button>
+              <button type="button" data-scope-release="r63" aria-pressed="true">R63</button>
             </div>
-            <strong id="scope-theme-count">22 items</strong>
+            <strong id="scope-theme-count">17 items</strong>
           </header>
-          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="SCF Sprint R62 delivery items"></div>
+          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="SCF Sprint R63 delivery items"></div>
           <div class="scope-pagination" aria-label="Scope item pages">
             <button id="scope-page-prev" type="button" aria-label="Previous scope items">←</button>
-            <span id="scope-page-label">1–6 of 22</span>
+            <span id="scope-page-label">1–6 of 17</span>
             <button id="scope-page-next" type="button" aria-label="Next scope items">→</button>
           </div>
         </section>
 
         <aside class="scope-detail" id="scope-detail" aria-live="polite">
           <div class="scope-detail-heading">
-            <div><span id="scope-detail-key">DF-4136</span><h3 id="scope-detail-title">BNPP End-of-Month Fees Reconciliation</h3></div>
-            <span class="scope-signal signal-complete" id="scope-detail-signal">Development complete</span>
+            <div><span id="scope-detail-key">EMQ-5767 · DF-4071</span><h3 id="scope-detail-title">Taulia Onboarding APIs Impact &amp; Interactions</h3></div>
+            <span class="scope-signal signal-testing" id="scope-detail-signal">In Testing</span>
           </div>
           <div class="scope-detail-labels" id="scope-detail-labels" aria-label="Jira labels"></div>
-          <div class="scope-detail-count"><strong id="scope-detail-tickets">1</strong><span>Tracked Jira items</span></div>
+          <div class="scope-detail-count"><strong id="scope-detail-tickets">1</strong><span>Tickets in selected sprint</span></div>
+          <p class="scope-detail-note" id="scope-detail-note" hidden></p>
           <div class="scope-status-section">
             <div class="scope-status-heading"><span>Current ticket status</span><strong id="scope-status-total">1 total</strong></div>
             <div class="scope-status-bar" id="scope-status-bar" aria-label="Ticket status distribution"></div>
             <div class="scope-status-legend" id="scope-status-legend"></div>
           </div>
-          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/DF-4136" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
+          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/EMQ-5767" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
         </aside>
       </div>
 
       <footer class="slide-footer">
         <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span id="scope-footer-release">R62 delivery scope from Delivery Pulse · regression and miscellaneous epics excluded.</span>
+        <span id="scope-footer-release">R63 · Delivery Pulse snapshot: 5 Sep 2026 · All entries from the selected sprint and squad view.</span>
       </footer>
     </section>
 
@@ -203,13 +184,13 @@
             <div><h3>Borrower channel</h3><p>Supplier web and mobile</p></div>
           </header>
           <div class="work-block">
-            <span>Status · No material change this week</span>
+            <span>R63 · Testing and UAT in progress</span>
             <h4>Borrower Activation Journey V2</h4>
-            <p>One journey from sign-up and profile completion through the borrower’s first financing activity, covering SCF and non-SCF users.</p>
+            <p>26 R63 tickets: 8 approved, 4 UAT ready, 2 in testing, 9 dev done, 2 on hold and 1 todo.</p>
           </div>
           <div class="card-facts">
             <div><span>Purpose</span><strong>Increase activation</strong></div>
-            <div><span>Planning target</span><strong>R62</strong></div>
+            <div><span>Planning target</span><strong>R63</strong></div>
           </div>
         </article>
 
@@ -317,7 +298,7 @@
             <ul>
               <li><span>Ongoing</span>SCF pipeline enhancements</li>
               <li><span>Ongoing</span>Reported issue resolution</li>
-              <li><span>Pending · R61</span>Lead Management deployment</li>
+              <li><span>R62 · UAT</span>Lead Management: 11 UAT ready, 4 approved</li>
             </ul>
           </div>
         </section>
@@ -400,7 +381,7 @@
         <div class="delivery-title"><span>Current status</span><strong>MVP and v1.1 are live in production</strong></div>
         <article><span>v1.1 stability</span><strong>Bug-fix release shipped</strong><p>Production fixes are included in the mini release.</p></article>
         <article><span>Financing visibility</span><strong>Offer Attempts shipped</strong><p>Teams can review attempted offers and understand their outcomes.</p></article>
-        <article><span>Release window</span><strong>R61 extended one week</strong><p>Remaining R61 delivery continues through 20 August.</p></article>
+        <article><span>R63 delivery</span><strong>Phase 3 in testing</strong><p>Funder onboarding and international IBAN support are also in R63 scope.</p></article>
       </div>
 
       <footer class="slide-footer">
@@ -482,7 +463,7 @@
         <span class="slide-number">03</span>
         <div>
           <h2 id="slide-6-title">Taulia integration updates</h2>
-          <p>Supplier onboarding API testing passed and Taulia confirmed the production release date.</p>
+          <p>Two APIs progressing toward go-live; two requests awaiting Taulia product feedback.</p>
         </div>
         <img class="taulia-logo" src="https://events.sap.com/adobe/dynamicmedia/deliver/dm-aid--5c5d573e-a3b4-446b-b794-d5221ee8ad7e/sap-taulia-r-grad-blu--3-.png?width=1600&amp;preferwebp=true&amp;quality=85" alt="SAP Taulia">
       </header>
@@ -491,27 +472,30 @@
         <article class="taulia-workstream-card">
           <header><span>01</span><span class="status-pill status-complete">Production · 30 Sep</span></header>
           <h3>Supplier onboarding APIs</h3>
-          <p class="taulia-card-subtitle">Remove duplicate supplier registration.</p>
-          <div class="taulia-card-detail"><span>Change</span><p>Retrieve suppliers invited by the buyer and take them directly through Manafa registration.</p></div>
-          <div class="taulia-card-detail"><span>Outcome</span><p><strong>Joint testing completed successfully.</strong></p></div>
-          <div class="taulia-card-detail"><span>Confirmed</span><p><strong>Taulia’s production release is scheduled for 30 September 2026.</strong></p></div>
+          <p class="taulia-card-subtitle">Retrieve buyer-invited suppliers and take them directly through Manafa registration.</p>
+          <div class="taulia-card-detail"><span>Readiness</span><p>Joint testing completed successfully. <strong>Production release scheduled for 30 September 2026.</strong></p></div>
         </article>
 
         <article class="taulia-workstream-card">
-          <header><span>02</span><span class="status-pill status-pending">Pending Taulia</span></header>
+          <header><span>02</span><span class="status-pill status-pending">Go-live pending</span></header>
           <h3>Invoice PDF API</h3>
-          <p class="taulia-card-subtitle">Receive the invoice PDF required for financing and retrieve it again when the original delivery fails.</p>
-          <div class="taulia-card-detail"><span>Scope</span><p>One API-based document flow covering the initial invoice copy and failed-copy retrieval.</p></div>
-          <div class="taulia-card-detail"><span>Current</span><p>The initial scope for the retrieval endpoint has been agreed.</p></div>
-          <div class="taulia-card-detail"><span>Next</span><p><strong>Follow up for the technical Swagger and delivery timeline.</strong></p></div>
+          <p class="taulia-card-subtitle">Receive invoice PDFs and retrieve copies when the original delivery fails.</p>
+          <div class="taulia-card-detail"><span>Testing passed</span><p>Tested successfully on Wednesday and Thursday, <strong>2–3 September.</strong> Awaiting go-live.</p></div>
         </article>
-      </div>
 
-      <div class="ownership-panel">
-        <span>Ownership</span>
-        <div><strong>Manafa</strong><p>Integration, registration experience and operating process</p></div>
-        <div><strong>Taulia</strong><p>API delivery and source data availability</p></div>
-        <div><strong>Joint</strong><p>Testing, reconciliation and readiness</p></div>
+        <article class="taulia-workstream-card">
+          <header><span>03</span><span class="status-pill status-pending">Product feedback pending</span></header>
+          <h3>ERP invoice number in EP payload</h3>
+          <p class="taulia-card-subtitle">Include the ERP invoice number in the early-payment (EP) payload.</p>
+          <div class="taulia-card-detail"><span>Requested</span><p><strong>Awaiting feedback from Taulia’s product team</strong> on the requested payload extension.</p></div>
+        </article>
+
+        <article class="taulia-workstream-card">
+          <header><span>04</span><span class="status-pill status-pending">Product feedback pending</span></header>
+          <h3>Preferred bank account via onboarding API</h3>
+          <p class="taulia-card-subtitle">Extend the onboarding API so Manafa can send the preferred bank account back to Taulia.</p>
+          <div class="taulia-card-detail"><span>Requested</span><p><strong>Awaiting feedback from Taulia’s product team</strong> on how to support the API extension.</p></div>
+        </article>
       </div>
 
       <footer class="slide-footer">
@@ -525,82 +509,105 @@
         <span class="slide-number">04</span>
         <div>
           <h2 id="slide-7-title">SCF funder progress</h2>
-          <p>This week’s delivery position, completed work and external dependencies.</p>
+          <p>This week’s actions, delivery targets and external dependencies.</p>
         </div>
         <span class="slide-context">Weekly integration update</span>
       </header>
 
-      <div class="funder-progress-grid funder-progress-grid-nine">
+      <div class="funder-progress-grid funder-progress-grid-nine funder-progress-grid-twelve">
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-bnpp" src="assets/logos/bnpp.png" alt="BNP Paribas">
-          <span class="progress-status progress-status-success">Account setup complete</span>
-          <h3>Aramco invoices pending</h3>
+          <span class="progress-status progress-status-success">Saudi Energy · SAO</span>
+          <h3>Operations &amp; invoice follow-up</h3>
           <div class="delivery-track delivery-track-complete" aria-label="BNP Paribas is live with Saudi Energy"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Live</span></div></div>
-          <ul class="funder-progress-list"><li>BNPP account setup is complete.</li><li><strong>Pending:</strong> Aramco response on the BNPP invoices.</li></ul>
+          <ul class="funder-progress-list"><li><strong>Saudi Energy:</strong> Prepare Ops handoff documentation.</li><li>Send August EOM file Sunday/Monday once deployed; awaiting Abdullah.</li><li><strong>SAO:</strong> Follow up Sunday on Aramco BNPP invoices; pending Aramco.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-smbc" src="assets/logos/smbc.svg" alt="SMBC">
-          <span class="progress-status">R63 delivery</span>
-          <h3>File and maturity changes</h3>
+          <span class="progress-status">Pending SAMA NOL</span>
+          <h3>Aramco pilot readiness</h3>
           <div class="delivery-track delivery-track-testing" aria-label="SMBC testing and UAT are in progress"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>UAT</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Password-protected reading and CSV-to-Excel change are planned for R63.</li><li>Sunday maturity and non-working-day push are planned for R63.</li><li>Pilot checklist follows NOL; collection account and invoice approval remain pending Aramco.</li></ul>
+          <ul class="funder-progress-list"><li>Pilot invoices and collection account setup pending; Aramco is awaiting SAMA NOL.</li><li>Share pilot checklist once SAMA NOL is received.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo" src="assets/logos/riyad-bank.svg" alt="Riyad Bank">
-          <span class="progress-status">Credential request</span>
-          <h3>B2B access formalization</h3>
+          <span class="progress-status">Updated SDD shared</span>
+          <h3>Manager ready in R64</h3>
           <div class="delivery-track delivery-track-sdd" aria-label="Riyad Bank is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Relationship manager is formalizing the UAT and production credential request.</li><li>Riyadh Bank document and SLA remain to be shared.</li><li>B2B Manager is planned for R63.</li></ul>
+          <ul class="funder-progress-list"><li>Await RB confirmation on SFTP hosting at Manafa.</li><li>B2B environment: RM formalizing request; pending RB.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo" src="assets/logos/standard-chartered.svg" alt="Standard Chartered">
           <span class="progress-status progress-status-pending">Account opening pending</span>
-          <h3>Manager planned for R63</h3>
+          <h3>Manager ready in R63</h3>
           <div class="delivery-track delivery-track-development" aria-label="Standard Chartered is preparing for development"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Follow up on account-opening progress, SDD and SLA documents.</li><li>API forms follow account opening.</li><li>SCB Manager is planned for R63.</li></ul>
+          <ul class="funder-progress-list"><li>Check B2B environment readiness with SCB.</li><li>SLA shared; pending SCB review. Fee-waiver follow-up sent; pending SCB.</li><li>Follow up on pending account opening.</li></ul>
         </article>
 
         <article class="funder-progress-card" aria-label="First Abu Dhabi Bank">
           <img class="progress-funder-logo progress-funder-logo-fab" src="https://companieslogo.com/img/orig/FAB.AE_BIG-7b5d760d.svg?download=true&amp;t=1720244491" alt="First Abu Dhabi Bank">
           <span class="progress-status">SDD &amp; SLA shared</span>
-          <h3>UAT SFTP in R62</h3>
+          <h3>Manager ready in R64</h3>
           <div class="delivery-track delivery-track-sdd" aria-label="FAB is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Updated SDD and SLA shared; FAB feedback is pending.</li><li>UAT SFTP is planned for R62; production SFTP follows.</li><li>FAB Manager is planned for R63.</li></ul>
+          <ul class="funder-progress-list"><li>Follow up on SFTP UAT IP address whitelisting.</li><li>Follow up on the shared updated SDD and SLA.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-snb" src="https://www.kscdr.org.sa/sites/default/files/styles/node_cover/public/2021-08/SNB-2.png?h=1336e95a&amp;itok=TZGeLG8N" alt="Saudi National Bank">
           <span class="progress-status progress-status-pending">Pending SNB</span>
-          <h3>API response pending</h3>
+          <h3>API timeline &amp; feedback</h3>
           <div class="delivery-track delivery-track-development" aria-label="SNB is moving into development planning"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>SNB API timeline and technical feedback remain pending.</li><li><strong>Next:</strong> Follow up with SNB on both items.</li></ul>
+          <ul class="funder-progress-list"><li>Await SNB’s API timeline and feedback.</li></ul>
         </article>
 
         <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-natixis" src="assets/logos/natixis.svg" alt="Natixis">
-          <span class="progress-status progress-status-pending">Pending Natixis</span>
-          <h3>Feedback pending</h3>
-          <div class="delivery-track delivery-track-discovery" aria-label="Natixis product demonstration completed"><div><i></i><span>Demo</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>Product information and responses have been shared.</li><li><strong>Next:</strong> Receive Natixis feedback.</li></ul>
+          <img class="progress-funder-logo " src="assets/logos/aramco.svg" alt="Aramco">
+          <span class="progress-status progress-status-pending">SDD · PPT · MOM shared</span>
+          <h3>SAO as a funder</h3>
+          <div class="delivery-track delivery-track-discovery" aria-label="SAO follow-up after the product meeting"><div><i></i><span>Demo</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
+          <ul class="funder-progress-list"><li>Post-meeting documents shared; follow up on Aramco meeting confirmation.</li><li>Prepare proposal after SAO shares deal/investment execution.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-sidf" src="assets/logos/sidf.png" alt="Saudi Industrial Development Fund">
-          <span class="progress-status">Impact assessment</span>
-          <h3>T+1 financing review</h3>
+          <span class="progress-status">Groomed for R63</span>
+          <h3>T+1 financing requirements</h3>
           <div class="delivery-track delivery-track-discovery" aria-label="SIDF impact assessment is in progress"><div><i></i><span>Review</span></div><div><i></i><span>Impact</span></div><div><i></i><span>Design</span></div><div><i></i><span>Build</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>Review the post-3:00 PM T+1 financing implications.</li><li>Assess impact on reports, accounts and financing status.</li></ul>
+          <ul class="funder-progress-list"><li>SIDF impact on T+1 financing requirements groomed for R63.</li><li>Share SIDF 1B celebration report skeleton this week.</li></ul>
         </article>
 
         <article class="funder-progress-card">
           <img class="progress-funder-logo progress-funder-logo-gib" src="assets/logos/gib.png" alt="Gulf International Bank">
-          <span class="progress-status">Inquiries answered</span>
-          <h3>Product kickoff pending</h3>
+          <span class="progress-status">Follow-up</span>
+          <h3>Product kickoff</h3>
           <div class="delivery-track delivery-track-discovery" aria-label="GIB is preparing for product kickoff"><div><i></i><span>Discuss</span></div><div><i></i><span>Kickoff</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>GIB inquiries have been answered.</li><li><strong>Next:</strong> GIB product kickoff.</li></ul>
+          <ul class="funder-progress-list"><li>Follow up with GIB on product kickoff.</li></ul>
+        </article>
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo" src="assets/logos/jpmorgan.svg" alt="JPMorgan">
+          <span class="progress-status">Pre-screening</span>
+          <h3>SAR & USD supplier lists</h3>
+          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Screen</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
+          <ul class="funder-progress-list"><li>Send SAR and USD supplier lists to JPM for pre-screening.</li></ul>
+        </article>
+
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo" src="https://www.sab.com/content/dam/sabpws/common/icons/sab-new-logo.svg" alt="SAB">
+          <span class="progress-status">Documentation</span>
+          <h3>Updated SDD & SLA</h3>
+          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
+          <ul class="funder-progress-list"><li>Share updated SDD and SLA.</li></ul>
+        </article>
+
+        <article class="funder-progress-card">
+          <img class="progress-funder-logo" src="https://bsf.sa/images/revampLogo.svg" alt="BSF">
+          <span class="progress-status">Monday meeting</span>
+          <h3>Product funder overview</h3>
+          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Overview</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
+          <ul class="funder-progress-list"><li>Conduct the BSF product funder overview on Monday.</li></ul>
         </article>
       </div>
 
@@ -707,6 +714,6 @@
     <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
   </nav>
 
-  <script src="script.js?v=20260830-release-status-scope"></script>
+  <script src="script.js?v=20260906-pulse-r62-r63"></script>
 </body>
 </html>

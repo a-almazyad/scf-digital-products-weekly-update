@@ -228,7 +228,7 @@ button { font: inherit; }
 .follow-up-list {
   display: grid;
   flex: 1;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 0.55rem;
   min-height: 0;
   margin: 0.9rem 0 0.75rem;
@@ -491,7 +491,11 @@ button { font: inherit; }
 .scope-status-heading strong { color: var(--brand-ink); font-size: clamp(0.46rem, 0.54vw, 0.61rem); }
 .scope-status-bar { display: flex; width: 100%; height: 0.48rem; margin-top: 0.65rem; overflow: hidden; background: var(--line); border-radius: 999px; }
 .scope-status-bar span { min-width: 0.22rem; }
-.status-approved { background: var(--status-good); }
+.status-approved { background: #0ea5e9; }
+.status-production { background: var(--status-good); }
+.status-devdone { background: #10b981; }
+.status-uat { background: var(--brand-violet); }
+.status-queue { background: #cbd5e1; }
 .status-testing { background: var(--status-watch); }
 .status-progress { background: var(--brand-blue); }
 .status-todo { background: #9ca1b1; }
@@ -880,13 +884,13 @@ button { font: inherit; }
 
 /* Taulia updates */
 .taulia-logo { display: block; width: clamp(6.6rem, 8.4vw, 9rem); height: auto; margin-top: 0.15rem; }
-.taulia-workstreams { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; flex: 1; min-height: 0; margin: 1.25rem 0 1rem; }
+.taulia-workstreams { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 1rem; flex: 1; min-height: 0; margin: 1.25rem 0 1rem; }
 .taulia-workstream-card { display: flex; min-width: 0; flex-direction: column; padding: 1.05rem 1.1rem; overflow: hidden; border: 1px solid var(--line-dark); border-top: 3px solid var(--brand-violet); border-radius: 12px; background: #fff; }
-.taulia-workstream-card:nth-child(2) { border-top-color: var(--brand-blue); background: var(--surface-blue); }
+.taulia-workstream-card:nth-child(even) { border-top-color: var(--brand-blue); background: var(--surface-blue); }
 .taulia-workstream-card > header { display: flex; align-items: center; justify-content: space-between; }
 .taulia-workstream-card > header > span:first-child { color: var(--brand-violet); font-size: clamp(1.25rem, 1.8vw, 2rem); font-weight: 350; letter-spacing: -0.06em; }
 .taulia-workstream-card h3 { margin: 0.8rem 0 0; font-size: clamp(0.86rem, 1.06vw, 1.22rem); line-height: 1.2; }
-.taulia-card-subtitle { min-height: 2.25rem; margin: 0.35rem 0 0.8rem; color: var(--muted); font-size: clamp(0.57rem, 0.68vw, 0.78rem); line-height: 1.35; }
+.taulia-card-subtitle { min-height: 0; margin: 0.35rem 0 0.6rem; color: var(--muted); font-size: clamp(0.57rem, 0.68vw, 0.78rem); line-height: 1.35; }
 .taulia-card-detail { padding: 0.72rem 0; border-top: 1px solid var(--line-dark); }
 .taulia-card-detail > span { color: var(--brand-violet); font-size: clamp(0.46rem, 0.54vw, 0.62rem); font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
 .taulia-card-detail p { margin: 0.3rem 0 0; color: var(--muted); font-size: clamp(0.54rem, 0.64vw, 0.74rem); line-height: 1.42; }
@@ -1157,3 +1161,15 @@ button { font: inherit; }
   }
   .deck-controls { display: none; }
 }
+
+.scope-detail-note { margin: 0 0 0.6rem; color: var(--muted); font-size: clamp(0.46rem, 0.54vw, 0.61rem); line-height: 1.4; }
+
+/* Four rows of the existing three-column funder cards. */
+.funder-progress-grid-twelve { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+.funder-progress-grid-twelve .funder-progress-card:nth-child(n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.funder-progress-grid-twelve .funder-progress-card:nth-child(3n) { border-right: 0; }
+.funder-progress-grid-twelve .funder-progress-card:nth-child(n+10) { border-bottom: 0; }
+.funder-progress-grid-twelve .funder-progress-card { padding-top: 0.36rem; padding-bottom: 0.3rem; }
+.funder-progress-grid-twelve .funder-progress-card h3 { min-height: 1rem; }
+.funder-progress-grid-twelve .progress-status { margin-top: 0.3rem; }
+.funder-progress-grid-twelve .funder-progress-list { gap: 0.15rem; }

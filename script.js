@@ -107,68 +107,109 @@ const scoped = (id, title, theme, tickets, labels, statuses, signal = "R62 scope
   id, title, theme, tickets, labels, statuses, signal, tone
 });
 
+// Delivery Pulse filtered snapshot, captured 5 September 2026.
+// Entries retain squad/sprint boundaries, including epics shared across groups.
 const releaseScope = [
-  planned("DF-4265", "V-Wallet — Display All Supplier Transactions and Restrict USD Information", "scf"),
-  planned("DF-4192", "Supplier Banking and Payout Account Management", "scf"),
-  planned("DF-4322", "Buyer-Configurable Default IBAN Selection", "scf"),
-  planned("DF-3957", "Direct-to-Supplier Funding Model V1.0", "scf"),
-  planned("DF-4188", "Invoice Management — Add Payer Column and Filter", "scf"),
-  planned("DF-4136", "BNPP End-of-Month Fees Reconciliation — Sending & Receiving", "scf"),
-  planned("DF-3936", "J.P. Morgan Adjusting Financing Calculation", "scf"),
-  planned("DF-3486", "Auto-sending Supplier Outreach Report", "scf"),
-  planned("DF-4071", "Taulia Onboarding APIs Impact and Interactions", "scf"),
-  planned("DF-3714", "Standard Chartered Bank — B2B API Manager", "scf"),
-  planned("DF-4385", "Funder Integration — Automatic Email for File Errors and Slack Notifications", "scf"),
-  planned("DF-4305", "PO Financing Endpoint — Enhancement", "scf"),
-  planned("DF-4302", "Riyadh Bank — B2B API Manager", "scf", ["might-spill-over-r63"]),
-  planned("DF-4288", "SNB Financing Request File — Use Slashes in Date Format", "scf"),
-  planned("DF-4277", "FAB — SFTP Access Credentials", "scf"),
-  planned("DF-4275", "Standard Chartered Bank — SFTP Access Credentials", "scf"),
-  planned("DF-4346", "SMBC Email Integration — Migrate CSV to XLSX", "scf"),
-  planned("DF-4344", "SMBC Inbound Files — Support Password-Protected Attachments", "scf"),
-  planned("DF-3778", "Borrower Channel — Taulia Onboarding APIs Impact and Interactions", "scf", ["might-spill-over-r63"]),
-  planned("DF-4194", "Fees Management — Goal-Seeking Fixes", "scf"),
-  planned("DF-4329", "Automate Scheduled Sending of the Aramco Buyer Report", "scf"),
-  planned("DF-4120", "Automating SAMA SCF Report — Enhancement", "scf"),
-
-  planned("DF-3718", "Lead Management in Sales CRM", "crm"),
-  planned("DF-3976", "Target Management Version 2.0 — CRM", "crm", ["will-spill-over-r63"]),
-  planned("DF-4337", "Rename Sales CRM to Customer Relationship", "crm"),
-  planned("DF-4354", "CRM — Show Support Report Dialog", "crm"),
-
-  planned("DF-3752", "Capex Product — Admin", "admin", ["will-spill-over-r63"]),
-  planned("DF-4335", "Periodic Review & Facility Change — Validate Outstanding Amount", "admin"),
-  planned("DF-4259", "Hotfix — Control Collaterals Reflection at Loan Level", "admin", ["hotfix"]),
-  planned("DF-4348", "Job Title Creation and Edit Handling", "admin"),
-  planned("DF-4339", "Facility Agreement Update", "admin"),
-  planned("DF-4359", "Hotfix — VAT Percentage Rounding on Invoice Files", "admin", ["hotfix"]),
-  planned("DF-4361", "Remove VAT Field from Manual Invoice Creation", "admin"),
-  planned("DF-4364", "Handle Long Company Names in Tax Invoice", "admin"),
-  planned("DF-4187", "Funder Management — Manual Qawaem in RAC Eligibility", "admin"),
-  planned("DF-4177", "Financial Ratios & Qawaem — Four-Month Update Cycle", "admin"),
-  planned("DF-4293", "Switcher Enhancement", "admin"),
-  planned("DF-4292", "Sidebar Enhancement for CRM and Invoice", "admin"),
-  planned("DF-4338", "Internal Design System — Create Permissions Page", "admin"),
-  planned("DF-4308", "Invoice Management — Remove Redundant Bank Information Columns", "admin"),
-  planned("DF-4291", "Add Header Breadcrumbs for CRM and Invoice", "admin"),
-  planned("DF-4269", "Enable Duplicating a Financing Offer", "admin"),
-  planned("DF-4270", "Add Filters to Credit Instrument Details Master View", "admin"),
-  planned("DF-4331", "Add Filter to Fund Request Page", "admin"),
-  planned("DF-4330", "Facility Configuration Enhancement", "admin"),
-  planned("DF-4336", "Attach Image Screenshots", "admin"),
-
-  planned("DF-3357", "Borrower Onboarding Activation Journey V2", "borrower", ["will-spill-over-r63"]),
-  planned("DF-4294", "Borrower Admin User Management Post-Launch Enhancements — Part 2", "borrower"),
-  planned("DF-4283", "Capex Product — Borrower", "borrower", ["will-spill-over-r63"]),
-  planned("DF-4332", "Register and Track External Delegations", "borrower"),
-  planned("DF-4328", "Owner-Related Companies", "borrower"),
-  planned("DF-4142", "Update Primary Permission Assignee Eligibility Rules", "borrower"),
-  planned("DF-4373", "Borrower Financing Journey V2", "borrower", ["will-spill-over-r63"]),
-
-  scoped("DF-4284", "SCF FinOps — Post-Deployment Feedback and Improvements", "finops", 1, ["mostly-done", "discussions-pending"], [["Mostly done", 1, "testing"]], "Mostly done", "testing"),
-  planned("DF-4389", "SCF FinOps — Supplier Onboarding to Funder Function", "finops"),
-  scoped("DF-4170", "SCF FinOps — Phase 3", "finops", 1, ["continuous-delivery"], [["In progress", 1, "progress"]], "Continuing", "progress"),
-  scoped("DF-4324", "Reject Pending EPs by Supplier and Program", "finops", 1, ["hotfix"], [["Hotfix", 1, "testing"]], "Hotfix delivery", "testing")
+  {"id": "BSQ-3254", "title": "[Admin] Update Primary Permission Assignee Eligibility Rules", "url": "https://manafaco.atlassian.net/browse/BSQ-3254", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4142", "sourceTitle": "DF-4142 - [Admin] Update Primary Permission Assignee Eligibility Rules", "theme": "borrower", "signal": "Approved", "tone": "progress"},
+  {"id": "BSQ-3248", "title": "[Admin] Register and Track External Delegations", "url": "https://manafaco.atlassian.net/browse/BSQ-3248", "labels": [], "statuses": [["Approved", 4, "approved"]], "tickets": 4, "df": "DF-4332", "sourceTitle": "DF-4332 - [Admin] Register and Track External Delegations", "theme": "borrower", "signal": "Approved", "tone": "progress"},
+  {"id": "BSQ-3251", "title": "[Admin] Owner Related Companies", "url": "https://manafaco.atlassian.net/browse/BSQ-3251", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4328", "sourceTitle": "DF-4328 - [Admin] Owner Related Companies", "theme": "borrower", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "BSQ-3215", "title": "[Borrower] [Admin] User Management Post-Launch Enhancements - Part 2", "url": "https://manafaco.atlassian.net/browse/BSQ-3215", "labels": [], "statuses": [["In Testing", 1, "testing"], ["UAT Ready", 4, "uat"], ["Approved", 17, "approved"]], "tickets": 22, "df": "DF-4294", "sourceTitle": "DF-4294 - [Borrower] [Admin] User Management Post-Launch Enhancements - Part 2", "theme": "borrower", "signal": "Mixed status", "tone": "testing"},
+  {"id": "BSQ-3033", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/BSQ-3033", "labels": [], "statuses": [["In Testing", 1, "testing"], ["Approved", 1, "approved"]], "tickets": 2, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "borrower", "signal": "Mixed status", "tone": "testing"},
+  {"id": "BSQ-3034", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/BSQ-3034", "labels": [], "statuses": [["In Testing", 1, "testing"], ["Approved", 3, "approved"]], "tickets": 4, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "borrower", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5853", "title": "[SCF][FinOps] Reject Pending EPs by Supplier and Program", "url": "https://manafaco.atlassian.net/browse/EMQ-5853", "labels": [], "statuses": [["Todo", 1, "todo"], ["Approved", 3, "approved"]], "tickets": 4, "df": "DF-4324", "sourceTitle": "DF-4324 - [SCF][FinOps] Reject Pending EPs by Supplier and Program", "theme": "finops", "signal": "Live (confirmed)", "tone": "complete", "note": "Live confirmed in this weekly update. Ticket statuses below reflect Delivery Pulse."},
+  {"id": "EMQ-5815", "title": "SCF FinOps – Post-Deployment Feedback and Improvements", "url": "https://manafaco.atlassian.net/browse/EMQ-5815", "labels": [], "statuses": [["Todo", 9, "todo"], ["In Testing", 15, "testing"], ["Approved", 11, "approved"]], "tickets": 35, "df": "DF-4284", "sourceTitle": "DF-4284 - SCF FinOps – Post-Deployment Feedback and Improvements", "theme": "finops", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5869", "title": "PO Financing Endpoint - Enhancement", "url": "https://manafaco.atlassian.net/browse/EMQ-5869", "labels": [], "statuses": [["Approved", 2, "approved"]], "tickets": 2, "df": "DF-4305", "sourceTitle": "DF-4305 - PO Financing Endpoint - Enhancement", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5921", "title": "[SCF][Admin] Buyer Program Limit — Shift from Funder-Level to Program-Level SAMA Limits", "url": "https://manafaco.atlassian.net/browse/EMQ-5921", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4402", "sourceTitle": "DF-4402 - [SCF][Admin] Buyer Program Limit — Shift from Funder-Level to Program-Level SAMA Limits", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5762", "title": "[SCF] [Borrower] V-Wallet - Display All Supplier V-Wallet Transactions & Restrict USD Wallet Information Display", "url": "https://manafaco.atlassian.net/browse/EMQ-5762", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4265", "sourceTitle": "DF-4265 - [SCF] [Borrower] V-Wallet - Display All Supplier V-Wallet Transactions & Restrict USD Wallet Information Display", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5880", "title": "[SCF][SMBC] Email Integration - Migrate File Exchange Format from CSV to XLSX", "url": "https://manafaco.atlassian.net/browse/EMQ-5880", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4346", "sourceTitle": "DF-4346 - [SCF][SMBC] Email Integration - Migrate File Exchange Format from CSV to XLSX", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5879", "title": "[SCF][SMBC] Inbound Files - Support Password-Protected (Encrypted) Attachments", "url": "https://manafaco.atlassian.net/browse/EMQ-5879", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4344", "sourceTitle": "DF-4344 - [SCF][SMBC] Inbound Files - Support Password-Protected (Encrypted) Attachments", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5939", "title": "[SCF] Taulia Funding Document PDF API Manager", "url": "https://manafaco.atlassian.net/browse/EMQ-5939", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4398", "sourceTitle": "DF-4398 - [SCF] Taulia Funding Document PDF API Manager", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5871", "title": "[SNB] Financing Request File - Change date format from dashes to slashes", "url": "https://manafaco.atlassian.net/browse/EMQ-5871", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4288", "sourceTitle": "DF-4288 - [SNB] Financing Request File - Change date format from dashes to slashes", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5711", "title": "BNPP - End of Month Manafa Fees Reconciliation - Sending & Receiving", "url": "https://manafaco.atlassian.net/browse/EMQ-5711", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4136", "sourceTitle": "DF-4136 - BNPP - End of Month Manafa Fees Reconciliation - Sending & Receiving", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5767", "title": "[SCF] Taulia Onboarding APIs Impact & Interactions", "url": "https://manafaco.atlassian.net/browse/EMQ-5767", "labels": [], "statuses": [["Approved", 3, "approved"]], "tickets": 3, "df": "DF-4071", "sourceTitle": "DF-4071 - [SCF] Taulia Onboarding APIs Impact & Interactions", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5825", "title": "[Admin][Invoice Management] Add Payer Column & Filter to Invoices Table", "url": "https://manafaco.atlassian.net/browse/EMQ-5825", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4188", "sourceTitle": "DF-4188 - [Admin][Invoice Management] Add Payer Column & Filter to Invoices Table", "theme": "scf", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "EMQ-5338", "title": "[J.P. Morgan] Adjusting Financing Calculation", "url": "https://manafaco.atlassian.net/browse/EMQ-5338", "labels": [], "statuses": [["UAT Ready", 3, "uat"]], "tickets": 3, "df": "DF-3936", "sourceTitle": "DF-3936 - [J.P. Morgan] Adjusting Financing Calculation", "theme": "scf", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "EMQ-5352", "title": "Direct-to-Supplier Funding Model V1.0", "url": "https://manafaco.atlassian.net/browse/EMQ-5352", "labels": [], "statuses": [["UAT Ready", 2, "uat"], ["Approved", 2, "approved"]], "tickets": 4, "df": "DF-3957", "sourceTitle": "DF-3957 - Direct-to-Supplier Funding Model V1.0", "theme": "scf", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5902", "title": "Funder Integration - Automatic Email for File Errors - Slack Notifications", "url": "https://manafaco.atlassian.net/browse/EMQ-5902", "labels": ["will-close-with-regression"], "statuses": [["In Testing", 2, "testing"]], "tickets": 2, "df": "DF-4385", "sourceTitle": "DF-4385 - Funder Integration - Automatic Email for File Errors - Slack Notifications", "theme": "scf", "signal": "In Testing", "tone": "testing"},
+  {"id": "EMQ-5596", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/EMQ-5596", "labels": [], "statuses": [["Approved", 4, "approved"]], "tickets": 4, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-4983", "title": "SCF - Production issues", "url": "https://manafaco.atlassian.net/browse/EMQ-4983", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "", "sourceTitle": "SCF - Production isuues", "theme": "scf", "signal": "Approved", "tone": "progress"},
+  {"id": "EMQ-5595", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/EMQ-5595", "labels": [], "statuses": [["Todo", 1, "todo"], ["In Progress", 1, "progress"], ["Dev Done", 1, "devdone"], ["In Testing", 2, "testing"], ["Approved", 6, "approved"]], "tickets": 11, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "scf", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-5084", "title": "Hotfix-Control Collaterals reflection - Loan level linking", "url": "https://manafaco.atlassian.net/browse/ASQ-5084", "labels": [], "statuses": [["In Production", 1, "production"]], "tickets": 1, "df": "DF-4259", "sourceTitle": "DF-4259 - Hotfix-Control Collaterals reflection - Loan level linking", "theme": "admin", "signal": "In Production", "tone": "complete"},
+  {"id": "ASQ-5104", "title": "Enhancement-Add filters to Credit Instrument Details master View", "url": "https://manafaco.atlassian.net/browse/ASQ-5104", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4270", "sourceTitle": "DF-4270 - Enhancement-Add filters to Credit Instrument Details master View", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5153", "title": "[Admin] Remove the VAT Field in Borrower Manual Invoice Creation and Rely on the VAT in General Settings", "url": "https://manafaco.atlassian.net/browse/ASQ-5153", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4361", "sourceTitle": "DF-4361 - [Admin] Remove the VAT Field in Borrower Manual Invoice Creation and Rely on the VAT in General Settings", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5087", "title": "Enhancement- adding filter to fund request page", "url": "https://manafaco.atlassian.net/browse/ASQ-5087", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4331", "sourceTitle": "DF-4331 - Enhancement- adding filter to fund request page", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5074", "title": "[Admin][Invoice Management] Customers List — Remove Redundant Bank Info Columns", "url": "https://manafaco.atlassian.net/browse/ASQ-5074", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4308", "sourceTitle": "DF-4308 - [Admin][Invoice Management] Customers List — Remove Redundant Bank Info Columns", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5105", "title": "[Admin]Attach Image Screenshots", "url": "https://manafaco.atlassian.net/browse/ASQ-5105", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4336", "sourceTitle": "DF-4336 - [Admin]Attach Image Screenshots", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5081", "title": "Switcher Enhancement", "url": "https://manafaco.atlassian.net/browse/ASQ-5081", "labels": [], "statuses": [["Approved", 2, "approved"]], "tickets": 2, "df": "DF-4293", "sourceTitle": "DF-4293 - Switcher Enhancement", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5022", "title": "[Admin] Enable duplicating a Financing Offer", "url": "https://manafaco.atlassian.net/browse/ASQ-5022", "labels": [], "statuses": [["Approved", 2, "approved"]], "tickets": 2, "df": "DF-4269", "sourceTitle": "DF-4269 - [Admin] Enable duplicating a Financing Offer", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5103", "title": "Enhancement - Facility configuration", "url": "https://manafaco.atlassian.net/browse/ASQ-5103", "labels": [], "statuses": [["Approved", 2, "approved"]], "tickets": 2, "df": "DF-4330", "sourceTitle": "DF-4330 - Enhancement - Facility configuration", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5152", "title": "[Hotfix] VAT Percentage on Invoice Files Incorrect Due to Rounding of Calculated VAT Amount", "url": "https://manafaco.atlassian.net/browse/ASQ-5152", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4359", "sourceTitle": "DF-4359 - [Hotfix] VAT Percentage on Invoice Files Incorrect Due to Rounding of Calculated VAT Amount", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5214", "title": "Access Matrix - Apply Operation Team User Group Permissions (Operation-L1, Operation-L2, Operation-L3)", "url": "https://manafaco.atlassian.net/browse/ASQ-5214", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4439", "sourceTitle": "[HotFix] DF-4439 - Access Matrix - Apply Operation Team User Group Permissions (Operation-L1, Operation-L2, Operation-L3)", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5078", "title": "HotFix-[Debt] Periodic Review & Facility Change - Route/Validate Credit Line Facilities Using Outstanding Amount", "url": "https://manafaco.atlassian.net/browse/ASQ-5078", "labels": [], "statuses": [["Approved", 2, "approved"]], "tickets": 2, "df": "DF-4335", "sourceTitle": "DF-4335 - HotFix-[Debt] Periodic Review & Facility Change - Route/Validate Credit Line Facilities Using Outstanding Amount", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-913", "title": "Production Issues", "url": "https://manafaco.atlassian.net/browse/ASQ-913", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "", "sourceTitle": "Production Issues", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5083", "title": "Add Header Breadcrumbs for CRM & Invoice", "url": "https://manafaco.atlassian.net/browse/ASQ-5083", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4291", "sourceTitle": "DF-4291 - Add Header Breadcrumbs for CRM & Invoice", "theme": "admin", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "ASQ-5107", "title": "Job Title Creation & Edit Handling in Job Title Mapping", "url": "https://manafaco.atlassian.net/browse/ASQ-5107", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4348", "sourceTitle": "DF-4348 - Job Title Creation & Edit Handling in Job Title Mapping", "theme": "admin", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "ASQ-5082", "title": "Sidebar Enhancement for CRM & Invoice", "url": "https://manafaco.atlassian.net/browse/ASQ-5082", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4292", "sourceTitle": "DF-4292 - Sidebar Enhancement for CRM & Invoice", "theme": "admin", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "ASQ-5154", "title": "Handle Long Company Names in Tax Invoice", "url": "https://manafaco.atlassian.net/browse/ASQ-5154", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4364", "sourceTitle": "DF-4364 - Handle Long Company Names in Tax Invoice", "theme": "admin", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "ASQ-5085", "title": "Funder Management - Consider the manually entered Qawaem in the RAC eligibility for the funders", "url": "https://manafaco.atlassian.net/browse/ASQ-5085", "labels": [], "statuses": [["UAT Ready", 1, "uat"], ["Approved", 1, "approved"]], "tickets": 2, "df": "DF-4187", "sourceTitle": "DF-4187 - Funders Managment - Consider the manually entered Qawaem in the RAC elegibility for the funders", "theme": "admin", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-5127", "title": "Facility Agreement Update", "url": "https://manafaco.atlassian.net/browse/ASQ-5127", "labels": [], "statuses": [["UAT Ready", 1, "uat"], ["Approved", 2, "approved"]], "tickets": 3, "df": "DF-4339", "sourceTitle": "DF-4339 - Facility Agreement Update", "theme": "admin", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-5080", "title": "[Admin] Financial Ratios & Qawaem Reduce Update Cycle to 4 Months and Add Re-fetch Reminder - update the company size with every fetch - rename a column in Mudad report", "url": "https://manafaco.atlassian.net/browse/ASQ-5080", "labels": [], "statuses": [["UAT Ready", 1, "uat"], ["Approved", 1, "approved"]], "tickets": 2, "df": "DF-4177", "sourceTitle": "DF-4177 - [Admin] Financial Ratios & Qawaem Reduce Update Cycle to 4 Months and Add Re-fetch Reminder - update the company size with every fetch - rename a column in Mudad report", "theme": "admin", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-4975", "title": "Capex product - Admin", "url": "https://manafaco.atlassian.net/browse/ASQ-4975", "labels": ["will-spill-over-r63"], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-3752", "sourceTitle": "DF-3752 - Capex product - Admin", "theme": "admin", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-4723", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/ASQ-4723", "labels": [], "statuses": [["Approved", 6, "approved"], ["In Production", 1, "production"]], "tickets": 7, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "admin", "signal": "Mixed status", "tone": "progress"},
+  {"id": "ASQ-4724", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/ASQ-4724", "labels": [], "statuses": [["Dev Done", 1, "devdone"], ["In Testing", 1, "testing"], ["Approved", 22, "approved"]], "tickets": 24, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "admin", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-5130", "title": "Rename Sales CRM to Customer Relationship", "url": "https://manafaco.atlassian.net/browse/ASQ-5130", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4337", "sourceTitle": "DF-4337 - Rename Sales CRM to Customer Relationship", "theme": "crm", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-5197", "title": "[CRM] SIDF Tag — Bulk Tag Leads and Registered Leads by CR Match", "url": "https://manafaco.atlassian.net/browse/ASQ-5197", "labels": [], "statuses": [["Approved", 1, "approved"]], "tickets": 1, "df": "DF-4434", "sourceTitle": "DF-4434 - [CRM] SIDF Tag — Bulk Tag Leads and Registered Leads by CR Match", "theme": "crm", "signal": "Approved", "tone": "progress"},
+  {"id": "ASQ-4601", "title": "Leads Management In Sales CRM", "url": "https://manafaco.atlassian.net/browse/ASQ-4601", "labels": [], "statuses": [["UAT Ready", 11, "uat"], ["Approved", 4, "approved"]], "tickets": 15, "df": "DF-3718", "sourceTitle": "DF-3718 - Leads Management In Sales CRM", "theme": "crm", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-5119", "title": "CRM - Show Support Report Dialog in CRM", "url": "https://manafaco.atlassian.net/browse/ASQ-5119", "labels": [], "statuses": [["UAT Ready", 1, "uat"]], "tickets": 1, "df": "DF-4354", "sourceTitle": "DF-4354 - CRM - Show Support Report Dialog in CRM", "theme": "crm", "signal": "UAT Ready", "tone": "testing"},
+  {"id": "ASQ-4724", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/ASQ-4724", "labels": [], "statuses": [["On Hold", 1, "hold"], ["In Testing", 1, "testing"], ["Approved", 7, "approved"]], "tickets": 9, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "crm", "signal": "Mixed status", "tone": "hold"}
+];
+const nextReleaseScope = [
+  {"id": "BSQ-3215", "title": "[Borrower] [Admin] User Management Post-Launch Enhancements - Part 2", "url": "https://manafaco.atlassian.net/browse/BSQ-3215", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4294", "sourceTitle": "DF-4294 - [Borrower] [Admin] User Management Post-Launch Enhancements - Part 2", "theme": "borrower", "signal": "Todo", "tone": "planned"},
+  {"id": "BSQ-3033", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/BSQ-3033", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "borrower", "signal": "Todo", "tone": "planned"},
+  {"id": "BSQ-3034", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/BSQ-3034", "labels": [], "statuses": [["Todo", 1, "todo"], ["In Testing", 1, "testing"]], "tickets": 2, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "borrower", "signal": "Mixed status", "tone": "testing"},
+  {"id": "BSQ-2988", "title": "[Debt][Borrower] Onboarding Activation Journey V2", "url": "https://manafaco.atlassian.net/browse/BSQ-2988", "labels": ["will-spill-over-r63"], "statuses": [["Todo", 1, "todo"], ["On Hold", 2, "hold"], ["Dev Done", 9, "devdone"], ["In Testing", 2, "testing"], ["UAT Ready", 4, "uat"], ["Approved", 8, "approved"]], "tickets": 26, "df": "DF-3357", "sourceTitle": "DF-3357 - [Debt][Borrower] Onboarding Activation Jouenry V2", "theme": "borrower", "signal": "Mixed status", "tone": "hold"},
+  {"id": "BSQ-3272", "title": "Borrower Financing Journey V2", "url": "https://manafaco.atlassian.net/browse/BSQ-3272", "labels": ["will-spill-over-r63"], "statuses": [["Todo", 14, "todo"], ["On Hold", 1, "hold"], ["In Progress", 2, "progress"], ["Dev Done", 11, "devdone"], ["In Testing", 10, "testing"]], "tickets": 38, "df": "DF-4373", "sourceTitle": "DF-4373 - Borrower Financing Journey V2", "theme": "borrower", "signal": "Mixed status", "tone": "hold"},
+  {"id": "BSQ-3187", "title": "Capex product - Borrower", "url": "https://manafaco.atlassian.net/browse/BSQ-3187", "labels": ["will-spill-over-r63"], "statuses": [["On Hold", 1, "hold"], ["Dev Done", 4, "devdone"], ["In Testing", 19, "testing"], ["UAT Ready", 4, "uat"], ["Approved", 5, "approved"]], "tickets": 33, "df": "DF-4283", "sourceTitle": "DF-4283 - Capex product - Borrower", "theme": "borrower", "signal": "Mixed status", "tone": "hold"},
+  {"id": "BSQ-3323", "title": "[Borrower]Allow Borrowers to Upload a Signature for Digital Signing", "url": "https://manafaco.atlassian.net/browse/BSQ-3323", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4206", "sourceTitle": "DF-4206 - [Borrower]Allow Borrowers to Upload a Signature for Digital Signing", "theme": "borrower", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5904", "title": "[SCF FinOps] - Phase 3", "url": "https://manafaco.atlassian.net/browse/EMQ-5904", "labels": [], "statuses": [["In Testing", 1, "testing"]], "tickets": 1, "df": "DF-4170", "sourceTitle": "DF-4170 - [SCF FinOps] - Phase 3", "theme": "finops", "signal": "In Testing", "tone": "testing"},
+  {"id": "EMQ-5905", "title": "[SCF FinOps] Supplier Onboarding to Funder Function", "url": "https://manafaco.atlassian.net/browse/EMQ-5905", "labels": [], "statuses": [["Todo", 4, "todo"]], "tickets": 4, "df": "DF-4389", "sourceTitle": "DF-4389 - [SCF FinOps] Supplier Onboarding to Funder Function", "theme": "finops", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5983", "title": "[SCF FinOps] Handling International IBANs and International Banks", "url": "https://manafaco.atlassian.net/browse/EMQ-5983", "labels": [], "statuses": [["Todo", 3, "todo"], ["Dev Done", 1, "devdone"]], "tickets": 4, "df": "DF-3480", "sourceTitle": "DF-3480 - [SCF FinOps] Handling International IBANs and International Banks", "theme": "finops", "signal": "Mixed status", "tone": "progress"},
+  {"id": "EMQ-5767", "title": "[SCF] Taulia Onboarding APIs Impact & Interactions", "url": "https://manafaco.atlassian.net/browse/EMQ-5767", "labels": [], "statuses": [["In Testing", 1, "testing"]], "tickets": 1, "df": "DF-4071", "sourceTitle": "DF-4071 - [SCF] Taulia Onboarding APIs Impact & Interactions", "theme": "scf", "signal": "In Testing", "tone": "testing"},
+  {"id": "EMQ-5596", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/EMQ-5596", "labels": [], "statuses": [["Todo", 8, "todo"], ["On Hold", 4, "hold"], ["In Progress", 1, "progress"], ["Dev Done", 1, "devdone"], ["In Testing", 2, "testing"]], "tickets": 16, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "scf", "signal": "Mixed status", "tone": "hold"},
+  {"id": "EMQ-5595", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/EMQ-5595", "labels": [], "statuses": [["Todo", 3, "todo"], ["On Hold", 1, "hold"], ["In Testing", 1, "testing"]], "tickets": 5, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "scf", "signal": "Mixed status", "tone": "hold"},
+  {"id": "EMQ-5811", "title": "[SCF] Automating SAMA SCF Report - Enhancement", "url": "https://manafaco.atlassian.net/browse/EMQ-5811", "labels": ["OnHold-BI"], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4120", "sourceTitle": "DF-4120 - [SCF] Automating SAMA SCF Report - Enhancement", "theme": "scf", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5463", "title": "[Admin] Auto-sending Supplier Outreach Report", "url": "https://manafaco.atlassian.net/browse/EMQ-5463", "labels": ["open-qa-issues", "will-spill-over-r63"], "statuses": [["In Testing", 2, "testing"], ["UAT Ready", 1, "uat"]], "tickets": 3, "df": "DF-3486", "sourceTitle": "DF-3486 - [Admin] Auto-sending Supplier Outreach Report", "theme": "scf", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5896", "title": "Automate scheduled sending of the Buyer Report for Aramco", "url": "https://manafaco.atlassian.net/browse/EMQ-5896", "labels": ["open-qa-issues", "will-spill-over-r63"], "statuses": [["In Testing", 1, "testing"]], "tickets": 1, "df": "DF-4329", "sourceTitle": "DF-4329 - Automate scheduled sending of the Buyer Report for Aramco", "theme": "scf", "signal": "In Testing", "tone": "testing"},
+  {"id": "EMQ-5716", "title": "[Fees management] Goal seeking fixes", "url": "https://manafaco.atlassian.net/browse/EMQ-5716", "labels": ["clrifications-pending", "will-spill-over-r63"], "statuses": [["Todo", 1, "todo"], ["On Hold", 1, "hold"]], "tickets": 2, "df": "DF-4194", "sourceTitle": "DF-4194 - [Fees management] Goal seeking fixes", "theme": "scf", "signal": "Mixed status", "tone": "hold"},
+  {"id": "EMQ-5839", "title": "[SCF][Supplier Banking][Phase 2] Buyer-Configurable Default IBAN Selection", "url": "https://manafaco.atlassian.net/browse/EMQ-5839", "labels": ["will-spill-over-r63"], "statuses": [["In Testing", 5, "testing"]], "tickets": 5, "df": "DF-4322", "sourceTitle": "DF-4322 - [SCF][Supplier Banking][Phase 2] Buyer-Configurable Default IBAN Selection", "theme": "scf", "signal": "In Testing", "tone": "testing"},
+  {"id": "EMQ-5693", "title": "[SCF][Supplier Banking] Supplier Banking and Payout Account Management", "url": "https://manafaco.atlassian.net/browse/EMQ-5693", "labels": ["will-spill-over-r63"], "statuses": [["UAT QUEUE", 7, "queue"], ["Todo", 5, "todo"], ["In Testing", 1, "testing"], ["UAT Ready", 3, "uat"], ["Approved", 9, "approved"]], "tickets": 25, "df": "DF-4192", "sourceTitle": "DF-4192 - [SCF][Supplier Banking] Supplier Banking and Payout Account Management", "theme": "scf", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5923", "title": "[SCF] Borrower Select a Preferred Bank Account", "url": "https://manafaco.atlassian.net/browse/EMQ-5923", "labels": ["will-spill-over-r63"], "statuses": [["Todo", 4, "todo"], ["In Progress", 1, "progress"]], "tickets": 5, "df": "DF-4325", "sourceTitle": "DF-4325 - [SCF] Borrower Select a Preferred Bank Account", "theme": "scf", "signal": "Mixed status", "tone": "progress"},
+  {"id": "EMQ-5089", "title": "[SCF] [Admin] [Buyer] Supplier Yearly Spend", "url": "https://manafaco.atlassian.net/browse/EMQ-5089", "labels": ["might-spill-over-r63"], "statuses": [["Todo", 5, "todo"], ["In Testing", 1, "testing"]], "tickets": 6, "df": "DF-3778", "sourceTitle": "DF-3778 - [SCF] [Admin] [Buyer] Supplier Yearly Spend", "theme": "scf", "signal": "Mixed status", "tone": "testing"},
+  {"id": "EMQ-5872", "title": "FAB - SFTP Access Credentials", "url": "https://manafaco.atlassian.net/browse/EMQ-5872", "labels": ["sftp-hostname-ip-not-provided"], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4277", "sourceTitle": "DF-4277 - FAB - SFTP Access Credentials", "theme": "scf", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5870", "title": "Riyadh Bank - B2B API Manager", "url": "https://manafaco.atlassian.net/browse/EMQ-5870", "labels": ["might-spill-over-r63"], "statuses": [["On Hold", 1, "hold"]], "tickets": 1, "df": "DF-4302", "sourceTitle": "DF-4302 - Riyadh Bank - B2B API Manager", "theme": "scf", "signal": "On Hold", "tone": "hold"},
+  {"id": "EMQ-5715", "title": "Standard Chartered Bank - B2B API Manager", "url": "https://manafaco.atlassian.net/browse/EMQ-5715", "labels": ["some-issue-pending-on-3rd-party"], "statuses": [["On Hold", 1, "hold"]], "tickets": 1, "df": "DF-3714", "sourceTitle": "DF-3714 - Standard Chartered Bank - B2B API Manager", "theme": "scf", "signal": "On Hold", "tone": "hold"},
+  {"id": "EMQ-5961", "title": "[SCF] Pricing Engine - Move Funder Rules from Hardcoded Logic to Funder Configuration", "url": "https://manafaco.atlassian.net/browse/EMQ-5961", "labels": [], "statuses": [["Todo", 9, "todo"]], "tickets": 9, "df": "DF-4411", "sourceTitle": "DF-4411 - [SCF] Pricing Engine - Move Funder Rules from Hardcoded Logic to Funder Configuration", "theme": "scf", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5981", "title": "[Pricing Engine] [SIDF] [SIC] SIDF & SIC - T-1 Processing Impact Analysis", "url": "https://manafaco.atlassian.net/browse/EMQ-5981", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4423", "sourceTitle": "DF-4423 - [Pricing Engine] [SIDF] [SIC] SIDF & SIC - T-1 Processing Impact Analysis", "theme": "scf", "signal": "Todo", "tone": "planned"},
+  {"id": "EMQ-5873", "title": "Standard Chartered Bank - SFTP Access Credentials", "url": "https://manafaco.atlassian.net/browse/EMQ-5873", "labels": ["some-issue-pending-on-3rd-party"], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4275", "sourceTitle": "DF-4275 - Standard Chartered Bank - SFTP Access Credentials", "theme": "scf", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-4975", "title": "Capex product - Admin", "url": "https://manafaco.atlassian.net/browse/ASQ-4975", "labels": ["will-spill-over-r63"], "statuses": [["UAT QUEUE", 5, "queue"], ["On Hold", 3, "hold"], ["In Testing", 25, "testing"], ["UAT Ready", 4, "uat"], ["Approved", 8, "approved"]], "tickets": 45, "df": "DF-3752", "sourceTitle": "DF-3752 - Capex product - Admin", "theme": "admin", "signal": "Mixed status", "tone": "hold"},
+  {"id": "ASQ-4723", "title": "Miscellaneous Q3-2026", "url": "https://manafaco.atlassian.net/browse/ASQ-4723", "labels": [], "statuses": [["Todo", 1, "todo"], ["On Hold", 6, "hold"], ["Dev Done", 1, "devdone"], ["In Testing", 1, "testing"]], "tickets": 9, "df": "", "sourceTitle": "Miscellaneous Q3-2026", "theme": "admin", "signal": "Mixed status", "tone": "hold"},
+  {"id": "ASQ-4724", "title": "Release Regression Q3-2026", "url": "https://manafaco.atlassian.net/browse/ASQ-4724", "labels": [], "statuses": [["Todo", 1, "todo"], ["On Hold", 1, "hold"], ["In Progress", 2, "progress"], ["Dev Done", 1, "devdone"]], "tickets": 5, "df": "", "sourceTitle": "Release Regression Q3-2026", "theme": "admin", "signal": "Mixed status", "tone": "hold"},
+  {"id": "ASQ-5114", "title": "Internal Design System - Create Permissions Page", "url": "https://manafaco.atlassian.net/browse/ASQ-5114", "labels": [], "statuses": [["Dev Done", 2, "devdone"]], "tickets": 2, "df": "DF-4338", "sourceTitle": "DF-4338 - Internal Design System - Create Permissions Page", "theme": "admin", "signal": "Dev Done", "tone": "progress"},
+  {"id": "ASQ-5196", "title": "CLM Project Setup", "url": "https://manafaco.atlassian.net/browse/ASQ-5196", "labels": [], "statuses": [["In Progress", 2, "progress"]], "tickets": 2, "df": "DF-0000", "sourceTitle": "DF-0000 CLM Project Setup", "theme": "admin", "signal": "In Progress", "tone": "progress"},
+  {"id": "ASQ-5170", "title": "Client Lifecycle Management (CLM) Platform – Build Platform Foundation, Case Management & Entity List", "url": "https://manafaco.atlassian.net/browse/ASQ-5170", "labels": ["will-spill-over-r63"], "statuses": [["Todo", 8, "todo"], ["Dev Done", 1, "devdone"]], "tickets": 9, "df": "DF-4261", "sourceTitle": "DF-4261 - Client Lifecycle Management (CLM) Platform – Build Platform Foundation, Case Management & Entity List", "theme": "admin", "signal": "Mixed status", "tone": "progress"},
+  {"id": "ASQ-5088", "title": "[Debt] Invoice Management - Issue Credit Note for Unpaid Invoices", "url": "https://manafaco.atlassian.net/browse/ASQ-5088", "labels": [], "statuses": [["Todo", 2, "todo"]], "tickets": 2, "df": "DF-4315", "sourceTitle": "DF-4315 - [Debt] Invoice Management - Issue Credit Note for Unpaid Invoices", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-4714", "title": "[UAT Business Feedback ]Revolving and non-revolving Sanads and Facility contract.", "url": "https://manafaco.atlassian.net/browse/ASQ-4714", "labels": [], "statuses": [["Todo", 3, "todo"]], "tickets": 3, "df": "DF-4104", "sourceTitle": "DF-4104 - [UAT Business Feedback ]Revolving and non-revolving Sanads and Facility contract.", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5206", "title": "[Admin][Collections] Collection Dashboard Enhancements", "url": "https://manafaco.atlassian.net/browse/ASQ-5206", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4368", "sourceTitle": "DF-4368 - [Admin][Collections] Collection Dashboard Enhancements", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5205", "title": "[Admin] Adding On-hold status option for LG funding request", "url": "https://manafaco.atlassian.net/browse/ASQ-5205", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4367", "sourceTitle": "DF-4367 - [Admin] Adding On-hold status option for LG funding request", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5204", "title": "[Admin] SIMAH Credit History Master-View: revise Last 24 Cycles coding", "url": "https://manafaco.atlassian.net/browse/ASQ-5204", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4268", "sourceTitle": "DF-4268 - [Admin] SIMAH Credit History Master-View: revise Last 24 Cycles coding", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5203", "title": "Funder Management - Block Withdrawals Toggle with Permission Control", "url": "https://manafaco.atlassian.net/browse/ASQ-5203", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4388", "sourceTitle": "DF-4388 - Funders Management - Block Withdrawals Toggle with Permission Control", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5232", "title": "[Admin]60-Day Countdown for Live Loan", "url": "https://manafaco.atlassian.net/browse/ASQ-5232", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4370", "sourceTitle": "DF-4370 - [Admin]60-Day Countdown for Live Loan", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5230", "title": "[admin]Add Comma Separators to Numbers in Communication Record", "url": "https://manafaco.atlassian.net/browse/ASQ-5230", "labels": [], "statuses": [["Dev Done", 1, "devdone"]], "tickets": 1, "df": "DF-4427", "sourceTitle": "DF-4427 - [admin]Add Comma Separators to Numbers in Communication Record", "theme": "admin", "signal": "Dev Done", "tone": "progress"},
+  {"id": "ASQ-5233", "title": "[Admin] Showcase User Manual Signature in Admin Portal", "url": "https://manafaco.atlassian.net/browse/ASQ-5233", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4220", "sourceTitle": "DF-4220 - [Admin] Showcase User Manual Signature in Admin Portal", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5231", "title": "[Admin]Automated Murabaha", "url": "https://manafaco.atlassian.net/browse/ASQ-5231", "labels": [], "statuses": [["Todo", 1, "todo"]], "tickets": 1, "df": "DF-4416", "sourceTitle": "DF-4416 - [Admin]Automated Murabaha", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5228", "title": "Funder Management - Adding Cross-Default Configuration to the Funder RAC", "url": "https://manafaco.atlassian.net/browse/ASQ-5228", "labels": [], "statuses": [["Todo", 2, "todo"]], "tickets": 2, "df": "DF-4363", "sourceTitle": "DF-4363 - Funders Management - Adding Cross-Default Configuration to the Funder RAC", "theme": "admin", "signal": "Todo", "tone": "planned"},
+  {"id": "ASQ-5066", "title": "Target Management Version 2.0 - CRM", "url": "https://manafaco.atlassian.net/browse/ASQ-5066", "labels": ["will-spill-over-r63"], "statuses": [["Todo", 2, "todo"], ["In Progress", 2, "progress"], ["Dev Done", 1, "devdone"], ["In Testing", 13, "testing"], ["Approved", 1, "approved"]], "tickets": 19, "df": "DF-3976", "sourceTitle": "DF-3976 - Target Management Version 2.0 - CRM", "theme": "crm", "signal": "Mixed status", "tone": "testing"},
+  {"id": "ASQ-4882", "title": "Onboarding V2 impacts - Hide Appointment Status + Add Requested Financing Amount", "url": "https://manafaco.atlassian.net/browse/ASQ-4882", "labels": [], "statuses": [["Dev Done", 1, "devdone"]], "tickets": 1, "df": "DF-4114", "sourceTitle": "DF-4114 - Onboarding V2 impacts - Hide Appointment Status + Add Requested Financing Amount", "theme": "crm", "signal": "Dev Done", "tone": "progress"}
 ];
 
 const releaseThemeLabels = {
@@ -179,20 +220,20 @@ const releaseThemeLabels = {
   finops: "SCF FinOps"
 };
 const releaseScopes = {
-  r61: legacyReleaseScope,
-  r62: releaseScope
+  r62: releaseScope,
+  r63: nextReleaseScope
 };
 const releaseLabels = {
-  r61: "R61",
-  r62: "R62"
+  r62: "R62",
+  r63: "R63"
 };
 const scopePageSize = 6;
 let activeScopeTheme = "scf";
-let activeScopeRelease = "r62";
+let activeScopeRelease = "r63";
 let activeScopePage = 0;
 
 function scopeLabelTone(label) {
-  if (label.includes("spill") || label.includes("pending") || label.includes("remove")) return "label-risk";
+  if (label.includes("spill") || label.includes("pending") || label.includes("remove") || /hold|not-provided|qa-issues/i.test(label)) return "label-risk";
   if (label === "must-have") return "label-must";
   return "";
 }
@@ -200,11 +241,15 @@ function scopeLabelTone(label) {
 function renderScopeDetail(item) {
   if (!releaseScopeRoot || !item) return;
 
-  const key = item.jira || (item.df ? `${item.id} · ${item.df}` : item.id);
+  const key = item.df ? `${item.id} · ${item.df}` : item.id;
   document.getElementById("scope-detail-key").textContent = key;
   document.getElementById("scope-detail-title").textContent = item.title;
   document.getElementById("scope-detail-tickets").textContent = item.tickets;
   document.getElementById("scope-status-total").textContent = `${item.tickets} total`;
+
+  const note = document.getElementById("scope-detail-note");
+  note.textContent = item.note || "";
+  note.hidden = !item.note;
 
   const signal = document.getElementById("scope-detail-signal");
   signal.textContent = item.signal;
@@ -219,7 +264,7 @@ function renderScopeDetail(item) {
   document.getElementById("scope-status-legend").innerHTML = item.statuses.map(([label, count, tone]) =>
     `<div><i class="status-${tone}"></i><span>${label}</span><strong>${count}</strong></div>`
   ).join("");
-  document.getElementById("scope-jira-link").href = `https://manafaco.atlassian.net/browse/${item.jira || item.df || item.id}`;
+  document.getElementById("scope-jira-link").href = item.url || `https://manafaco.atlassian.net/browse/${item.jira || item.id}`;
 
   releaseScopeRoot.querySelectorAll(".scope-item").forEach((button) => {
     button.setAttribute("aria-selected", String(button.dataset.scopeItem === item.id));
@@ -273,7 +318,7 @@ function renderScopePage() {
   const list = document.getElementById("scope-item-list");
   list.setAttribute("aria-label", `${releaseThemeLabels[activeScopeTheme]} ${releaseLabels[activeScopeRelease]} delivery items`);
   list.innerHTML = visibleItems.map((item) => {
-    const key = item.jira || (item.df ? `${item.id} · ${item.df}` : item.id);
+    const key = item.df ? `${item.id} · ${item.df}` : item.id;
     const labels = item.labels.slice(0, 2).map((label) => `<i class="${scopeLabelTone(label)}">${label}</i>`).join("");
     return `<button class="scope-item" type="button" role="option" data-scope-item="${item.id}" aria-selected="false">
       <span class="scope-item-copy"><span>${key}</span><strong>${item.title}</strong>${labels ? `<span class="scope-item-labels">${labels}</span>` : ""}</span>
@@ -284,7 +329,7 @@ function renderScopePage() {
   list.querySelectorAll("[data-scope-item]").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.stopPropagation();
-      renderScopeDetail(activeReleaseScope.find((item) => item.id === button.dataset.scopeItem));
+      renderScopeDetail(items.find((item) => item.id === button.dataset.scopeItem));
     });
   });
 
@@ -292,7 +337,7 @@ function renderScopePage() {
   document.getElementById("scope-page-label").textContent = `${start + 1}–${end} of ${items.length}`;
   document.getElementById("scope-page-prev").disabled = activeScopePage === 0;
   document.getElementById("scope-page-next").disabled = activeScopePage === pageCount - 1;
-  document.getElementById("scope-footer-release").textContent = `${releaseLabels[activeScopeRelease]} delivery scope from Delivery Pulse · regression and miscellaneous epics excluded.`;
+  document.getElementById("scope-footer-release").textContent = `${releaseLabels[activeScopeRelease]} · Delivery Pulse snapshot: 5 Sep 2026 · All entries from the selected sprint and squad view.`;
   renderScopeDetail(visibleItems[0]);
 }
 
