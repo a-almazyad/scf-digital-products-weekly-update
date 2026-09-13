@@ -457,6 +457,7 @@ prevButton.addEventListener("click", previousSlide);
 nextButton.addEventListener("click", nextSlide);
 
 document.addEventListener("keydown", (event) => {
+  if (document.querySelector(".roadmap-detail[open]")) return;
   if (event.target instanceof HTMLElement && event.target.closest("button, a, input, select, textarea")) {
     return;
   }
@@ -494,3 +495,8 @@ window.addEventListener("hashchange", () => {
 
 readInitialSlide();
 showSlide(currentIndex, false);
+
+// Roadmap workstreams expose full scope without crowding the timeline.
+document.querySelectorAll('[data-roadmap-open]').forEach((button) => {
+  button.addEventListener('click', () => document.getElementById(button.dataset.roadmapOpen)?.showModal());
+});

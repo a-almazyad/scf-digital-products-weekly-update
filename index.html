@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260906-funders-four-rows">
+  <link rel="stylesheet" href="style.css?v=20260913-finops-roadmap">
 </head>
 <body>
   <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -390,54 +390,144 @@
       </footer>
     </section>
 
-    <section class="slide" data-slide="9" aria-labelledby="slide-finops-roadmap-title">
-      <header class="slide-header">
-        <span class="slide-number">A2</span>
-        <div><h2 id="slide-finops-roadmap-title">SCF FinOps · 2026 roadmap progress</h2><p>The core transaction workspace is live; counterparty and operational capabilities are the next delivery focus.</p></div>
-        <span class="slide-context">Appendix · Roadmap</span>
-      </header>
-      <div class="channel-grid">
-        <article class="channel-card channel-card-violet">
-          <header><div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"></circle><path d="M10 39c1-9 6-14 14-14s13 5 14 14"></path></svg>
-            </div><div><h3>Implemented</h3><p>MVP + v1.1 · Live</p></div></header>
-          <div class="work-block"><span>Current production capabilities</span><ul class="work-list compact">
-            <li><strong>Instruments</strong><small>Invoice and credit-note workspaces.</small></li>
-            <li><strong>Financing</strong><small>Early payments, offers, loans, fund requests and receivables.</small></li>
-            <li><strong>Offer Attempts</strong><small>Attempted offers and outcomes, plus production fixes in v1.1.</small></li>
-            <li><strong>Bulk EP rejection</strong><small>Reject pending early payments in bulk; confirmed live.</small></li>
-          </ul></div>
-          <div class="card-facts"><div><span>Progress</span><strong>Core workspace live</strong></div><div><span>Evidence</span><strong>First phase · Production Live</strong></div></div>
-        </article>
-        <article class="channel-card channel-card-blue">
-          <header><div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M7 40h34M12 40V15h10v25M26 40V8h10v32"></path><path d="M16 21h2M16 27h2M30 15h2M30 21h2M30 27h2"></path></svg>
-            </div><div><h3>In delivery</h3><p>Phase 3 + reconciliation</p></div></header>
-          <div class="work-block"><span>Next operational capabilities</span><ul class="work-list compact">
-            <li><strong>Counterparty profiles</strong><small>Supplier additions, funder and buyer lists/details, and funder onboarding.</small></li>
-            <li><strong>Operational actions</strong><small>Single/bulk document upload and manual loan cancellation.</small></li>
-            <li><strong>Fund request timeline</strong><small>In testing; not yet confirmed live.</small></li>
-            <li><strong>Collections & reconciliation</strong><small>Separate delivery workstream; in the delivery queue.</small></li>
-          </ul></div>
-          <div class="card-facts"><div><span>Phase 3</span><strong>In delivery queue</strong></div><div><span>Release gate</span><strong>CAB approvals pending</strong></div></div>
-        </article>
-        <article class="channel-card channel-card-ink">
-          <header><div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M7 20h34L24 8 7 20ZM10 23h28M12 23v14M20 23v14M28 23v14M36 23v14M7 40h34"></path></svg>
-            </div><div><h3>Planned</h3><p>Phase 4 + remaining roadmap</p></div></header>
-          <div class="work-block"><span>Remaining product scope</span><ul class="work-list compact">
-            <li><strong>Dashboard</strong><small>Operational KPIs and monitoring; currently in scoping.</small></li>
-            <li><strong>Phase 4 draft</strong><small>Report generation, supplier profiles, banking/default IBANs and program enrollment.</small></li>
-            <li><strong>Operational oversight</strong><small>Logs, wallets/accounts and statements remain in the roadmap.</small></li>
-            <li><strong>SLA & alerts</strong><small>SLA monitoring and alerts are planned; delivery not confirmed.</small></li>
-          </ul></div>
-          <div class="card-facts"><div><span>Progress</span><strong>Scope and requirements</strong></div><div><span>Delivery dates</span><strong>Not yet confirmed</strong></div></div>
-        </article>
+    <section class="slide finops-roadmap-slide" data-slide="9" aria-labelledby="slide-finops-roadmap-title">
+      <header class="slide-header"><span class="slide-number">A2</span><div><h2 id="slide-finops-roadmap-title">SCF FinOps · 2026 delivery roadmap</h2><p>Core transaction capabilities are live; counterparty management and operational controls are the next delivery focus.</p></div><span class="slide-context">As of 13 Sep 2026</span></header>
+      <div class="roadmap-key"><span><i class="live"></i>Live</span><span><i class="queue"></i>Delivery queue</span><span><i class="testing"></i>Testing</span><span><i class="planned"></i>Planned / scoping</span><small>Select a workstream for full sub-items</small></div>
+      <div class="roadmap-gantt" role="table" aria-label="SCF FinOps roadmap by delivery phase">
+        <div class="roadmap-gantt-head" role="row"><div role="columnheader">Workstream &amp; sub-items</div><div role="columnheader">Foundation<small>MVP + v1.1 · live</small></div><div role="columnheader">Current delivery<small>Phase 3 + parallel work</small></div><div role="columnheader">Phase 4<small>Draft scope</small></div><div role="columnheader">Remaining scope<small>Schedule unconfirmed</small></div></div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-0" aria-haspopup="dialog"><strong>Instruments <b>↗</b></strong><span>Invoice list and details · Credit-note list</span></button></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">Live</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-1" aria-haspopup="dialog"><strong>Early payments &amp; offers <b>↗</b></strong><span>EP list, details and timeline · Offers and attempts · Bulk EP rejection</span></button></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">Live</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-2" aria-haspopup="dialog"><strong>Loans &amp; fund requests <b>↗</b></strong><span>Loans, fund requests and receivables · Fund-request timeline</span></button></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">Core live</span></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar testing">Timeline testing</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-3" aria-haspopup="dialog"><strong>Supplier management <b>↗</b></strong><span>Company size and sector · Funder onboarding · Supplier profile additions</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">Phase 3</span></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Profile additions</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-4" aria-haspopup="dialog"><strong>Funder management <b>↗</b></strong><span>Funder list and details · Supplier onboarding · Pricing, calendars and programs</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">Profiles / onboarding</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Remaining controls</span></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-5" aria-haspopup="dialog"><strong>Buyer management <b>↗</b></strong><span>Buyer list and details · Program configuration · Buyer calendars and profiles</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">List / details</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Remaining controls</span></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-6" aria-haspopup="dialog"><strong>Operational actions <b>↗</b></strong><span>Single and bulk document upload · Manual loan cancellation</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">Delivery queue</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-7" aria-haspopup="dialog"><strong>Collections &amp; reconciliation <b>↗</b></strong><span>Maturity imports · Payment advices · Bank matching · Suspense resolution</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">Separate workstream</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-8" aria-haspopup="dialog"><strong>Reporting <b>↗</b></strong><span>Report catalogue · Date/filter selection · Excel/PDF export · Generation history</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Phase 4 draft</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-9" aria-haspopup="dialog"><strong>Banking &amp; program enrollment <b>↗</b></strong><span>Supplier IBANs and banking status · Default IBAN · SCF program enrollment</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Phase 4 draft</span></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-10" aria-haspopup="dialog"><strong>FinOps dashboard <b>↗</b></strong><span>Health KPIs · Summary cards · Monitoring widgets</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar scoping">Scoping</span></div>
+</div>
+<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-11" aria-haspopup="dialog"><strong>Operational oversight <b>↗</b></strong><span>Logs · Wallets/accounts and statements · SLA monitor · Alerts and communications</span></button></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"></div>
+<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Remaining roadmap</span></div>
+</div>
       </div>
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span><a href="https://manafaco.atlassian.net/wiki/spaces/PTS/pages/4382097412" target="_blank" rel="noopener noreferrer">2026 roadmap</a> · <a href="https://manafaco.atlassian.net/browse/DF-4170" target="_blank" rel="noopener noreferrer">Jira status: 13 Sep 2026</a> · Requirements completion does not mean production release.</span>
-      </footer>
+      <footer class="slide-footer"><img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa"><span>Phase-based view; bars indicate scope, not duration. Phase 3: delivery queue / CAB approvals. <a href="https://manafaco.atlassian.net/wiki/spaces/PTS/pages/4382097412" target="_blank" rel="noopener noreferrer">Roadmap source ↗</a></span></footer>
+
+<dialog class="roadmap-detail" id="roadmap-detail-0" aria-labelledby="roadmap-detail-title-0"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-0">Instruments</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Live</strong><p>Invoice workspace: list and details; credit-note workspace.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-1" aria-labelledby="roadmap-detail-title-1"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-1">Early payments &amp; offers</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Live</strong><p>Early-payment list, details and transaction timeline.</p></li>
+<li><strong>Live</strong><p>Offers workspace and Offer Attempts visibility in v1.1.</p></li>
+<li><strong>Live</strong><p>Bulk rejection of pending EPs, confirmed by the user.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-2" aria-labelledby="roadmap-detail-title-2"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-2">Loans &amp; fund requests</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Live</strong><p>Loans, fund requests and receivables are in the existing production scope.</p></li>
+<li><strong>Testing</strong><p>Fund-request timeline — EMQ-5903. This extension is not yet confirmed live.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-3" aria-labelledby="roadmap-detail-title-3"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-3">Supplier management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 3 · queued</strong><p>Company size and SAMA industry activity on supplier details.</p></li>
+<li><strong>Phase 3 · queued</strong><p>Supplier-to-funder onboarding: eligibility gates, data preview, batch sending and confirmation status.</p></li>
+<li><strong>Phase 4 · draft</strong><p>Supplier information and onboarding statuses; SAR/USD spend and active-invoice snapshot.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-4" aria-labelledby="roadmap-detail-title-4"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-4">Funder management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 3 · queued</strong><p>Funder list and funder details pages; supplier onboarding from funder details.</p></li>
+<li><strong>Roadmap · unconfirmed</strong><p>Funder SLA, pricing, currency and benchmark configuration.</p></li>
+<li><strong>Roadmap · unconfirmed</strong><p>Funder calendar, call-account configuration, integration mechanisms/logs, logos/profile and funder programs. Delivery of this broader scope is not confirmed.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-5" aria-labelledby="roadmap-detail-title-5"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-5">Buyer management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 3 · queued</strong><p>Buyer list and buyer details pages.</p></li>
+<li><strong>Roadmap · unconfirmed</strong><p>Buyer program configuration, buyer calendars and buyer logo/profile. Existing Admin features are not treated as completed FinOps migration.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-6" aria-labelledby="roadmap-detail-title-6"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-6">Operational actions</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 3 · queued</strong><p>Upload a document and bulk-upload documents.</p></li>
+<li><strong>Phase 3 · queued</strong><p>Manual loan cancellation.</p></li>
+<li><strong>Roadmap coverage</strong><p>Files and documents cover supplier, funder and financing files; broader document management remains planned unless confirmed.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-7" aria-labelledby="roadmap-detail-title-7"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-7">Collections &amp; reconciliation</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Delivery queue · DF-4111</strong><p>Import maturity reports and create payment advices.</p></li>
+<li><strong>Delivery queue</strong><p>Reconcile bank transactions against payment advices.</p></li>
+<li><strong>Delivery queue</strong><p>Collections page, payment-advice details and transaction details.</p></li>
+<li><strong>Delivery queue</strong><p>Manage and resolve suspense. This is a separate BRD and delivery workstream.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-8" aria-labelledby="roadmap-detail-title-8"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-8">Reporting</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 4 · draft</strong><p>Select report type, date range and optional buyer, funder, supplier and currency filters.</p></li>
+<li><strong>Phase 4 · draft</strong><p>Generate XLSX/PDF output and download from generation history.</p></li>
+<li><strong>Phase 4 · draft</strong><p>Track generation status; download existing reports or regenerate.</p></li>
+<li><strong>Original roadmap</strong><p>Buyer maturity reporting. Catalogue and delivery dates remain to be confirmed.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-9" aria-labelledby="roadmap-detail-title-9"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-9">Banking &amp; program enrollment</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Phase 4 · draft</strong><p>Supplier banking tab, IBAN information, status and default-IBAN management.</p></li>
+<li><strong>Phase 4 · draft</strong><p>Manage supplier SCF program enrollment.</p></li>
+<li><strong>Scope boundary</strong><p>Separate from the Taulia request to return the preferred bank account through its onboarding API.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-10" aria-labelledby="roadmap-detail-title-10"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-10">FinOps dashboard</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Scoping · DF-3920</strong><p>FinOps dashboard as the operational landing page.</p></li>
+<li><strong>Planned</strong><p>Health dashboard, KPI summary cards and monitoring widgets. No confirmed production date.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
+<dialog class="roadmap-detail" id="roadmap-detail-11" aria-labelledby="roadmap-detail-title-11"><header><div><span>SCF FinOps · Workstream scope</span><h3 id="roadmap-detail-title-11">Operational oversight</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
+<li><strong>Planned · delivery unconfirmed</strong><p>System and operational logs.</p></li>
+<li><strong>Planned · delivery unconfirmed</strong><p>Buyer, funder and supplier wallets/accounts; transactions and downloadable statements.</p></li>
+<li><strong>Planned · delivery unconfirmed</strong><p>SLA monitoring and alerts.</p></li>
+<li><strong>Product-plan scope</strong><p>SMS and email communication management. Scope and implementation dates need confirmation.</p></li>
+<p class="roadmap-detail-note">Requirements marked done are not treated as production delivery. Sources: 2026 roadmap, Phase 3 and Phase 4 BRDs, current Jira status, and confirmed production updates.</p></ul></dialog>
     </section>
 
     <section class="slide" data-slide="12" aria-labelledby="slide-5-title">
@@ -764,6 +854,6 @@
     <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
   </nav>
 
-  <script src="script.js?v=20260906-pulse-r62-r63"></script>
+  <script src="script.js?v=20260913-finops-roadmap"></script>
 </body>
 </html>

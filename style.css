@@ -1173,3 +1173,32 @@ button { font: inherit; }
 .funder-progress-grid-twelve .funder-progress-card h3 { min-height: 1rem; }
 .funder-progress-grid-twelve .progress-status { margin-top: 0.3rem; }
 .funder-progress-grid-twelve .funder-progress-list { gap: 0.15rem; }
+
+/* FinOps roadmap: stage-based Gantt view in the existing deck theme. */
+.roadmap-key { display:flex; align-items:center; gap:1.3rem; margin:.7rem 0; font-size:clamp(.5rem,.62vw,.75rem); color:var(--muted); }
+.roadmap-key > span { display:flex; align-items:center; gap:.35rem; }
+.roadmap-key i { width:.6rem; height:.6rem; border-radius:2px; }
+.roadmap-key small { margin-left:auto; font-size:inherit; }
+.roadmap-key .live { background:#15aa3e; }.roadmap-key .queue { background:var(--brand-violet); }.roadmap-key .testing { background:#f59a23; }.roadmap-key .planned { border:1px solid var(--brand-violet); background:var(--surface-violet); }
+.roadmap-gantt { flex:1; min-height:0; display:grid; grid-template-rows:1.05fr repeat(12,1fr); border:1px solid var(--line-dark); margin-bottom:.7rem; }
+.roadmap-gantt-head,.roadmap-gantt-row { display:grid; grid-template-columns:44% repeat(4,14%); min-height:0; }
+.roadmap-gantt-head { color:var(--brand-violet); background:var(--surface-violet); font-size:clamp(.52rem,.69vw,.82rem); font-weight:750; }
+.roadmap-gantt-head > div { padding:.35rem .6rem; display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--line); }
+.roadmap-gantt-head small { font-size:.78em; font-weight:450; color:var(--muted); margin-top:.15rem; }
+.roadmap-gantt-row { border-top:1px solid var(--line); }
+.roadmap-gantt-row:nth-child(odd) { background:#fafafd; }
+.roadmap-gantt-row > div { min-width:0; min-height:0; }
+.roadmap-workstream { display:flex; flex-direction:column; justify-content:center; width:100%; height:100%; padding:.2rem .65rem; text-align:left; border:0; background:transparent; color:var(--brand-ink); cursor:pointer; }
+.roadmap-workstream:hover,.roadmap-workstream:focus-visible { background:var(--surface-violet); outline:2px solid var(--brand-violet); outline-offset:-2px; }
+.roadmap-workstream strong { font-size:clamp(.56rem,.72vw,.86rem); line-height:1.15; }.roadmap-workstream b { font-weight:450; color:var(--brand-violet); }
+.roadmap-workstream span { margin-top:.12rem; color:var(--muted); font-size:clamp(.46rem,.57vw,.68rem); line-height:1.22; }
+.roadmap-phase-cell { display:flex; align-items:center; padding:.3rem .4rem; border-left:1px solid var(--line); }
+.roadmap-phase-cell:nth-child(3) { background:rgba(83,55,255,.035); }
+.roadmap-bar { width:100%; padding:.32rem .25rem; border-radius:3px; font-size:clamp(.43rem,.57vw,.66rem); line-height:1.15; font-weight:650; text-align:center; }
+.roadmap-bar.live { background:#e3f5e8; color:#087126; border-left:3px solid #15aa3e; }.roadmap-bar.queue { background:var(--brand-violet); color:#fff; }.roadmap-bar.testing { background:#fff0d8; color:#805000; border-left:3px solid #f59a23; }
+.roadmap-bar.planned,.roadmap-bar.scoping { border:1px dashed #9183d7; background:var(--surface-violet); color:#49368b; }
+.roadmap-detail { width:min(760px,85vw); max-height:82vh; padding:1.8rem; border:1px solid var(--line-dark); border-top:4px solid var(--brand-violet); border-radius:12px; color:var(--brand-ink); box-shadow:var(--shadow); }
+.roadmap-detail::backdrop { background:rgba(3,2,15,.55); }
+.roadmap-detail header { display:flex; justify-content:space-between; gap:1rem; align-items:start; }.roadmap-detail header span { color:var(--brand-violet); font-size:.65rem; text-transform:uppercase; letter-spacing:.05em; }.roadmap-detail h3 { margin:.45rem 0 .8rem; font-size:1.5rem; }
+.roadmap-detail button { background:var(--surface); border:1px solid var(--line); border-radius:50%; width:2rem; height:2rem; font-size:1.4rem; cursor:pointer; }
+.roadmap-detail ul { list-style:none; padding:0; margin:0; }.roadmap-detail li { border-top:1px solid var(--line); padding:.9rem 0; }.roadmap-detail li strong { font-size:.7rem; color:var(--brand-violet); }.roadmap-detail li p { font-size:.86rem; line-height:1.5; margin:.3rem 0 0; }.roadmap-detail-note { font-size:.65rem; line-height:1.5; color:var(--muted); }
