@@ -46,6 +46,17 @@ document.querySelectorAll("[data-stages]").forEach((el) => {
     `<div class="stage-labels" style="--n:${labels.length}">${labels.map((l, i) => `<span class="${state(i)}">${l}</span>`).join("")}</div>`;
 });
 
+
+/* ---------- Module ticket bars: data-bar="approved:8,uat:1" ---------- */
+const barLabels = { production: "live", approved: "approved", uat: "UAT", testing: "staging", progress: "dev done", devnow: "in dev", todo: "to do", hold: "on hold" };
+document.querySelectorAll("[data-bar]").forEach((el) => {
+  const parts = el.dataset.bar.split(",").map((p) => p.split(":")).map(([t, c]) => [t, Number(c)]).filter(([, c]) => c > 0);
+  const total = parts.reduce((a, [, c]) => a + c, 0);
+  const done = parts.filter(([t]) => t === "approved" || t === "production").reduce((a, [, c]) => a + c, 0);
+  const lead = done ? `${done}/${total} approved` : parts[0] ? `${parts[0][1]}/${total} ${barLabels[parts[0][0]] || parts[0][0]}` : "";
+  el.innerHTML = `<span class="bar">${parts.map(([t, c]) => `<i class="s-${t === "devnow" ? "progress" : t}" style="width:${(c / total) * 100}%" title="${barLabels[t] || t}: ${c}"></i>`).join("")}</span><small>${lead}</small>`;
+});
+
 /* ---------- Release scope ---------- */
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 const RELEASES = window.RELEASE_DATA || {};
