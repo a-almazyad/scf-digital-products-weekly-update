@@ -924,3 +924,19 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--light-blue); ou
 .phase-track span { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.45; }
 .plat-note { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.72); padding: 14px 16px; border-radius: 10px; background: rgba(255,255,255,0.07); }
 .jira-link.light { background: #fff; color: var(--ink); }
+
+/* ---------- Section slides ------------------------------------------------- */
+.section-slide { background: var(--ink); }
+.section-body { display: grid; grid-template-columns: 1fr 720px; gap: 80px; align-items: center; }
+.section-body .kicker { color: var(--light-blue); }
+.section-body h2 { font-size: 88px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; }
+.section-body p { margin-top: 22px; font-size: 22px; line-height: 1.45; color: rgba(255,255,255,0.65); max-width: 560px; }
+.section-list { border-top: 2px solid var(--violet); }
+.section-list li { display: grid; grid-template-columns: 64px 1fr; gap: 8px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.section-list b { font-size: 15px; font-weight: 600; color: var(--light-blue); }
+.section-list strong { display: block; font-size: 24px; font-weight: 600; }
+.section-list span { display: block; margin-top: 5px; font-size: 16px; color: rgba(255,255,255,0.6); }
+
+/* Logo that failed to load: show the organisation name in plain text */
+.logo-fallback { display: inline-flex; align-items: center; font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; white-space: nowrap; }
+.partner-logos .logo-fallback { font-size: 20px; }

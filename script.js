@@ -57,6 +57,21 @@ document.querySelectorAll("[data-bar]").forEach((el) => {
   el.innerHTML = `<span class="bar">${parts.map(([t, c]) => `<i class="s-${t === "devnow" ? "progress" : t}" style="width:${(c / total) * 100}%" title="${barLabels[t] || t}: ${c}"></i>`).join("")}</span><small>${lead}</small>`;
 });
 
+
+/* ---------- Logo fallback: a logo that cannot load shows its name as plain text ---------- */
+function logoFallback(img) {
+  if (img.dataset.fallbackDone) return;
+  img.dataset.fallbackDone = "1";
+  const span = document.createElement("span");
+  span.className = "logo-fallback";
+  span.textContent = img.alt;
+  img.replaceWith(span);
+}
+document.querySelectorAll(".funder-top img, .partner-logos img, .logo-plate img").forEach((img) => {
+  if (img.complete && img.naturalWidth === 0 && !img.getAttribute("onerror")) logoFallback(img);
+  img.addEventListener("error", () => { if (!img.getAttribute("onerror")) logoFallback(img); });
+});
+
 /* ---------- Release scope ---------- */
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 const RELEASES = window.RELEASE_DATA || {};

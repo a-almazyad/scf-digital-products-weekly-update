@@ -28,20 +28,17 @@
         <div class="cover-date"><span>Sun</span>25 October 2026</div>
       </div>
       <ol class="agenda" aria-label="Agenda">
-        <li><b>01</b><div>Items from last weekly<small>4 closed · 4 new open issues</small></div></li>
-        <li><b>02</b><div>R65 closeout · R66 scope<small>Delivery by squad</small></div></li>
-        <li><b>03</b><div>Internal platforms<small>FinOps · Buyer Mgmt · Funder Mgmt · CRM</small></div></li>
-        <li><b>04</b><div>Taulia integration<small>Onboarding, PDF and bank-account APIs</small></div></li>
-        <li><b>05</b><div>Funder progress<small>12 funder workstreams</small></div></li>
-        <li><b>06</b><div>Embedded financing<small>Healthcare · government · housing</small></div></li>
+        <li><b>01</b><div>Items from last weekly<small>Closed items and new open issues</small></div></li>
+        <li><b>P1</b><div>Partners &amp; integrations<small>Funders · Embedded financing · Taulia</small></div></li>
+        <li><b>P2</b><div>Digital products<small>FinOps · Buyer Mgmt · Funder Mgmt · CRM · R65/R66</small></div></li>
       </ol>
     </div>
 
     <div>
       <div class="cover-stats">
-        <div><strong>32</strong><span>R64 epics shipped<br>12–14 Oct</span></div>
-        <div><strong>64%</strong><span>R65 tickets approved<br>SCF go-ahead 22 Oct</span></div>
-        <div><strong>209</strong><span>Supplier submissions via<br>Taulia onboarding API</span></div>
+        <div><strong>12</strong><span>Funder<br>workstreams</span></div>
+        <div><strong>4</strong><span>Embedded-financing<br>partners</span></div>
+        <div><strong>4</strong><span>Internal<br>platforms</span></div>
         <div style="display:flex;align-items:center;justify-content:flex-end">
           <div class="program-logos" aria-label="Operating buyer programs">
             <img src="assets/logos/saudi-energy.svg" alt="Saudi Energy">
@@ -122,353 +119,32 @@
     <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira and SCF Slack channels, as of 25 Oct 2026.</span><span class="pg"></span></footer>
   </section>
 
-  <!-- ============================== 3 · RELEASE ============================== -->
-  <section class="slide" data-slide="3" aria-labelledby="t-release">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>02</b>Release delivery</div>
-        <h2 id="t-release">R65 closeout · R66 scope</h2>
-        <p class="lede">R64 deployed 12–14 Oct. R65 SCF go-ahead 22 Oct. R66 sprint 26 Oct – 5 Nov.</p>
-      </div>
-    </header>
-
-    <div class="release-body">
-      <div class="release-kpis">
-        <div class="card ink kpi">
-          <span class="eyebrow">R64 · Shipped <span class="chip done" style="height:22px;font-size:11.5px">Live</span></span>
-          <strong>32<small>epics</small></strong>
-          <p>Borrower Financing &amp; Activation Journey V2, FinOps supplier profiles, BMP phase 1.</p>
-        </div>
-        <div class="card violet kpi">
-          <span class="eyebrow">R65 · Deploying this week</span>
-          <strong data-kpi="r65-pct">64%<small>approved</small></strong>
-          <div class="meter"><i data-kpi="r65-meter" style="width:64%"></i></div>
-          <p data-kpi="r65-note">125 of 194 tickets approved across 48 epics</p>
-        </div>
-        <div class="card kpi">
-          <span class="eyebrow">R66 · 26 Oct – 5 Nov</span>
-          <strong data-kpi="r66-epics">28<small>epics</small></strong>
-          <p data-kpi="r66-note">79 tickets planned · grooming in progress</p>
-        </div>
-        <div class="card kpi">
-          <span class="eyebrow">Moved from R65 to R66</span>
-          <ul>
-            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4310" target="_blank" rel="noopener">DF-4310</a>FAB SFTP Manager</li>
-            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4411" target="_blank" rel="noopener">DF-4411</a>Pricing-engine funder rules</li>
-            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a>Taulia onboarding data gaps</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="scope" data-release-scope>
-        <nav class="card ink scope-rail" aria-label="Release and squad">
-          <div class="release-switch" role="group" aria-label="Release">
-            <button type="button" data-scope-release="r65" aria-pressed="true">R65</button>
-            <button type="button" data-scope-release="r66" aria-pressed="false">R66</button>
-          </div>
-          <span class="eyebrow">Squads · approved share</span>
-          <button class="squad-btn" type="button" data-scope-theme="scf" aria-pressed="true"><span>SCF</span><strong data-scope-theme-count="scf">0</strong><span class="bar"><i data-scope-theme-bar="scf"></i></span></button>
-          <button class="squad-btn" type="button" data-scope-theme="finops" aria-pressed="false"><span>SCF FinOps</span><strong data-scope-theme-count="finops">0</strong><span class="bar"><i data-scope-theme-bar="finops"></i></span></button>
-          <button class="squad-btn" type="button" data-scope-theme="admin" aria-pressed="false"><span>Admin</span><strong data-scope-theme-count="admin">0</strong><span class="bar"><i data-scope-theme-bar="admin"></i></span></button>
-          <button class="squad-btn" type="button" data-scope-theme="crm" aria-pressed="false"><span>CRM</span><strong data-scope-theme-count="crm">0</strong><span class="bar"><i data-scope-theme-bar="crm"></i></span></button>
-          <button class="squad-btn" type="button" data-scope-theme="borrower" aria-pressed="false"><span>Borrower</span><strong data-scope-theme-count="borrower">0</strong><span class="bar"><i data-scope-theme-bar="borrower"></i></span></button>
-        </nav>
-
-        <section class="card scope-list" aria-labelledby="scope-theme-title">
-          <header><h3 id="scope-theme-title">SCF · R65</h3><span id="scope-theme-count">0 epics</span></header>
-          <div class="scope-items" id="scope-item-list" role="listbox" aria-label="Delivery items"></div>
-          <div class="scope-pager">
-            <button id="scope-page-prev" type="button" aria-label="Previous items">←</button>
-            <span id="scope-page-label">1–6 of 6</span>
-            <button id="scope-page-next" type="button" aria-label="Next items">→</button>
-          </div>
-        </section>
-
-        <aside class="card scope-detail" aria-live="polite">
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-              <span class="tag" id="scope-detail-key">—</span>
-              <span class="chip" id="scope-detail-signal">—</span>
-            </div>
-            <h3 id="scope-detail-title">—</h3>
-          </div>
-          <div class="labels" id="scope-detail-labels"></div>
-          <div class="count"><strong id="scope-detail-tickets">0</strong><span>tickets in this sprint</span></div>
-          <div>
-            <div class="status-bar" id="scope-status-bar"></div>
-            <div class="status-legend" id="scope-status-legend"></div>
-          </div>
-          <a class="jira-link" id="scope-jira-link" href="#" target="_blank" rel="noopener noreferrer">Open in Jira <span aria-hidden="true">↗</span></a>
-        </aside>
-      </div>
+  <!-- ======================== SECTION · Partners &amp; integrations ======================== -->
+  <section class="slide dark section-slide" data-slide="3" aria-labelledby="t-sec-1">
+    <div class="cover-top">
+      <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
+      <span>SCF Digital Products · Weekly update</span>
     </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src" id="scope-footer-release">Jira sprint snapshot, 25 Oct 2026. Regression and miscellaneous epics excluded.</span><span class="pg"></span></footer>
-  </section>
-
-  <!-- ======================== PLATFORM · SCF FinOps ======================== -->
-  <section class="slide" data-slide="4" aria-labelledby="t-plat-1">
-    <header class="slide-head">
+    <div class="section-body">
       <div>
-        <div class="kicker"><b>03</b>Internal platforms · 1 of 4</div>
-        <h2 id="t-plat-1">SCF FinOps</h2>
-        <p class="lede">First platform split out of the Admin Portal. Live since R61; R65 adds funder monitoring and the dashboard.</p>
+        <div class="kicker">Part 1</div>
+        <h2 id="t-sec-1">Partners &amp; integrations</h2>
+        <p>Funders, embedded-financing partners and the SAP Taulia integration.</p>
       </div>
-    </header>
-
-    <div class="plat-body">
-      <div class="plat-kpis">
-        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Live<small>since R61</small></strong><p>Standalone platform for SCF financial operations.</p></div>
-        <div class="card kpi"><span class="eyebrow">Live modules</span><strong>6<small></small></strong><p>Core, EP rejection, UX/UI, supplier profile & funder onboarding.</p></div>
-        <div class="card kpi"><span class="eyebrow">In R65</span><strong>5<small>modules</small></strong><p>4 of 5 have approved tickets; reconciliation held.</p></div>
-        <div class="card kpi"><span class="eyebrow">Next · R67</span><strong>5<small>items</small></strong><p>In scoping or BRD; none in R66.</p></div>
-      </div>
-      <div class="plat-grid">
-        <div class="card outline mod-table">
-          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
-          <div class="mod"><div class="mod-name"><strong>Core transactions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4026" target="_blank" rel="noopener">DF-4026</a></div><span class="mod-rel">R61–62</span><div class="mod-note">Instruments, EPs, fund requests, offers, loans</div><span class="chip done">Live</span></div>
-          <div class="mod"><div class="mod-name"><strong>Supplier profile &amp; funder onboarding</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4529" target="_blank" rel="noopener">DF-4529</a></div><span class="mod-rel">R64</span><div class="mod-note">Plus UX/UI enhancements, 29 Sep</div><span class="chip done">Live 12 Oct</span></div>
-          <div class="mod"><div class="mod-name"><strong>Funder monitoring</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4530" target="_blank" rel="noopener">DF-4530</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:8,uat:1"></div><span class="chip ready">Approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Dashboard</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4562" target="_blank" rel="noopener">DF-4562</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Document &amp; loan tooling</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4532" target="_blank" rel="noopener">DF-4532</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:4,uat:1,testing:5,hold:1"></div><span class="chip active">Partly approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Buyer monitoring &amp; SAMA capacity</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4531" target="_blank" rel="noopener">DF-4531</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:2"></div><span class="chip active">On staging</span></div>
-          <div class="mod"><div class="mod-name"><strong>Reconciliation</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4111" target="_blank" rel="noopener">DF-4111</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:14"></div><span class="chip wait">Held from prod</span></div>
-          <div class="mod"><div class="mod-name"><strong>R67 backlog · 5 items</strong></div><span class="mod-rel">R67</span><div class="mod-note">EP statuses, funder monitoring ph. 2, Taulia, int’l IBANs</div><span class="chip idle">Scoping</span></div>
-        </div>
-        <figure class="card shot-frame" data-finops-carousel>
-          <header>
-            <strong id="finops-shot-title">SCF FinOps · Early Payments</strong>
-            <div class="shot-nav">
-              <button id="finops-shot-prev" type="button" aria-label="Previous screenshot">←</button>
-              <span id="finops-shot-count" aria-live="polite">1 / 3</span>
-              <button id="finops-shot-next" type="button" aria-label="Next screenshot">→</button>
-            </div>
-          </header>
-          <div class="shot-viewport">
-            <div class="finops-shot is-current" data-title="SCF FinOps · Early Payments" data-caption="Operational totals, filters and transaction-level visibility in one view."><img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace"></div>
-            <div class="finops-shot" data-title="SCF FinOps · Invoices" data-caption="A consolidated invoice view across buyer programs, suppliers and statuses."><img src="assets/scf-finops-invoices.jpg" alt="SCF FinOps Invoices workspace"></div>
-            <div class="finops-shot" data-title="SCF FinOps · Early Payment Details" data-caption="Early payment information, linked instruments, documents and transaction timeline."><img src="assets/scf-finops-early-payment-details.jpg" alt="SCF FinOps Early Payment details"></div>
-          </div>
-          <footer>
-            <span id="finops-shot-caption">Operational totals, filters and transaction-level visibility in one view.</span>
-            <div class="shot-dots">
-              <button class="is-current" type="button" data-finops-index="0" aria-label="Early Payments" aria-current="true"></button>
-              <button type="button" data-finops-index="1" aria-label="Invoices" aria-current="false"></button>
-              <button type="button" data-finops-index="2" aria-label="Early Payment Details" aria-current="false"></button>
-            </div>
-          </footer>
-        </figure>
-      </div>
+      <ol class="section-list">
+        <li><b>1.1</b><div><strong>Funder progress</strong><span>12 funders: 3 live, 3 building, 6 waiting on the partner</span></div></li>
+        <li><b>1.2</b><div><strong>Embedded financing</strong><span>4 partners: 2 live, Elm awaiting response, Waseel in discussion</span></div></li>
+        <li><b>1.3</b><div><strong>Taulia integration</strong><span>3 APIs live; ERP invoice number awaiting Taulia</span></div></li>
+      </ol>
     </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and R65 sprint tickets, 25 Oct 2026. Screens: R61 build.</span><span class="pg"></span></footer>
-  </section>
-
-  <!-- ======================== PLATFORM · Buyer Management Platform ======================== -->
-  <section class="slide" data-slide="5" aria-labelledby="t-plat-2">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>03</b>Internal platforms · 2 of 4</div>
-        <h2 id="t-plat-2">Buyer Management Platform</h2>
-        <p class="lede">Phase 1 part 1 is live. Part 2 and supplier-list work are on staging for R65.</p>
-      </div>
-    </header>
-
-    <div class="plat-body">
-      <div class="plat-kpis">
-        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Phase 1<small>rolling out</small></strong><p>Buyer-facing operations moving out of the Admin Portal.</p></div>
-        <div class="card kpi"><span class="eyebrow">Live</span><strong>1<small>module</small></strong><p>Buyers part 1, live 14 Oct (R64).</p></div>
-        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>2 / 9<small>tickets approved</small></strong><p>7 on staging, incl. 6 for Buyers part 2.</p></div>
-        <div class="card kpi"><span class="eyebrow">Queued for R65</span><strong>4<small>items</small></strong><p>Suppliers, payables, permissions and phase 2 have no sprint tickets yet.</p></div>
-      </div>
-      <div class="plat-grid">
-        <div class="card outline mod-table">
-          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
-          <div class="mod"><div class="mod-name"><strong>Buyers · part 1</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4468" target="_blank" rel="noopener">DF-4468</a></div><span class="mod-rel">R64</span><div class="mod-note">Buyer list and profile</div><span class="chip done">Live 14 Oct</span></div>
-          <div class="mod"><div class="mod-name"><strong>Buyers · part 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4599" target="_blank" rel="noopener">DF-4599</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:6"></div><span class="chip active">On staging</span></div>
-          <div class="mod"><div class="mod-name"><strong>Middleware info on buyer profile</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4614" target="_blank" rel="noopener">DF-4614</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Supplier list enhancements</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4640" target="_blank" rel="noopener">DF-4640</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1,testing:1"></div><span class="chip active">Partly approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Suppliers management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4533" target="_blank" rel="noopener">DF-4533</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Payables management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4534" target="_blank" rel="noopener">DF-4534</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Internal user permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4653" target="_blank" rel="noopener">DF-4653</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4506" target="_blank" rel="noopener">DF-4506</a></div><span class="mod-rel">R65</span><div class="mod-note">Scope after phase 1</div><span class="chip idle">Queued</span></div>
-        </div>
-        <div class="card ink plat-scope">
-          <span class="eyebrow">Platform scope</span>
-          <h3>Buyer Management Platform</h3>
-          <ol class="phase-track">
-            <li class="done"><b>Phase 1</b><span>Buyers, suppliers, payables, permissions</span></li>
-            <li><b>Phase 2</b><span>Scope follows phase 1</span></li>
-          </ol>
-          <p class="plat-note">Own squad sprint (SCF BMP). Buyer features in the Admin Portal move here module by module.</p>
-          <a class="jira-link light" href="https://manafaco.atlassian.net/browse/DF-4495" target="_blank" rel="noopener">BMP epic · DF-4495 <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and SCF BMP sprint (R65), 25 Oct 2026.</span><span class="pg"></span></footer>
-  </section>
-
-  <!-- ======================== PLATFORM · Funder Management Platform ======================== -->
-  <section class="slide" data-slide="6" aria-labelledby="t-plat-3">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>03</b>Internal platforms · 3 of 4</div>
-        <h2 id="t-plat-3">Funder Management Platform</h2>
-        <p class="lede">New standalone platform; build started in the R66 FMP sprint.</p>
-      </div>
-    </header>
-
-    <div class="plat-body">
-      <div class="plat-kpis">
-        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>In build<small>new platform</small></strong><p>Separate from the funder features in today’s Admin Portal.</p></div>
-        <div class="card kpi"><span class="eyebrow">FMP sprint · R66</span><strong>42<small>tickets</small></strong><p>Across 4 workstreams.</p></div>
-        <div class="card kpi"><span class="eyebrow">Dev completed</span><strong>8<small>/ 42</small></strong><p>1 in development, 28 to do.</p></div>
-        <div class="card kpi"><span class="eyebrow">On hold</span><strong>5<small>tickets</small></strong><p>Rules engine (3) and operations (2).</p></div>
-      </div>
-      <div class="plat-grid">
-        <div class="card outline mod-table">
-          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
-          <div class="mod"><div class="mod-name"><strong>Funder entity &amp; access management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4635" target="_blank" rel="noopener">DF-4635</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:4,todo:6"></div><span class="chip active">Building</span></div>
-          <div class="mod"><div class="mod-name"><strong>Programs &amp; investment rules engine</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4636" target="_blank" rel="noopener">DF-4636</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:1,todo:12,hold:3"></div><span class="chip active">Building</span></div>
-          <div class="mod"><div class="mod-name"><strong>Operations &amp; financial management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4637" target="_blank" rel="noopener">DF-4637</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:2,todo:8,hold:2"></div><span class="chip active">Building</span></div>
-          <div class="mod"><div class="mod-name"><strong>Data migration &amp; cutover</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4096" target="_blank" rel="noopener">DF-4096</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:1,devnow:1,todo:2"></div><span class="chip active">Building</span></div>
-          <div class="mod"><div class="mod-name"><strong>Funder SLA monitor</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3923" target="_blank" rel="noopener">DF-3923</a></div><span class="mod-rel">—</span><div class="mod-note">No release yet</div><span class="chip idle">Scoping</span></div>
-        </div>
-        <div class="card ink plat-scope">
-          <span class="eyebrow">Platform scope</span>
-          <h3>Funder Management Platform</h3>
-          <ol class="phase-track">
-            <li class="now"><b>Build</b><span>Entity &amp; access, rules engine, operations</span></li>
-            <li><b>Cutover</b><span>Migrate data from the Admin Portal</span></li>
-          </ol>
-          <p class="plat-note">Until cutover, funder configuration (RAC, co-lending, revenue model) stays in the Admin Portal and keeps receiving fixes.</p>
-          <a class="jira-link light" href="https://manafaco.atlassian.net/browse/DF-3869" target="_blank" rel="noopener">Funder management epic · DF-3869 <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and FMP sprint (R66), 25 Oct 2026. Bar shows dev completed / in dev / to do / on hold.</span><span class="pg"></span></footer>
-  </section>
-
-  <!-- ======================== PLATFORM · Manafa CRM ======================== -->
-  <section class="slide" data-slide="7" aria-labelledby="t-plat-4">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>03</b>Internal platforms · 4 of 4</div>
-        <h2 id="t-plat-4">Manafa CRM</h2>
-        <p class="lede">Lead Management is live. Assignment rules and Taulia leads ship with R65; fund requests in CRM start in R66.</p>
-      </div>
-    </header>
-
-    <div class="plat-body">
-      <div class="plat-kpis">
-        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Live<small>dedicated tool</small></strong><p>SCF pipeline, leads and targets.</p></div>
-        <div class="card kpi"><span class="eyebrow">R64 · shipped</span><strong>3<small>epics</small></strong><p>Target Management v2, leads design, reactivation script.</p></div>
-        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>31 / 34<small>tickets done</small></strong><p>Assignment rules: 24 approved, 2 in UAT.</p></div>
-        <div class="card kpi"><span class="eyebrow">R66 sprint</span><strong>3<small>epics</small></strong><p>8 tickets, all to do.</p></div>
-      </div>
-      <div class="plat-grid">
-        <div class="card outline mod-table">
-          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
-          <div class="mod"><div class="mod-name"><strong>Lead Management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3718" target="_blank" rel="noopener">DF-3718</a></div><span class="mod-rel">R63</span><div class="mod-note">Live 29 Sep</div><span class="chip done">Live</span></div>
-          <div class="mod"><div class="mod-name"><strong>Target Management v2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3976" target="_blank" rel="noopener">DF-3976</a></div><span class="mod-rel">R64</span><div class="mod-note">22 tickets; back-button fix live in R65</div><span class="chip done">Live</span></div>
-          <div class="mod"><div class="mod-name"><strong>Assignment rules · team management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4027" target="_blank" rel="noopener">DF-4027</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:24,uat:2"></div><span class="chip ready">Approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Taulia leads into CRM</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1,todo:1"></div><span class="chip active">In progress</span></div>
-          <div class="mod"><div class="mod-name"><strong>Sales CRM enhancements</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4355" target="_blank" rel="noopener">DF-4355</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:3"></div><span class="chip ready">Approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Fund requests in CRM</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4657" target="_blank" rel="noopener">DF-4657</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="todo:6"></div><span class="chip idle">To do</span></div>
-          <div class="mod"><div class="mod-name"><strong>Duplicate-lead block · permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4681" target="_blank" rel="noopener">DF-4681</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="todo:2"></div><span class="chip idle">To do</span></div>
-        </div>
-        <div class="card ink plat-scope">
-          <span class="eyebrow">Platform scope</span>
-          <h3>Manafa CRM</h3>
-          <ol class="phase-track">
-            <li class="done"><b>Pipeline</b><span>Leads, targets, reactivation</span></li>
-            <li class="now"><b>Automation</b><span>Assignment rules, Taulia leads</span></li>
-            <li><b>Applications</b><span>Fund requests in CRM (R66)</span></li>
-          </ol>
-          <p class="plat-note">Used by the SCF sales team to manage relationships and the opportunity pipeline.</p>
-        </div>
-      </div>
-    </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira CRM sprints R64–R66, 25 Oct 2026.</span><span class="pg"></span></footer>
-  </section>
-
-  <!-- =============================== 4 · TAULIA ============================== -->
-  <section class="slide" data-slide="8" aria-labelledby="t-taulia">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>04</b>Integrations</div>
-        <h2 id="t-taulia">Taulia integration updates</h2>
-        <p class="lede">Status of each Taulia API workstream.</p>
-      </div>
-    </header>
-
-    <div class="taulia-grid">
-      <div class="card ink taulia-summary">
-        <div class="logo-plate"><img src="assets/logos/sap-taulia.svg" alt="SAP Taulia"></div>
-        <div class="big-stat"><strong>209</strong><span>supplier submissions received through the onboarding API (as of 21 Oct)</span></div>
-        <div></div>
-        <ul>
-          <li><b>Queued</b><span>~500 more Saudi Energy suppliers. We asked Taulia on 15 Oct to release them via the API.</span></li>
-          <li><b>SLA</b><span>First Manafa–Taulia SLA draft shared 22 Oct. v2 adds the product framework.</span></li>
-        </ul>
-      </div>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">01</span><span class="chip done">Live · 29 Sep</span></div>
-        <h3>Supplier onboarding APIs</h3>
-        <ul>
-          <li>Buyer-invited suppliers now come straight into Manafa registration.</li>
-          <li><strong>Gap:</strong> most submissions lack the unified number; fix creates the company and captures it at sign-up.</li>
-          <li>Taulia leads into CRM in R65; FinOps impact in design.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4071" target="_blank" rel="noopener">DF-4071</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">02</span><span class="chip done">Live · 30 Sep</span></div>
-        <h3>Funding document PDF API</h3>
-        <ul>
-          <li>Initial PDF and retry of failed copies in one flow.</li>
-          <li><strong>Gap:</strong> Taulia’s fix only covers EPs created after its late-Aug release; older retries return 400.</li>
-          <li>FinOps PDF retrieval being scoped for R67.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">03</span><span class="chip done">Live · 1 Oct</span></div>
-        <h3>Preferred bank account via onboarding</h3>
-        <ul>
-          <li>Default IBAN is set from Taulia onboarding data.</li>
-          <li>Backfill: Aramco and whitelisted SE suppliers use the latest EP’s IBAN; others choose manually.</li>
-          <li>Two follow-up tickets and the IBAN currency gap are in R66.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">04</span><span class="chip wait">Awaiting Taulia</span></div>
-        <h3>ERP invoice number in EP payload</h3>
-        <ul>
-          <li>Add the buyer’s ERP invoice number to the early-payment payload.</li>
-          <li>No feedback yet from Taulia’s product team; no delivery ticket opened.</li>
-          <li><strong>Next:</strong> raise it alongside the SLA review.</li>
-        </ul>
-        <div class="refs"><span class="tag" style="color:var(--faint)">No ticket yet</span></div>
-      </article>
-    </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira; #manafa-taulia-channel and Taulia tech group, to 22 Oct 2026.</span><span class="pg"></span></footer>
+    <footer class="slide-foot"><span></span><span class="src"></span><span class="pg"></span></footer>
   </section>
 
   <!-- =============================== 5 · FUNDERS ============================= -->
-  <section class="slide" data-slide="9" aria-labelledby="t-funders">
+  <section class="slide" data-slide="4" aria-labelledby="t-funders">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>05</b>Funders</div>
+        <div class="kicker"><b>1.1</b>Partners &amp; integrations</div>
         <h2 id="t-funders">SCF funder progress</h2>
         <p class="lede">Bar shows integration stages completed; striped segment is the current stage.</p>
       </div>
@@ -558,10 +234,10 @@
   </section>
 
   <!-- ========================= 6 · EMBEDDED FINANCE ========================= -->
-  <section class="slide" data-slide="10" aria-labelledby="t-embedded">
+  <section class="slide" data-slide="5" aria-labelledby="t-embedded">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>06</b>Partnerships</div>
+        <div class="kicker"><b>1.2</b>Partners &amp; integrations</div>
         <h2 id="t-embedded">Embedded financing partnerships</h2>
         <p class="lede">Status and next step for each partner.</p>
       </div>
@@ -620,8 +296,373 @@
     <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: #embedded-scf-squad, #manafa-nhcsupplypro-channel, Dhamen–Muqeem group and team input.</span><span class="pg"></span></footer>
   </section>
 
+  <!-- =============================== 4 · TAULIA ============================== -->
+  <section class="slide" data-slide="6" aria-labelledby="t-taulia">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>1.3</b>Partners &amp; integrations</div>
+        <h2 id="t-taulia">Taulia integration updates</h2>
+        <p class="lede">Status of each Taulia API workstream.</p>
+      </div>
+    </header>
+
+    <div class="taulia-grid">
+      <div class="card ink taulia-summary">
+        <div class="logo-plate"><img src="assets/logos/sap-taulia.svg" alt="SAP Taulia"></div>
+        <div class="big-stat"><strong>209</strong><span>supplier submissions received through the onboarding API (as of 21 Oct)</span></div>
+        <div></div>
+        <ul>
+          <li><b>Queued</b><span>~500 more Saudi Energy suppliers. We asked Taulia on 15 Oct to release them via the API.</span></li>
+          <li><b>SLA</b><span>First Manafa–Taulia SLA draft shared 22 Oct. v2 adds the product framework.</span></li>
+        </ul>
+      </div>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">01</span><span class="chip done">Live · 29 Sep</span></div>
+        <h3>Supplier onboarding APIs</h3>
+        <ul>
+          <li>Buyer-invited suppliers now come straight into Manafa registration.</li>
+          <li><strong>Gap:</strong> most submissions lack the unified number; fix creates the company and captures it at sign-up.</li>
+          <li>Taulia leads into CRM in R65; FinOps impact in design.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4071" target="_blank" rel="noopener">DF-4071</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">02</span><span class="chip done">Live · 30 Sep</span></div>
+        <h3>Funding document PDF API</h3>
+        <ul>
+          <li>Initial PDF and retry of failed copies in one flow.</li>
+          <li><strong>Gap:</strong> Taulia’s fix only covers EPs created after its late-Aug release; older retries return 400.</li>
+          <li>FinOps PDF retrieval being scoped for R67.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">03</span><span class="chip done">Live · 1 Oct</span></div>
+        <h3>Preferred bank account via onboarding</h3>
+        <ul>
+          <li>Default IBAN is set from Taulia onboarding data.</li>
+          <li>Backfill: Aramco and whitelisted SE suppliers use the latest EP’s IBAN; others choose manually.</li>
+          <li>Two follow-up tickets and the IBAN currency gap are in R66.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">04</span><span class="chip wait">Awaiting Taulia</span></div>
+        <h3>ERP invoice number in EP payload</h3>
+        <ul>
+          <li>Add the buyer’s ERP invoice number to the early-payment payload.</li>
+          <li>No feedback yet from Taulia’s product team; no delivery ticket opened.</li>
+          <li><strong>Next:</strong> raise it alongside the SLA review.</li>
+        </ul>
+        <div class="refs"><span class="tag" style="color:var(--faint)">No ticket yet</span></div>
+      </article>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira; #manafa-taulia-channel and Taulia tech group, to 22 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== SECTION · Digital products ======================== -->
+  <section class="slide dark section-slide" data-slide="7" aria-labelledby="t-sec-2">
+    <div class="cover-top">
+      <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
+      <span>SCF Digital Products · Weekly update</span>
+    </div>
+    <div class="section-body">
+      <div>
+        <div class="kicker">Part 2</div>
+        <h2 id="t-sec-2">Digital products</h2>
+        <p>The internal platforms we are building and this release cycle.</p>
+      </div>
+      <ol class="section-list">
+        <li><b>2.1</b><div><strong>SCF FinOps</strong><span>Live since R61; 5 modules in R65</span></div></li>
+        <li><b>2.2</b><div><strong>Buyer Management Platform</strong><span>Phase 1 part 1 live; part 2 on staging</span></div></li>
+        <li><b>2.3</b><div><strong>Funder Management Platform</strong><span>In build: 8 of 42 tickets dev-complete in R66</span></div></li>
+        <li><b>2.4</b><div><strong>Manafa CRM</strong><span>Live; assignment rules ship with R65</span></div></li>
+        <li><b>2.5</b><div><strong>R65 closeout · R66 scope</strong><span>R65 deploys this week; R66 runs 26 Oct – 5 Nov</span></div></li>
+      </ol>
+    </div>
+    <footer class="slide-foot"><span></span><span class="src"></span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== PLATFORM · SCF FinOps ======================== -->
+  <section class="slide" data-slide="8" aria-labelledby="t-plat-1">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.1</b>Digital products · Platforms</div>
+        <h2 id="t-plat-1">SCF FinOps</h2>
+        <p class="lede">First platform split out of the Admin Portal. Live since R61; R65 adds funder monitoring and the dashboard.</p>
+      </div>
+    </header>
+
+    <div class="plat-body">
+      <div class="plat-kpis">
+        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Live<small>since R61</small></strong><p>Standalone platform for SCF financial operations.</p></div>
+        <div class="card kpi"><span class="eyebrow">Live modules</span><strong>6<small></small></strong><p>Core, EP rejection, UX/UI, supplier profile & funder onboarding.</p></div>
+        <div class="card kpi"><span class="eyebrow">In R65</span><strong>5<small>modules</small></strong><p>4 of 5 have approved tickets; reconciliation held.</p></div>
+        <div class="card kpi"><span class="eyebrow">Next · R67</span><strong>5<small>items</small></strong><p>In scoping or BRD; none in R66.</p></div>
+      </div>
+      <div class="plat-grid">
+        <div class="card outline mod-table">
+          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
+          <div class="mod"><div class="mod-name"><strong>Core transactions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4026" target="_blank" rel="noopener">DF-4026</a></div><span class="mod-rel">R61–62</span><div class="mod-note">Instruments, EPs, fund requests, offers, loans</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>Supplier profile &amp; funder onboarding</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4529" target="_blank" rel="noopener">DF-4529</a></div><span class="mod-rel">R64</span><div class="mod-note">Plus UX/UI enhancements, 29 Sep</div><span class="chip done">Live 12 Oct</span></div>
+          <div class="mod"><div class="mod-name"><strong>Funder monitoring</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4530" target="_blank" rel="noopener">DF-4530</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:8,uat:1"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Dashboard</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4562" target="_blank" rel="noopener">DF-4562</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Document &amp; loan tooling</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4532" target="_blank" rel="noopener">DF-4532</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:4,uat:1,testing:5,hold:1"></div><span class="chip active">Partly approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Buyer monitoring &amp; SAMA capacity</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4531" target="_blank" rel="noopener">DF-4531</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:2"></div><span class="chip active">On staging</span></div>
+          <div class="mod"><div class="mod-name"><strong>Reconciliation</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4111" target="_blank" rel="noopener">DF-4111</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:14"></div><span class="chip wait">Held from prod</span></div>
+          <div class="mod"><div class="mod-name"><strong>R67 backlog · 5 items</strong></div><span class="mod-rel">R67</span><div class="mod-note">EP statuses, funder monitoring ph. 2, Taulia, int’l IBANs</div><span class="chip idle">Scoping</span></div>
+        </div>
+        <figure class="card shot-frame" data-finops-carousel>
+          <header>
+            <strong id="finops-shot-title">SCF FinOps · Early Payments</strong>
+            <div class="shot-nav">
+              <button id="finops-shot-prev" type="button" aria-label="Previous screenshot">←</button>
+              <span id="finops-shot-count" aria-live="polite">1 / 3</span>
+              <button id="finops-shot-next" type="button" aria-label="Next screenshot">→</button>
+            </div>
+          </header>
+          <div class="shot-viewport">
+            <div class="finops-shot is-current" data-title="SCF FinOps · Early Payments" data-caption="Operational totals, filters and transaction-level visibility in one view."><img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace"></div>
+            <div class="finops-shot" data-title="SCF FinOps · Invoices" data-caption="A consolidated invoice view across buyer programs, suppliers and statuses."><img src="assets/scf-finops-invoices.jpg" alt="SCF FinOps Invoices workspace"></div>
+            <div class="finops-shot" data-title="SCF FinOps · Early Payment Details" data-caption="Early payment information, linked instruments, documents and transaction timeline."><img src="assets/scf-finops-early-payment-details.jpg" alt="SCF FinOps Early Payment details"></div>
+          </div>
+          <footer>
+            <span id="finops-shot-caption">Operational totals, filters and transaction-level visibility in one view.</span>
+            <div class="shot-dots">
+              <button class="is-current" type="button" data-finops-index="0" aria-label="Early Payments" aria-current="true"></button>
+              <button type="button" data-finops-index="1" aria-label="Invoices" aria-current="false"></button>
+              <button type="button" data-finops-index="2" aria-label="Early Payment Details" aria-current="false"></button>
+            </div>
+          </footer>
+        </figure>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and R65 sprint tickets, 25 Oct 2026. Screens: R61 build.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== PLATFORM · Buyer Management Platform ======================== -->
+  <section class="slide" data-slide="9" aria-labelledby="t-plat-2">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.2</b>Digital products · Platforms</div>
+        <h2 id="t-plat-2">Buyer Management Platform</h2>
+        <p class="lede">Phase 1 part 1 is live. Part 2 and supplier-list work are on staging for R65.</p>
+      </div>
+    </header>
+
+    <div class="plat-body">
+      <div class="plat-kpis">
+        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Phase 1<small>rolling out</small></strong><p>Buyer-facing operations moving out of the Admin Portal.</p></div>
+        <div class="card kpi"><span class="eyebrow">Live</span><strong>1<small>module</small></strong><p>Buyers part 1, live 14 Oct (R64).</p></div>
+        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>2 / 9<small>tickets approved</small></strong><p>7 on staging, incl. 6 for Buyers part 2.</p></div>
+        <div class="card kpi"><span class="eyebrow">Queued for R65</span><strong>4<small>items</small></strong><p>Suppliers, payables, permissions and phase 2 have no sprint tickets yet.</p></div>
+      </div>
+      <div class="plat-grid">
+        <div class="card outline mod-table">
+          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
+          <div class="mod"><div class="mod-name"><strong>Buyers · part 1</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4468" target="_blank" rel="noopener">DF-4468</a></div><span class="mod-rel">R64</span><div class="mod-note">Buyer list and profile</div><span class="chip done">Live 14 Oct</span></div>
+          <div class="mod"><div class="mod-name"><strong>Buyers · part 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4599" target="_blank" rel="noopener">DF-4599</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:6"></div><span class="chip active">On staging</span></div>
+          <div class="mod"><div class="mod-name"><strong>Middleware info on buyer profile</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4614" target="_blank" rel="noopener">DF-4614</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Supplier list enhancements</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4640" target="_blank" rel="noopener">DF-4640</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1,testing:1"></div><span class="chip active">Partly approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Suppliers management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4533" target="_blank" rel="noopener">DF-4533</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
+          <div class="mod"><div class="mod-name"><strong>Payables management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4534" target="_blank" rel="noopener">DF-4534</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
+          <div class="mod"><div class="mod-name"><strong>Internal user permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4653" target="_blank" rel="noopener">DF-4653</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
+          <div class="mod"><div class="mod-name"><strong>Phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4506" target="_blank" rel="noopener">DF-4506</a></div><span class="mod-rel">R65</span><div class="mod-note">Scope after phase 1</div><span class="chip idle">Queued</span></div>
+        </div>
+        <div class="card ink plat-scope">
+          <span class="eyebrow">Platform scope</span>
+          <h3>Buyer Management Platform</h3>
+          <ol class="phase-track">
+            <li class="done"><b>Phase 1</b><span>Buyers, suppliers, payables, permissions</span></li>
+            <li><b>Phase 2</b><span>Scope follows phase 1</span></li>
+          </ol>
+          <p class="plat-note">Own squad sprint (SCF BMP). Buyer features in the Admin Portal move here module by module.</p>
+          <a class="jira-link light" href="https://manafaco.atlassian.net/browse/DF-4495" target="_blank" rel="noopener">BMP epic · DF-4495 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and SCF BMP sprint (R65), 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== PLATFORM · Funder Management Platform ======================== -->
+  <section class="slide" data-slide="10" aria-labelledby="t-plat-3">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.3</b>Digital products · Platforms</div>
+        <h2 id="t-plat-3">Funder Management Platform</h2>
+        <p class="lede">New standalone platform; build started in the R66 FMP sprint.</p>
+      </div>
+    </header>
+
+    <div class="plat-body">
+      <div class="plat-kpis">
+        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>In build<small>new platform</small></strong><p>Separate from the funder features in today’s Admin Portal.</p></div>
+        <div class="card kpi"><span class="eyebrow">FMP sprint · R66</span><strong>42<small>tickets</small></strong><p>Across 4 workstreams.</p></div>
+        <div class="card kpi"><span class="eyebrow">Dev completed</span><strong>8<small>/ 42</small></strong><p>1 in development, 28 to do.</p></div>
+        <div class="card kpi"><span class="eyebrow">On hold</span><strong>5<small>tickets</small></strong><p>Rules engine (3) and operations (2).</p></div>
+      </div>
+      <div class="plat-grid">
+        <div class="card outline mod-table">
+          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
+          <div class="mod"><div class="mod-name"><strong>Funder entity &amp; access management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4635" target="_blank" rel="noopener">DF-4635</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:4,todo:6"></div><span class="chip active">Building</span></div>
+          <div class="mod"><div class="mod-name"><strong>Programs &amp; investment rules engine</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4636" target="_blank" rel="noopener">DF-4636</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:1,todo:12,hold:3"></div><span class="chip active">Building</span></div>
+          <div class="mod"><div class="mod-name"><strong>Operations &amp; financial management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4637" target="_blank" rel="noopener">DF-4637</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:2,todo:8,hold:2"></div><span class="chip active">Building</span></div>
+          <div class="mod"><div class="mod-name"><strong>Data migration &amp; cutover</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4096" target="_blank" rel="noopener">DF-4096</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="progress:1,devnow:1,todo:2"></div><span class="chip active">Building</span></div>
+          <div class="mod"><div class="mod-name"><strong>Funder SLA monitor</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3923" target="_blank" rel="noopener">DF-3923</a></div><span class="mod-rel">—</span><div class="mod-note">No release yet</div><span class="chip idle">Scoping</span></div>
+        </div>
+        <div class="card ink plat-scope">
+          <span class="eyebrow">Platform scope</span>
+          <h3>Funder Management Platform</h3>
+          <ol class="phase-track">
+            <li class="now"><b>Build</b><span>Entity &amp; access, rules engine, operations</span></li>
+            <li><b>Cutover</b><span>Migrate data from the Admin Portal</span></li>
+          </ol>
+          <p class="plat-note">Until cutover, funder configuration (RAC, co-lending, revenue model) stays in the Admin Portal and keeps receiving fixes.</p>
+          <a class="jira-link light" href="https://manafaco.atlassian.net/browse/DF-3869" target="_blank" rel="noopener">Funder management epic · DF-3869 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and FMP sprint (R66), 25 Oct 2026. Bar shows dev completed / in dev / to do / on hold.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== PLATFORM · Manafa CRM ======================== -->
+  <section class="slide" data-slide="11" aria-labelledby="t-plat-4">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.4</b>Digital products · Platforms</div>
+        <h2 id="t-plat-4">Manafa CRM</h2>
+        <p class="lede">Lead Management is live. Assignment rules and Taulia leads ship with R65; fund requests in CRM start in R66.</p>
+      </div>
+    </header>
+
+    <div class="plat-body">
+      <div class="plat-kpis">
+        <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Live<small>dedicated tool</small></strong><p>SCF pipeline, leads and targets.</p></div>
+        <div class="card kpi"><span class="eyebrow">R64 · shipped</span><strong>3<small>epics</small></strong><p>Target Management v2, leads design, reactivation script.</p></div>
+        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>31 / 34<small>tickets done</small></strong><p>Assignment rules: 24 approved, 2 in UAT.</p></div>
+        <div class="card kpi"><span class="eyebrow">R66 sprint</span><strong>3<small>epics</small></strong><p>8 tickets, all to do.</p></div>
+      </div>
+      <div class="plat-grid">
+        <div class="card outline mod-table">
+          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
+          <div class="mod"><div class="mod-name"><strong>Lead Management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3718" target="_blank" rel="noopener">DF-3718</a></div><span class="mod-rel">R63</span><div class="mod-note">Live 29 Sep</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>Target Management v2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3976" target="_blank" rel="noopener">DF-3976</a></div><span class="mod-rel">R64</span><div class="mod-note">22 tickets; back-button fix live in R65</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>Assignment rules · team management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4027" target="_blank" rel="noopener">DF-4027</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:24,uat:2"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Taulia leads into CRM</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1,todo:1"></div><span class="chip active">In progress</span></div>
+          <div class="mod"><div class="mod-name"><strong>Sales CRM enhancements</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4355" target="_blank" rel="noopener">DF-4355</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:3"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Fund requests in CRM</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4657" target="_blank" rel="noopener">DF-4657</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="todo:6"></div><span class="chip idle">To do</span></div>
+          <div class="mod"><div class="mod-name"><strong>Duplicate-lead block · permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4681" target="_blank" rel="noopener">DF-4681</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="todo:2"></div><span class="chip idle">To do</span></div>
+        </div>
+        <div class="card ink plat-scope">
+          <span class="eyebrow">Platform scope</span>
+          <h3>Manafa CRM</h3>
+          <ol class="phase-track">
+            <li class="done"><b>Pipeline</b><span>Leads, targets, reactivation</span></li>
+            <li class="now"><b>Automation</b><span>Assignment rules, Taulia leads</span></li>
+            <li><b>Applications</b><span>Fund requests in CRM (R66)</span></li>
+          </ol>
+          <p class="plat-note">Used by the SCF sales team to manage relationships and the opportunity pipeline.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira CRM sprints R64–R66, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ============================== 3 · RELEASE ============================== -->
+  <section class="slide" data-slide="12" aria-labelledby="t-release">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.5</b>Digital products · Delivery</div>
+        <h2 id="t-release">R65 closeout · R66 scope</h2>
+        <p class="lede">R64 deployed 12–14 Oct. R65 SCF go-ahead 22 Oct. R66 sprint 26 Oct – 5 Nov.</p>
+      </div>
+    </header>
+
+    <div class="release-body">
+      <div class="release-kpis">
+        <div class="card ink kpi">
+          <span class="eyebrow">R64 · Shipped <span class="chip done" style="height:22px;font-size:11.5px">Live</span></span>
+          <strong>32<small>epics</small></strong>
+          <p>Borrower Financing &amp; Activation Journey V2, FinOps supplier profiles, BMP phase 1.</p>
+        </div>
+        <div class="card violet kpi">
+          <span class="eyebrow">R65 · Deploying this week</span>
+          <strong data-kpi="r65-pct">64%<small>approved</small></strong>
+          <div class="meter"><i data-kpi="r65-meter" style="width:64%"></i></div>
+          <p data-kpi="r65-note">125 of 194 tickets approved across 48 epics</p>
+        </div>
+        <div class="card kpi">
+          <span class="eyebrow">R66 · 26 Oct – 5 Nov</span>
+          <strong data-kpi="r66-epics">28<small>epics</small></strong>
+          <p data-kpi="r66-note">79 tickets planned · grooming in progress</p>
+        </div>
+        <div class="card kpi">
+          <span class="eyebrow">Moved from R65 to R66</span>
+          <ul>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4310" target="_blank" rel="noopener">DF-4310</a>FAB SFTP Manager</li>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4411" target="_blank" rel="noopener">DF-4411</a>Pricing-engine funder rules</li>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a>Taulia onboarding data gaps</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope" data-release-scope>
+        <nav class="card ink scope-rail" aria-label="Release and squad">
+          <div class="release-switch" role="group" aria-label="Release">
+            <button type="button" data-scope-release="r65" aria-pressed="true">R65</button>
+            <button type="button" data-scope-release="r66" aria-pressed="false">R66</button>
+          </div>
+          <span class="eyebrow">Squads · approved share</span>
+          <button class="squad-btn" type="button" data-scope-theme="scf" aria-pressed="true"><span>SCF</span><strong data-scope-theme-count="scf">0</strong><span class="bar"><i data-scope-theme-bar="scf"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="finops" aria-pressed="false"><span>SCF FinOps</span><strong data-scope-theme-count="finops">0</strong><span class="bar"><i data-scope-theme-bar="finops"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="admin" aria-pressed="false"><span>Admin</span><strong data-scope-theme-count="admin">0</strong><span class="bar"><i data-scope-theme-bar="admin"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="crm" aria-pressed="false"><span>CRM</span><strong data-scope-theme-count="crm">0</strong><span class="bar"><i data-scope-theme-bar="crm"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="borrower" aria-pressed="false"><span>Borrower</span><strong data-scope-theme-count="borrower">0</strong><span class="bar"><i data-scope-theme-bar="borrower"></i></span></button>
+        </nav>
+
+        <section class="card scope-list" aria-labelledby="scope-theme-title">
+          <header><h3 id="scope-theme-title">SCF · R65</h3><span id="scope-theme-count">0 epics</span></header>
+          <div class="scope-items" id="scope-item-list" role="listbox" aria-label="Delivery items"></div>
+          <div class="scope-pager">
+            <button id="scope-page-prev" type="button" aria-label="Previous items">←</button>
+            <span id="scope-page-label">1–6 of 6</span>
+            <button id="scope-page-next" type="button" aria-label="Next items">→</button>
+          </div>
+        </section>
+
+        <aside class="card scope-detail" aria-live="polite">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+              <span class="tag" id="scope-detail-key">—</span>
+              <span class="chip" id="scope-detail-signal">—</span>
+            </div>
+            <h3 id="scope-detail-title">—</h3>
+          </div>
+          <div class="labels" id="scope-detail-labels"></div>
+          <div class="count"><strong id="scope-detail-tickets">0</strong><span>tickets in this sprint</span></div>
+          <div>
+            <div class="status-bar" id="scope-status-bar"></div>
+            <div class="status-legend" id="scope-status-legend"></div>
+          </div>
+          <a class="jira-link" id="scope-jira-link" href="#" target="_blank" rel="noopener noreferrer">Open in Jira <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src" id="scope-footer-release">Jira sprint snapshot, 25 Oct 2026. Regression and miscellaneous epics excluded.</span><span class="pg"></span></footer>
+  </section>
+
   <!-- =============================== 7 · CLOSING ============================= -->
-  <section class="slide dark closing" data-slide="11" aria-labelledby="t-close">
+  <section class="slide dark closing" data-slide="13" aria-labelledby="t-close">
     <div class="cover-top">
       <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
       <span>SCF Digital Products · Weekly update</span>
@@ -638,7 +679,7 @@
   </section>
 
   <!-- ========================= A2 · FINOPS ROADMAP ========================== -->
-  <section class="slide" data-slide="12" aria-labelledby="t-roadmap">
+  <section class="slide" data-slide="14" aria-labelledby="t-roadmap">
     <header class="slide-head">
       <div>
         <div class="kicker appendix"><b>A1</b>Appendix · SCF FinOps</div>
@@ -684,7 +725,7 @@
   </section>
 
   <!-- =========================== A3 · CHANNELS ============================== -->
-  <section class="slide" data-slide="13" aria-labelledby="t-channels">
+  <section class="slide" data-slide="15" aria-labelledby="t-channels">
     <header class="slide-head">
       <div>
         <div class="kicker appendix"><b>A2</b>Appendix · Channels</div>
@@ -781,7 +822,7 @@
 <nav class="deck-controls" aria-label="Presentation controls">
   <button class="control-button" id="prev-slide" type="button" aria-label="Previous slide">←</button>
   <div class="slide-progress" aria-hidden="true"><span id="progress-fill"></span></div>
-  <p><span id="current-slide">1</span> / <span id="total-slides">13</span></p>
+  <p><span id="current-slide">1</span> / <span id="total-slides">15</span></p>
   <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
 </nav>
 
