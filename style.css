@@ -956,3 +956,4 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--light-blue); ou
 .buyer li p { margin-top: 6px; font-size: 16px; line-height: 1.45; color: var(--muted); }
 .buyer .side { font-size: 15px; color: var(--muted); }
 .buyer .chip { justify-self: start; }
+.finops-shot.static img { object-fit: contain; object-position: top center; background: #fff; }
