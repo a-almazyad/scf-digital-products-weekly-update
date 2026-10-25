@@ -623,7 +623,7 @@ a.tag:hover { text-decoration: underline; }
 
 .taulia-summary { grid-row: 1 / -1; display: grid; grid-template-rows: auto auto 1fr auto; gap: 22px; padding: 30px; }
 .taulia-summary .logo-plate { background: #fff; border-radius: 12px; padding: 14px 18px; justify-self: start; min-height: 64px; display: grid; place-items: center; }
-.taulia-summary .logo-plate img { height: 36px; width: auto; }
+.taulia-summary .logo-plate img { height: 44px; width: auto; }
 .big-stat strong { display: block; font-size: 88px; line-height: 0.95; font-weight: 600; letter-spacing: -0.015em; }
 .big-stat span { display: block; margin-top: 10px; font-size: 17px; line-height: 1.45; color: rgba(255,255,255,0.72); }
 .taulia-summary ul { display: grid; gap: 14px; align-content: end; }
