@@ -243,7 +243,7 @@
         <ul>
           <li>Initial PDF and retry of failed copies in one flow.</li>
           <li><strong>Gap:</strong> Taulia’s fix only covers EPs created after its late-Aug release; older retries return 400.</li>
-          <li>FinOps PDF retrieval is being scoped for R66.</li>
+          <li>FinOps PDF retrieval being scoped for R67.</li>
         </ul>
         <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
       </article>
@@ -466,7 +466,7 @@
       <div>
         <div class="kicker appendix"><b>A1</b>Appendix · SCF FinOps</div>
         <h2 id="t-finops">SCF FinOps</h2>
-        <p class="lede">Release status and product screens.</p>
+        <p class="lede">Release status from Jira fix versions, and product screens.</p>
       </div>
     </header>
 
@@ -475,13 +475,13 @@
         <div class="card ink finops-status">
           <span class="eyebrow">What it is</span>
           <h3>The first platform split out of the Admin Portal</h3>
-          <p>One workspace for SCF financial operations: instruments, early payments, fund requests, offers, loans and receivables.</p>
+          <p>One workspace for SCF financial operations.</p>
         </div>
         <div class="card finops-releases">
-          <div class="row"><b>R64</b><div><span class="chip done">Live 12 Oct</span><p><strong>Supplier profile &amp; funder onboarding</strong> (DF-4529), incl. company size and SAMA activity.</p></div></div>
-          <div class="row"><b>R65</b><div><span class="chip ready">Approved</span><p><strong>Funder monitoring</strong> (DF-4530), <strong>dashboard</strong> (DF-4562), document &amp; loan tooling (DF-4532, partial).</p></div></div>
-          <div class="row"><b></b><div><span class="chip wait">On staging</span><p>Buyer monitoring &amp; SAMA capacity (DF-4531). Reconciliation (DF-4111) held from production.</p></div></div>
-          <div class="row"><b>R66</b><div><span class="chip idle">Planned</span><p>EP statuses, funder monitoring phase 2, Taulia PDF retrieval and onboarding impact.</p></div></div>
+          <div class="row"><b>R63–64</b><div><span class="chip done">Live</span><p><strong>UX/UI enhancements</strong> (29 Sep); <strong>supplier profile &amp; funder onboarding</strong> (12 Oct).</p></div></div>
+          <div class="row"><b>R65</b><div><span class="chip ready">Approved</span><p><strong>Funder monitoring</strong>, <strong>dashboard</strong>, document &amp; loan tooling (partial).</p></div></div>
+          <div class="row"><b></b><div><span class="chip wait">On staging</span><p>Buyer monitoring &amp; SAMA capacity. Reconciliation held from production.</p></div></div>
+          <div class="row"><b>R67</b><div><span class="chip idle">Scoping</span><p>EP statuses, funder monitoring ph. 2, Taulia impacts, international IBANs.</p></div></div>
         </div>
       </div>
 
@@ -519,7 +519,7 @@
       <div>
         <div class="kicker appendix"><b>A2</b>Appendix · SCF FinOps</div>
         <h2 id="t-roadmap">SCF FinOps roadmap</h2>
-        <p class="lede">Delivery release per workstream. Select a workstream for full scope.</p>
+        <p class="lede">Release per workstream from Jira fix versions; no FinOps items are in R66. Select a workstream for full scope.</p>
       </div>
       <div class="head-aside legend">
         <span><i style="background:var(--done)"></i>Live</span>
@@ -537,21 +537,21 @@
         <div role="columnheader">R62<small>Enhancement</small></div>
         <div role="columnheader">R64<small>Expansion · live 12 Oct</small></div>
         <div role="columnheader" class="now">R65<small>Deploying this week</small></div>
-        <div role="columnheader">R66 · next<small>26 Oct – 5 Nov</small></div>
+        <div role="columnheader">R67 · next<small>Scoping / BRD</small></div>
       </div>
       <div class="roadmap-rows">
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-0"><strong>Instruments<b>↗</b></strong><span>Invoices · Credit notes</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
-        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-1"><strong>Early payments<b>↗</b></strong><span>List · Details · Timeline · Rejection</span></button></div><div><span class="rbar live">Core</span></div><div><span class="rbar live">Bulk rejection</span></div><div></div><div></div><div><span class="rbar planned">EP statuses</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-1"><strong>Early payments<b>↗</b></strong><span>List · Details · Timeline · Rejection</span></button></div><div><span class="rbar live">Core</span></div><div><span class="rbar live">Bulk rejection</span></div><div></div><div></div><div><span class="rbar planned">EP statuses · scoping</span></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-2"><strong>Fund requests<b>↗</b></strong><span>List · Details · Timeline</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-3"><strong>Offers &amp; attempts<b>↗</b></strong><span>Offers · Offer attempts</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-4"><strong>Loans &amp; receivables<b>↗</b></strong><span>Loans · Receivables · Doc tooling</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div><span class="rbar ready">Doc &amp; loan tooling</span></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-5"><strong>Supplier management<b>↗</b></strong><span>List · Profile · Onboard to funder</span></button></div><div><span class="rbar live">List</span></div><div></div><div><span class="rbar live">Profiles</span></div><div></div><div><span class="rbar held">Onboard to funder · deferred</span></div></div>
-        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-6"><strong>Funder management<b>↗</b></strong><span>Onboarding · Monitoring</span></button></div><div></div><div></div><div><span class="rbar live">Onboarding</span></div><div><span class="rbar ready">Monitoring</span></div><div><span class="rbar planned">Monitoring ph. 2</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-6"><strong>Funder management<b>↗</b></strong><span>Onboarding · Monitoring</span></button></div><div></div><div></div><div><span class="rbar live">Onboarding</span></div><div><span class="rbar ready">Monitoring</span></div><div><span class="rbar planned">Monitoring ph. 2 · BRD</span></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-7"><strong>Buyer management<b>↗</b></strong><span>Buyer monitoring · SAMA capacity</span></button></div><div></div><div></div><div></div><div><span class="rbar build">On staging</span></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-8"><strong>Collections<b>↗</b></strong><span>Reconciliation · Collections · Suspense</span></button></div><div></div><div></div><div></div><div><span class="rbar held">Reconciliation · held</span></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-10"><strong>FinOps dashboard<b>↗</b></strong><span>Dashboard management</span></button></div><div></div><div></div><div></div><div><span class="rbar ready">Dashboard</span></div><div></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-9"><strong>Transaction details<b>↗</b></strong><span>Wallet / account transactions</span></button></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">Not scheduled</span></div></div>
-        <div class="roadmap-row" role="row"><div role="cell"><span class="ws"><strong>Taulia in FinOps</strong><span>PDF retrieval · Onboarding impact</span></span></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">DF-4405 · DF-4280</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><span class="ws"><strong>Taulia in FinOps</strong><span>PDF retrieval · Onboarding impact</span></span></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">PDF retrieval · onboarding</span></div></div>
         <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-11"><strong>Remaining operations<b>↗</b></strong><span>Logs · Files · Wallets · Reports · SLA</span></button></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">Not started</span></div></div>
       </div>
     </div>
