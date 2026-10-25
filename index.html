@@ -29,8 +29,8 @@
       </div>
       <ol class="agenda" aria-label="Agenda">
         <li><b>01</b><div>Items from last weekly<small>Closed items and new open issues</small></div></li>
-        <li><b>P1</b><div>Partners &amp; integrations<small>Funders · Embedded financing · Taulia</small></div></li>
-        <li><b>P2</b><div>Digital products<small>FinOps · Buyer Mgmt · Funder Mgmt · CRM · R65/R66</small></div></li>
+        <li><b>P1</b><div>Partners &amp; integrations<small>Buyers · Funders · Taulia · Embedded financing</small></div></li>
+        <li><b>P2</b><div>Digital products<small>Borrower channel · FinOps · BMP · FMP · CRM · R65/R66</small></div></li>
       </ol>
     </div>
 
@@ -129,22 +129,63 @@
       <div>
         <div class="kicker">Part 1</div>
         <h2 id="t-sec-1">Partners &amp; integrations</h2>
-        <p>Funders, embedded-financing partners and the SAP Taulia integration.</p>
+        <p>Buyers, funders, the SAP Taulia integration and embedded-financing partners.</p>
       </div>
       <ol class="section-list">
-        <li><b>1.1</b><div><strong>Funder progress</strong><span>12 funders: 3 live, 3 building, 6 waiting on the partner</span></div></li>
-        <li><b>1.2</b><div><strong>Embedded financing</strong><span>4 partners: 2 live, Elm awaiting response, Waseel in discussion</span></div></li>
+        <li><b>1.1</b><div><strong>Buyer programs</strong><span>Aramco and Saudi Energy: open requests and engagements</span></div></li>
+        <li><b>1.2</b><div><strong>Funder progress</strong><span>12 funders: 3 live, 3 building, 6 waiting on the partner</span></div></li>
         <li><b>1.3</b><div><strong>Taulia integration</strong><span>3 APIs live; ERP invoice number awaiting Taulia</span></div></li>
+        <li><b>1.4</b><div><strong>Embedded financing</strong><span>4 partners: 2 live, Elm awaiting response, Waseel in discussion</span></div></li>
       </ol>
     </div>
     <footer class="slide-foot"><span></span><span class="src"></span><span class="pg"></span></footer>
   </section>
 
-  <!-- =============================== 5 · FUNDERS ============================= -->
-  <section class="slide" data-slide="4" aria-labelledby="t-funders">
+  <!-- ============================== BUYERS ============================== -->
+  <section class="slide" data-slide="4" aria-labelledby="t-buyers">
     <header class="slide-head">
       <div>
         <div class="kicker"><b>1.1</b>Partners &amp; integrations</div>
+        <h2 id="t-buyers">Buyer programs</h2>
+        <p class="lede">Open requests and engagements with our two operating buyers.</p>
+      </div>
+      <div class="head-aside legend">
+        <span><i style="background:var(--done)"></i>Done</span>
+        <span><i style="background:var(--active)"></i>In progress</span>
+        <span><i style="background:var(--wait)"></i>Pending</span>
+      </div>
+    </header>
+
+    <div class="buyer-grid">
+      <section class="card outline buyer">
+        <header><div class="buyer-logo"><img src="assets/logos/aramco.svg" alt="Saudi Aramco"></div><div><span class="eyebrow">Buyer program</span><h3>Saudi Aramco</h3></div></header>
+        <div class="buyer-cols"><span>Item</span><span>Owner</span><span>Status</span></div>
+        <ul>
+          <li><div><strong>SMBC participation in the Aramco program</strong><p>Aramco approved SMBC as a participating funder.</p></div><span class="side">Aramco</span><span class="chip done">Green light</span></li>
+          <li><div><strong>Digitalise the Ahsan weekly report</strong><p>Move the weekly report into the platform.</p></div><span class="side">Manafa</span><span class="chip active">Open</span></li>
+          <li><div><strong>PO financing project</strong><p>Define the required APIs and the data-exchange architecture to kick off.</p></div><span class="side">Manafa · Digital</span><span class="chip idle">To start</span></li>
+          <li><div><strong>Aramco (SAO) as a funder</strong><p>Waiting for SAO feedback.</p></div><span class="side">Aramco</span><span class="chip wait">Pending</span></li>
+        </ul>
+      </section>
+
+      <section class="card outline buyer">
+        <header><div class="buyer-logo"><img src="assets/logos/saudi-energy.svg" alt="Saudi Energy"></div><div><span class="eyebrow">Buyer program</span><h3>Saudi Energy (SE)</h3></div></header>
+        <div class="buyer-cols"><span>Item</span><span>Owner</span><span>Status</span></div>
+        <ul>
+          <li><div><strong>JPM IBANs and GUID numbers</strong><p>Shared by SE; closed.</p></div><span class="side">SE</span><span class="chip done">Received</span></li>
+          <li><div><strong>Copy of the JPM invoice</strong><p>Waiting for SE to share it.</p></div><span class="side">SE</span><span class="chip wait">Pending</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Source: SCF team, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- =============================== 5 · FUNDERS ============================= -->
+  <section class="slide" data-slide="5" aria-labelledby="t-funders">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>1.2</b>Partners &amp; integrations</div>
         <h2 id="t-funders">SCF funder progress</h2>
         <p class="lede">Bar shows integration stages completed; striped segment is the current stage.</p>
       </div>
@@ -233,69 +274,6 @@
     <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Stages: Requirements · SDD · Development · Testing/UAT · Pilot · Live. Sources: funder team update and Jira, 25 Oct 2026.</span><span class="pg"></span></footer>
   </section>
 
-  <!-- ========================= 6 · EMBEDDED FINANCE ========================= -->
-  <section class="slide" data-slide="5" aria-labelledby="t-embedded">
-    <header class="slide-head">
-      <div>
-        <div class="kicker"><b>1.2</b>Partners &amp; integrations</div>
-        <h2 id="t-embedded">Embedded financing partnerships</h2>
-        <p class="lede">Status and next step for each partner.</p>
-      </div>
-    </header>
-
-    <div class="partner-grid">
-      <article class="partner done">
-        <div class="partner-logos"><img src="assets/logos/lean.png" alt="Lean Technologies"><span class="plus">+</span><img src="assets/logos/nphies.png" alt="Nphies"></div>
-        <div class="sector"><span class="eyebrow">Healthcare</span><span class="chip done">Live · scaling</span></div>
-        <h3>Lean + Nphies</h3>
-        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
-        <ul class="latest">
-          <li>Moved past the Twaig Health pilot into <strong>regular production</strong>.</li>
-          <li>Healthcare providers finance claims through the Nphies flow.</li>
-        </ul>
-        <div class="next"><b>Next</b><span>Grow the provider base with Sales.</span></div>
-      </article>
-
-      <article class="partner wait">
-        <div class="partner-logos"><img src="assets/logos/elm.png" alt="Elm"><span class="plus">+</span><img src="assets/logos/dhamen.png" alt="Dhamen"></div>
-        <div class="sector"><span class="eyebrow">Government services</span><span class="chip wait">Awaiting Elm</span></div>
-        <h3>Elm · Dhamen–Muqeem</h3>
-        <div data-stages="3" data-labels="Scope,Build,Demo,Pilot,Live"></div>
-        <ul class="latest">
-          <li>Muqeem PO-financing journey <strong>demoed 6 Oct</strong>; nothing back from Elm yet.</li>
-          <li>No pilot entity yet; ~400–500 entities whitelisted for rollout.</li>
-          <li>Tasdeed and Nusuk remain on hold.</li>
-        </ul>
-        <div class="next"><b>Next</b><span>Elm to name a pilot entity.</span></div>
-      </article>
-
-      <article class="partner done">
-        <div class="partner-logos"><img src="assets/logos/nhc.png" alt="National Housing Company"><span class="plus">+</span><img src="assets/logos/supplypro.png" alt="Supplier Pro"></div>
-        <div class="sector"><span class="eyebrow">Housing</span><span class="chip done">Live</span></div>
-        <h3>NHC / SupplyPro</h3>
-        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
-        <ul class="latest">
-          <li><strong>Live in production.</strong> Open issues: NHC designated account missing from requests, and a 404 on fund-request details.</li>
-          <li>Next tracks agreed 17 Sep: Wafi model, NHC supplier financing, ERP integration.</li>
-        </ul>
-        <div class="next"><b>Next</b><span>Close integration issues with SupplyPro; scope the ERP track.</span></div>
-      </article>
-      <article class="partner idle">
-        <div class="partner-logos"><img src="https://waseel.com/wp-content/uploads/2023/12/waseel.svg" alt="Waseel"></div>
-        <div class="sector"><span class="eyebrow">Healthcare</span><span class="chip idle">Initial discussions</span></div>
-        <h3>Waseel</h3>
-        <div data-stages="0" data-labels="Scope,Build,Demo,Pilot,Live"></div>
-        <ul class="latest">
-          <li>Use case: <strong>healthcare claims financing</strong>.</li>
-          <li>Initial discussion document and integration approach shared with Waseel.</li>
-        </ul>
-        <div class="next"><b>Next</b><span>Waseel feedback on the shared document.</span></div>
-      </article>
-    </div>
-
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: #embedded-scf-squad, #manafa-nhcsupplypro-channel, Dhamen–Muqeem group and team input.</span><span class="pg"></span></footer>
-  </section>
-
   <!-- =============================== 4 · TAULIA ============================== -->
   <section class="slide" data-slide="6" aria-labelledby="t-taulia">
     <header class="slide-head">
@@ -365,8 +343,71 @@
     <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira; #manafa-taulia-channel and Taulia tech group, to 22 Oct 2026.</span><span class="pg"></span></footer>
   </section>
 
+  <!-- ========================= 6 · EMBEDDED FINANCE ========================= -->
+  <section class="slide" data-slide="7" aria-labelledby="t-embedded">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>1.4</b>Partners &amp; integrations</div>
+        <h2 id="t-embedded">Embedded financing partnerships</h2>
+        <p class="lede">Status and next step for each partner.</p>
+      </div>
+    </header>
+
+    <div class="partner-grid">
+      <article class="partner done">
+        <div class="partner-logos"><img src="assets/logos/lean.png" alt="Lean Technologies"><span class="plus">+</span><img src="assets/logos/nphies.png" alt="Nphies"></div>
+        <div class="sector"><span class="eyebrow">Healthcare</span><span class="chip done">Live · scaling</span></div>
+        <h3>Lean + Nphies</h3>
+        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li>Moved past the Twaig Health pilot into <strong>regular production</strong>.</li>
+          <li>Healthcare providers finance claims through the Nphies flow.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Grow the provider base with Sales.</span></div>
+      </article>
+
+      <article class="partner wait">
+        <div class="partner-logos"><img src="assets/logos/elm.png" alt="Elm"><span class="plus">+</span><img src="assets/logos/dhamen.png" alt="Dhamen"></div>
+        <div class="sector"><span class="eyebrow">Government services</span><span class="chip wait">Awaiting Elm</span></div>
+        <h3>Elm · Dhamen–Muqeem</h3>
+        <div data-stages="3" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li>Muqeem PO-financing journey <strong>demoed 6 Oct</strong>; nothing back from Elm yet.</li>
+          <li>No pilot entity yet; ~400–500 entities whitelisted for rollout.</li>
+          <li>Tasdeed and Nusuk remain on hold.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Elm to name a pilot entity.</span></div>
+      </article>
+
+      <article class="partner done">
+        <div class="partner-logos"><img src="assets/logos/nhc.png" alt="National Housing Company"><span class="plus">+</span><img src="assets/logos/supplypro.png" alt="Supplier Pro"></div>
+        <div class="sector"><span class="eyebrow">Housing</span><span class="chip done">Live</span></div>
+        <h3>NHC / SupplyPro</h3>
+        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li><strong>Live in production.</strong> Open issues: NHC designated account missing from requests, and a 404 on fund-request details.</li>
+          <li>Next tracks agreed 17 Sep: Wafi model, NHC supplier financing, ERP integration.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Close integration issues with SupplyPro; scope the ERP track.</span></div>
+      </article>
+      <article class="partner idle">
+        <div class="partner-logos"><img src="https://waseel.com/wp-content/uploads/2023/12/waseel.svg" alt="Waseel"></div>
+        <div class="sector"><span class="eyebrow">Healthcare</span><span class="chip idle">Initial discussions</span></div>
+        <h3>Waseel</h3>
+        <div data-stages="0" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li>Use case: <strong>healthcare claims financing</strong>.</li>
+          <li>Initial discussion document and integration approach shared with Waseel.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Waseel feedback on the shared document.</span></div>
+      </article>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: #embedded-scf-squad, #manafa-nhcsupplypro-channel, Dhamen–Muqeem group and team input.</span><span class="pg"></span></footer>
+  </section>
+
   <!-- ======================== SECTION · Digital products ======================== -->
-  <section class="slide dark section-slide" data-slide="7" aria-labelledby="t-sec-2">
+  <section class="slide dark section-slide" data-slide="8" aria-labelledby="t-sec-2">
     <div class="cover-top">
       <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
       <span>SCF Digital Products · Weekly update</span>
@@ -375,24 +416,70 @@
       <div>
         <div class="kicker">Part 2</div>
         <h2 id="t-sec-2">Digital products</h2>
-        <p>The internal platforms we are building and this release cycle.</p>
+        <p>The borrower channel, the internal platforms we are building, and this release cycle.</p>
       </div>
       <ol class="section-list">
-        <li><b>2.1</b><div><strong>SCF FinOps</strong><span>Live since R61; 5 modules in R65</span></div></li>
-        <li><b>2.2</b><div><strong>Buyer Management Platform</strong><span>Phase 1 part 1 live; part 2 on staging</span></div></li>
-        <li><b>2.3</b><div><strong>Funder Management Platform</strong><span>In build: 8 of 42 tickets dev-complete in R66</span></div></li>
-        <li><b>2.4</b><div><strong>Manafa CRM</strong><span>Live; assignment rules ship with R65</span></div></li>
-        <li><b>2.5</b><div><strong>R65 closeout · R66 scope</strong><span>R65 deploys this week; R66 runs 26 Oct – 5 Nov</span></div></li>
+        <li><b>2.1</b><div><strong>Borrower channel</strong><span>Journey V2 live since R64; real estate in R65</span></div></li>
+        <li><b>2.2</b><div><strong>SCF FinOps</strong><span>Live since R61; 5 modules in R65</span></div></li>
+        <li><b>2.3</b><div><strong>Buyer Management Platform</strong><span>Phase 1 part 1 live; part 2 on staging</span></div></li>
+        <li><b>2.4</b><div><strong>Funder Management Platform</strong><span>In build: 8 of 42 tickets dev-complete in R66</span></div></li>
+        <li><b>2.5</b><div><strong>Manafa CRM</strong><span>Live; assignment rules ship with R65</span></div></li>
+        <li><b>2.6</b><div><strong>R65 closeout · R66 scope</strong><span>R65 deploys this week; R66 runs 26 Oct – 5 Nov</span></div></li>
       </ol>
     </div>
     <footer class="slide-foot"><span></span><span class="src"></span><span class="pg"></span></footer>
   </section>
 
-  <!-- ======================== PLATFORM · SCF FinOps ======================== -->
-  <section class="slide" data-slide="8" aria-labelledby="t-plat-1">
+  <!-- ======================== CHANNEL · Borrower ======================== -->
+  <section class="slide" data-slide="9" aria-labelledby="t-borrower">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>2.1</b>Digital products · Platforms</div>
+        <div class="kicker"><b>2.1</b>Digital products · Channel</div>
+        <h2 id="t-borrower">Borrower channel</h2>
+        <p class="lede">Web and mobile journey for the suppliers we finance. Activation and financing journeys V2 went live in R64.</p>
+      </div>
+    </header>
+
+    <div class="plat-body">
+      <div class="plat-kpis">
+        <div class="card kpi ink"><span class="eyebrow">Journey revamp</span><strong>Live<small>since R64</small></strong><p>Activation and financing journeys V2.</p></div>
+        <div class="card kpi"><span class="eyebrow">R64 · shipped</span><strong>6<small>epics</small></strong><p>Both V2 journeys, CapEx, AOP, financing summary.</p></div>
+        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>20 / 39<small>tickets approved</small></strong><p>Real-estate product: 14 approved, 10 in UAT.</p></div>
+        <div class="card kpi"><span class="eyebrow">R66 sprint</span><strong>24<small>tickets</small></strong><p>1 approved; fund-acceptance change on hold.</p></div>
+      </div>
+      <div class="plat-grid">
+        <div class="card outline mod-table">
+          <div class="mod mod-head"><span>Module</span><span>Release</span><span>Delivery tickets</span><span>Status</span></div>
+          <div class="mod"><div class="mod-name"><strong>Activation journey V2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-3357" target="_blank" rel="noopener">DF-3357</a></div><span class="mod-rel">R64</span><div class="mod-note">Sign-up to profile completion</div><span class="chip done">Live 14 Oct</span></div>
+          <div class="mod"><div class="mod-name"><strong>Financing journey V2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4373" target="_blank" rel="noopener">DF-4373</a></div><span class="mod-rel">R64</span><div class="mod-note">44 tickets; 3 follow-ups approved in R65</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>AOP · financing summary</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4536" target="_blank" rel="noopener">DF-4536</a></div><span class="mod-rel">R64</span><div class="mod-note">Also DF-4010</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>CapEx product</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4283" target="_blank" rel="noopener">DF-4283</a></div><span class="mod-rel">R64</span><div class="mod-note">Spilled from R62</div><span class="chip done">Live</span></div>
+          <div class="mod"><div class="mod-name"><strong>Real-estate product</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4526" target="_blank" rel="noopener">DF-4526</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:14,uat:10"></div><span class="chip active">In UAT</span></div>
+          <div class="mod"><div class="mod-name"><strong>Passport-based stakeholders</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4601" target="_blank" rel="noopener">DF-4601</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
+          <div class="mod"><div class="mod-name"><strong>Remove fund-acceptance task</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4521" target="_blank" rel="noopener">DF-4521</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="testing:1,todo:10,hold:2"></div><span class="chip wait">On hold</span></div>
+          <div class="mod"><div class="mod-name"><strong>Passed-away stakeholder · phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4545" target="_blank" rel="noopener">DF-4545</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="approved:1,testing:2,todo:5"></div><span class="chip active">Building</span></div>
+        </div>
+        <div class="card ink plat-scope">
+          <span class="eyebrow">Journey revamp</span>
+          <h3>Supplier journey V2</h3>
+          <ol class="phase-track">
+            <li class="done"><b>Activation V2</b><span>Sign-up, KYC and profile completion</span></li>
+            <li class="done"><b>Financing V2</b><span>Request, offer and acceptance</span></li>
+            <li class="now"><b>New products</b><span>CapEx live; real estate in R65</span></li>
+          </ol>
+          <p class="plat-note">Suppliers invited through Taulia now enter this journey directly.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira DF fix versions and Borrower sprints R64–R66, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================== PLATFORM · SCF FinOps ======================== -->
+  <section class="slide" data-slide="10" aria-labelledby="t-plat-1">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>2.2</b>Digital products · Platforms</div>
         <h2 id="t-plat-1">SCF FinOps</h2>
         <p class="lede">First platform split out of the Admin Portal. Live since R61; R65 adds funder monitoring and the dashboard.</p>
       </div>
@@ -447,10 +534,10 @@
   </section>
 
   <!-- ======================== PLATFORM · Buyer Management Platform ======================== -->
-  <section class="slide" data-slide="9" aria-labelledby="t-plat-2">
+  <section class="slide" data-slide="11" aria-labelledby="t-plat-2">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>2.2</b>Digital products · Platforms</div>
+        <div class="kicker"><b>2.3</b>Digital products · Platforms</div>
         <h2 id="t-plat-2">Buyer Management Platform</h2>
         <p class="lede">Phase 1 part 1 is live. Part 2 and supplier-list work are on staging for R65.</p>
       </div>
@@ -492,10 +579,10 @@
   </section>
 
   <!-- ======================== PLATFORM · Funder Management Platform ======================== -->
-  <section class="slide" data-slide="10" aria-labelledby="t-plat-3">
+  <section class="slide" data-slide="12" aria-labelledby="t-plat-3">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>2.3</b>Digital products · Platforms</div>
+        <div class="kicker"><b>2.4</b>Digital products · Platforms</div>
         <h2 id="t-plat-3">Funder Management Platform</h2>
         <p class="lede">New standalone platform; build started in the R66 FMP sprint.</p>
       </div>
@@ -534,10 +621,10 @@
   </section>
 
   <!-- ======================== PLATFORM · Manafa CRM ======================== -->
-  <section class="slide" data-slide="11" aria-labelledby="t-plat-4">
+  <section class="slide" data-slide="13" aria-labelledby="t-plat-4">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>2.4</b>Digital products · Platforms</div>
+        <div class="kicker"><b>2.5</b>Digital products · Platforms</div>
         <h2 id="t-plat-4">Manafa CRM</h2>
         <p class="lede">Lead Management is live. Assignment rules and Taulia leads ship with R65; fund requests in CRM start in R66.</p>
       </div>
@@ -578,10 +665,10 @@
   </section>
 
   <!-- ============================== 3 · RELEASE ============================== -->
-  <section class="slide" data-slide="12" aria-labelledby="t-release">
+  <section class="slide" data-slide="14" aria-labelledby="t-release">
     <header class="slide-head">
       <div>
-        <div class="kicker"><b>2.5</b>Digital products · Delivery</div>
+        <div class="kicker"><b>2.6</b>Digital products · Delivery</div>
         <h2 id="t-release">R65 closeout · R66 scope</h2>
         <p class="lede">R64 deployed 12–14 Oct. R65 SCF go-ahead 22 Oct. R66 sprint 26 Oct – 5 Nov.</p>
       </div>
@@ -662,7 +749,7 @@
   </section>
 
   <!-- =============================== 7 · CLOSING ============================= -->
-  <section class="slide dark closing" data-slide="13" aria-labelledby="t-close">
+  <section class="slide dark closing" data-slide="15" aria-labelledby="t-close">
     <div class="cover-top">
       <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
       <span>SCF Digital Products · Weekly update</span>
@@ -679,7 +766,7 @@
   </section>
 
   <!-- ========================= A2 · FINOPS ROADMAP ========================== -->
-  <section class="slide" data-slide="14" aria-labelledby="t-roadmap">
+  <section class="slide" data-slide="16" aria-labelledby="t-roadmap">
     <header class="slide-head">
       <div>
         <div class="kicker appendix"><b>A1</b>Appendix · SCF FinOps</div>
@@ -725,25 +812,16 @@
   </section>
 
   <!-- =========================== A3 · CHANNELS ============================== -->
-  <section class="slide" data-slide="15" aria-labelledby="t-channels">
+  <section class="slide" data-slide="17" aria-labelledby="t-channels">
     <header class="slide-head">
       <div>
         <div class="kicker appendix"><b>A2</b>Appendix · Channels</div>
         <h2 id="t-channels">Channel updates</h2>
-        <p class="lede">Borrower, buyer and funder channel status.</p>
+        <p class="lede">Buyer and funder channel status. The borrower channel is covered in 2.1.</p>
       </div>
     </header>
 
     <div class="channel-grid">
-      <section class="card channel">
-        <header><span class="eyebrow">Supplier web &amp; mobile</span><h3>Borrower channel</h3></header>
-        <ul>
-          <li><div class="row"><strong>Activation Journey V2</strong><span class="chip done">Live 14 Oct</span></div><p>DF-3357 shipped in R64 after spilling from R63.</p></li>
-          <li><div class="row"><strong>Financing Journey V2</strong><span class="chip done">Live · R64</span></div><p>DF-4373, 44 tickets. AOP in the financing flow also live.</p></li>
-          <li><div class="row"><strong>Real-estate product</strong><span class="chip active">R65 · UAT</span></div><p>DF-4526: 14 approved, 10 in UAT review.</p></li>
-          <li><div class="row"><strong>Remove fund-acceptance task</strong><span class="chip hold">On hold</span></div><p>DF-4521 in R66; clarifications pending.</p></li>
-        </ul>
-      </section>
       <section class="card channel c2">
         <header><span class="eyebrow">Buyer web application</span><h3>Buyer channel</h3></header>
         <ul>
@@ -822,7 +900,7 @@
 <nav class="deck-controls" aria-label="Presentation controls">
   <button class="control-button" id="prev-slide" type="button" aria-label="Previous slide">←</button>
   <div class="slide-progress" aria-hidden="true"><span id="progress-fill"></span></div>
-  <p><span id="current-slide">1</span> / <span id="total-slides">15</span></p>
+  <p><span id="current-slide">1</span> / <span id="total-slides">17</span></p>
   <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
 </nav>
 
