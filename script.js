@@ -196,26 +196,30 @@ if (releaseScopeRoot) {
   renderScope();
 }
 
-/* ---------- FinOps carousel ---------- */
-const carousel = document.querySelector("[data-finops-carousel]");
-const shots = carousel ? Array.from(carousel.querySelectorAll(".finops-shot")) : [];
-const dots = carousel ? Array.from(carousel.querySelectorAll("[data-finops-index]")) : [];
-let shotIndex = 0;
+/* ---------- Screenshot carousels (FinOps, BMP, CRM) ---------- */
+document.querySelectorAll("[data-carousel]").forEach((root) => {
+  const shots = Array.from(root.querySelectorAll(".finops-shot"));
+  const dots = Array.from(root.querySelectorAll("[data-shot-index]"));
+  const title = root.querySelector("[data-shot-title]");
+  const caption = root.querySelector("[data-shot-caption]");
+  const count = root.querySelector("[data-shot-count]");
+  let shotIndex = 0;
 
-function showShot(index) {
-  if (!shots.length) return;
-  shotIndex = (index + shots.length) % shots.length;
-  shots.forEach((s, i) => s.classList.toggle("is-current", i === shotIndex));
-  dots.forEach((d, i) => { d.classList.toggle("is-current", i === shotIndex); d.setAttribute("aria-current", String(i === shotIndex)); });
-  const s = shots[shotIndex];
-  document.getElementById("finops-shot-title").textContent = s.dataset.title || "SCF FinOps";
-  document.getElementById("finops-shot-caption").textContent = s.dataset.caption || "";
-  document.getElementById("finops-shot-count").textContent = `${shotIndex + 1} / ${shots.length}`;
-}
-document.getElementById("finops-shot-prev")?.addEventListener("click", (e) => { e.stopPropagation(); showShot(shotIndex - 1); });
-document.getElementById("finops-shot-next")?.addEventListener("click", (e) => { e.stopPropagation(); showShot(shotIndex + 1); });
-dots.forEach((d) => d.addEventListener("click", (e) => { e.stopPropagation(); showShot(Number(d.dataset.finopsIndex)); }));
-showShot(0);
+  function showShot(index) {
+    if (!shots.length) return;
+    shotIndex = (index + shots.length) % shots.length;
+    shots.forEach((s, i) => s.classList.toggle("is-current", i === shotIndex));
+    dots.forEach((d, i) => { d.classList.toggle("is-current", i === shotIndex); d.setAttribute("aria-current", String(i === shotIndex)); });
+    const s = shots[shotIndex];
+    if (title) title.textContent = s.dataset.title || "";
+    if (caption) caption.textContent = s.dataset.caption || "";
+    if (count) count.textContent = `${shotIndex + 1} / ${shots.length}`;
+  }
+  root.querySelector("[data-shot-prev]")?.addEventListener("click", (e) => { e.stopPropagation(); showShot(shotIndex - 1); });
+  root.querySelector("[data-shot-next]")?.addEventListener("click", (e) => { e.stopPropagation(); showShot(shotIndex + 1); });
+  dots.forEach((d) => d.addEventListener("click", (e) => { e.stopPropagation(); showShot(Number(d.dataset.shotIndex)); }));
+  showShot(0);
+});
 
 /* ---------- Roadmap dialogs ---------- */
 document.querySelectorAll("[data-roadmap-open]").forEach((b) => {
