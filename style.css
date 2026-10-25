@@ -31,12 +31,12 @@
   --done-bg: #E3F5EC;
   --ready: #5337FF;
   --ready-bg: #EFECFF;
-  --active: #293BE0;
-  --active-bg: #E7ECFF;
+  --active: #5337FF;
+  --active-bg: #EFECFF;
   --wait: #B25E09;
   --wait-bg: #FDF0DD;
-  --hold: #C2263B;
-  --hold-bg: #FCE8EA;
+  --hold: #B25E09;
+  --hold-bg: #FDF0DD;
   --idle: #7C7C93;
   --idle-bg: #EEEEF4;
 
@@ -451,12 +451,9 @@ a.tag:hover { text-decoration: underline; }
   grid-template-rows: auto auto 1fr auto;
   gap: 8px;
   padding: 18px 22px;
-  border-left: 5px solid var(--wait);
-  border-radius: 6px var(--radius) var(--radius) 6px;
+  border-radius: var(--radius);
 }
 
-.issue.hold { border-left-color: var(--hold); }
-.issue.active { border-left-color: var(--active); }
 
 .issue-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .issue h4 { font-size: 19px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
@@ -607,11 +604,11 @@ a.tag:hover { text-decoration: underline; }
 .s-approved { background: #16C47F; }
 .s-uat { background: #5337FF; }
 .s-testing { background: #829DFF; }
-.s-progress { background: #293BE0; }
+.s-progress { background: #3F25E6; }
 .s-queue { background: #B9B3FF; }
 .s-devdone { background: #4F6BFF; }
 .s-todo { background: #C9CBDF; }
-.s-hold { background: #C2263B; }
+.s-hold { background: #B25E09; }
 .s-deferred { background: #E39A3B; }
 
 /* ---------- Taulia --------------------------------------------------------- */
@@ -660,8 +657,7 @@ a.tag:hover { text-decoration: underline; }
   padding: 13px 18px 12px;
   background: var(--paper);
   border: 1.5px solid var(--line);
-  border-top: 5px solid var(--c, var(--idle));
-  border-radius: 8px 8px var(--radius) var(--radius);
+  border-radius: var(--radius);
   min-height: 0;
   overflow: hidden;
 }
@@ -703,8 +699,7 @@ a.tag:hover { text-decoration: underline; }
   padding: 22px 26px;
   background: var(--paper);
   border: 1.5px solid var(--line);
-  border-top: 6px solid var(--c, var(--idle));
-  border-radius: 8px 8px var(--radius) var(--radius);
+  border-radius: var(--radius);
 }
 
 .partner.done { --c: var(--done); }
@@ -812,8 +807,6 @@ dialog.roadmap-detail .roadmap-detail-note { padding-top: 14px; font-size: 13px;
 .channel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; min-height: 0; }
 .channel { display: grid; grid-template-rows: auto 1fr; padding: 0; overflow: hidden; background: var(--paper); border: 1.5px solid var(--line); }
 .channel > header { padding: 24px 26px; background: var(--ink); color: #fff; }
-.channel.c2 > header { background: var(--violet); }
-.channel.c3 > header { background: var(--blue); }
 .channel > header h3 { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; margin-top: 4px; }
 .channel > header .eyebrow { color: rgba(255,255,255,0.65); }
 .channel ul { display: grid; grid-template-rows: repeat(4, 1fr); padding: 6px 26px; }
@@ -883,3 +876,15 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--light-blue); ou
   .deck-controls { display: none; }
   @page { size: 1600px 900px; margin: 0; }
 }
+
+/* Calmer palette: one brand accent, light cards instead of violet panels */
+.card.violet { background: var(--violet-tint); color: var(--text); border: 1.5px solid var(--violet-soft); }
+.card.violet .eyebrow { color: var(--violet); }
+.card.violet.kpi p { color: var(--muted); }
+.kpi .meter { background: var(--violet-soft); }
+.kpi .meter i { background: var(--violet); }
+.card.violet.platform li { border-color: var(--violet-soft); }
+.card.violet.platform li b { color: var(--violet); }
+.card.violet.platform .where { color: var(--muted); }
+.card.violet.platform .foot { background: var(--paper); color: var(--muted); }
+.issue .eyebrow { color: var(--faint); }
