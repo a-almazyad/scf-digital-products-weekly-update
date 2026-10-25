@@ -8,844 +8,711 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260913-finops-roadmap-v23">
+  <link rel="stylesheet" href="style.css?v=20261025-editorial">
 </head>
 <body>
-  <main class="deck" aria-label="SCF Digital Products weekly presentation">
-    <section class="slide cover is-active" data-slide="1" aria-labelledby="slide-1-title">
-      <div class="cover-orbit" aria-hidden="true"></div>
-      <header class="cover-header">
-        <img class="brand-logo brand-logo-cover" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>SCF vertical · Product &amp; Technology</span>
-      </header>
+<main class="deck" aria-label="SCF Digital Products weekly presentation">
+<div class="stage" id="stage">
 
-      <div class="cover-grid">
-        <div class="cover-copy">
-          <p class="eyebrow">Weekly update</p>
-          <h1 id="slide-1-title">SCF Digital<br>Products</h1>
-          <p class="cover-subtitle">Weekly actions, delivery scope and partner integrations</p>
-          <p class="cover-date">6 September 2026</p>
+  <!-- =============================== 1 · COVER =============================== -->
+  <section class="slide dark cover" data-slide="1" aria-labelledby="t-cover">
+    <div class="cover-top">
+      <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
+      <span>SCF vertical · Product &amp; Technology</span>
+    </div>
+
+    <div class="cover-body">
+      <div>
+        <div class="kicker">Weekly update</div>
+        <h1 id="t-cover">SCF Digital<br><em>Products</em></h1>
+        <div class="cover-date"><span>Sun</span>25 October 2026</div>
+      </div>
+      <ol class="agenda" aria-label="Agenda">
+        <li><b>01</b><div>Items from last weekly<small>4 closed · 4 new open issues</small></div></li>
+        <li><b>02</b><div>R65 closeout · R66 scope<small>Delivery by squad</small></div></li>
+        <li><b>03</b><div>Taulia integration<small>Onboarding, PDF and bank-account APIs</small></div></li>
+        <li><b>04</b><div>Funder progress<small>12 funder workstreams</small></div></li>
+        <li><b>05</b><div>Embedded financing<small>Healthcare · government · housing</small></div></li>
+      </ol>
+    </div>
+
+    <div>
+      <div class="cover-stats">
+        <div><strong>32</strong><span>R64 epics shipped<br>12–14 Oct</span></div>
+        <div><strong>64%</strong><span>R65 tickets approved<br>SCF go-ahead 22 Oct</span></div>
+        <div><strong>209</strong><span>Supplier submissions via<br>Taulia onboarding API</span></div>
+        <div style="display:flex;align-items:center;justify-content:flex-end">
+          <div class="program-logos" aria-label="Operating buyer programs">
+            <img src="assets/logos/saudi-energy.svg" alt="Saudi Energy">
+            <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <aside class="cover-agenda" aria-label="Discussion areas">
-          <p>Today’s discussion</p>
-          <ol>
-            <li><span>01</span>Last-week items &amp; R62/R63 delivery</li>
-            <li><span>02</span>Taulia integration update</li>
-            <li><span>03</span>SCF funder progress</li>
-            <li><span>04</span>Embedded financing partnerships</li>
-          </ol>
-        </aside>
+  <!-- =========================== 2 · ACTION ITEMS =========================== -->
+  <section class="slide" data-slide="2" aria-labelledby="t-actions">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>01</b>Items from last weekly</div>
+        <h2 id="t-actions">All four items are live</h2>
+        <p class="lede">Four new operational issues came up since the last weekly. Each needs an owner and a date.</p>
+      </div>
+    </header>
+
+    <div class="actions-grid">
+      <div class="card ink closed-list">
+        <header>
+          <span class="eyebrow">Closed since last weekly</span>
+          <strong>4<small>/ 4 live</small></strong>
+        </header>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>Bulk rejection of pending early payments</h3><p>Reject by supplier and program. Live 9 Sep · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4324" target="_blank" rel="noopener">DF-4324</a></p></div>
+        </div>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>SCF default IBAN selection</h3><p>Buyer-configurable default IBAN, live 29 Sep · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a>. Next phase: <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4432" target="_blank" rel="noopener">DF-4432</a></p></div>
+        </div>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>Company-size update mechanism</h3><p>Auto-update live 8 Sep; sizing from annual spend live 1 Oct · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4177" target="_blank" rel="noopener">DF-4177</a></p></div>
+        </div>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>Preferred bank account via Taulia onboarding</h3><p>Live 1 Oct · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a>. Two follow-up tickets in R66.</p></div>
+        </div>
       </div>
 
-      <footer class="cover-footer">
-        <div>
-          <span>Operating buyer programs</span>
-          <strong>Saudi Energy (SE) · Saudi Aramco</strong>
-        </div>
-        <div class="cover-logos">
-          <img src="assets/logos/saudi-energy.svg" alt="Saudi Energy">
-          <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
-        </div>
-      </footer>
-    </section>
+      <div class="open-issues">
+        <header><h3>New open issues</h3><span>Raised 12–21 Oct</span></header>
 
-    <section class="slide follow-up-slide" data-slide="2" aria-labelledby="slide-follow-up-title">
-      <header class="slide-header">
-        <span class="slide-number">01</span>
-        <div>
-          <h2 id="slide-follow-up-title">Items from last weekly</h2>
-          <p>Status and next actions.</p>
-        </div>
-        <span class="slide-context">Discussion &amp; action</span>
-      </header>
-
-      <div class="follow-up-list">
-        <article class="follow-up-item">
-          <span class="follow-up-index">01</span>
-          <div class="follow-up-copy">
-            <span class="follow-up-status">Scheduled</span>
-            <h3>Define the company-size update mechanism</h3>
-            <p>Support automatic updates from available data and manual updates by the responsible team.</p>
-          </div>
-          <div class="follow-up-decision"><span>Target</span><strong>30 September, with the Taulia onboarding API release.</strong></div>
+        <article class="card issue">
+          <div class="issue-top"><span class="eyebrow">Taulia onboarding</span><span class="chip wait">Fix in progress</span></div>
+          <h4>Suppliers arrive without the unified (700) number</h4>
+          <p>Most of the 209 API submissions are missing it, which blocks company creation.</p>
+          <div class="next"><b>Next</b><span>Create the company without it and capture it at sign-up. Data gaps in <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a> (R66).</span></div>
         </article>
 
-        <article class="follow-up-item follow-up-item-accent">
-          <span class="follow-up-index">02</span>
-          <div class="follow-up-copy">
-            <span class="follow-up-status">R63 · In testing</span>
-            <h3>Define SCF IBAN selection and management</h3>
-            <p>When Taulia ERP onboarding returns multiple IBANs, determine the correct one and send it back to Taulia as the EP default.</p>
-          </div>
-          <div class="follow-up-decision"><span>Status</span><strong>Default IBAN selection: all 5 tickets in testing in R63.</strong></div>
+        <article class="card issue hold">
+          <div class="issue-top"><span class="eyebrow">BNPP operations</span><span class="chip hold">Guard open</span></div>
+          <h4>Payment file after cut-off re-sent paid requests</h4>
+          <p>14 Oct file arrived 6 pm, after the 5 pm read slot, and re-sent 63 already-paid requests. Double payment was blocked.</p>
+          <div class="next"><b>Next</b><span>Add the “already paid” guard and agree file timing with BNPP.</span></div>
+        </article>
+
+        <article class="card issue active">
+          <div class="issue-top"><span class="eyebrow">Pricing engine</span><span class="chip active">Logged</span></div>
+          <h4>Draft offers double-count the BNPP daily limit</h4>
+          <p>Same invoices counted twice, so a large SE request was wrongly declined. The limit also did not reset on 13 Oct.</p>
+          <div class="next"><b>Next</b><span>Fix under <a class="tag" href="https://manafaco.atlassian.net/browse/EMQ-6251" target="_blank" rel="noopener">EMQ-6251</a>.</span></div>
+        </article>
+
+        <article class="card issue">
+          <div class="issue-top"><span class="eyebrow">Aramco · Taulia pilot</span><span class="chip wait">Open</span></div>
+          <h4>Offer amount shown ≠ amount funded</h4>
+          <p>Tenor question resolved on 18 Oct. The supplier-facing amount difference is still open.</p>
+          <div class="next"><b>Next</b><span>Confirm the calculation source and align what the supplier sees.</span></div>
         </article>
       </div>
+    </div>
 
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Open actions: company-size updates and SCF IBAN selection.</span>
-      </footer>
-    </section>
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira and SCF Slack channels, as of 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
 
-    <section class="slide release-scope-slide" data-slide="3" aria-labelledby="slide-r61-title">
-      <header class="slide-header">
-        <span class="slide-number">02</span>
-        <div>
-          <h2 id="slide-r61-title">R62 delivery status · R63 scope</h2>
-          <p>Ticket status within each selected sprint. Approved and In Production are shown separately.</p>
+  <!-- ============================== 3 · RELEASE ============================== -->
+  <section class="slide" data-slide="3" aria-labelledby="t-release">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>02</b>Delivery</div>
+        <h2 id="t-release">R65 closeout · R66 scope</h2>
+        <p class="lede">R64 shipped 12–14 Oct. <strong>R65 has SCF go-ahead and deploys this week.</strong> R66 runs 26 Oct – 5 Nov.</p>
+      </div>
+    </header>
+
+    <div class="release-body">
+      <div class="release-kpis">
+        <div class="card ink kpi">
+          <span class="eyebrow">R64 · Shipped <span class="chip done" style="height:22px;font-size:11.5px">Live</span></span>
+          <strong>32<small>epics</small></strong>
+          <p>Borrower Financing &amp; Activation Journey V2, FinOps supplier profiles, BMP phase 1.</p>
         </div>
-        <span class="slide-context">6 Sep weekly update</span>
-      </header>
-
-      <div class="release-summary" aria-label="R62 and R63 filtered scope summary">
-        <div><strong>52</strong><span>R62 entries</span></div>
-        <div><strong>46</strong><span>R63 entries</span></div>
-        <div><strong>5</strong><span>Squads</span></div>
-        <p><span class="release-live-dot" aria-hidden="true"></span>All 98 entries from the selected sprint and squad view</p>
+        <div class="card violet kpi">
+          <span class="eyebrow">R65 · Deploying this week</span>
+          <strong data-kpi="r65-pct">64%<small>approved</small></strong>
+          <div class="meter"><i data-kpi="r65-meter" style="width:64%"></i></div>
+          <p data-kpi="r65-note">125 of 194 tickets approved across 48 epics</p>
+        </div>
+        <div class="card kpi">
+          <span class="eyebrow">R66 · 26 Oct – 5 Nov</span>
+          <strong data-kpi="r66-epics">28<small>epics</small></strong>
+          <p data-kpi="r66-note">79 tickets planned · grooming in progress</p>
+        </div>
+        <div class="card kpi">
+          <span class="eyebrow">Moved from R65 to R66</span>
+          <ul>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4310" target="_blank" rel="noopener">DF-4310</a>FAB SFTP Manager</li>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4411" target="_blank" rel="noopener">DF-4411</a>Pricing-engine funder rules</li>
+            <li><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a>Taulia onboarding data gaps</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="release-scope-layout" data-release-scope>
-        <nav class="scope-themes" aria-label="Delivery squads">
-          <p>Squads</p>
-          <button type="button" data-scope-theme="scf" aria-pressed="true">
-            <span>SCF Sprint</span><strong data-scope-theme-count="scf">17</strong>
-          </button>
-          <button type="button" data-scope-theme="crm" aria-pressed="false">
-            <span>CRM Sprint</span><strong data-scope-theme-count="crm">2</strong>
-          </button>
-          <button type="button" data-scope-theme="admin" aria-pressed="false">
-            <span>Admin Sprint</span><strong data-scope-theme-count="admin">17</strong>
-          </button>
-          <button type="button" data-scope-theme="borrower" aria-pressed="false">
-            <span>Borrower Sprint</span><strong data-scope-theme-count="borrower">7</strong>
-          </button>
-          <button type="button" data-scope-theme="finops" aria-pressed="false">
-            <span>SCF FinOps</span><strong data-scope-theme-count="finops">3</strong>
-          </button>
+      <div class="scope" data-release-scope>
+        <nav class="card ink scope-rail" aria-label="Release and squad">
+          <div class="release-switch" role="group" aria-label="Release">
+            <button type="button" data-scope-release="r65" aria-pressed="true">R65</button>
+            <button type="button" data-scope-release="r66" aria-pressed="false">R66</button>
+          </div>
+          <span class="eyebrow">Squads · approved share</span>
+          <button class="squad-btn" type="button" data-scope-theme="scf" aria-pressed="true"><span>SCF</span><strong data-scope-theme-count="scf">0</strong><span class="bar"><i data-scope-theme-bar="scf"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="finops" aria-pressed="false"><span>SCF FinOps</span><strong data-scope-theme-count="finops">0</strong><span class="bar"><i data-scope-theme-bar="finops"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="admin" aria-pressed="false"><span>Admin</span><strong data-scope-theme-count="admin">0</strong><span class="bar"><i data-scope-theme-bar="admin"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="crm" aria-pressed="false"><span>CRM</span><strong data-scope-theme-count="crm">0</strong><span class="bar"><i data-scope-theme-bar="crm"></i></span></button>
+          <button class="squad-btn" type="button" data-scope-theme="borrower" aria-pressed="false"><span>Borrower</span><strong data-scope-theme-count="borrower">0</strong><span class="bar"><i data-scope-theme-bar="borrower"></i></span></button>
         </nav>
 
-        <section class="scope-items" aria-labelledby="scope-theme-title">
-          <header>
-            <div><span>Selected squad</span><h3 id="scope-theme-title">SCF Sprint · R63</h3></div>
-            <div class="scope-release-switch" role="group" aria-label="Selected squad release">
-              <button type="button" data-scope-release="r62" aria-pressed="false">R62</button>
-              <button type="button" data-scope-release="r63" aria-pressed="true">R63</button>
-            </div>
-            <strong id="scope-theme-count">17 items</strong>
-          </header>
-          <div class="scope-item-list" id="scope-item-list" role="listbox" aria-label="SCF Sprint R63 delivery items"></div>
-          <div class="scope-pagination" aria-label="Scope item pages">
-            <button id="scope-page-prev" type="button" aria-label="Previous scope items">←</button>
-            <span id="scope-page-label">1–6 of 17</span>
-            <button id="scope-page-next" type="button" aria-label="Next scope items">→</button>
+        <section class="card scope-list" aria-labelledby="scope-theme-title">
+          <header><h3 id="scope-theme-title">SCF · R65</h3><span id="scope-theme-count">0 epics</span></header>
+          <div class="scope-items" id="scope-item-list" role="listbox" aria-label="Delivery items"></div>
+          <div class="scope-pager">
+            <button id="scope-page-prev" type="button" aria-label="Previous items">←</button>
+            <span id="scope-page-label">1–6 of 6</span>
+            <button id="scope-page-next" type="button" aria-label="Next items">→</button>
           </div>
         </section>
 
-        <aside class="scope-detail" id="scope-detail" aria-live="polite">
-          <div class="scope-detail-heading">
-            <div><span id="scope-detail-key">EMQ-5767 · DF-4071</span><h3 id="scope-detail-title">Taulia Onboarding APIs Impact &amp; Interactions</h3></div>
-            <span class="scope-signal signal-testing" id="scope-detail-signal">In Testing</span>
+        <aside class="card scope-detail" aria-live="polite">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+              <span class="tag" id="scope-detail-key">—</span>
+              <span class="chip" id="scope-detail-signal">—</span>
+            </div>
+            <h3 id="scope-detail-title">—</h3>
           </div>
-          <div class="scope-detail-labels" id="scope-detail-labels" aria-label="Jira labels"></div>
-          <div class="scope-detail-count"><strong id="scope-detail-tickets">1</strong><span>Tickets in selected sprint</span></div>
-          <p class="scope-detail-note" id="scope-detail-note" hidden></p>
-          <div class="scope-status-section">
-            <div class="scope-status-heading"><span>Current ticket status</span><strong id="scope-status-total">1 total</strong></div>
-            <div class="scope-status-bar" id="scope-status-bar" aria-label="Ticket status distribution"></div>
-            <div class="scope-status-legend" id="scope-status-legend"></div>
+          <div class="labels" id="scope-detail-labels"></div>
+          <div class="count"><strong id="scope-detail-tickets">0</strong><span>tickets in this sprint</span></div>
+          <div>
+            <div class="status-bar" id="scope-status-bar"></div>
+            <div class="status-legend" id="scope-status-legend"></div>
           </div>
-          <a class="scope-jira-link" id="scope-jira-link" href="https://manafaco.atlassian.net/browse/EMQ-5767" target="_blank" rel="noopener noreferrer">Open item in Jira <span aria-hidden="true">↗</span></a>
+          <a class="jira-link" id="scope-jira-link" href="#" target="_blank" rel="noopener noreferrer">Open in Jira <span aria-hidden="true">↗</span></a>
         </aside>
       </div>
+    </div>
 
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span id="scope-footer-release">R63 · Delivery Pulse snapshot: 5 Sep 2026 · All entries from the selected sprint and squad view.</span>
-      </footer>
-    </section>
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src" id="scope-footer-release">Jira sprint snapshot, 25 Oct 2026. Regression and miscellaneous epics excluded.</span><span class="pg"></span></footer>
+  </section>
 
-    <section class="slide" data-slide="10" aria-labelledby="slide-2-title">
-      <header class="slide-header">
-        <span class="slide-number">A3</span>
-        <div>
-          <h2 id="slide-2-title">Channel updates</h2>
-          <p>Work currently planned across the borrower, buyer and funder experiences.</p>
+  <!-- =============================== 4 · TAULIA ============================== -->
+  <section class="slide" data-slide="4" aria-labelledby="t-taulia">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>03</b>Taulia integration</div>
+        <h2 id="t-taulia">Three APIs live; data quality is the focus</h2>
+        <p class="lede">Onboarding, PDF and preferred-bank APIs went live 29 Sep – 1 Oct. One request still waits on Taulia’s product team.</p>
+      </div>
+    </header>
+
+    <div class="taulia-grid">
+      <div class="card ink taulia-summary">
+        <div class="logo-plate"><img src="https://events.sap.com/adobe/dynamicmedia/deliver/dm-aid--5c5d573e-a3b4-446b-b794-d5221ee8ad7e/sap-taulia-r-grad-blu--3-.png?width=1600&amp;preferwebp=true&amp;quality=85" alt="SAP Taulia" onerror="this.onerror=null;this.src='assets/logos/taulia.svg'"></div>
+        <div class="big-stat"><strong>209</strong><span>supplier submissions received through the onboarding API (as of 21 Oct)</span></div>
+        <div></div>
+        <ul>
+          <li><b>Queued</b><span>~500 more Saudi Energy suppliers. We asked Taulia on 15 Oct to release them via the API.</span></li>
+          <li><b>SLA</b><span>First Manafa–Taulia SLA draft shared 22 Oct. v2 adds the product framework.</span></li>
+        </ul>
+      </div>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">01</span><span class="chip done">Live · 29 Sep</span></div>
+        <h3>Supplier onboarding APIs</h3>
+        <ul>
+          <li>Buyer-invited suppliers now come straight into Manafa registration.</li>
+          <li><strong>Gap:</strong> most submissions lack the unified number; fix creates the company and captures it at sign-up.</li>
+          <li>Taulia leads into CRM in R65; FinOps impact in design.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4071" target="_blank" rel="noopener">DF-4071</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">02</span><span class="chip done">Live · 30 Sep</span></div>
+        <h3>Funding document PDF API</h3>
+        <ul>
+          <li>Initial PDF and retry of failed copies in one flow.</li>
+          <li><strong>Gap:</strong> Taulia’s fix only covers EPs created after its late-Aug release; older retries return 400.</li>
+          <li>FinOps PDF retrieval is being scoped for R66.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">03</span><span class="chip done">Live · 1 Oct</span></div>
+        <h3>Preferred bank account via onboarding</h3>
+        <ul>
+          <li>Default IBAN is set from Taulia onboarding data.</li>
+          <li>Backfill: Aramco and whitelisted SE suppliers use the latest EP’s IBAN; others choose manually.</li>
+          <li>Two follow-up tickets and the IBAN currency gap are in R66.</li>
+        </ul>
+        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a></div>
+      </article>
+
+      <article class="card workstream">
+        <div class="top"><span class="num">04</span><span class="chip wait">Awaiting Taulia</span></div>
+        <h3>ERP invoice number in EP payload</h3>
+        <ul>
+          <li>Add the buyer’s ERP invoice number to the early-payment payload.</li>
+          <li>No feedback yet from Taulia’s product team; no delivery ticket opened.</li>
+          <li><strong>Next:</strong> raise it alongside the SLA review.</li>
+        </ul>
+        <div class="refs"><span class="tag" style="color:var(--faint)">No ticket yet</span></div>
+      </article>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira; #manafa-taulia-channel and Taulia tech group, to 22 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- =============================== 5 · FUNDERS ============================= -->
+  <section class="slide" data-slide="5" aria-labelledby="t-funders">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>04</b>Funder progress</div>
+        <h2 id="t-funders">Four live, four building, four waiting</h2>
+        <p class="lede">Bar shows integration stages completed. Striped segment is the current stage.</p>
+      </div>
+      <div class="head-aside legend">
+        <span><i style="background:var(--done)"></i>Live</span>
+        <span><i style="background:var(--active)"></i>Building</span>
+        <span><i style="background:var(--wait)"></i>Waiting</span>
+        <span><i style="background:var(--hold)"></i>On hold</span>
+      </div>
+    </header>
+
+    <div class="funder-grid">
+      <article class="funder done">
+        <div class="funder-top"><img src="assets/logos/bnpp.png" alt="BNP Paribas"><span class="chip done">Live</span></div>
+        <h3><small>Saudi Energy · Aramco</small>SE daily limit raised</h3>
+        <div data-stages="6"></div>
+        <ul><li>SE daily-limit increase approved.</li><li>Aramco invoices <strong>pending Aramco</strong>.</li></ul>
+      </article>
+
+      <article class="funder active">
+        <div class="funder-top"><img src="assets/logos/smbc.svg" alt="SMBC"><span class="chip active">Pilot prep</span></div>
+        <h3><small>Email integration</small>SAMA NOL received</h3>
+        <div data-stages="4"></div>
+        <ul><li>Pilot checklist in preparation.</li><li>Email Phase 1 live; Phase 2 deferred.</li></ul>
+      </article>
+
+      <article class="funder hold">
+        <div class="funder-top"><img src="assets/logos/riyad-bank.svg" alt="Riyad Bank"><span class="chip hold">On hold</span></div>
+        <h3><small>B2B API · SFTP</small>Waiting on account opening</h3>
+        <div data-stages="2"></div>
+        <ul><li>B2B Manager and SFTP set-up on hold.</li><li>URLs and certificates follow.</li></ul>
+      </article>
+
+      <article class="funder active">
+        <div class="funder-top"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"><span class="chip active">UAT</span></div>
+        <h3><small>SFTP · B2B API</small>SFTP Manager ships in R65</h3>
+        <div data-stages="3"></div>
+        <ul><li>8 of 9 tickets approved; files in UAT.</li><li>B2B: <strong>awaiting SCB credentials</strong>.</li></ul>
+      </article>
+
+      <article class="funder active">
+        <div class="funder-top"><img src="https://companieslogo.com/img/orig/FAB.AE_BIG-7b5d760d.svg?download=true&amp;t=1720244491" alt="First Abu Dhabi Bank"><span class="chip active">R66</span></div>
+        <h3><small>SFTP</small>SFTP Manager moved to R66</h3>
+        <div data-stages="3"></div>
+        <ul><li>SFTP credentials live 1 Oct.</li><li>8 of 10 use cases tested on staging.</li></ul>
+      </article>
+
+      <article class="funder hold">
+        <div class="funder-top"><img src="assets/logos/snb.jpg" alt="Saudi National Bank" class="tall"><span class="chip hold">Pending SNB</span></div>
+        <h3><small>API integration</small>Waiting for scope and timeline</h3>
+        <div data-stages="1"></div>
+        <ul><li>API Manager (DF-3705) on hold.</li><li>File-based jobs run in production.</li></ul>
+      </article>
+
+      <article class="funder wait">
+        <div class="funder-top"><img src="assets/logos/aramco.svg" alt="Saudi Aramco"><span class="chip wait">Awaiting SAO</span></div>
+        <h3><small>Funder proposal</small>Waiting for SAO direction</h3>
+        <div data-stages="0"></div>
+        <ul><li>Awaiting SAO input and direction.</li><li>Proposal follows their reply.</li></ul>
+      </article>
+
+      <article class="funder done">
+        <div class="funder-top"><img src="assets/logos/sidf.png" alt="Saudi Industrial Development Fund"><span class="chip done">Live</span></div>
+        <h3><small>Aramco program</small>T-1 processing change in R66</h3>
+        <div data-stages="6"></div>
+        <ul><li>SAR/USD program report live 12 Oct.</li><li>T-1 impact (DF-4423) in R66.</li></ul>
+      </article>
+
+      <article class="funder hold">
+        <div class="funder-top"><span style="display:flex;gap:14px;align-items:center"><img src="assets/logos/natixis.svg" alt="Natixis" style="max-width:88px"><img src="assets/logos/gib.png" alt="Gulf International Bank" style="max-width:56px"></span><span class="chip hold">On hold</span></div>
+        <h3><small>New funders</small>Natixis and GIB paused</h3>
+        <div data-stages="0"></div>
+        <ul><li>Natixis: Business Committee hold.</li><li>GIB: product kickoff on hold.</li></ul>
+      </article>
+
+      <article class="funder done">
+        <div class="funder-top"><img src="assets/logos/jpmorgan.svg" alt="J.P. Morgan"><span class="chip done">Live</span></div>
+        <h3><small>Aramco program</small>SAR financing in R65</h3>
+        <div data-stages="6"></div>
+        <ul><li>SAR activation approved (DF-4552).</li><li>Financing calc (DF-3936) in UAT.</li></ul>
+      </article>
+
+      <article class="funder done">
+        <div class="funder-top"><img src="https://www.sab.com/content/dam/sabpws/common/icons/sab-new-logo.svg" alt="SAB"><span class="chip done">Live</span></div>
+        <h3><small>Supplier set-up file</small>KYC-completed suppliers only</h3>
+        <div data-stages="6"></div>
+        <ul><li>File filter (DF-4619) ships in R65.</li><li>Daily production jobs running.</li></ul>
+      </article>
+
+      <article class="funder active">
+        <div class="funder-top"><img src="https://bsf.sa/images/revampLogo.svg" alt="BSF"><span class="chip active">In dev</span></div>
+        <h3><small>B2B API</small>B2B Manager in R66</h3>
+        <div data-stages="2"></div>
+        <ul><li>DF-4622 in development.</li><li>Targeted for R66.</li></ul>
+      </article>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Stages: Requirements · SDD · Development · Testing/UAT · Pilot · Live. Sources: Jira, Slack and team input, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ========================= 6 · EMBEDDED FINANCE ========================= -->
+  <section class="slide" data-slide="6" aria-labelledby="t-embedded">
+    <header class="slide-head">
+      <div>
+        <div class="kicker"><b>05</b>Embedded financing</div>
+        <h2 id="t-embedded">Healthcare and housing are live</h2>
+        <p class="lede">Lean + Nphies is past pilot and NHC / SupplyPro is in production. Elm has seen the demo; we are waiting on them.</p>
+      </div>
+    </header>
+
+    <div class="partner-grid">
+      <article class="partner done">
+        <div class="partner-logos"><img src="assets/logos/lean.png" alt="Lean Technologies"><span class="plus">+</span><img src="assets/logos/nphies.png" alt="Nphies"></div>
+        <div class="sector"><span class="eyebrow">Healthcare</span><span class="chip done">Live · scaling</span></div>
+        <h3>Lean + Nphies</h3>
+        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li>Moved past the Twaig Health pilot into <strong>regular production</strong>.</li>
+          <li>Healthcare providers finance claims through the Nphies flow.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Grow the provider base with Sales.</span></div>
+      </article>
+
+      <article class="partner wait">
+        <div class="partner-logos"><img src="assets/logos/elm.png" alt="Elm"><span class="plus">+</span><img src="assets/logos/dhamen.png" alt="Dhamen"></div>
+        <div class="sector"><span class="eyebrow">Government services</span><span class="chip wait">Awaiting Elm</span></div>
+        <h3>Elm · Dhamen–Muqeem</h3>
+        <div data-stages="3" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li>Muqeem PO-financing journey <strong>demoed 6 Oct</strong>; nothing back from Elm yet.</li>
+          <li>No pilot entity yet; ~400–500 entities whitelisted for rollout.</li>
+          <li>Tasdeed and Nusuk remain on hold.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Elm to name a pilot entity.</span></div>
+      </article>
+
+      <article class="partner done">
+        <div class="partner-logos"><img src="assets/logos/nhc.png" alt="National Housing Company"><span class="plus">+</span><img src="assets/logos/supplypro.png" alt="Supplier Pro"></div>
+        <div class="sector"><span class="eyebrow">Housing</span><span class="chip done">Live</span></div>
+        <h3>NHC / SupplyPro</h3>
+        <div data-stages="5" data-labels="Scope,Build,Demo,Pilot,Live"></div>
+        <ul class="latest">
+          <li><strong>Live in production.</strong> Open issues: NHC designated account missing from requests, and a 404 on fund-request details.</li>
+          <li>Next tracks agreed 17 Sep: Wafi model, NHC supplier financing, ERP integration.</li>
+        </ul>
+        <div class="next"><b>Next</b><span>Close integration issues with SupplyPro; scope the ERP track.</span></div>
+      </article>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: #embedded-scf-squad, #manafa-nhcsupplypro-channel, Dhamen–Muqeem group and team input.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- =============================== 7 · CLOSING ============================= -->
+  <section class="slide dark closing" data-slide="7" aria-labelledby="t-close">
+    <div class="cover-top">
+      <img src="assets/manafa-logo.svg" alt="Manafa" style="filter: brightness(0) invert(1)">
+      <span>SCF Digital Products · Weekly update</span>
+    </div>
+    <div class="closing-body">
+      <h2 id="t-close">Thank <em>you</em></h2>
+      <p>Questions &amp; discussion</p>
+      <div class="appendix-note">
+        <span><b>A1</b>SCF FinOps</span>
+        <span><b>A2</b>FinOps roadmap</span>
+        <span><b>A3</b>Channel updates</span>
+        <span><b>A4</b>Internal platforms</span>
+      </div>
+    </div>
+    <footer class="slide-foot"><span></span><span class="src">Appendix follows</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ============================ A1 · FINOPS =============================== -->
+  <section class="slide" data-slide="8" aria-labelledby="t-finops">
+    <header class="slide-head">
+      <div>
+        <div class="kicker appendix"><b>A1</b>Appendix · SCF FinOps</div>
+        <h2 id="t-finops">FinOps now covers suppliers and funders</h2>
+        <p class="lede">R64 added supplier profiles and funder onboarding. Funder monitoring and the dashboard ship with R65.</p>
+      </div>
+    </header>
+
+    <div class="finops-grid">
+      <div class="finops-side">
+        <div class="card ink finops-status">
+          <span class="eyebrow">What it is</span>
+          <h3>The first platform split out of the Admin Portal</h3>
+          <p>One workspace for SCF financial operations: instruments, early payments, fund requests, offers, loans and receivables.</p>
         </div>
-        <span class="slide-context">Appendix · Planning view</span>
-      </header>
-
-      <div class="channel-grid">
-        <article class="channel-card channel-card-violet">
-          <header>
-            <div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"></circle><path d="M10 39c1-9 6-14 14-14s13 5 14 14"></path></svg>
-            </div>
-            <div><h3>Borrower channel</h3><p>Supplier web and mobile</p></div>
-          </header>
-          <div class="work-block">
-            <span>R63 · Testing and UAT in progress</span>
-            <h4>Borrower Activation Journey V2</h4>
-            <p>26 R63 tickets: 8 approved, 4 UAT ready, 2 in testing, 9 dev done, 2 on hold and 1 todo.</p>
-          </div>
-          <div class="card-facts">
-            <div><span>Purpose</span><strong>Increase activation</strong></div>
-            <div><span>Planning target</span><strong>R63</strong></div>
-          </div>
-        </article>
-
-        <article class="channel-card channel-card-blue">
-          <header>
-            <div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M7 40h34M12 40V15h10v25M26 40V8h10v32"></path><path d="M16 21h2M16 27h2M30 15h2M30 21h2M30 27h2"></path></svg>
-            </div>
-            <div><h3>Buyer channel</h3><p>Buyer web application</p></div>
-          </header>
-          <div class="work-block">
-            <span>Current work</span>
-            <ul class="work-list">
-              <li><strong>Dashboard V2</strong><small>Improve operational visibility</small></li>
-              <li><strong>Analytics</strong><small>Extend the buyer reporting experience</small></li>
-              <li><strong>Data quality and QA</strong><small>Correct existing figures and validate results</small></li>
-            </ul>
-          </div>
-          <div class="card-facts">
-            <div><span>Primary concern</span><strong>Reliable visibility</strong></div>
-            <div><span>Planning target</span><strong>R62</strong></div>
-          </div>
-        </article>
-
-        <article class="channel-card channel-card-ink">
-          <header>
-            <div class="channel-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M7 20h34L24 8 7 20ZM10 23h28M12 23v14M20 23v14M28 23v14M36 23v14M7 40h34"></path></svg>
-            </div>
-            <div><h3>Funder channel</h3><p>Local and international funders</p></div>
-          </header>
-          <div class="work-block">
-            <span>Current work</span>
-            <ul class="work-list compact">
-              <li><strong>International login</strong><small>Email and password access</small></li>
-              <li><strong>SIC enablement</strong><small>Onboarding, pricing and eligibility changes</small></li>
-              <li><strong>SIDF account changes</strong><small>Updated wallet and account structure</small></li>
-              <li><strong>BNP Paribas model</strong><small>Direct transfer to the supplier</small></li>
-            </ul>
-          </div>
-          <div class="card-facts">
-            <div><span>Primary concern</span><strong>New funder models</strong></div>
-            <div><span>Planning target</span><strong>R62</strong></div>
-          </div>
-        </article>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Targets are planning assumptions and may move with release readiness.</span>
-      </footer>
-    </section>
-
-    <section class="slide" data-slide="11" aria-labelledby="slide-3-title">
-      <header class="slide-header">
-        <span class="slide-number">A4</span>
-        <div>
-          <h2 id="slide-3-title">Current internal tools</h2>
-          <p>What the SCF team uses today inside the Admin Portal and Manafa CRM.</p>
+        <div class="card finops-releases">
+          <div class="row"><b>R64</b><div><span class="chip done">Live 12 Oct</span><p><strong>Supplier profile &amp; funder onboarding</strong> (DF-4529), incl. company size and SAMA activity.</p></div></div>
+          <div class="row"><b>R65</b><div><span class="chip ready">Approved</span><p><strong>Funder monitoring</strong> (DF-4530), <strong>dashboard</strong> (DF-4562), document &amp; loan tooling (DF-4532, partial).</p></div></div>
+          <div class="row"><b></b><div><span class="chip wait">On staging</span><p>Buyer monitoring &amp; SAMA capacity (DF-4531). Reconciliation (DF-4111) held from production.</p></div></div>
+          <div class="row"><b>R66</b><div><span class="chip idle">Planned</span><p>EP statuses, funder monitoring phase 2, Taulia PDF retrieval and onboarding impact.</p></div></div>
         </div>
-        <span class="slide-context">Appendix · Current state</span>
-      </header>
-
-      <div class="current-state-layout">
-        <section class="admin-area">
-          <div class="area-heading">
-            <div><span>Shared platform</span><h3>Admin Portal</h3></div>
-            <p>Buyer and funder capabilities currently exist as feature sets inside the shared Admin Portal.</p>
-          </div>
-
-          <div class="admin-features">
-            <article>
-              <span class="feature-index">01</span>
-              <div>
-                <h4>Buyer Management features</h4>
-                <p class="state-chip state-current">Launching in R61</p>
-                <ul>
-                  <li>Buyer profile and status</li>
-                  <li>Centralized invoice view</li>
-                  <li>Invoice status and financial details</li>
-                </ul>
-              </div>
-            </article>
-            <article>
-              <span class="feature-index">02</span>
-              <div>
-                <h4>Funder Management features</h4>
-                <p class="state-chip state-current">Available in Admin</p>
-                <ul>
-                  <li>Funder and program hierarchy</li>
-                  <li>Pricing and revenue configuration</li>
-                  <li>Eligibility and concentration controls</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="crm-area">
-          <div class="area-heading">
-            <div><span>Dedicated tool</span><h3>Manafa CRM</h3></div>
-          </div>
-          <div class="crm-body">
-            <p>The SCF team manages its relationship and opportunity pipeline in Manafa CRM.</p>
-            <ul>
-              <li><span>Ongoing</span>SCF pipeline enhancements</li>
-              <li><span>Ongoing</span>Reported issue resolution</li>
-              <li><span>R62 · UAT</span>Lead Management: 11 UAT ready, 4 approved</li>
-            </ul>
-          </div>
-        </section>
       </div>
 
-      <div class="clarity-strip">
-        <div><span>Today</span><strong>Buyer and Funder Management are Admin Portal feature sets.</strong></div>
-        <div><span>Future</span><strong>They will become separate platforms with their own roadmaps.</strong></div>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>This distinction is important when discussing the platform strategy.</span>
-      </footer>
-    </section>
-
-    <section class="slide" data-slide="8" aria-labelledby="slide-4-title">
-      <header class="slide-header">
-        <span class="slide-number">A1</span>
-        <div>
-          <h2 id="slide-4-title">SCF FinOps · v1.1 is live</h2>
-          <p>The mini release improves production stability and adds visibility into every offer attempt.</p>
+      <figure class="card shot-frame" data-finops-carousel>
+        <header>
+          <strong id="finops-shot-title">SCF FinOps · Early Payments</strong>
+          <div class="shot-nav">
+            <button id="finops-shot-prev" type="button" aria-label="Previous screenshot">←</button>
+            <span id="finops-shot-count" aria-live="polite">1 / 3</span>
+            <button id="finops-shot-next" type="button" aria-label="Next screenshot">→</button>
+          </div>
+        </header>
+        <div class="shot-viewport">
+          <div class="finops-shot is-current" data-title="SCF FinOps · Early Payments" data-caption="Operational totals, filters and transaction-level visibility in one view."><img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace"></div>
+          <div class="finops-shot" data-title="SCF FinOps · Invoices" data-caption="A consolidated invoice view across buyer programs, suppliers and statuses."><img src="assets/scf-finops-invoices.jpg" alt="SCF FinOps Invoices workspace"></div>
+          <div class="finops-shot" data-title="SCF FinOps · Early Payment Details" data-caption="Early payment information, linked instruments, documents and transaction timeline."><img src="assets/scf-finops-early-payment-details.jpg" alt="SCF FinOps Early Payment details"></div>
         </div>
-        <span class="slide-context">Appendix · Production update</span>
-      </header>
-
-      <div class="finops-launch">
-        <section class="launch-introduction">
-          <span class="launch-kicker">Mini release · v1.1</span>
-          <h3>The first production update is live</h3>
-          <p>The release focused on bug fixes and clearer financing visibility while keeping the existing operational workspace in production.</p>
-
-          <div class="launch-scope">
-            <span>Current production scope</span>
-            <div class="launch-domain">
-              <strong>Instruments</strong>
-              <p>Invoices · Credit notes</p>
-            </div>
-            <div class="launch-domain">
-              <strong>Financing</strong>
-              <p>Early payments · Fund requests · Loans · Receivables · Offers</p>
-              <small>New in v1.1: Offer Attempts shows each attempted offer and its outcome.</small>
-            </div>
+        <footer>
+          <span id="finops-shot-caption">Operational totals, filters and transaction-level visibility in one view.</span>
+          <div class="shot-dots">
+            <button class="is-current" type="button" data-finops-index="0" aria-label="Early Payments" aria-current="true"></button>
+            <button type="button" data-finops-index="1" aria-label="Invoices" aria-current="false"></button>
+            <button type="button" data-finops-index="2" aria-label="Early Payment Details" aria-current="false"></button>
           </div>
-        </section>
+        </footer>
+      </figure>
+    </div>
 
-        <figure class="finops-product-shot" data-finops-carousel>
-          <div class="preview-bar">
-            <div class="preview-window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-            <strong id="finops-shot-title">SCF FinOps · Early Payments</strong>
-            <div class="preview-controls">
-              <button id="finops-shot-prev" type="button" aria-label="Previous SCF FinOps screenshot">←</button>
-              <span id="finops-shot-count" aria-live="polite">1 / 3</span>
-              <button id="finops-shot-next" type="button" aria-label="Next SCF FinOps screenshot">→</button>
-            </div>
-          </div>
-          <div class="launch-preview-body">
-            <div class="finops-shot is-current" data-title="SCF FinOps · Early Payments" data-caption="Operational totals, filters and transaction-level visibility in one view.">
-              <img src="assets/scf-finops-early-payments.jpg" alt="SCF FinOps Early Payments workspace showing operational totals, filters and transaction records">
-            </div>
-            <div class="finops-shot" data-title="SCF FinOps · Invoices" data-caption="A consolidated invoice view across buyer programs, suppliers and statuses.">
-              <img src="assets/scf-finops-invoices.jpg" alt="SCF FinOps Invoices workspace showing totals, filters and invoice records">
-            </div>
-            <div class="finops-shot" data-title="SCF FinOps · Early Payment Details" data-caption="Early payment information, linked instruments, documents and transaction timeline.">
-              <img src="assets/scf-finops-early-payment-details.jpg" alt="SCF FinOps Early Payment details workspace">
-            </div>
-          </div>
-          <figcaption>
-            <span id="finops-shot-caption">Operational totals, filters and transaction-level visibility in one view.</span>
-            <div class="carousel-dots" aria-label="Choose SCF FinOps screenshot">
-              <button class="is-current" type="button" data-finops-index="0" aria-label="Show Early Payments screenshot" aria-current="true"></button>
-              <button type="button" data-finops-index="1" aria-label="Show Invoices screenshot" aria-current="false"></button>
-              <button type="button" data-finops-index="2" aria-label="Show Early Payment Details screenshot" aria-current="false"></button>
-            </div>
-          </figcaption>
-        </figure>
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira snapshot, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ========================= A2 · FINOPS ROADMAP ========================== -->
+  <section class="slide" data-slide="9" aria-labelledby="t-roadmap">
+    <header class="slide-head">
+      <div>
+        <div class="kicker appendix"><b>A2</b>Appendix · SCF FinOps</div>
+        <h2 id="t-roadmap">FinOps delivery roadmap</h2>
+        <p class="lede">Transactions done in R61–R62. Counterparty operations land across R64–R66. Select a workstream for full scope.</p>
       </div>
-
-      <div class="finops-delivery">
-        <div class="delivery-title"><span>Current status</span><strong>MVP and v1.1 are live in production</strong></div>
-        <article><span>v1.1 stability</span><strong>Bug-fix release shipped</strong><p>Production fixes are included in the mini release.</p></article>
-        <article><span>Financing visibility</span><strong>Offer Attempts shipped</strong><p>Teams can review attempted offers and understand their outcomes.</p></article>
-        <article><span>Phase 3 delivery</span><strong>In the delivery queue</strong><p>CAB approvals pending; fund request timeline is in testing. See the roadmap on the next slide.</p></article>
+      <div class="head-aside legend">
+        <span><i style="background:var(--done)"></i>Live</span>
+        <span><i style="background:var(--violet)"></i>Approved</span>
+        <span><i style="background:var(--active)"></i>Building</span>
+        <span><i style="background:var(--wait)"></i>Held</span>
+        <span><i style="background:var(--line-strong)"></i>Planned</span>
       </div>
+    </header>
 
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>SCF FinOps v1.1 is live with production fixes and Offer Attempts visibility.</span>
-      </footer>
-    </section>
-
-    <section class="slide finops-roadmap-slide" data-slide="9" aria-labelledby="slide-finops-roadmap-title">
-      <header class="slide-header"><span class="slide-number">A2</span><div><h2 id="slide-finops-roadmap-title">SCF FinOps · 2026 delivery roadmap</h2><p>R61 established the transaction workspace; R64 expands FinOps into counterparty and collections operations.</p></div><span class="slide-context">Updated 13 Sep 2026</span></header>
-      <div class="roadmap-key"><span><i class="live"></i>Delivered release</span><span><i class="queue"></i>R64 scope</span><span><i class="planned"></i>Not started / unscheduled</span><small>Select a workstream for the complete feature list</small></div>
-      <div class="roadmap-gantt" role="table" aria-label="SCF FinOps roadmap by technical delivery release">
-        <div class="roadmap-gantt-head" role="row"><div role="columnheader">Workstream &amp; features</div><div role="columnheader">Foundation<small>R61</small></div><div role="columnheader">Enhancement<small>R62</small></div><div role="columnheader">Expansion<small>R64</small></div><div role="columnheader">Remaining scope<small>No release assigned</small></div></div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-0" aria-haspopup="dialog"><strong>Instruments <b>↗</b></strong><span>Invoices · Credit notes</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-1" aria-haspopup="dialog"><strong>Early payments <b>↗</b></strong><span>EP list · Details · Timeline · Pending rejection</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61 core</span></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R62 rejection</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-2" aria-haspopup="dialog"><strong>Fund requests <b>↗</b></strong><span>List · Details · Timeline</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-3" aria-haspopup="dialog"><strong>Offers &amp; attempts <b>↗</b></strong><span>Offer list/details · Attempt list/details</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-4" aria-haspopup="dialog"><strong>Loans &amp; receivables <b>↗</b></strong><span>Loan list/details · Receivable list/details</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-5" aria-haspopup="dialog"><strong>Supplier management <b>↗</b></strong><span>List/details · Supplier-view funder onboarding</span></button></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar live">R61 profiles</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">R64 onboarding</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-6" aria-haspopup="dialog"><strong>Funder management <b>↗</b></strong><span>List/details · Funder-view supplier onboarding</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">R64</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-7" aria-haspopup="dialog"><strong>Buyer management <b>↗</b></strong><span>Buyer list · Buyer details</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">R64</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-8" aria-haspopup="dialog"><strong>Collections <b>↗</b></strong><span>Reconciliation · Collections · Payment advice · Suspense</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">R64</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-9" aria-haspopup="dialog"><strong>Transaction details <b>↗</b></strong><span>Wallets / accounts transaction view</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar queue">R64</span></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-10" aria-haspopup="dialog"><strong>FinOps dashboard <b>↗</b></strong><span>Dashboard management</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Not scheduled</span></div>
-</div>
-<div class="roadmap-gantt-row" role="row"><div role="cell"><button class="roadmap-workstream" data-roadmap-open="roadmap-detail-11" aria-haspopup="dialog"><strong>Remaining operations <b>↗</b></strong><span>Logs · Files · Wallets · Reports · SLA · Alerts</span></button></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"></div>
-<div class="roadmap-phase-cell" role="cell"><span class="roadmap-bar planned">Not started</span></div>
-</div>
+    <div class="roadmap" role="table" aria-label="SCF FinOps roadmap by release">
+      <div class="roadmap-head" role="row">
+        <div role="columnheader">Workstream</div>
+        <div role="columnheader">R61<small>Foundation</small></div>
+        <div role="columnheader">R62<small>Enhancement</small></div>
+        <div role="columnheader">R64<small>Expansion · live 12 Oct</small></div>
+        <div role="columnheader" class="now">R65<small>Deploying this week</small></div>
+        <div role="columnheader">R66 · next<small>26 Oct – 5 Nov</small></div>
       </div>
-      <footer class="slide-footer"><img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa"><span>Bars show the technical-delivery release listed in the roadmap, not duration. <a href="https://manafaco.atlassian.net/wiki/spaces/PTS/pages/4382097412" target="_blank" rel="noopener noreferrer">Roadmap source ↗</a></span></footer>
+      <div class="roadmap-rows">
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-0"><strong>Instruments<b>↗</b></strong><span>Invoices · Credit notes</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-1"><strong>Early payments<b>↗</b></strong><span>List · Details · Timeline · Rejection</span></button></div><div><span class="rbar live">Core</span></div><div><span class="rbar live">Bulk rejection</span></div><div></div><div></div><div><span class="rbar planned">EP statuses</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-2"><strong>Fund requests<b>↗</b></strong><span>List · Details · Timeline</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-3"><strong>Offers &amp; attempts<b>↗</b></strong><span>Offers · Offer attempts</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-4"><strong>Loans &amp; receivables<b>↗</b></strong><span>Loans · Receivables · Doc tooling</span></button></div><div><span class="rbar live">Live</span></div><div></div><div></div><div><span class="rbar ready">Doc &amp; loan tooling</span></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-5"><strong>Supplier management<b>↗</b></strong><span>List · Profile · Onboard to funder</span></button></div><div><span class="rbar live">List</span></div><div></div><div><span class="rbar live">Profiles</span></div><div></div><div><span class="rbar held">Onboard to funder · deferred</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-6"><strong>Funder management<b>↗</b></strong><span>Onboarding · Monitoring</span></button></div><div></div><div></div><div><span class="rbar live">Onboarding</span></div><div><span class="rbar ready">Monitoring</span></div><div><span class="rbar planned">Monitoring ph. 2</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-7"><strong>Buyer management<b>↗</b></strong><span>Buyer monitoring · SAMA capacity</span></button></div><div></div><div></div><div></div><div><span class="rbar build">On staging</span></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-8"><strong>Collections<b>↗</b></strong><span>Reconciliation · Collections · Suspense</span></button></div><div></div><div></div><div></div><div><span class="rbar held">Reconciliation · held</span></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-10"><strong>FinOps dashboard<b>↗</b></strong><span>Dashboard management</span></button></div><div></div><div></div><div></div><div><span class="rbar ready">Dashboard</span></div><div></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-9"><strong>Transaction details<b>↗</b></strong><span>Wallet / account transactions</span></button></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">Not scheduled</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><span class="ws"><strong>Taulia in FinOps</strong><span>PDF retrieval · Onboarding impact</span></span></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">DF-4405 · DF-4280</span></div></div>
+        <div class="roadmap-row" role="row"><div role="cell"><button class="ws" data-roadmap-open="roadmap-detail-11"><strong>Remaining operations<b>↗</b></strong><span>Logs · Files · Wallets · Reports · SLA</span></button></div><div></div><div></div><div></div><div></div><div><span class="rbar planned">Not started</span></div></div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Scope: FinOps Product Roadmap 2026 v23. Status: Jira, 25 Oct 2026. <a href="https://manafaco.atlassian.net/wiki/spaces/PTS/pages/4382097412" target="_blank" rel="noopener">Roadmap source ↗</a></span><span class="pg"></span></footer>
+  </section>
+
+  <!-- =========================== A3 · CHANNELS ============================== -->
+  <section class="slide" data-slide="10" aria-labelledby="t-channels">
+    <header class="slide-head">
+      <div>
+        <div class="kicker appendix"><b>A3</b>Appendix · Channels</div>
+        <h2 id="t-channels">Channel updates</h2>
+        <p class="lede">Borrower journeys V2 are live. Buyer dashboard ships in R65. Funder-channel items are on hold.</p>
+      </div>
+    </header>
+
+    <div class="channel-grid">
+      <section class="card channel">
+        <header><span class="eyebrow">Supplier web &amp; mobile</span><h3>Borrower channel</h3></header>
+        <ul>
+          <li><div class="row"><strong>Activation Journey V2</strong><span class="chip done">Live 14 Oct</span></div><p>DF-3357 shipped in R64 after spilling from R63.</p></li>
+          <li><div class="row"><strong>Financing Journey V2</strong><span class="chip done">Live · R64</span></div><p>DF-4373, 44 tickets. AOP in the financing flow also live.</p></li>
+          <li><div class="row"><strong>Real-estate product</strong><span class="chip active">R65 · UAT</span></div><p>DF-4526: 14 approved, 10 in UAT review.</p></li>
+          <li><div class="row"><strong>Remove fund-acceptance task</strong><span class="chip hold">On hold</span></div><p>DF-4521 in R66; clarifications pending.</p></li>
+        </ul>
+      </section>
+      <section class="card channel c2">
+        <header><span class="eyebrow">Buyer web application</span><h3>Buyer channel</h3></header>
+        <ul>
+          <li><div class="row"><strong>Buyer Portal dashboard revamp</strong><span class="chip ready">R65 · approved</span></div><p>DF-4311, 8 of 8 tickets approved.</p></li>
+          <li><div class="row"><strong>Buyer Portal Analytics V2</strong><span class="chip active">UAT</span></div><p>EMQ-6152 in UAT on 20–21 Oct.</p></li>
+          <li><div class="row"><strong>AoRF clauses for SE &amp; Aramco</strong><span class="chip done">Live 14 Oct</span></div><p>DF-4489.</p></li>
+        </ul>
+      </section>
+      <section class="card channel c3">
+        <header><span class="eyebrow">Local &amp; international funders</span><h3>Funder channel</h3></header>
+        <ul>
+          <li><div class="row"><strong>Funder Channel roadmap v0.1</strong><span class="chip idle">In review</span></div><p>Shared for review on 17 Sep.</p></li>
+          <li><div class="row"><strong>Limits management</strong><span class="chip hold">R66 · on hold</span></div><p>Funder self-service limit control.</p></li>
+          <li><div class="row"><strong>User invites · international login</strong><span class="chip hold">R66 · on hold</span></div><p>Email/password access for international funders.</p></li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira snapshot, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+  <!-- ======================= A4 · INTERNAL PLATFORMS ======================== -->
+  <section class="slide" data-slide="11" aria-labelledby="t-platforms">
+    <header class="slide-head">
+      <div>
+        <div class="kicker appendix"><b>A4</b>Appendix · Internal platforms</div>
+        <h2 id="t-platforms">From one Admin Portal to focused platforms</h2>
+        <p class="lede">FinOps was the first split. Buyer Management phase 1 is now live; Funder Management follows with its own sprint.</p>
+      </div>
+    </header>
+
+    <div style="display:grid;grid-template-rows:1fr auto;gap:16px;min-height:0">
+      <div class="platform-grid">
+        <article class="card ink platform">
+          <span class="eyebrow">Today · shared</span>
+          <h3>Admin Portal</h3>
+          <ul>
+            <li><b>R65</b><span>Funder program configurations (DF-4518) approved.</span></li>
+            <li><b>R66</b><span>Data masking (DF-4611), cash-flow schedule, funder hotfixes.</span></li>
+          </ul>
+          <p class="foot">Buyer and funder features still live here until each platform takes them over.</p>
+        </article>
+        <article class="card violet platform">
+          <span class="eyebrow">Standalone · phase 1</span>
+          <h3>Buyer Management Platform</h3>
+          <ul>
+            <li><b>R64</b><span>Phase 1 part 1 live 14 Oct (DF-4468).</span></li>
+            <li><b>R65</b><span>Part 2 (DF-4599) on staging; supplier list and middleware info.</span></li>
+          </ul>
+          <p class="foot">Own roadmap and squad sprint (SCF BMP).</p>
+        </article>
+        <article class="card platform">
+          <span class="eyebrow">Standalone · next</span>
+          <h3>Funder Management Platform</h3>
+          <ul>
+            <li><b>R66</b><span>Dedicated FMP sprint opens in R66.</span></li>
+            <li><b>R65</b><span>FinOps funder monitoring ships first.</span></li>
+          </ul>
+          <p class="foot">Funder 360, programs, pricing, limits and accounts.</p>
+        </article>
+        <article class="card platform">
+          <span class="eyebrow">Dedicated tool</span>
+          <h3>Manafa CRM</h3>
+          <ul>
+            <li><b>Live</b><span>Lead Management live 29 Sep (DF-3718).</span></li>
+            <li><b>R65</b><span>Assignment rules (24 approved), Taulia leads into CRM.</span></li>
+            <li><b>R66</b><span>Fund requests in CRM (DF-4657).</span></li>
+          </ul>
+          <p class="foot">SCF pipeline and lead management.</p>
+        </article>
+      </div>
+      <div class="strategy-strip">
+        <div>Separation model</div>
+        <div><strong>1 · SCF FinOps</strong>Live since R61; expanding each release.</div>
+        <div><strong>2 · Buyer Management</strong>Phase 1 part 1 live 14 Oct.</div>
+        <div><strong>3 · Funder Management</strong>Own sprint starting R66.</div>
+      </div>
+    </div>
+
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Jira snapshot, 25 Oct 2026.</span><span class="pg"></span></footer>
+  </section>
+
+</div>
+</main>
 
 <dialog class="roadmap-detail" id="roadmap-detail-0" aria-labelledby="roadmap-detail-title-0"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-0">Instruments</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Invoice list and invoice details.</p></li>
 <li><strong>R61</strong><p>Credit-notes list.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-1" aria-labelledby="roadmap-detail-title-1"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-1">Early payments</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Early-payments list, details and timeline.</p></li>
 <li><strong>R62</strong><p>Reject pending early payments by supplier and program.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-2" aria-labelledby="roadmap-detail-title-2"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-2">Fund requests</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Fund-requests list.</p></li>
 <li><strong>R61</strong><p>Fund-request details.</p></li>
 <li><strong>R61</strong><p>Fund-request timeline.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-3" aria-labelledby="roadmap-detail-title-3"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-3">Offers &amp; attempts</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Offers list and offer details.</p></li>
 <li><strong>R61</strong><p>Offer Attempts list and Offer Attempt details.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-4" aria-labelledby="roadmap-detail-title-4"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-4">Loans &amp; receivables</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Loans list and loan details.</p></li>
 <li><strong>R61</strong><p>Receivables list and receivable details.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-5" aria-labelledby="roadmap-detail-title-5"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-5">Supplier management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R61</strong><p>Suppliers list and supplier details.</p></li>
 <li><strong>R64</strong><p>Onboard suppliers to funders from the supplier view.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-6" aria-labelledby="roadmap-detail-title-6"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-6">Funder management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R64</strong><p>Funders list and funder details.</p></li>
 <li><strong>R64</strong><p>Onboard suppliers to a funder from the funder view.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-7" aria-labelledby="roadmap-detail-title-7"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-7">Buyer management</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R64</strong><p>Buyers list.</p></li>
 <li><strong>R64</strong><p>Buyer details.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-8" aria-labelledby="roadmap-detail-title-8"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-8">Collections</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R64</strong><p>New reconciliation logic.</p></li>
 <li><strong>R64</strong><p>Collection page.</p></li>
 <li><strong>R64</strong><p>Payment Advice list and Payment Advice details.</p></li>
 <li><strong>R64</strong><p>Suspense Transactions list.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-9" aria-labelledby="roadmap-detail-title-9"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-9">Transaction details</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>R64</strong><p>Transaction details within Wallets / Accounts.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-10" aria-labelledby="roadmap-detail-title-10"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-10">FinOps dashboard</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>Not started</strong><p>FinOps Dashboard. No technical-delivery release is assigned in the updated roadmap.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 <dialog class="roadmap-detail" id="roadmap-detail-11" aria-labelledby="roadmap-detail-title-11"><header><div><span>SCF FinOps · Roadmap scope</span><h3 id="roadmap-detail-title-11">Remaining operations</h3></div><form method="dialog"><button aria-label="Close workstream details">×</button></form></header><ul>
 <li><strong>Not started</strong><p>System and operational logs; files and documents.</p></li>
 <li><strong>Not started</strong><p>Wallets and accounts, beyond the R64 Transaction Details item; reports.</p></li>
 <li><strong>Not started</strong><p>SLA Monitor; View Alerts.</p></li>
-<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23, updated 13 September 2026.</p></ul></dialog>
-    </section>
+<p class="roadmap-detail-note">Source: Supply Chain Financing (FinOps) Product Roadmap 2026, version 23 (13 Sep 2026). Release status refreshed from Jira on 25 Oct 2026.</p></ul></dialog>
 
-    <section class="slide" data-slide="12" aria-labelledby="slide-5-title">
-      <header class="slide-header">
-        <span class="slide-number">A5</span>
-        <div>
-          <h2 id="slide-5-title">Standalone Buyer and Funder Management platforms</h2>
-          <p>Today they are Admin Portal feature sets. Each will move to a dedicated platform with its own roadmap.</p>
-        </div>
-        <span class="slide-context">Appendix · Product strategy</span>
-      </header>
+<nav class="deck-controls" aria-label="Presentation controls">
+  <button class="control-button" id="prev-slide" type="button" aria-label="Previous slide">←</button>
+  <div class="slide-progress" aria-hidden="true"><span id="progress-fill"></span></div>
+  <p><span id="current-slide">1</span> / <span id="total-slides">11</span></p>
+  <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
+</nav>
 
-      <div class="management-strategy">
-        <section class="strategy-current">
-          <span class="strategy-kicker">Today</span>
-          <h3>Shared Admin Portal</h3>
-          <p>Buyer and funder workflows are added as features inside one large internal platform.</p>
-          <div class="admin-module-list">
-            <div><span>01</span><strong>Buyer Management features</strong></div>
-            <div><span>02</span><strong>Funder Management features</strong></div>
-          </div>
-        </section>
-
-        <div class="strategy-separation" aria-hidden="true">
-          <span>Separate</span>
-          <i>→</i>
-        </div>
-
-        <section class="strategy-platforms">
-          <span class="strategy-kicker">Future structure</span>
-          <article class="management-platform buyer-platform">
-            <div class="platform-index">01</div>
-            <div>
-              <h3>Buyer Management</h3>
-              <p>Dedicated workspace for buyer profiles, programs, controls and operational visibility.</p>
-              <ul>
-                <li>Buyer 360 and program setup</li>
-                <li>Program controls and monitoring</li>
-                <li>Dedicated roadmap and ownership</li>
-              </ul>
-            </div>
-          </article>
-          <article class="management-platform funder-platform">
-            <div class="platform-index">02</div>
-            <div>
-              <h3>Funder Management</h3>
-              <p>Dedicated workspace for funder programs, pricing, eligibility, wallets and reporting.</p>
-              <ul>
-                <li>Funder 360 and program hierarchy</li>
-                <li>Pricing, limits and account management</li>
-                <li>Dedicated roadmap and ownership</li>
-              </ul>
-            </div>
-          </article>
-        </section>
-      </div>
-
-      <div class="strategy-principles">
-        <span>What changes</span>
-        <div><strong>Focused workflows</strong><p>Each team works in a platform designed for its operational responsibilities.</p></div>
-        <div><strong>Clear ownership</strong><p>Each platform has an accountable product owner and delivery roadmap.</p></div>
-        <div><strong>Incremental separation</strong><p>Capabilities move from Admin in planned stages rather than one large migration.</p></div>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>SCF FinOps is the first product using this separation model; Buyer and Funder Management follow.</span>
-      </footer>
-    </section>
-
-    <section class="slide" data-slide="4" aria-labelledby="slide-6-title">
-      <header class="slide-header">
-        <span class="slide-number">03</span>
-        <div>
-          <h2 id="slide-6-title">Taulia integration updates</h2>
-          <p>Two APIs progressing toward go-live; two requests awaiting Taulia product feedback.</p>
-        </div>
-        <img class="taulia-logo" src="https://events.sap.com/adobe/dynamicmedia/deliver/dm-aid--5c5d573e-a3b4-446b-b794-d5221ee8ad7e/sap-taulia-r-grad-blu--3-.png?width=1600&amp;preferwebp=true&amp;quality=85" alt="SAP Taulia">
-      </header>
-
-      <div class="taulia-workstreams" aria-label="Taulia integration updates">
-        <article class="taulia-workstream-card">
-          <header><span>01</span><span class="status-pill status-complete">Production · 30 Sep</span></header>
-          <h3>Supplier onboarding APIs</h3>
-          <p class="taulia-card-subtitle">Retrieve buyer-invited suppliers and take them directly through Manafa registration.</p>
-          <div class="taulia-card-detail"><span>Readiness</span><p>Joint testing completed successfully. <strong>Production release scheduled for 30 September 2026.</strong></p></div>
-        </article>
-
-        <article class="taulia-workstream-card">
-          <header><span>02</span><span class="status-pill status-pending">Go-live pending</span></header>
-          <h3>Invoice PDF API</h3>
-          <p class="taulia-card-subtitle">Receive invoice PDFs and retrieve copies when the original delivery fails.</p>
-          <div class="taulia-card-detail"><span>Testing passed</span><p>Tested successfully on Wednesday and Thursday, <strong>2–3 September.</strong> Awaiting go-live.</p></div>
-        </article>
-
-        <article class="taulia-workstream-card">
-          <header><span>03</span><span class="status-pill status-pending">Product feedback pending</span></header>
-          <h3>ERP invoice number in EP payload</h3>
-          <p class="taulia-card-subtitle">Include the ERP invoice number in the early-payment (EP) payload.</p>
-          <div class="taulia-card-detail"><span>Requested</span><p><strong>Awaiting feedback from Taulia’s product team</strong> on the requested payload extension.</p></div>
-        </article>
-
-        <article class="taulia-workstream-card">
-          <header><span>04</span><span class="status-pill status-pending">Product feedback pending</span></header>
-          <h3>Preferred bank account via onboarding API</h3>
-          <p class="taulia-card-subtitle">Extend the onboarding API so Manafa can send the preferred bank account back to Taulia.</p>
-          <div class="taulia-card-detail"><span>Requested</span><p><strong>Awaiting feedback from Taulia’s product team</strong> on how to support the API extension.</p></div>
-        </article>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Dates shown are the latest confirmed working dates.</span>
-      </footer>
-    </section>
-
-    <section class="slide" data-slide="5" aria-labelledby="slide-7-title">
-      <header class="slide-header">
-        <span class="slide-number">04</span>
-        <div>
-          <h2 id="slide-7-title">SCF funder progress</h2>
-          <p>This week’s actions, delivery targets and external dependencies.</p>
-        </div>
-        <span class="slide-context">Weekly integration update</span>
-      </header>
-
-      <div class="funder-progress-grid funder-progress-grid-nine funder-progress-grid-twelve">
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-bnpp" src="assets/logos/bnpp.png" alt="BNP Paribas">
-          <span class="progress-status progress-status-success">Saudi Energy · SAO</span>
-          <h3>Limit &amp; invoice follow-up</h3>
-          <div class="delivery-track delivery-track-complete" aria-label="BNP Paribas is live with Saudi Energy"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Live</span></div></div>
-          <ul class="funder-progress-list"><li><strong>Saudi Energy:</strong> Sent BNPP request to increase the SAR 10M daily limit.</li><li><strong>SAO:</strong> Followed up Sunday on Aramco BNPP invoices; pending Aramco.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-smbc" src="assets/logos/smbc.svg" alt="SMBC">
-          <span class="progress-status">Pending SAMA NOL</span>
-          <h3>Pilot checklist</h3>
-          <div class="delivery-track delivery-track-testing" aria-label="SMBC testing and UAT are in progress"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>UAT</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Share the pilot checklist after SAMA NOL is received.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="assets/logos/riyad-bank.svg" alt="Riyad Bank">
-          <span class="progress-status">B2B access pending</span>
-          <h3>Manager ready in R64/R65</h3>
-          <div class="delivery-track delivery-track-sdd" aria-label="Riyad Bank is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Await RB confirmation on SFTP hosting at Manafa; share SLA when the SDD is final.</li><li>RM is formalizing the request for B2B environment access.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="assets/logos/standard-chartered.svg" alt="Standard Chartered">
-          <span class="progress-status progress-status-pending">R63 · In progress</span>
-          <h3>SFTP manager &amp; B2B testing</h3>
-          <div class="delivery-track delivery-track-development" aria-label="Standard Chartered is preparing for development"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Follow up on SDD and SLA documents; API forms follow account opening.</li><li>Fee-waiver follow-up completed; account opening remains pending.</li><li>SCB SFTP Manager and B2B testing are in progress in R63.</li></ul>
-        </article>
-
-        <article class="funder-progress-card" aria-label="First Abu Dhabi Bank">
-          <img class="progress-funder-logo progress-funder-logo-fab" src="https://companieslogo.com/img/orig/FAB.AE_BIG-7b5d760d.svg?download=true&amp;t=1720244491" alt="First Abu Dhabi Bank">
-          <span class="progress-status">Pending FAB</span>
-          <h3>Manager ready in R64</h3>
-          <div class="delivery-track delivery-track-sdd" aria-label="FAB is in solution design"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Outgoing-folder file directory is missing; pending FAB.</li><li>Updated SDD and SLA shared; follow up with FAB.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-snb" src="https://www.kscdr.org.sa/sites/default/files/styles/node_cover/public/2021-08/SNB-2.png?h=1336e95a&amp;itok=TZGeLG8N" alt="Saudi National Bank">
-          <span class="progress-status progress-status-pending">Pending SNB</span>
-          <h3>API timeline &amp; feedback</h3>
-          <div class="delivery-track delivery-track-development" aria-label="SNB is moving into development planning"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Await SNB’s API timeline and feedback.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo " src="assets/logos/aramco.svg" alt="Aramco">
-          <span class="progress-status progress-status-pending">Follow-up today</span>
-          <h3>SAO funder proposal</h3>
-          <div class="delivery-track delivery-track-discovery" aria-label="SAO follow-up after the product meeting"><div><i></i><span>Demo</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>Prepare the proposal after SAO shares the deal/investment execution.</li><li>No response from SAO on scheduling; follow up today.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-sidf" src="assets/logos/sidf.png" alt="Saudi Industrial Development Fund">
-          <span class="progress-status">R64</span>
-          <h3>SIDF 1B celebration report</h3>
-          <div class="delivery-track delivery-track-discovery" aria-label="SIDF impact assessment is in progress"><div><i></i><span>Review</span></div><div><i></i><span>Impact</span></div><div><i></i><span>Design</span></div><div><i></i><span>Build</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>Create the SIDF 1B Celebration Report DF in R64.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo progress-funder-logo-gib" src="assets/logos/gib.png" alt="Gulf International Bank">
-          <span class="progress-status">Natixis · GIB</span>
-          <h3>Product follow-ups</h3>
-          <div class="delivery-track delivery-track-discovery" aria-label="GIB is preparing for product kickoff"><div><i></i><span>Discuss</span></div><div><i></i><span>Kickoff</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li><strong>Natixis:</strong> Feedback pending Business Committee review.</li><li><strong>GIB:</strong> Followed up on the product kickoff.</li></ul>
-        </article>
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="assets/logos/jpmorgan.svg" alt="JPMorgan">
-          <span class="progress-status">R64 · If needed</span>
-          <h3>SAR implementation &amp; screening</h3>
-          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Screen</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>SAR pricing: SAIBOR +55 bps; check the SAR financing window after tomorrow’s benchmark.</li><li>Sent SAR and USD supplier lists for pre-screening; English names only.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="https://www.sab.com/content/dam/sabpws/common/icons/sab-new-logo.svg" alt="SAB">
-          <span class="progress-status">This week</span>
-          <h3>Updated SDD &amp; SLA</h3>
-          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div><div><i></i><span>Pilot</span></div></div>
-          <ul class="funder-progress-list"><li>Send the updated SDD and SLA this week.</li></ul>
-        </article>
-
-        <article class="funder-progress-card">
-          <img class="progress-funder-logo" src="https://bsf.sa/images/revampLogo.svg" alt="BSF">
-          <span class="progress-status">Every Monday</span>
-          <h3>Weekly product meetings</h3>
-          <div class="delivery-track delivery-track-discovery"><div><i></i><span>Overview</span></div><div><i></i><span>Req.</span></div><div><i></i><span>SDD</span></div><div><i></i><span>Dev.</span></div><div><i></i><span>Test</span></div></div>
-          <ul class="funder-progress-list"><li>Weekly meetings are scheduled on Mondays.</li></ul>
-        </article>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Supply Chain Finance · Funders</span>
-      </footer>
-    </section>
-
-    <section class="slide embedded-finance-slide" data-slide="6" aria-labelledby="slide-embedded-title">
-      <header class="slide-header">
-        <span class="slide-number">05</span>
-        <div>
-          <h2 id="slide-embedded-title">Embedded financing partnerships</h2>
-          <p>Partner-led financing capabilities and the next delivery gate for each relationship.</p>
-        </div>
-        <span class="slide-context">Partnership roadmap</span>
-      </header>
-
-      <div class="embedded-partner-map">
-        <article class="embedded-partner-column">
-          <header>
-            <div class="embedded-logo-pair">
-              <img src="assets/logos/nphies.png" alt="Nphies">
-              <img src="assets/logos/lean.png" alt="Lean Technologies">
-            </div>
-            <span>Healthcare financing stream</span>
-          </header>
-          <div class="embedded-rail" aria-hidden="true"><i></i></div>
-          <section class="embedded-stream embedded-stream-active">
-            <div><span>Current milestone</span><strong>First pilot completed</strong></div>
-            <p>Pilot completed with Twaig Health Establishment. The opportunity is now with Sales to close the sales cycle.</p>
-          </section>
-        </article>
-
-        <article class="embedded-partner-column">
-          <header>
-            <div class="embedded-logo-single"><img src="assets/logos/elm.png" alt="Elm"></div>
-            <span>Government services stream</span>
-          </header>
-          <div class="embedded-rail" aria-hidden="true"><i></i></div>
-          <section class="embedded-stream embedded-stream-hold">
-            <div><span>Track 01</span><strong>Tasdeed</strong></div>
-            <b>On hold</b>
-          </section>
-          <section class="embedded-stream embedded-stream-hold">
-            <div class="embedded-stream-brand"><img src="assets/logos/dhamen.png" alt="Dhamen"><p>Nusuk · Muqeem</p></div>
-            <p>No material change this week; testing has not started.</p>
-          </section>
-        </article>
-
-        <article class="embedded-partner-column">
-          <header>
-            <div class="embedded-logo-single"><img src="assets/logos/nhc.png" alt="National Housing Company"></div>
-            <span>Housing ecosystem stream</span>
-          </header>
-          <div class="embedded-rail" aria-hidden="true"><i></i></div>
-          <section class="embedded-stream embedded-stream-active">
-            <div class="embedded-stream-brand"><img src="assets/logos/supplypro.png" alt="Supplier Pro"></div>
-            <p>The integration is complete. NHC requires the agreement to be signed before production go-live.</p>
-          </section>
-          <section class="embedded-stream embedded-stream-planned">
-            <div><span>Track 02</span><strong>NHC ERP integration</strong></div>
-          </section>
-        </article>
-      </div>
-
-      <footer class="slide-footer">
-        <img class="brand-logo brand-logo-footer" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>Embedded Financing · Partner integrations</span>
-      </footer>
-    </section>
-
-    <section class="slide closing-slide" data-slide="7" aria-labelledby="slide-8-title">
-      <div class="closing-orbit" aria-hidden="true"></div>
-      <header class="closing-header">
-        <img class="brand-logo closing-logo" src="assets/manafa-logo.svg" alt="Manafa">
-        <span>SCF Digital Products · Weekly Update</span>
-      </header>
-
-      <div class="closing-content">
-        <p class="eyebrow">End of update</p>
-        <h2 id="slide-8-title">Thank you</h2>
-        <p>Questions &amp; discussion</p>
-      </div>
-
-      <footer class="closing-footer">
-        <div>
-          <span>Operating buyer programs</span>
-          <strong>Saudi Energy (SE) · Saudi Aramco</strong>
-        </div>
-        <div class="cover-logos">
-          <img src="assets/logos/saudi-energy.svg" alt="Saudi Energy">
-          <img src="assets/logos/aramco.svg" alt="Saudi Aramco">
-        </div>
-      </footer>
-    </section>
-  </main>
-
-  <nav class="deck-controls" aria-label="Presentation controls">
-    <button class="control-button" id="prev-slide" type="button" aria-label="Previous slide">←</button>
-    <div class="slide-progress" aria-hidden="true"><span id="progress-fill"></span></div>
-    <p><span id="current-slide">1</span> / <span id="total-slides">11</span></p>
-    <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
-  </nav>
-
-  <script src="script.js?v=20260913-finops-roadmap-v23"></script>
+<script src="release-data.js?v=20261025"></script>
+<script src="script.js?v=20261025-editorial"></script>
 </body>
 </html>

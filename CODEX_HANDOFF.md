@@ -1,5 +1,7 @@
 # Codex Handoff — SCF Digital Products Weekly Presentation
 
+> **25 Oct 2026 update — redesign.** The deck was rebuilt in a bold editorial style on a fixed 1600×900 canvas. Main deck: Cover → Items from last weekly → R65 closeout · R66 scope → Taulia → Funders (12 equal cards, stage bar each) → Embedded financing → Thank you. Appendix: A1 FinOps, A2 FinOps roadmap, A3 Channels, A4 Internal platforms (old "internal tools" and "standalone platforms" merged). Release data now lives in `release-data.js`. See README for the weekly checklist. Sections below describe the pre-redesign state and remain useful history.
+
 Last updated: 5 September 2026  
 Repository state when this handoff was written: `main` at commit `7761699`  
 Working tree: clean  
