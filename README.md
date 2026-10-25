@@ -23,6 +23,10 @@ The SCF FinOps screenshot placeholder is on slide 4.
 - `script.js` — navigation, scaling, stage bars, release explorer, FinOps carousel, roadmap dialogs.
 - `style.css` — bold editorial theme on Manafa tokens (see `BRAND-TOKENS.md`).
 
+### Single-file copy
+
+`python3 tools/bundle.py dist/scf-weekly.html` builds one self-contained HTML file (CSS, JS and local images inlined) that opens by double-click.
+
 ### Weekly update checklist
 
 1. Cover date, agenda sub-lines and the three cover numbers.

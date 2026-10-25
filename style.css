@@ -653,8 +653,8 @@ a.tag:hover { text-decoration: underline; }
 .funder {
   display: grid;
   grid-template-rows: 30px auto auto 1fr;
-  gap: 9px;
-  padding: 13px 18px 12px;
+  gap: 8px;
+  padding: 11px 18px 8px;
   background: var(--paper);
   border: 1.5px solid var(--line);
   border-radius: var(--radius);
@@ -673,7 +673,7 @@ a.tag:hover { text-decoration: underline; }
 .funder-top img.tall { max-height: 34px; }
 .funder-top .chip { height: 24px; font-size: 12px; padding: 0 10px; }
 .funder h3 { font-size: 17px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
-.funder h3 small { display: block; font-size: 12px; font-weight: 600; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+.funder h3 small { display: none; font-size: 12px; font-weight: 600; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
 .funder ul { display: grid; gap: 4px; align-content: start; }
 .funder li { position: relative; padding-left: 12px; font-size: 13.5px; line-height: 1.42; color: var(--muted); }
 .funder li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--c); }

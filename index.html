@@ -480,92 +480,81 @@
     </header>
 
     <div class="funder-grid">
-      <article class="funder done">
-        <div class="funder-top"><img src="assets/logos/bnpp.png" alt="BNP Paribas"><span class="chip done">Live</span></div>
-        <h3><small>Saudi Energy · Aramco</small>SE daily limit raised</h3>
-        <div data-stages="6"></div>
-        <ul><li>SE daily-limit increase approved.</li><li>Aramco invoices <strong>pending Aramco</strong>.</li></ul>
+      <article class="funder wait">
+        <div class="funder-top"><img src="assets/logos/bnpp.png" alt="BNP Paribas"><span class="chip wait">Aramco pilot</span></div>
+        <h3><small>SE live · Aramco pilot</small>Pilot settlement pending</h3>
+        <div data-stages="4"></div>
+        <ul><li>Settlement confirmation pending on pilot invoices.</li><li>Saudi Energy live; limit raised.</li></ul>
       </article>
-
+      <article class="funder done">
+        <div class="funder-top"><img src="assets/logos/jpmorgan.svg" alt="J.P. Morgan"><span class="chip done">Live</span></div>
+        <h3><small>Aramco · Saudi Energy</small>SAR window extension pending</h3>
+        <div data-stages="6"></div>
+        <ul><li>SAR window extension: <strong>pending JPM</strong>.</li><li>Aramco invoice approval pending.</li><li>SE: SAR invoice pending Taulia.</li></ul>
+      </article>
+      <article class="funder wait">
+        <div class="funder-top"><img src="assets/logos/aramco.svg" alt="Saudi Aramco"><span class="chip wait">Pending SAO</span></div>
+        <h3><small>SAO as a funder</small>Waiting for SAO feedback</h3>
+        <div data-stages="0"></div>
+        <ul><li>Pending feedback from SAO.</li></ul>
+      </article>
+      <article class="funder active">
+        <div class="funder-top"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"><span class="chip active">B2B testing</span></div>
+        <h3><small>SFTP · B2B API</small>SFTP done; B2B testing</h3>
+        <div data-stages="3"></div>
+        <ul><li>SFTP Manager and set-up complete.</li><li>B2B testing in progress; feedback shared.</li><li>SDD, SLA, fee waiver: <strong>pending SCB</strong>.</li></ul>
+      </article>
+      <article class="funder active">
+        <div class="funder-top"><img src="https://companieslogo.com/img/orig/FAB.AE_BIG-7b5d760d.svg?download=true&amp;t=1720244491" alt="First Abu Dhabi Bank"><span class="chip active">SDD sign-off</span></div>
+        <h3><small>SFTP</small>SDD &amp; SLA ready for sign-off</h3>
+        <div data-stages="2"></div>
+        <ul><li>FAB shared updated SDD &amp; SLA for sign-off.</li><li>SFTP Manager in progress.</li></ul>
+      </article>
       <article class="funder active">
         <div class="funder-top"><img src="assets/logos/smbc.svg" alt="SMBC"><span class="chip active">Pilot prep</span></div>
-        <h3><small>Email integration</small>SAMA NOL received</h3>
+        <h3><small>Email integration</small>Pilot checklist after NoL</h3>
         <div data-stages="4"></div>
-        <ul><li>Pilot checklist in preparation.</li><li>Email Phase 1 live; Phase 2 deferred.</li></ul>
+        <ul><li>Share pilot checklist (post SAMA NoL).</li><li>Discount round-up example: <strong>pending SMBC</strong>.</li></ul>
       </article>
-
-      <article class="funder hold">
-        <div class="funder-top"><img src="assets/logos/riyad-bank.svg" alt="Riyad Bank"><span class="chip hold">On hold</span></div>
-        <h3><small>B2B API · SFTP</small>Waiting on account opening</h3>
+      <article class="funder wait">
+        <div class="funder-top"><img src="assets/logos/riyad-bank.svg" alt="Riyad Bank"><span class="chip wait">Pending RB</span></div>
+        <h3><small>SFTP · B2B API</small>SDD with file acks shared</h3>
+        <div data-stages="1"></div>
+        <ul><li>Awaiting RB feedback on updated SDD.</li><li>B2B access request; IP whitelisting to share.</li><li>RB Manager ready in R67.</li></ul>
+      </article>
+      <article class="funder wait">
+        <div class="funder-top"><img src="https://bsf.sa/images/revampLogo.svg" alt="BSF"><span class="chip wait">Pending BSF</span></div>
+        <h3><small>B2B API</small>B2B Manager waiting on credentials</h3>
         <div data-stages="2"></div>
-        <ul><li>B2B Manager and SFTP set-up on hold.</li><li>URLs and certificates follow.</li></ul>
+        <ul><li>Follow up on SDD feedback.</li><li>B2B: pending environment credentials.</li></ul>
       </article>
-
-      <article class="funder active">
-        <div class="funder-top"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"><span class="chip active">UAT</span></div>
-        <h3><small>SFTP · B2B API</small>SFTP Manager ships in R65</h3>
-        <div data-stages="3"></div>
-        <ul><li>8 of 9 tickets approved; files in UAT.</li><li>B2B: <strong>awaiting SCB credentials</strong>.</li></ul>
-      </article>
-
-      <article class="funder active">
-        <div class="funder-top"><img src="https://companieslogo.com/img/orig/FAB.AE_BIG-7b5d760d.svg?download=true&amp;t=1720244491" alt="First Abu Dhabi Bank"><span class="chip active">R66</span></div>
-        <h3><small>SFTP</small>SFTP Manager moved to R66</h3>
-        <div data-stages="3"></div>
-        <ul><li>SFTP credentials live 1 Oct.</li><li>8 of 10 use cases tested on staging.</li></ul>
-      </article>
-
       <article class="funder hold">
         <div class="funder-top"><img src="assets/logos/snb.jpg" alt="Saudi National Bank" class="tall"><span class="chip hold">Pending SNB</span></div>
-        <h3><small>API integration</small>Waiting for scope and timeline</h3>
+        <h3><small>API integration</small>Waiting for API timeline</h3>
         <div data-stages="1"></div>
-        <ul><li>API Manager (DF-3705) on hold.</li><li>File-based jobs run in production.</li></ul>
+        <ul><li>Pending SNB API timeline and feedback.</li></ul>
       </article>
-
-      <article class="funder wait">
-        <div class="funder-top"><img src="assets/logos/aramco.svg" alt="Saudi Aramco"><span class="chip wait">Awaiting SAO</span></div>
-        <h3><small>Funder proposal</small>Waiting for SAO direction</h3>
+      <article class="funder hold">
+        <div class="funder-top"><span style="display:flex;gap:14px;align-items:center"><img src="assets/logos/natixis.svg" alt="Natixis" style="max-width:88px"><img src="assets/logos/gib.png" alt="Gulf International Bank" style="max-width:56px"></span><span class="chip hold">Pending</span></div>
+        <h3><small>New funders</small>Natixis and GIB pending</h3>
         <div data-stages="0"></div>
-        <ul><li>Awaiting SAO input and direction.</li><li>Proposal follows their reply.</li></ul>
+        <ul><li>Natixis: Business Committee review.</li><li>GIB: inquiries and kickoff pending.</li></ul>
       </article>
-
       <article class="funder done">
         <div class="funder-top"><img src="assets/logos/sidf.png" alt="Saudi Industrial Development Fund"><span class="chip done">Live</span></div>
         <h3><small>Aramco program</small>T-1 processing change in R66</h3>
         <div data-stages="6"></div>
         <ul><li>SAR/USD program report live 12 Oct.</li><li>T-1 impact (DF-4423) in R66.</li></ul>
       </article>
-
-      <article class="funder hold">
-        <div class="funder-top"><span style="display:flex;gap:14px;align-items:center"><img src="assets/logos/natixis.svg" alt="Natixis" style="max-width:88px"><img src="assets/logos/gib.png" alt="Gulf International Bank" style="max-width:56px"></span><span class="chip hold">On hold</span></div>
-        <h3><small>New funders</small>Natixis and GIB paused</h3>
-        <div data-stages="0"></div>
-        <ul><li>Natixis: Business Committee hold.</li><li>GIB: product kickoff on hold.</li></ul>
-      </article>
-
-      <article class="funder done">
-        <div class="funder-top"><img src="assets/logos/jpmorgan.svg" alt="J.P. Morgan"><span class="chip done">Live</span></div>
-        <h3><small>Aramco program</small>SAR financing in R65</h3>
-        <div data-stages="6"></div>
-        <ul><li>SAR activation approved (DF-4552).</li><li>Financing calc (DF-3936) in UAT.</li></ul>
-      </article>
-
       <article class="funder done">
         <div class="funder-top"><img src="https://www.sab.com/content/dam/sabpws/common/icons/sab-new-logo.svg" alt="SAB"><span class="chip done">Live</span></div>
         <h3><small>Supplier set-up file</small>KYC-completed suppliers only</h3>
         <div data-stages="6"></div>
         <ul><li>File filter (DF-4619) ships in R65.</li><li>Daily production jobs running.</li></ul>
       </article>
-
-      <article class="funder active">
-        <div class="funder-top"><img src="https://bsf.sa/images/revampLogo.svg" alt="BSF"><span class="chip active">In dev</span></div>
-        <h3><small>B2B API</small>B2B Manager in R66</h3>
-        <div data-stages="2"></div>
-        <ul><li>DF-4622 in development.</li><li>Targeted for R66.</li></ul>
-      </article>
     </div>
 
-    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Stages: Requirements · SDD · Development · Testing/UAT · Pilot · Live. Sources: Jira, Slack and team input, 25 Oct 2026.</span><span class="pg"></span></footer>
+    <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Stages: Requirements · SDD · Development · Testing/UAT · Pilot · Live. Sources: funder team update and Jira, 25 Oct 2026.</span><span class="pg"></span></footer>
   </section>
 
   <!-- ========================= 6 · EMBEDDED FINANCE ========================= -->
