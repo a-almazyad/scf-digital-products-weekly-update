@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261025-logos13">
+  <link rel="stylesheet" href="style.css?v=20261025-flags">
 </head>
 <body>
 <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -162,7 +162,7 @@
         <div class="buyer-cols"><span>Item</span><span>Owner</span><span>Status</span></div>
         <ul>
           <li><div><strong>SMBC participation in the Aramco program</strong><p>Aramco approved SMBC as a participating funder.</p></div><span class="side">Aramco</span><span class="chip done">Green light</span></li>
-          <li><div><strong>Digitalise the Ahsan weekly report</strong><p>Move the weekly report into the platform.</p></div><span class="side">Manafa</span><span class="chip active">Open</span></li>
+          <li><div><strong>Digitalise the Ahsan weekly report</strong><p>Move the weekly report into the platform.</p></div><span class="side">Manafa</span><span class="chip idle">To confirm</span></li>
           <li><div><strong>PO financing project</strong><p>Define the required APIs and the data-exchange architecture to kick off.</p></div><span class="side">Manafa · Digital</span><span class="chip idle">To start</span></li>
           <li><div><strong>Aramco (SAO) as a funder</strong><p>Waiting for SAO feedback.</p></div><span class="side">Aramco</span><span class="chip wait">Pending</span></li>
         </ul>
@@ -216,16 +216,16 @@
         <ul><li>Pending feedback from SAO.</li></ul>
       </article>
       <article class="funder active">
-        <div class="funder-top"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"><span class="chip active">B2B testing</span></div>
-        <h3><small>SFTP · B2B API</small>SFTP done; B2B testing</h3>
+        <div class="funder-top"><img src="assets/logos/standard-chartered.svg" alt="Standard Chartered"><span class="chip wait">Pending SCB</span></div>
+        <h3><small>SFTP · B2B API</small>SFTP done; B2B on hold</h3>
         <div data-stages="3"></div>
-        <ul><li>SFTP Manager and set-up complete.</li><li>B2B testing in progress; feedback shared.</li><li>SDD, SLA, fee waiver: <strong>pending SCB</strong>.</li></ul>
+        <ul><li>SFTP Manager and set-up complete.</li><li>B2B on hold awaiting SCB credentials.</li><li>SDD, SLA, fee waiver: <strong>pending SCB</strong>.</li></ul>
       </article>
       <article class="funder active">
         <div class="funder-top"><img src="assets/logos/fab.svg" alt="First Abu Dhabi Bank"><span class="chip active">SDD sign-off</span></div>
         <h3><small>SFTP</small>SDD &amp; SLA ready for sign-off</h3>
         <div data-stages="2"></div>
-        <ul><li>FAB shared updated SDD &amp; SLA for sign-off.</li><li>SFTP Manager in progress.</li></ul>
+        <ul><li>FAB shared updated SDD &amp; SLA for sign-off.</li><li>SFTP Manager moved to R66.</li></ul>
       </article>
       <article class="funder active">
         <div class="funder-top"><img src="assets/logos/smbc.svg" alt="SMBC"><span class="chip active">Pilot prep</span></div>
@@ -419,7 +419,7 @@
         <p>The borrower channel, the internal platforms we are building, and this release cycle.</p>
       </div>
       <ol class="section-list">
-        <li><b>2.1</b><div><strong>Borrower channel</strong><span>Journey V2 live since R64; real estate in R65</span></div></li>
+        <li><b>2.1</b><div><strong>Borrower channel</strong><span>Journey V2 live since R64</span></div></li>
         <li><b>2.2</b><div><strong>SCF FinOps</strong><span>Live since R61; 5 modules in R65</span></div></li>
         <li><b>2.3</b><div><strong>Buyer Management Platform</strong><span>Phase 1 part 1 live; part 2 on staging</span></div></li>
         <li><b>2.4</b><div><strong>Funder Management Platform</strong><span>In build: 8 of 42 tickets dev-complete in R66</span></div></li>
@@ -444,8 +444,8 @@
       <div class="plat-kpis">
         <div class="card kpi ink"><span class="eyebrow">Journey revamp</span><strong>Live<small>since R64</small></strong><p>Activation and financing journeys V2.</p></div>
         <div class="card kpi"><span class="eyebrow">R64 · shipped</span><strong>6<small>epics</small></strong><p>Both V2 journeys, CapEx, AOP, financing summary.</p></div>
-        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>20 / 39<small>tickets approved</small></strong><p>Real-estate product: 14 approved, 10 in UAT.</p></div>
-        <div class="card kpi"><span class="eyebrow">R66 sprint</span><strong>24<small>tickets</small></strong><p>1 approved; fund-acceptance change on hold.</p></div>
+        <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>6 / 15<small>tickets approved</small></strong><p>Journey V2 follow-ups, passport stakeholders, watermark.</p></div>
+        <div class="card kpi"><span class="eyebrow">R66 sprint</span><strong>23<small>tickets</small></strong><p>1 approved; fund-acceptance change on hold.</p></div>
       </div>
       <div class="plat-grid">
         <div class="card outline mod-table">
@@ -454,7 +454,6 @@
           <div class="mod"><div class="mod-name"><strong>Financing journey V2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4373" target="_blank" rel="noopener">DF-4373</a></div><span class="mod-rel">R64</span><div class="mod-note">44 tickets; 3 follow-ups approved in R65</div><span class="chip done">Live</span></div>
           <div class="mod"><div class="mod-name"><strong>AOP · financing summary</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4536" target="_blank" rel="noopener">DF-4536</a></div><span class="mod-rel">R64</span><div class="mod-note">Also DF-4010</div><span class="chip done">Live</span></div>
           <div class="mod"><div class="mod-name"><strong>CapEx product</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4283" target="_blank" rel="noopener">DF-4283</a></div><span class="mod-rel">R64</span><div class="mod-note">Spilled from R62</div><span class="chip done">Live</span></div>
-          <div class="mod"><div class="mod-name"><strong>Real-estate product</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4526" target="_blank" rel="noopener">DF-4526</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:14,uat:10"></div><span class="chip active">In UAT</span></div>
           <div class="mod"><div class="mod-name"><strong>Passport-based stakeholders</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4601" target="_blank" rel="noopener">DF-4601</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
           <div class="mod"><div class="mod-name"><strong>Remove fund-acceptance task</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4521" target="_blank" rel="noopener">DF-4521</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="testing:1,todo:10,hold:2"></div><span class="chip wait">On hold</span></div>
           <div class="mod"><div class="mod-name"><strong>Passed-away stakeholder · phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4545" target="_blank" rel="noopener">DF-4545</a></div><span class="mod-rel">R66</span><div class="mod-bar" data-bar="approved:1,testing:2,todo:5"></div><span class="chip active">Building</span></div>
@@ -465,7 +464,7 @@
           <ol class="phase-track">
             <li class="done"><b>Activation V2</b><span>Sign-up, KYC and profile completion</span></li>
             <li class="done"><b>Financing V2</b><span>Request, offer and acceptance</span></li>
-            <li class="now"><b>New products</b><span>CapEx live; real estate in R65</span></li>
+            <li class="done"><b>New products</b><span>CapEx live since R64</span></li>
           </ol>
           <p class="plat-note">Suppliers invited through Taulia now enter this journey directly.</p>
         </div>
@@ -547,7 +546,7 @@
         <div class="card kpi ink"><span class="eyebrow">Status</span><strong>Phase 1<small>rolling out</small></strong><p>Buyer-facing operations moving out of the Admin Portal.</p></div>
         <div class="card kpi"><span class="eyebrow">Live</span><strong>1<small>module</small></strong><p>Buyers part 1, live 14 Oct (R64).</p></div>
         <div class="card kpi"><span class="eyebrow">R65 sprint</span><strong>2 / 9<small>tickets approved</small></strong><p>7 on staging, incl. 6 for Buyers part 2.</p></div>
-        <div class="card kpi"><span class="eyebrow">Queued for R65</span><strong>4<small>items</small></strong><p>Suppliers, payables, permissions and phase 2 have no sprint tickets yet.</p></div>
+        <div class="card kpi"><span class="eyebrow">Planned next</span><strong>4<small>items</small></strong><p>Suppliers, payables, permissions and phase 2; no sprint tickets yet.</p></div>
       </div>
       <div class="plat-grid">
         <div class="card outline mod-table">
@@ -556,10 +555,10 @@
           <div class="mod"><div class="mod-name"><strong>Buyers · part 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4599" target="_blank" rel="noopener">DF-4599</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="testing:6"></div><span class="chip active">On staging</span></div>
           <div class="mod"><div class="mod-name"><strong>Middleware info on buyer profile</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4614" target="_blank" rel="noopener">DF-4614</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1"></div><span class="chip ready">Approved</span></div>
           <div class="mod"><div class="mod-name"><strong>Supplier list enhancements</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4640" target="_blank" rel="noopener">DF-4640</a></div><span class="mod-rel">R65</span><div class="mod-bar" data-bar="approved:1,testing:1"></div><span class="chip active">Partly approved</span></div>
-          <div class="mod"><div class="mod-name"><strong>Suppliers management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4533" target="_blank" rel="noopener">DF-4533</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Payables management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4534" target="_blank" rel="noopener">DF-4534</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Internal user permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4653" target="_blank" rel="noopener">DF-4653</a></div><span class="mod-rel">R65</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Queued</span></div>
-          <div class="mod"><div class="mod-name"><strong>Phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4506" target="_blank" rel="noopener">DF-4506</a></div><span class="mod-rel">R65</span><div class="mod-note">Scope after phase 1</div><span class="chip idle">Queued</span></div>
+          <div class="mod"><div class="mod-name"><strong>Suppliers management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4533" target="_blank" rel="noopener">DF-4533</a></div><span class="mod-rel">Next</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Planned</span></div>
+          <div class="mod"><div class="mod-name"><strong>Payables management</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4534" target="_blank" rel="noopener">DF-4534</a></div><span class="mod-rel">Next</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Planned</span></div>
+          <div class="mod"><div class="mod-name"><strong>Internal user permissions</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4653" target="_blank" rel="noopener">DF-4653</a></div><span class="mod-rel">Next</span><div class="mod-note">No sprint tickets yet</div><span class="chip idle">Planned</span></div>
+          <div class="mod"><div class="mod-name"><strong>Phase 2</strong><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4506" target="_blank" rel="noopener">DF-4506</a></div><span class="mod-rel">Next</span><div class="mod-note">Scope after phase 1</div><span class="chip idle">Planned</span></div>
         </div>
         <figure class="card shot-frame">
           <header><strong>Buyer Management · Buyer list</strong><a class="tag" style="color:var(--light-blue)" href="https://manafaco.atlassian.net/browse/DF-4495" target="_blank" rel="noopener">DF-4495 ↗</a></header>
@@ -672,14 +671,14 @@
         </div>
         <div class="card violet kpi">
           <span class="eyebrow">R65 · Deploying this week</span>
-          <strong data-kpi="r65-pct">64%<small>approved</small></strong>
+          <strong data-kpi="r65-pct">65%<small>approved</small></strong>
           <div class="meter"><i data-kpi="r65-meter" style="width:64%"></i></div>
-          <p data-kpi="r65-note">125 of 194 tickets approved across 48 epics</p>
+          <p data-kpi="r65-note">111 of 170 tickets approved across 47 epics</p>
         </div>
         <div class="card kpi">
           <span class="eyebrow">R66 · 26 Oct – 5 Nov</span>
-          <strong data-kpi="r66-epics">28<small>epics</small></strong>
-          <p data-kpi="r66-note">79 tickets planned · grooming in progress</p>
+          <strong data-kpi="r66-epics">27<small>epics</small></strong>
+          <p data-kpi="r66-note">78 tickets planned · grooming in progress</p>
         </div>
         <div class="card kpi">
           <span class="eyebrow">Moved from R65 to R66</span>
@@ -893,7 +892,7 @@
   <button class="control-button" id="next-slide" type="button" aria-label="Next slide">→</button>
 </nav>
 
-<script src="release-data.js?v=20261025"></script>
+<script src="release-data.js?v=20261025-flags"></script>
 <script src="script.js?v=20261025-editorial"></script>
 </body>
 </html>

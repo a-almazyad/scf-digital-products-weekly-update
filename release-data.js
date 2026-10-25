@@ -1,5 +1,5 @@
 // Release scope snapshot from Jira (read-only), 25 Oct 2026.
-// Generic regression / miscellaneous / production-support epics are excluded.
+// Generic regression / miscellaneous / production-support epics are excluded, as are crowdfunding (non-SCF) borrower epics.
 // Shape: {id, df, title, url, theme, tickets, labels, statuses:[[label,count,tone]], signal, tone}
 window.RELEASE_DATA = {
   snapshot: "25 Oct 2026",
@@ -45,7 +45,6 @@ window.RELEASE_DATA = {
     {"id": "ASQ-5702", "df": "DF-4644", "title": "Reflect Unassigned Permissions on Production V1.2", "url": "https://manafaco.atlassian.net/browse/ASQ-5702", "theme": "admin", "tickets": 1, "labels": [], "statuses": [["Production Done", 1, "production"]], "signal": "Production Done", "tone": "complete"},
     {"id": "ASQ-5735", "df": "DF-4664", "title": "Update User Group Permissions in Production", "url": "https://manafaco.atlassian.net/browse/ASQ-5735", "theme": "admin", "tickets": 1, "labels": [], "statuses": [["Approved", 1, "approved"]], "signal": "Approved", "tone": "progress"},
     {"id": "ASQ-5734", "df": "DF-4667", "title": "Receivables Page [Company profile, General receivables] : Loan / Repayment View Toggle", "url": "https://manafaco.atlassian.net/browse/ASQ-5734", "theme": "admin", "tickets": 1, "labels": ["Hotfix"], "statuses": [["Approved", 1, "approved"]], "signal": "Approved", "tone": "progress"},
-    {"id": "BSQ-3430", "df": "DF-4526", "title": "Real estate product within the financing flow", "url": "https://manafaco.atlassian.net/browse/BSQ-3430", "theme": "borrower", "tickets": 24, "labels": [], "statuses": [["Approved", 14, "approved"], ["UAT Review", 10, "uat"]], "signal": "Mixed status", "tone": "testing"},
     {"id": "BSQ-3499", "df": "DF-4473", "title": "Add Watermark to Official Documents Before Digital Signature", "url": "https://manafaco.atlassian.net/browse/BSQ-3499", "theme": "borrower", "tickets": 5, "labels": [], "statuses": [["Approved", 1, "approved"], ["Deferred", 4, "deferred"]], "signal": "Mixed status", "tone": "progress"},
     {"id": "BSQ-3475", "df": "", "title": "Crashlytics Borrower", "url": "https://manafaco.atlassian.net/browse/BSQ-3475", "theme": "borrower", "tickets": 4, "labels": [], "statuses": [["Dev Tested on Staging", 2, "testing"], ["On Hold", 1, "hold"], ["Deferred", 1, "deferred"]], "signal": "Mixed status", "tone": "hold"},
     {"id": "BSQ-3272", "df": "DF-4373", "title": "Borrower Financing Journey V2", "url": "https://manafaco.atlassian.net/browse/BSQ-3272", "theme": "borrower", "tickets": 3, "labels": [], "statuses": [["Approved", 3, "approved"]], "signal": "Approved", "tone": "progress"},
@@ -81,6 +80,5 @@ window.RELEASE_DATA = {
     {"id": "BSQ-3429", "df": "DF-4521", "title": "Remove the Fund Acceptance (Loan Detail) Task", "url": "https://manafaco.atlassian.net/browse/BSQ-3429", "theme": "borrower", "tickets": 13, "labels": ["clarifications-still-pending", "might-spill-over-66"], "statuses": [["Dev Tested on Staging", 1, "testing"], ["To Do", 10, "todo"], ["On Hold", 2, "hold"]], "signal": "Mixed status", "tone": "hold"},
     {"id": "BSQ-3518", "df": "DF-4545", "title": "Handle Passed Away Stakeholder – Phase 2", "url": "https://manafaco.atlassian.net/browse/BSQ-3518", "theme": "borrower", "tickets": 8, "labels": ["will-spill-over-r66"], "statuses": [["Approved", 1, "approved"], ["Dev Tested on Staging", 1, "testing"], ["Testing", 1, "testing"], ["To Do", 5, "todo"]], "signal": "Mixed status", "tone": "planned"},
     {"id": "ASQ-5628", "df": "DF-4544", "title": "Phase II - Activity licenses and compliance documents (Admin and borrower task loop)", "url": "https://manafaco.atlassian.net/browse/ASQ-5628", "theme": "borrower", "tickets": 2, "labels": ["will-spill-over-r66"], "statuses": [["To Do", 2, "todo"]], "signal": "To Do", "tone": "planned"},
-    {"id": "ASQ-5626", "df": "DF-4577", "title": "Funders Management - Co-Lending – Funder Participation Within Crowdfunding Opportunities", "url": "https://manafaco.atlassian.net/browse/ASQ-5626", "theme": "borrower", "tickets": 1, "labels": ["Hotfix", "will-spill-over-r66"], "statuses": [["To Do", 1, "todo"]], "signal": "To Do", "tone": "planned"}
   ],
 };
