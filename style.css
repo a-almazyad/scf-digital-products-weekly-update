@@ -591,7 +591,7 @@ a.tag:hover { text-decoration: underline; }
 .scope-detail .count strong { font-size: 36px; font-weight: 600; letter-spacing: -0.015em; }
 .scope-detail .count span { color: var(--muted); font-size: 15px; }
 .status-bar { display: flex; height: 12px; border-radius: 6px; overflow: hidden; background: var(--surface-2); }
-.status-legend { display: grid; gap: 7px; margin-top: 14px; align-content: start; }
+.status-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 18px; margin-top: 14px; align-content: start; }
 .status-legend div { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 14px; }
 .status-legend i { width: 10px; height: 10px; border-radius: 3px; }
 .status-legend strong { font-weight: 600; }
@@ -621,13 +621,13 @@ a.tag:hover { text-decoration: underline; }
   min-height: 0;
 }
 
-.taulia-summary { grid-row: 1 / -1; display: grid; grid-template-rows: auto auto 1fr auto; gap: 22px; padding: 30px; }
+.taulia-summary { grid-row: 1 / -1; display: grid; grid-template-rows: auto auto 1fr auto; gap: 16px; padding: 26px 28px; min-height: 0; }
 .taulia-summary .logo-plate { background: #fff; border-radius: 12px; padding: 14px 18px; justify-self: start; min-height: 64px; display: grid; place-items: center; }
 .taulia-summary .logo-plate img { height: 44px; width: auto; }
-.big-stat strong { display: block; font-size: 88px; line-height: 0.95; font-weight: 600; letter-spacing: -0.015em; }
+.big-stat strong { display: block; font-size: 72px; line-height: 0.95; font-weight: 600; letter-spacing: -0.015em; }
 .big-stat span { display: block; margin-top: 10px; font-size: 17px; line-height: 1.45; color: rgba(255,255,255,0.72); }
-.taulia-summary ul { display: grid; gap: 14px; align-content: end; }
-.taulia-summary li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); font-size: 15px; line-height: 1.45; color: rgba(255,255,255,0.8); }
+.taulia-summary ul { display: grid; gap: 10px; align-content: end; }
+.taulia-summary li { display: grid; grid-template-columns: 1fr; gap: 4px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); font-size: 15px; line-height: 1.45; color: rgba(255,255,255,0.8); }
 .taulia-summary li b { color: var(--light-blue); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
 
 .workstream { display: grid; grid-template-rows: auto auto 1fr auto; gap: 12px; }

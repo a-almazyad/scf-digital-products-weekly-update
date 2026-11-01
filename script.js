@@ -75,14 +75,15 @@ document.querySelectorAll(".funder-top img, .partner-logos img, .logo-plate img"
 /* ---------- Release scope ---------- */
 const releaseScopeRoot = document.querySelector("[data-release-scope]");
 const RELEASES = window.RELEASE_DATA || {};
-const releaseKeys = ["r65", "r66"];
-const releaseLabels = { r65: "R65", r66: "R66" };
+// Release keys come from the data file (e.g. r66, r67): the first is the current sprint, the second the next one.
+const releaseKeys = Object.keys(RELEASES).filter((k) => /^r\d+$/.test(k));
+const releaseLabels = Object.fromEntries(releaseKeys.map((k) => [k, k.toUpperCase()]));
 const themeLabels = { scf: "SCF", finops: "SCF FinOps", admin: "Admin", crm: "CRM", borrower: "Borrower" };
 const signalChip = { complete: "done", progress: "ready", testing: "active", planned: "idle", hold: "hold" };
 const doneTones = new Set(["approved", "production"]);
 const pageSize = 6;
 let activeTheme = "scf";
-let activeRelease = "r65";
+let activeRelease = releaseKeys[0];
 let activePage = 0;
 
 const itemsFor = (release, theme) => (RELEASES[release] || []).filter((item) => item.theme === theme);
@@ -97,16 +98,17 @@ const labelTone = (label) => (/spill|pending|remove|hold|waiting|don't|not-provi
 const keyOf = (item) => (item.df ? `${item.id} · ${item.df}` : item.id);
 
 function renderKpis() {
-  const r65 = ticketTotals(RELEASES.r65 || []);
-  const r66 = ticketTotals(RELEASES.r66 || []);
-  const pct = r65.total ? Math.round((r65.done / r65.total) * 100) : 0;
+  const [curKey, nextKey] = releaseKeys;
+  const cur = ticketTotals(RELEASES[curKey] || []);
+  const next = ticketTotals(RELEASES[nextKey] || []);
+  const pct = cur.total ? Math.round((cur.done / cur.total) * 100) : 0;
   const set = (k, html) => { const el = document.querySelector(`[data-kpi="${k}"]`); if (el) el.innerHTML = html; };
-  set("r65-pct", `${pct}%<small>approved</small>`);
-  const meter = document.querySelector('[data-kpi="r65-meter"]');
+  set("cur-pct", `${pct}%<small>approved</small>`);
+  const meter = document.querySelector('[data-kpi="cur-meter"]');
   if (meter) meter.style.width = `${pct}%`;
-  set("r65-note", `${r65.done} of ${r65.total} tickets approved across ${(RELEASES.r65 || []).length} epics`);
-  set("r66-epics", `${(RELEASES.r66 || []).length}<small>epics</small>`);
-  set("r66-note", `${r66.total} tickets planned · grooming in progress`);
+  set("cur-note", `${cur.done} of ${cur.total} tickets approved across ${(RELEASES[curKey] || []).length} epics`);
+  set("next-epics", `${(RELEASES[nextKey] || []).length}<small>epics</small>`);
+  set("next-note", `${next.total} tickets planned · grooming in progress`);
 }
 
 function renderDetail(item) {
