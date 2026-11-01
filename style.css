@@ -377,6 +377,8 @@ a.tag:hover { text-decoration: underline; }
 }
 
 .program-logos img { height: 38px; width: auto; }
+/* The plate sits inside a .cover-stats column; keep its own padding and no column border. */
+.cover-stats .program-logos { padding: 12px 22px; border-left: 0; }
 
 /* ---------- Action items --------------------------------------------------- */
 
