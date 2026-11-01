@@ -63,15 +63,11 @@
       <div class="card ink closed-list">
         <header>
           <span class="eyebrow">Closed since last weekly</span>
-          <strong>4<small>/ 4 live</small></strong>
+          <strong>5<small>/ 5 done</small></strong>
         </header>
         <div class="closed-item">
           <span class="tick">✓</span>
-          <div><h3>CRM assignment rules and teams</h3><p>Live 27 Oct with R65 · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4027" target="_blank" rel="noopener">DF-4027</a></p></div>
-        </div>
-        <div class="closed-item">
-          <span class="tick">✓</span>
-          <div><h3>Taulia leads into CRM</h3><p>Live 27 Oct with R65 · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></p></div>
+          <div><h3>CRM assignment rules, teams and Taulia leads</h3><p>Live 27 Oct with R65 · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4027" target="_blank" rel="noopener">DF-4027</a> <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></p></div>
         </div>
         <div class="closed-item">
           <span class="tick">✓</span>
@@ -80,6 +76,14 @@
         <div class="closed-item">
           <span class="tick">✓</span>
           <div><h3>SAB supplier file: KYC-completed only</h3><p>Live 27 Oct with R65 · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4619" target="_blank" rel="noopener">DF-4619</a></p></div>
+        </div>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>Taulia: missing unified (700) number</h3><p>Resolved · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a></p></div>
+        </div>
+        <div class="closed-item">
+          <span class="tick">✓</span>
+          <div><h3>Aramco: offer amount ≠ amount funded</h3><p>Resolved · <a class="tag" href="https://manafaco.atlassian.net/browse/DF-4710" target="_blank" rel="noopener">DF-4710</a></p></div>
         </div>
       </div>
 
@@ -93,13 +97,6 @@
           <div class="next"><b>Next</b><span>Backfill English names; add the guard. BNPP KYC-only filter (<a class="tag" href="https://manafaco.atlassian.net/browse/DF-4742" target="_blank" rel="noopener">DF-4742</a>) in review.</span></div>
         </article>
 
-        <article class="card issue">
-          <div class="issue-top"><span class="eyebrow">Taulia onboarding</span><span class="chip wait">Fix in progress</span></div>
-          <h4>Suppliers arrive without the unified (700) number</h4>
-          <p>Most API submissions are missing it, which blocks company creation.</p>
-          <div class="next"><b>Next</b><span><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a> in R66: 2 of 3 tickets approved, 1 in UAT.</span></div>
-        </article>
-
         <article class="card issue active">
           <div class="issue-top"><span class="eyebrow">Pricing engine</span><span class="chip active">Fix built</span></div>
           <h4>Draft offers double-count the BNPP daily limit</h4>
@@ -107,11 +104,11 @@
           <div class="next"><b>Next</b><span><a class="tag" href="https://manafaco.atlassian.net/browse/EMQ-6251" target="_blank" rel="noopener">EMQ-6251</a> is dev-complete in R66; test and release.</span></div>
         </article>
 
-        <article class="card issue">
-          <div class="issue-top"><span class="eyebrow">Aramco · Taulia pilot</span><span class="chip wait">Open</span></div>
-          <h4>Offer amount shown ≠ amount funded</h4>
-          <p>No change this week. Supplier outreach report now adds the original invoice amount (<a class="tag" href="https://manafaco.atlassian.net/browse/DF-4710" target="_blank" rel="noopener">DF-4710</a>, approved).</p>
-          <div class="next"><b>Next</b><span>Confirm the calculation source and align what the supplier sees.</span></div>
+        <article class="card issue active">
+          <div class="issue-top"><span class="eyebrow">Global outstanding cap</span><span class="chip active">Fix on staging</span></div>
+          <h4>Platform-wide cap limited SCF financing</h4>
+          <p>Raised 27 Oct. Disabling the cap check (<a class="tag" href="https://manafaco.atlassian.net/browse/EMQ-6314" target="_blank" rel="noopener">EMQ-6314</a>) was deferred; SCF will count in the same Admin-set cap instead.</p>
+          <div class="next"><b>Next</b><span><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4739" target="_blank" rel="noopener">DF-4739</a> hotfix on staging for R66.</span></div>
         </article>
       </div>
     </div>
@@ -370,15 +367,14 @@
       <article class="partner wait">
         <div class="partner-logos"><img src="assets/logos/elm.png" alt="Elm"><span class="plus">+</span><img src="assets/logos/dhamen.png" alt="Dhamen"></div>
         <div class="sector"><span class="eyebrow">Government services</span><span class="chip wait">Awaiting Elm</span></div>
-        <h3>Elm · Dhamen–Muqeem</h3>
+        <h3>Elm · two engagements</h3>
         <div data-stages="3" data-labels="Scope,Build,Demo,Pilot,Live"></div>
         <ul class="latest">
-          <li>Muqeem PO-financing journey <strong>demoed 6 Oct</strong>; no reply from Elm as of 1 Nov.</li>
-          <li>Partnership proposal sent to Elm; <strong>awaiting feedback</strong>.</li>
-          <li>No pilot entity yet; ~400–500 entities whitelisted for rollout.</li>
+          <li><strong>Dhamen–Muqeem:</strong> PO-financing journey demoed 6 Oct; no reply or pilot entity yet. ~400–500 entities whitelisted.</li>
+          <li><strong>General partnership:</strong> proposal sent this week; awaiting Elm’s feedback.</li>
           <li>Tasdeed and Nusuk remain on hold.</li>
         </ul>
-        <div class="next"><b>Next</b><span>Elm feedback on the proposal and a pilot entity.</span></div>
+        <div class="next"><b>Next</b><span>Elm feedback on the proposal; pilot entity for Dhamen–Muqeem.</span></div>
       </article>
 
       <article class="partner done">
