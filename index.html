@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261101d">
+  <link rel="stylesheet" href="style.css?v=20261101h">
 </head>
 <body>
 <main class="deck" aria-label="SCF Digital Products weekly presentation">
@@ -90,20 +90,6 @@
       <div class="open-issues">
         <header><h3>Open issues</h3><span>Updated 1 Nov</span></header>
 
-        <article class="card issue hold">
-          <div class="issue-top"><span class="eyebrow">BNPP operations</span><span class="chip hold">Blocked</span></div>
-          <h4>Supplier file paused: missing English company names</h4>
-          <p>The 1 Nov job skipped 81 Aramco and 103 SE companies. The “already paid” guard for late payment files is still open.</p>
-          <div class="next"><b>Next</b><span>Backfill English names; add the guard. BNPP KYC-only filter (<a class="tag" href="https://manafaco.atlassian.net/browse/DF-4742" target="_blank" rel="noopener">DF-4742</a>) in review.</span></div>
-        </article>
-
-        <article class="card issue active">
-          <div class="issue-top"><span class="eyebrow">Pricing engine</span><span class="chip active">Fix built</span></div>
-          <h4>Draft offers double-count the BNPP daily limit</h4>
-          <p>Same invoices counted twice, so a large SE request was wrongly declined.</p>
-          <div class="next"><b>Next</b><span><a class="tag" href="https://manafaco.atlassian.net/browse/EMQ-6251" target="_blank" rel="noopener">EMQ-6251</a> is dev-complete in R66; test and release.</span></div>
-        </article>
-
         <article class="card issue active">
           <div class="issue-top"><span class="eyebrow">Global outstanding cap</span><span class="chip active">Fix on staging</span></div>
           <h4>Platform-wide cap limited SCF financing</h4>
@@ -160,7 +146,7 @@
         <ul>
           <li><div><strong>SMBC participation in the Aramco program</strong><p>Aramco approved SMBC as a participating funder.</p></div><span class="side">Aramco</span><span class="chip done">Green light</span></li>
           <li><div><strong>Digitalise the Ahsan weekly report</strong><p>Move the weekly report into the platform.</p></div><span class="side">Manafa</span><span class="chip idle">To confirm</span></li>
-          <li><div><strong>PO financing project</strong><p>Build started: SIDF PO-financing virtual accounts for Aramco and SE in UAT (EMQ-6302).</p></div><span class="side">Manafa · Digital</span><span class="chip active">In build</span></li>
+          <li><div><strong>PO financing project</strong><p>On hold. Build had started on SIDF PO-financing virtual accounts for Aramco and SE (EMQ-6302).</p></div><span class="side">Manafa · Digital</span><span class="chip wait">On hold</span></li>
           <li><div><strong>Aramco (SAO) as a funder</strong><p>Waiting for SAO feedback.</p></div><span class="side">Aramco</span><span class="chip wait">Pending</span></li>
         </ul>
       </section>
@@ -277,58 +263,24 @@
       <div>
         <div class="kicker"><b>1.3</b>Partners &amp; integrations</div>
         <h2 id="t-taulia">Taulia integration updates</h2>
-        <p class="lede">Status of each Taulia workstream, including items from us to Taulia.</p>
+        <p class="lede">Open items between Manafa and Taulia; live integrations below.</p>
       </div>
       <div class="head-aside"><div class="logo-plate"><img src="assets/logos/sap-taulia.svg" alt="SAP Taulia"></div></div>
     </header>
 
     <div class="taulia-grid">
       <article class="card workstream">
-        <div class="top"><span class="num">01</span><span class="chip done">Live · 29 Sep</span></div>
-        <h3>Supplier onboarding APIs</h3>
+        <div class="top"><span class="num">01</span><span class="chip active">Under analysis</span></div>
+        <h3>Reconciliation data</h3>
         <ul>
-          <li>Buyer-invited suppliers now come straight into Manafa registration.</li>
-          <li>Unified (700) number gap <strong>resolved</strong>.</li>
-          <li>Supplier pull updated 26 Oct: ~500 more suppliers coming through; many lack spend data.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4071" target="_blank" rel="noopener">DF-4071</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4600" target="_blank" rel="noopener">DF-4600</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">02</span><span class="chip done">Live · 30 Sep</span></div>
-        <h3>Funding document PDF API</h3>
-        <ul>
-          <li>Initial PDF and retry of failed copies in one flow.</li>
-          <li><strong>Gap:</strong> Taulia’s fix only covers EPs created after its late-Aug release; older retries return 400.</li>
-          <li>FinOps PDF retrieval being scoped for R67.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">03</span><span class="chip done">Live · 1 Oct</span></div>
-        <h3>Preferred bank account via onboarding</h3>
-        <ul>
-          <li>Default IBAN is set from Taulia onboarding data.</li>
-          <li>Backfill: Aramco and whitelisted SE suppliers use the latest EP’s IBAN; others choose manually.</li>
-          <li>Currency-less IBANs: fix (EMQ-6272) in QA for R66.</li>
-        </ul>
-        <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a></div>
-      </article>
-
-      <article class="card workstream">
-        <div class="top"><span class="num">04</span><span class="chip wait">Awaiting Taulia</span></div>
-        <h3>ERP invoice number in EP payload</h3>
-        <ul>
-          <li>Add the buyer’s ERP invoice number to the early-payment payload.</li>
-          <li>No feedback yet from Taulia’s product team; no delivery ticket opened.</li>
-          <li><strong>Next:</strong> raise it alongside the SLA review.</li>
+          <li>Taulia reported that our reconciliation data does not match.</li>
+          <li>Under analysis; a fix to repopulate the data will follow.</li>
         </ul>
         <div class="refs"><span class="tag" style="color:var(--faint)">No ticket yet</span></div>
       </article>
 
       <article class="card workstream">
-        <div class="top"><span class="num">05</span><span class="chip wait">With General Counsel</span></div>
+        <div class="top"><span class="num">02</span><span class="chip wait">With General Counsel</span></div>
         <h3>Manafa–Taulia SLA</h3>
         <ul>
           <li>SLA drafted by our team.</li>
@@ -339,14 +291,34 @@
       </article>
 
       <article class="card workstream">
-        <div class="top"><span class="num">06</span><span class="chip active">Fix in progress</span></div>
-        <h3>Reconciliation data</h3>
+        <div class="top"><span class="num">03</span><span class="chip wait">Awaiting Taulia</span></div>
+        <h3>ERP invoice number in EP payload</h3>
         <ul>
-          <li>Taulia reported that our reconciliation data does not match.</li>
-          <li>We are building a fix to repopulate the data.</li>
+          <li>Add the buyer’s ERP invoice number to the early-payment payload.</li>
+          <li>No feedback yet from Taulia’s product team; no delivery ticket opened.</li>
+          <li><strong>Next:</strong> raise it alongside the SLA.</li>
         </ul>
         <div class="refs"><span class="tag" style="color:var(--faint)">No ticket yet</span></div>
       </article>
+
+      <section class="card ink taulia-live" aria-label="Live Taulia integrations">
+        <header><span class="eyebrow">Live integrations</span><p>Live since Sep–Oct; follow-ups only.</p></header>
+        <div class="live-item">
+          <div class="row"><strong>Supplier onboarding APIs</strong><span class="chip done">Live · 29 Sep</span></div>
+          <p>Supplier pull updated 26 Oct: ~500 more suppliers coming through; many lack spend data.</p>
+          <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4071" target="_blank" rel="noopener">DF-4071</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4674" target="_blank" rel="noopener">DF-4674</a></div>
+        </div>
+        <div class="live-item">
+          <div class="row"><strong>Funding document PDF API</strong><span class="chip done">Live · 30 Sep</span></div>
+          <p>Older EPs still return 400 on retry. FinOps PDF retrieval scoped for R67.</p>
+          <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4398" target="_blank" rel="noopener">DF-4398</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4405" target="_blank" rel="noopener">DF-4405</a></div>
+        </div>
+        <div class="live-item">
+          <div class="row"><strong>Preferred bank account</strong><span class="chip done">Live · 1 Oct</span></div>
+          <p>Currency-less IBANs: fix (EMQ-6272) in QA for R66.</p>
+          <div class="refs"><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4325" target="_blank" rel="noopener">DF-4325</a><a class="tag" href="https://manafaco.atlassian.net/browse/DF-4322" target="_blank" rel="noopener">DF-4322</a></div>
+        </div>
+      </section>
     </div>
 
     <footer class="slide-foot"><img src="assets/manafa-logo.svg" alt="Manafa"><span class="src">Sources: Jira and SCF Slack channels, to 1 Nov 2026.</span><span class="pg"></span></footer>

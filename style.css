@@ -391,7 +391,8 @@ a.tag:hover { text-decoration: underline; }
 
 .closed-list {
   display: grid;
-  grid-template-rows: auto repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr; /* one equal row per closed item, however many there are */
   gap: 0;
   padding: 20px 28px;
 }
@@ -430,10 +431,12 @@ a.tag:hover { text-decoration: underline; }
 .closed-item p { margin-top: 5px; font-size: 14.5px; color: rgba(255,255,255,0.62); line-height: 1.45; }
 .closed-item .tag { color: var(--light-blue); }
 
+/* Issue cards fill the row; one card spans the full width. */
 .open-issues {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-rows: auto;
+  align-content: start;
   gap: 14px;
   min-height: 0;
 }
@@ -618,7 +621,7 @@ a.tag:hover { text-decoration: underline; }
 .taulia-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   gap: 16px;
   min-height: 0;
 }
@@ -719,7 +722,7 @@ a.tag:hover { text-decoration: underline; }
 .partner .latest li { position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.5; color: var(--muted); }
 .partner .latest li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 2px; background: var(--c); }
 .partner .latest li strong { color: var(--text); font-weight: 600; }
-.partner .next { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 12px 16px; border-radius: 12px; background: var(--surface); font-size: 15px; line-height: 1.45; }
+.partner .next { display: grid; grid-template-columns: 1fr; align-content: start; min-height: 118px; gap: 4px; padding: 12px 16px; border-radius: 12px; background: var(--surface); font-size: 15px; line-height: 1.45; }
 .partner .next b { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--violet); padding-top: 2px; }
 .partner .stage-labels { font-size: 13px; }
 .partner .stages span { height: 10px; }
@@ -965,3 +968,17 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--light-blue); ou
 /* Partner logo shown in a slide header (Taulia). */
 .head-aside .logo-plate { background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 16px; }
 .head-aside .logo-plate img { height: 36px; width: auto; display: block; }
+
+/* Taulia: live integrations as a compact band under the open items. */
+.taulia-live { grid-column: 1 / -1; display: grid; grid-template-columns: 200px repeat(3, 1fr); gap: 28px; padding: 22px 28px; align-items: start; }
+.taulia-live > header .eyebrow { color: var(--light-blue); }
+.taulia-live > header p { margin-top: 8px; font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.62); }
+.live-item { display: grid; gap: 8px; padding-left: 22px; border-left: 1px solid rgba(255,255,255,0.14); }
+.live-item .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.live-item strong { font-size: 17px; font-weight: 600; color: #fff; }
+.live-item p { font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.72); }
+.live-item .refs { display: flex; gap: 12px; }
+.live-item .tag { color: var(--light-blue); }
+
+/* A single open issue spans the whole column. */
+.open-issues .issue:only-of-type { grid-column: 1 / -1; }
